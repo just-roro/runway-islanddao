@@ -100,4 +100,4 @@ node --test tests/production-leaderboards/api.test.mjs tests/dao41/rankings.test
 
 ## Licencias
 
-Las licencias de terceros (librerías, tipografías y assets) están en `runway/public/licenses.txt` y `runway/public/assets/fonts/*-OFL.txt`. El proyecto no declara una licencia propia.
+Las licencias de terceros (librerías, tipografías y assets) están en `runway/public/licenses.txt` y `runway/public/assets/fonts/*-OFL.txt`. © 2026 Tres Humanos S.R.L. (Human Friendly). Todos los derechos reservados: el proyecto es software propietario y no se otorga ninguna licencia de uso, copia, modificación ni distribución sin autorización escrita. Ver [`LICENSE`](LICENSE).
