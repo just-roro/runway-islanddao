@@ -4,7 +4,7 @@
 
 > *Build your capital. Ride the currents. Land your startup in Floripa.*
 
-RUNWAY is a 3D web game for IslandDAO × Human Friendly. Every run is a flight: you jump out of the plane, freefall, open your parachute and land on the island while collecting SOL (the in-game money, which is the only score). Players have their own identity, can create or join a startup and invite others, buy cosmetics and compete on two global leaderboards: **CEO** (each player's best verified score) and **STARTUP** (the sum of its members' best scores). Scores are recomputed on the server from the replay: the score sent by the client is not trusted.
+RUNWAY is a web game for IslandDAO × Human Friendly. Every run is a flight: you jump out of the plane, freefall, pray to open your parachute and land on the island while collecting SOL (the in-game money, which is the only score). Players have their own identity, can create or join a startup and invite others, buy cosmetics and compete on two global leaderboards: **CEO** (each player's best verified score) and **STARTUP** (the sum of its members' best scores). Scores are recomputed on the server from the replay: the score sent by the client is not trusted.
 
 - Live game: https://humanfriendly.global/islanddao/ (the version deployed in production; it may not match this code exactly).
 
