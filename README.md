@@ -1,4 +1,34 @@
-# RUNWAY — código recuperado para GitHub
+# RUNWAY · IslandDAO
+
+Juego web RUNWAY (frontend React/TypeScript + Vite/Three.js) y su API (Cloudflare Workers/Vinext + D1).
+
+**Estado: código fuente completo de la última versión guardada.** Frontend **v47** (commit original `e58d1fd3366258686830d116d2c6db5d80c5de32`, proyecto `appgprj_6acfeda93e2c8191a478eae796d0d3dd`) y API **v28** (commit original `3d74ea5a3fbc15cd9a9dcda956692c892985eb9c`). La v47 ya no está pendiente.
+
+- Juego publicado: https://humanfriendly.global/islanddao/ (sirve el build desplegado en producción; no se verificó que sea idéntico a la v47)
+- Sitio original (Sites): https://runway-islanddao.agenciahumanfriendly.chatgpt.site
+
+## Estructura del repositorio
+
+| Carpeta | Qué es |
+|---|---|
+| `runway/` | **Fuente del frontend v47** (React/TS, assets originales, modelos Blender/GLB, audio, tests, scripts). Es la carpeta para desarrollar. |
+| `services/runway-api/` | **Fuente de la API v28** (rutas, simulaciones, migraciones D1, tests, lockfile). |
+| `docs/` | Procedencia (`ORIGEN-FUENTES.json`), validación (`VALIDACION.md`), exclusiones (`ARCHIVOS-EXCLUIDOS.json`) y handoff de Cloudflare. |
+| `public/` | *Histórico:* build compilado del frontend exportado el 22/10/2026 para `/islanddao/` (anterior a la v47; no es fuente). |
+| `api/` | *Histórico:* copia de la API v28 de la primera entrega parcial; idéntica a `services/runway-api/` salvo `reports/`. Usar `services/runway-api/`. |
+| `docs/entrega-parcial-anterior/` y `docs/ESTADO-EXPORTACION.json` | Documentos de la primera entrega parcial (ya superados: decían que la v47 faltaba). |
+
+`MANIFEST-SHA256.json` + `VERIFICAR-PAQUETE.py` verifican los 730 archivos del paquete v47 (`python3 VERIFICAR-PAQUETE.py`). Este `README.md` se amplió después de importar el paquete, por lo que es el único archivo que el verificador marca como distinto; el original está en el commit `Import recovered RUNWAY frontend v47 and API v28 source`.
+
+## Qué no incluye
+
+- Base D1 de producción (jugadores, rankings) ni secretos/variables del servidor: no se exportan a un repositorio.
+- Historial Git original (los commits de origen están referenciados arriba) ni cambios locales posteriores que no se hayan guardado en Sites.
+- Grabaciones/screenshots de QA (listados en `docs/ARCHIVOS-EXCLUIDOS.json`).
+
+---
+
+## Notas de la entrega v47 (README original del paquete)
 
 Entrega del 29/10/2026. **Reemplaza el ZIP parcial RUNWAY-GITHUB-HANDOFF.zip.**
 
