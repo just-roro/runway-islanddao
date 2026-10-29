@@ -1,37 +1,37 @@
-# RUNWAY — IslandDAO: instrucciones de hosting
+# RUNWAY — IslandDAO: hosting instructions
 
-## Qué entregar y subir
+## What to deliver and upload
 
-Este ZIP contiene el videojuego compilado con React 19, Three.js/R3F, TypeScript y Vite. No requiere Node, npm, compilación ni un servidor de aplicaciones en el hosting de destino.
+This ZIP contains the compiled game built with React 19, Three.js/R3F, TypeScript and Vite. It does not require Node, npm, a build step or an application server on the target host.
 
-1. Extraer `RUNWAY-ISLANDDAO-PRODUCTION.zip` en una carpeta local.
-2. Subir **la carpeta `islanddao` completa** al directorio público de `humanfriendly.global`. El resultado debe ser `https://humanfriendly.global/islanddao/index.html`, no `/islanddao/islanddao/index.html`.
-3. No subir este manual. No reemplazar archivos del sitio principal ni copiar el contenido de `islanddao` en la raíz del dominio.
-4. Servir `https://humanfriendly.global/islanddao/` mediante HTTPS, con `index.html` como documento predeterminado. Redirigir `/islanddao` a `/islanddao/` preservando los parámetros de consulta.
-5. En actualizaciones, subir primero los recursos y por último `index.html`. Es preferible reemplazar la carpeta de forma atómica. Conservar una copia de la versión previa para rollback. Invalidar caché de archivos sin hash.
+1. Extract `RUNWAY-ISLANDDAO-PRODUCTION.zip` into a local folder.
+2. Upload **the entire `islanddao` folder** to the public directory of `humanfriendly.global`. The result must be `https://humanfriendly.global/islanddao/index.html`, not `/islanddao/islanddao/index.html`.
+3. Do not upload this manual. Do not replace files of the main site or copy the contents of `islanddao` into the domain root.
+4. Serve `https://humanfriendly.global/islanddao/` over HTTPS, with `index.html` as the default document. Redirect `/islanddao` to `/islanddao/`, preserving query parameters.
+5. For updates, upload the assets first and `index.html` last. Replacing the folder atomically is preferable. Keep a copy of the previous version for rollback. Invalidate the cache of non-hashed files.
 
-La navegación usa estados de interfaz y parámetros como `?join=ABCDEF1234`; no necesita un fallback SPA global. No redirigir recursos inexistentes a HTML: deben responder 404. Cualquier regla debe limitarse a `/islanddao/`.
+Navigation uses UI states and parameters such as `?join=ABCDEF1234`; it does not need a global SPA fallback. Do not redirect missing assets to HTML: they must return 404. Any rule must be limited to `/islanddao/`.
 
-## Requisito pendiente: autorización de la API existente
+## Pending requirement: authorization on the existing API
 
-El cliente conserva la API `https://runway-api.agenciahumanfriendly.chatgpt.site/api`. **Antes de habilitar las funciones online, el responsable de esa API debe autorizar el origen exacto `https://humanfriendly.global`.** Esta autorización no puede hacerse desde el ZIP ni desde el servidor estático.
+The client keeps the API `https://runway-api.agenciahumanfriendly.chatgpt.site/api`. **Before enabling online features, the owner of that API must authorize the exact origin `https://humanfriendly.global`.** This authorization cannot be done from the ZIP or from the static server.
 
-Debe permitir:
+It must allow:
 
-- `Origin: https://humanfriendly.global` (sin `/islanddao/` y sin barra final).
-- Preflight `OPTIONS`, y solicitudes `GET` y `POST`.
-- Encabezados `Authorization` y `Content-Type`.
-- Respuestas CORS adecuadas también en errores: `Access-Control-Allow-Origin: https://humanfriendly.global`; `Vary: Origin` cuando la respuesta dependa del origen.
+- `Origin: https://humanfriendly.global` (without `/islanddao/` and without a trailing slash).
+- `OPTIONS` preflight, and `GET` and `POST` requests.
+- `Authorization` and `Content-Type` headers.
+- Proper CORS responses on errors too: `Access-Control-Allow-Origin: https://humanfriendly.global`; `Vary: Origin` when the response depends on the origin.
 
-La API ya tiene una lista de orígenes permitidos. Su responsable debe ampliar esa lista y publicar el cambio por su procedimiento habitual. **No se ha accedido ni modificado la API ni Cloudflare en esta entrega.** Si esta autorización falta, puede cargar el juego local, pero rankings, startups, invitaciones y verificación online no estarán operativos. No presentar esto como una migración completa del backend.
+The API already has a list of allowed origins. Its owner must extend that list and publish the change through the usual procedure. **Neither the API nor Cloudflare was accessed or modified in this delivery.** If this authorization is missing, the game will load locally, but rankings, startups, invitations and online verification will not work. Do not present this as a full backend migration.
 
-Después de habilitar el origen, comprobar desde el dominio real: identificación, ticket de partida, envío de resultado, rankings, startup e invitación. No hacen falta nuevas tablas, endpoints ni servicios para alojar este paquete.
+After enabling the origin, check from the real domain: sign-in, run ticket, result submission, rankings, startup and invitation. No new tables, endpoints or services are needed to host this package.
 
-## Recursos, MIME y seguridad del sitio
+## Assets, MIME types and site security
 
-Todas las rutas públicas del build están prefijadas con `/islanddao/`. Conservar nombres y mayúsculas/minúsculas de los archivos. MIME recomendados:
+All public paths in the build are prefixed with `/islanddao/`. Keep file names and their upper/lower case. Recommended MIME types:
 
-| Extensión | Content-Type |
+| Extension | Content-Type |
 | --- | --- |
 | `.html` | `text/html; charset=utf-8` |
 | `.js` | `text/javascript; charset=utf-8` |
@@ -42,30 +42,30 @@ Todas las rutas públicas del build están prefijadas con `/islanddao/`. Conserv
 | `.mp3`, `.m4a`, `.wav` | `audio/mpeg`, `audio/mp4`, `audio/wav` |
 | `.txt` | `text/plain; charset=utf-8` |
 
-HTTPS es necesario para sensores, audio tras interacción y algunas funciones del navegador. No bloquear WebGL/Web Audio ni sensores de movimiento con políticas del servidor. Si el sitio usa CSP, autorizar los scripts y recursos propios de `/islanddao/`, imágenes `data:`/`blob:`, estilos inline utilizados por React/R3F y el estilo inicial de `index.html`, y `connect-src` hacia la API indicada y el propio origen para modelos/audio. Adaptar una CSP existente de forma acotada; no deshabilitar la protección del sitio principal. El juego se entrega como página propia, no requiere iframe.
+HTTPS is required for sensors, audio after interaction and some browser features. Do not block WebGL/Web Audio or motion sensors with server policies. If the site uses a CSP, allow the scripts and assets under `/islanddao/`, `data:`/`blob:` images, inline styles used by React/R3F and the initial style in `index.html`, and `connect-src` to the API above and to the site's own origin for models/audio. Adapt an existing CSP narrowly; do not disable the main site's protection. The game ships as its own page and does not require an iframe.
 
-Compresión gzip/Brotli opcional para HTML/JS/CSS/texto. Los PNG y audios ya están comprimidos. Caché sugerida:
+gzip/Brotli compression is optional for HTML/JS/CSS/text. PNGs and audio are already compressed. Suggested caching:
 
-- `index.html`, `curtain.css`, `licenses.txt` y recursos con nombre estable: `Cache-Control: no-cache` (permite guardar y revalidar).
-- Bundles generados `assets/index-<hash>.js`, `assets/index-<hash>.css`, `assets/three-<hash>.js`: `Cache-Control: public, max-age=31536000, immutable`.
-- No aplicar `immutable` a todo `assets/`: los modelos, logos y sonidos mantienen nombres estables.
+- `index.html`, `curtain.css`, `licenses.txt` and assets with stable names: `Cache-Control: no-cache` (allows storing and revalidating).
+- Generated bundles `assets/index-<hash>.js`, `assets/index-<hash>.css`, `assets/three-<hash>.js`: `Cache-Control: public, max-age=31536000, immutable`.
+- Do not apply `immutable` to all of `assets/`: models, logos and sounds keep stable names.
 
-Conservar `licenses.txt` y avisos de fuentes: son accesibles desde créditos. No es necesario añadir service workers ni configuración de Cloudflare.
+Keep `licenses.txt` and the font notices: they are reachable from the credits. No service workers or Cloudflare configuration need to be added.
 
-## Progreso e invitaciones
+## Progress and invitations
 
-Las invitaciones generadas por este paquete apuntan a `https://humanfriendly.global/islanddao/?join=…`. Conservar los parámetros al redirigir.
+Invitations generated by this package point to `https://humanfriendly.global/islanddao/?join=…`. Keep the parameters when redirecting.
 
-El progreso, saldo SHOP, preferencias e identidad del navegador se guardan por origen. Los guardados del dominio anterior **no se trasladan automáticamente** a `humanfriendly.global`; allí se iniciará una identidad local nueva. Los históricos de la API se conservan, pero no se añade recuperación/migración de cuentas en esta entrega. Tampoco se comparten guardados entre navegadores o dispositivos.
+Progress, SHOP balance, preferences and browser identity are stored per origin. Saves from the previous domain **are not carried over automatically** to `humanfriendly.global`; a new local identity will start there. API history is preserved, but this delivery does not add account recovery/migration. Saves are not shared between browsers or devices either.
 
-## Comprobación del administrador
+## Administrator check
 
-Abrir la URL en móvil y desktop, completar la carga, abrir tutorial y SHOP, jugar y reintentar. Comprobar en la consola/red que no hay 404 ni recursos solicitados accidentalmente a `/assets/` en la raíz. Probar música mediante un toque del usuario, ya que el autoplay sin interacción está bloqueado por los navegadores. Probar también una invitación y recargarla.
+Open the URL on mobile and desktop, let it finish loading, open the tutorial and SHOP, play and retry. Check in the console/network tab that there are no 404s and no assets accidentally requested from `/assets/` at the root. Test music with a user tap, since browsers block autoplay without interaction. Also test an invitation and reload it.
 
-La entrega se valida localmente extrayendo el ZIP y sirviéndolo bajo `/islanddao/`, con API simulada para no contactar producción. Esa prueba no certifica la configuración del hosting real, su CSP/CORS ni rendimiento en teléfonos físicos. El informe de la entrega, tamaño y SHA-256 se entregan por separado, fuera de la carpeta pública.
+The delivery is validated locally by extracting the ZIP and serving it under `/islanddao/`, with a mocked API so production is not contacted. That test does not certify the real hosting configuration, its CSP/CORS or performance on physical phones. The delivery report, size and SHA-256 are provided separately, outside the public folder.
 
-## Regenerar desde el proyecto de desarrollo
+## Regenerating from the development project
 
-Sólo el desarrollador necesita Node 24 y las dependencias fijadas del proyecto. En la carpeta `runway`, ejecutar `npm run package:hosting`.
+Only the developer needs Node 24 and the project's pinned dependencies. In the `runway` folder, run `npm run package:hosting`.
 
-El comando verifica tipos, compila con base `/islanddao/` en un directorio temporal, genera y audita el ZIP y muestra tamaño y SHA-256. No publica ni accede a la API. El resultado se escribe en `../entregas/RUNWAY-ISLANDDAO-PRODUCTION.zip`. Requiere Python 3 local para el ZIP, sin instalar nuevas dependencias. El administrador recibe los archivos ya compilados.
+The command type-checks, builds with base `/islanddao/` into a temporary directory, generates and audits the ZIP and prints its size and SHA-256. It does not publish or contact the API. The output is written to `../entregas/RUNWAY-ISLANDDAO-PRODUCTION.zip`. It requires a local Python 3 for the ZIP, without installing new dependencies. The administrator receives the already compiled files.

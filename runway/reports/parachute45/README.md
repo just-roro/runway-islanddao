@@ -1,67 +1,67 @@
-# RUNWAY — Tanda 3/6: Parachute Experience & Environment
+# RUNWAY — Batch 3/6: Parachute Experience & Environment
 
-Fecha: 2026-10-22. Implementación local, sin publicación. No se avanzó a otra tanda.
+Date: 2026-10-22. Local implementation, not published. No other batch was started.
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-- **Tormenta y salida:** la niebla gris aumenta en la aproximación y permanece densa hasta el borde inferior de la capa. Se añadieron 48 lóbulos de nube en coordenadas del mundo, reutilizando el instancing existente. El cielo, la luz de relleno, la luz solar, el fog y el postproceso consumen la misma envolvente atmosférica. La isla permanece montada durante el vuelo y se revela por la atmósfera, sin encender su grupo a mitad del descenso.
-- **Apertura sincronizada:** la capa termina 0,2 s antes del inicio de la apertura existente de un segundo. Adaptación de exposición, bloom y sonido existente de revelación siguen ese hito. No se alteraron controles, animación del canopy, duración de apertura ni sustentación de las corrientes.
-- **Corrientes:** 36 cintas ascendentes con punta direccional, repartidas entre las dos columnas; límites circulares en la base, medio y parte superior del volumen físico real. Visibles desde la salida de las nubes. Dos draws instanciados, sin objetos ni texturas por partícula. Pausa y movimiento reducido respetados.
-- **Estrellas en planeo:** dos alternativas, una a la salida de cada corriente. Radio visual y de apertura compartido (3,2). Se reutilizan la detección continua, posición fija tras el contacto, flash amarillo y giro de Tanda 1. Cada estrella concede una sola vez el bonus existente. El impulso de 1,2 s aumenta hasta 25% la velocidad horizontal; no aumenta la velocidad de descenso ni el presupuesto de sustentación.
-- **Aves y arcoíris:** dos grupos de tres aves se incorporan progresivamente a ambos lados del piloto, con menor escala, aleteo y orientación según el movimiento. Arcoíris lejano fijo en el mundo, con bordes suaves y atenuación atmosférica; una malla de 160 triángulos, sin textura adicional.
-- **LOD:** las rocas ya no dependen de un corte a 240 unidades ni de pertenecer a las 48 más cercanas. Siluetas de ocho triángulos a distancia, detalle cercano y transición por cobertura, culling por frustum y desaparición completa entre 480–620 unidades. Los árboles también transicionan por cobertura, sin cambio brusco del grupo de los 16 más cercanos. Se conservan costa, posiciones de decoración, plataformas y colliders.
+- **Storm and exit:** the grey fog increases on approach and stays dense down to the bottom edge of the layer. 48 cloud lobes were added in world coordinates, reusing the existing instancing. Sky, fill light, sunlight, fog and post-processing all use the same atmospheric envelope. The island stays mounted during the flight and is revealed through the atmosphere, without switching its group on midway through the descent.
+- **Synchronized opening:** the layer ends 0.2 s before the start of the existing one-second opening. Exposure adaptation, bloom and the existing reveal sound follow that milestone. Controls, canopy animation, opening duration and current lift were not altered.
+- **Currents:** 36 rising ribbons with a directional tip, split between the two columns; circular boundaries at the base, middle and top of the real physical volume. Visible from the moment you exit the clouds. Two instanced draws, with no per-particle objects or textures. Pause and reduced motion are respected.
+- **Stars while gliding:** two alternatives, one at the exit of each current. Shared visual and opening radius (3.2). Reuses Batch 1's continuous detection, fixed position after contact, yellow flash and spin. Each star grants the existing bonus only once. The 1.2 s boost increases horizontal speed by up to 25%; it does not increase descent speed or the lift budget.
+- **Birds and rainbow:** two groups of three birds progressively join on both sides of the pilot, at a smaller scale, with flapping and orientation following their motion. A distant rainbow fixed in the world, with soft edges and atmospheric attenuation; a single 160-triangle mesh, with no additional texture.
+- **LOD:** rocks no longer depend on a cut at 240 units or on being among the 48 closest. Eight-triangle silhouettes at distance, close-up detail and coverage-based transition, frustum culling and full disappearance between 480–620 units. Trees also transition by coverage, with no abrupt change of the 16-closest group. Coast, decoration positions, platforms and colliders are preserved.
 
-## Causas corregidas
+## Causes fixed
 
-1. La capa comenzaba a despejarse muchos segundos antes de abrir el canopy y terminaba después de empezar la apertura. Ahora hay un hito único de salida anterior al despliegue.
-2. Las corrientes se habilitaban después de abrir el canopy y sus trazos eran demasiado finos. Se muestran durante la revelación y tienen dirección y límites reconocibles.
-3. El impulso genérico sólo aceleraba el reloj de caída: aplicado sin adaptación al planeo habría aumentado el hundimiento. En planeo afecta velocidad horizontal; las corrientes conservan su tasa y límite anteriores.
-4. Las rocas se eliminaban antes de alcanzar la distancia de desvanecimiento del material. El culling ahora ocurre después de cobertura cero.
-5. Durante la verificación apareció una discrepancia entre los uniforms de configuración y los del material realmente montado: la visibilidad renderizada permanecía en cero. Cintas, arcoíris y cielo actualizan ahora el material efectivo; el test comprueba esos valores y se revisaron las imágenes resultantes.
+1. The layer started clearing many seconds before the canopy opened and ended after the opening started. Now there is a single exit milestone before deployment.
+2. The currents were enabled after the canopy opened and their strokes were too thin. They now show during the reveal and have a recognizable direction and boundaries.
+3. The generic boost only sped up the fall clock: applied to gliding without adaptation it would have increased sinking. While gliding it affects horizontal speed; the currents keep their previous rate and limit.
+4. Rocks were removed before reaching the material's fade distance. Culling now happens after coverage reaches zero.
+5. During verification, a mismatch appeared between the configuration uniforms and those of the material actually mounted: the rendered visibility stayed at zero. Ribbons, rainbow and sky now update the effective material; the test checks those values and the resulting images were reviewed.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- Build TypeScript/Vite de producción correcto. Sigue el aviso conocido del tamaño del bundle de Three; no se añadieron dependencias.
-- 27 pruebas focalizadas de atmósfera, estrellas, simulación, sincronización sonora, geografía y reloj; más dos pruebas de vegetación. La prueba antigua de hábitat esperaba 96 árboles, pero el generador existente ya producía 112; se corrigió esa expectativa y ambas pruebas pasaron. No se cambió la densidad de árboles.
-- Comparación SHA-256 de **1.000 semillas**: quitando únicamente las dos nuevas estrellas, todos los objetos generados coinciden exactamente con la base. Incluye IDs, orden, economía, obstáculos y secuencias.
-- **200 vuelos automatizados**, 50 semillas por combinación de lado/corrientes: 100/100 con corrientes alcanzaron Jurerê y recogieron la estrella correspondiente; 0/100 sin corrientes alcanzaron Jurerê (aterrizaron en Terrace). Son controladores automatizados, no pruebas humanas.
-- Impulso, recolección única, barridos continuos, ausencia de atracción de estrellas y mayor alcance sin hundimiento añadido comprobados por pruebas ejecutables.
-- **Cuatro pruebas finales de navegador**: vuelo real completo + inspección de escenario, en Chromium y WebKit. Capturas y vídeo desde avión, tormenta, revelación, apertura, corrientes, activación de estrella y aterrizaje. Replay reproducible, una sola concesión de la nueva estrella, pausa estable, sin errores de shader o JavaScript en el recorrido final.
-- Dos pruebas adicionales en ambos navegadores: cobertura del horizonte, pausa y movimiento reducido.
-- Formatos: Pixel 7 emulado, iPhone 13 emulado, 1440×900 y 844×390. En una pasada previa también se revisaron 320×568 y las tres zonas de aterrizaje. El cambio artificial de viewport produjo un aviso de ResizeObserver en WebKit; se conservó el registro y se separó de los errores gráficos, sin modificar la UI en esta tanda.
-- Núcleo de frontend y copia local de API idénticos. `CONTENT = island-glide-13`; reglas competitivas y PB conservados. No se contactó la API de producción durante las pruebas de navegador.
+- Production TypeScript/Vite build OK. The known warning about the Three bundle size remains; no dependencies were added.
+- 27 focused tests of atmosphere, stars, simulation, sound sync, geography and clock; plus two vegetation tests. The old habitat test expected 96 trees, but the existing generator already produced 112; that expectation was corrected and both tests passed. Tree density was not changed.
+- SHA-256 comparison over **1,000 seeds**: removing only the two new stars, every generated object matches the baseline exactly. Includes IDs, order, economy, obstacles and sequences.
+- **200 automated flights**, 50 seeds per side/current combination: 100/100 with currents reached Jurerê and collected the corresponding star; 0/100 without currents reached Jurerê (they landed at Terrace). These are automated controllers, not human tests.
+- Boost, single collection, continuous sweeps, no star attraction and greater reach without added sinking checked by executable tests.
+- **Four final browser tests**: full real flight + scenery inspection, in Chromium and WebKit. Screenshots and video from the plane, storm, reveal, opening, currents, star activation and landing. Reproducible replay, a single grant of the new star, stable pause, no shader or JavaScript errors in the final run.
+- Two additional tests in both browsers: horizon coverage, pause and reduced motion.
+- Formats: emulated Pixel 7, emulated iPhone 13, 1440×900 and 844×390. A previous pass also reviewed 320×568 and the three landing zones. The artificial viewport change produced a ResizeObserver warning in WebKit; the log was kept and separated from graphics errors, without modifying the UI in this batch.
+- Frontend core and local API copy identical. `CONTENT = island-glide-13`; competitive rules and PB preserved. The production API was not contacted during the browser tests.
 
-## Rendimiento observado
+## Observed performance
 
-Incluye escena, sombras y postproceso. Intervalos de RAF durante ruta 19–50; medidos en el equipo anfitrión con viewports emulados, **no en dispositivos físicos**.
+Includes scene, shadows and post-processing. RAF intervals during route 19–50; measured on the host machine with emulated viewports, **not on physical devices**.
 
-| Medida | Base Chromium | Final Chromium | Final WebKit |
+| Measurement | Chromium baseline | Chromium final | WebKit final |
 |---|---:|---:|---:|
-| Mediana frame | 8,3 ms | 8,4 ms | 33 ms |
-| P95 frame | 8,9 ms | 10 ms | 38 ms |
-| Draw calls máximos | 60 | 61 | 61 |
-| Triángulos máximos | 88.015 | 89.071 | 88.985 |
+| Median frame | 8.3 ms | 8.4 ms | 33 ms |
+| P95 frame | 8.9 ms | 10 ms | 38 ms |
+| Max draw calls | 60 | 61 | 61 |
+| Max triangles | 88,015 | 89,071 | 88,985 |
 
-Objetos GPU observados al final: hasta 79 geometrías y 24 texturas. Son recuentos de Three, no una medición en MB de memoria GPU. No se capturó una base WebKit de rendimiento en esta intervención. Las capturas generan algunas pausas aisladas de unos 300 ms; se conservan en la telemetría, no se interpretan como saltos de la trayectoria de cámara.
+GPU objects observed at the end: up to 79 geometries and 24 textures. These are Three counts, not a measurement of GPU memory in MB. No WebKit performance baseline was captured in this intervention. Screenshots cause a few isolated pauses of about 300 ms; they are kept in the telemetry and are not interpreted as jumps in the camera trajectory.
 
-## Evidencia
+## Evidence
 
-- [Métricas consolidadas](verification.json), [simulaciones de rutas](routes.json), [huellas del curso anterior](course-before.json).
-- [Tormenta anterior](captures/before-inside-clouds.png) / [tormenta actual](captures/final-inside-clouds.png).
-- [Antes de abrir](captures/final-clearing-before-canopy.png), [apertura](captures/final-canopy-opening.png), [isla, corrientes, aves y arcoíris](captures/final-sunlit-island-reveal.png).
-- [Estrella activada](captures/final-glide-star-activated.png), [vista desktop](captures/final-glide-1440.png), [costa lejana](captures/final-coast-400.png), [LOD cercano](captures/final-coast-65.png).
-- Vídeos, trazas y telemetría completa locales en `final/`; tomas originales en `before/`. No se incluyen esos archivos pesados en Git.
+- [Consolidated metrics](verification.json), [route simulations](routes.json), [fingerprints of the previous course](course-before.json).
+- [Previous storm](captures/before-inside-clouds.png) / [current storm](captures/final-inside-clouds.png).
+- [Before opening](captures/final-clearing-before-canopy.png), [opening](captures/final-canopy-opening.png), [island, currents, birds and rainbow](captures/final-sunlit-island-reveal.png).
+- [Activated star](captures/final-glide-star-activated.png), [desktop view](captures/final-glide-1440.png), [distant coast](captures/final-coast-400.png), [close LOD](captures/final-coast-65.png).
+- Videos, traces and full telemetry kept locally in `final/`; original shots in `before/`. Those heavy files are not included in Git.
 
-## PARCIAL / PENDIENTE
+## PARTIAL / PENDING
 
-- Pendiente validar controles táctiles/sensores y rendimiento sostenido en iPhone y Android físicos. La emulación no sustituye esa validación.
-- La revisión visual realizada cubre las capturas de cada hito y la telemetría de continuidad; el recorrido quedó grabado. No se realizó una sesión de testers humanos.
-- No publicado: antes de una publicación futura deben salir juntos frontend y API compatibles, porque hay nuevas estrellas y una adaptación del boost en el núcleo compartido.
-- ZIP de producción intacto: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
+- Pending validation of touch controls/sensors and sustained performance on physical iPhone and Android. Emulation does not replace that validation.
+- The visual review covers the screenshots of each milestone and the continuity telemetry; the run was recorded. No session with human testers was held.
+- Not published: before a future release, compatible frontend and API must ship together, because there are new stars and a boost adaptation in the shared core.
+- Production ZIP intact: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
 
-## Repetición local
+## Local rerun
 
-Desde `runway/`, con Node 24:
+From `runway/`, with Node 24:
 
 ```sh
 npm run build
@@ -69,4 +69,4 @@ npm test -- tests/parachute45.test.mjs tests/sky38.test.ts tests/stars43.test.ts
 RUNWAY_BASE_URL=http://127.0.0.1:5181 npx playwright test tests/browser/parachute45.spec.mjs --workers 1
 ```
 
-El test de semillas utiliza `course-before.json`; no regenerarlo desde la versión nueva.
+The seed test uses `course-before.json`; do not regenerate it from the new version.

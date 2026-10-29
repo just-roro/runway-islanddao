@@ -1,54 +1,54 @@
-# Production Leaderboards — reparación de API
+# Production Leaderboards — API repair
 
-## Causas comprobadas
+## Confirmed causes
 
-Los rankings ya son compartidos: D1 almacena players, tickets, runs, startups y memberships; CEO usa el máximo score verificado por jugador y STARTUP suma los máximos de sus miembros. localStorage conserva identidad, preferencias y cola de envío, no el ranking global.
+Rankings are already shared: D1 stores players, tickets, runs, startups and memberships; CEO uses each player's highest verified score and STARTUP adds up its members' highest scores. localStorage keeps identity, preferences and the submission queue, not the global ranking.
 
-1. CORS sólo autorizaba Sites y localhost; humanfriendly.global recibía 403.
-2. Pages conserva island-routes-10 y exige un ticket de esa versión. La API sólo emitía island-glide-13; el cliente descartaba el ticket y jugaba en modo no competitivo. Reparar CORS únicamente no bastaba.
-3. Dos envíos concurrentes se guardaban una sola vez por PK, pero ambos podían informar duplicate=false. Ahora el resultado de la inserción decide esa respuesta.
+1. CORS only allowed Sites and localhost; humanfriendly.global received 403.
+2. Pages keeps island-routes-10 and requires a ticket for that version. The API only issued island-glide-13; the client discarded the ticket and played in non-competitive mode. Fixing CORS alone was not enough.
+3. Two concurrent submissions were stored only once thanks to the PK, but both could report duplicate=false. Now the result of the insert decides that response.
 
-## Solución
+## Solution
 
-Allowlist exacta para humanfriendly.global, el Pages estable y los orígenes anteriores. No wildcard de Pages.
+Exact allowlist for humanfriendly.global, the stable Pages origin and the previous origins. No Pages wildcard.
 
-Replay antiguo congelado desde el source original, comprobado contra 100 semillas ejecutadas en el bundle realmente publicado (resultado y todos los eventos económicos idénticos). Tickets sin negociación desde los orígenes de Pages reciben esa versión; Sites conserva la actual. Clientes nuevos pueden declarar rules/content. El ticket fija la versión del replay; no se confía en score enviado por el cliente. Las versiones desconocidas se rechazan. No hay downgrade silencioso de un ticket existente.
+The old replay is frozen from the original source and checked against 100 seeds run on the bundle that was actually published (result and all economic events identical). Tickets without negotiation from the Pages origins get that version; Sites keeps the current one. New clients can declare rules/content. The ticket pins the replay version; the score sent by the client is not trusted. Unknown versions are rejected. There is no silent downgrade of an existing ticket.
 
-El cliente local declara su versión explícitamente; ese único cambio queda preparado para la publicación futura del frontend, sin desplegar el juego ahora.
+The local client declares its version explicitly; that single change is ready for the future frontend release, without deploying the game now.
 
-Se conservan binding DB, schema, históricos, reglas competitivas, validación de inputs, duración mínima, expiración, autenticación y restricciones de membresía. No se crean recursos ni migraciones.
+The DB binding, schema, history, competitive rules, input validation, minimum duration, expiry, authentication and membership restrictions are all preserved. No resources or migrations are created.
 
-## Pruebas reproducibles
+## Reproducible tests
 
-Desde services/runway-api con Node 24:
+From services/runway-api with Node 24:
 
 ```sh
 node --test tests/production-leaderboards/api.test.mjs tests/dao41/rankings.test.mjs tests/startup48/join.test.mjs
 TEST_API=http://127.0.0.1:8791/api node tests/api.integration.mjs
 ```
 
-La segunda prueba requiere el Worker compilado y una D1 local de prueba con las dos migraciones existentes. No apuntarla a producción: crea cinco identidades y una startup y juega una partida con premio.
+The second test requires the built Worker and a local test D1 with the two existing migrations. Do not point it at production: it creates five identities and a startup and plays a run with a reward.
 
-`runway/scripts/qa-production-rankings.mjs` compara el bundle guardado de Pages servido localmente en 5186 con el replay recuperado; bloquea todas las llamadas a la API real.
+`runway/scripts/qa-production-rankings.mjs` compares the saved Pages bundle, served locally on 5186, with the recovered replay; it blocks every call to the real API.
 
-Evidencia estructurada: validation.json. El test SQL cierra y reabre una base en disco, y una identidad independiente consulta CEO, STARTUP y contribuciones. El test Worker usa D1 real de Miniflare, no una API simulada.
+Structured evidence: validation.json. The SQL test closes and reopens an on-disk database, and an independent identity queries CEO, STARTUP and contributions. The Worker test uses Miniflare's real D1, not a mocked API.
 
-## Límites que se conservan
+## Limits that remain
 
-Pausar u ocultar la pestaña vuelve no competitiva la partida por diseño existente; no se cambió esa regla. Los resultados offline sin ticket no pueden validarse retroactivamente. Las identidades guest son locales a cada navegador/origen: el ranking es global y persistente entre dispositivos, pero recuperar la MISMA identidad en otro dispositivo requiere un sistema de acceso que esta fase no añade. No unir cuentas por nombre.
+Pausing or hiding the tab makes the run non-competitive by existing design; that rule was not changed. Offline results without a ticket cannot be validated retroactively. Guest identities are local to each browser/origin: the ranking is global and persistent across devices, but recovering the SAME identity on another device requires a sign-in system that this phase does not add. Do not merge accounts by name.
 
-## Publicación y rollback
+## Release and rollback
 
-Sólo la API Sites existente appgprj_6acfed30efd88191aef688e5a181c299. Frontend Pages y router intactos. Rollback: volver a la versión API 23 registrada en entregas/release-safety-2026-10-22/sites-publication.json. No modifica D1. Se conservará aquí el ID de la nueva publicación y las verificaciones reales del endpoint.
+Only the existing Sites API appgprj_6acfed30efd88191aef688e5a181c299. Pages frontend and router untouched. Rollback: return to API version 23 recorded in entregas/release-safety-2026-10-22/sites-publication.json. It does not modify D1. The ID of the new release and the real endpoint checks are kept here.
 
-## Resultado publicado verificado
+## Verified published result
 
-API versión **24**, commit `faf59e166f23e940cc9a38aa1d17dbe544e324ad`, deployment `appgdep_6adaadedd6508191b244dd61ae7a8010`, publicado 2026-10-23 00:44:49 UTC. Endpoint https://runway-api.agenciahumanfriendly.chatgpt.site/api . IDs y archivo de publicación en publication.json.
+API version **24**, commit `faf59e166f23e940cc9a38aa1d17dbe544e324ad`, deployment `appgdep_6adaadedd6508191b244dd61ae7a8010`, published 2026-10-23 00:44:49 UTC. Endpoint https://runway-api.agenciahumanfriendly.chatgpt.site/api . IDs and the release file are in publication.json.
 
-Prueba real en Chromium y WebKit con origen https://humanfriendly.global: CORS/preflight, alta de identidades, creación y unión idempotente a startup, ticket legacy por defecto, ticket actual explícito, replay antiguo, dos envíos concurrentes con una sola fila, lectura desde otra identidad/contexto, recarga de ambas sesiones, detalle individual con runs=1 y consulta de membresía.
+Real test in Chromium and WebKit with origin https://humanfriendly.global: CORS/preflight, identity creation, idempotent startup creation and joining, default legacy ticket, explicit current ticket, old replay, two concurrent submissions resulting in a single row, reading from another identity/context, reloading both sessions, individual detail with runs=1 and membership lookup.
 
-Se conservan deliberadamente dos identidades identificadas como QA y la startup RUNWAY QA 387683 para auditar la prueba. Sólo se guardó una derrota real con score 0; no se otorgó una puntuación artificial ni se desplazó a líderes. Los cinco registros CEO y tres startups previos conservan IDs, nombres y scores. No se eliminaron registros de producción. La prueba no simula un dispositivo físico ni demuestra recuperación de una misma cuenta guest entre teléfonos.
+Two identities labeled as QA and one QA startup were deliberately kept to audit the test. Only one real loss with score 0 was stored; no artificial score was awarded and no leaders were displaced. The five previous CEO records and three startups keep their IDs, names and scores. No production records were deleted. The test does not simulate a physical device or demonstrate recovering the same guest account across phones.
 
-No hubo cambios en schema/migraciones ni en el hosting de frontend/router. El ZIP de entrega anterior se mantiene intacto. El cliente local tiene preparada negociación explícita de versión para cuando se publique el resto del juego.
+There were no changes to the schema/migrations or to the frontend/router hosting. The previous delivery ZIP remains intact. The local client has explicit version negotiation ready for when the rest of the game is published.
 
-Comprobación de tipos: módulos backend modificados y módulo cliente de sesión pasaron; los chequeos globales quedaron bloqueados por declaraciones de dependencias descargadas de iCloud (zod/three), se detuvieron. Build backend y pruebas de ejecución sí completaron.
+Type checking: the modified backend modules and the client session module passed; the global checks were blocked by dependency declarations offloaded to iCloud (zod/three) and were stopped. The backend build and runtime tests did complete.

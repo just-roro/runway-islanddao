@@ -1,145 +1,145 @@
-# RUNWAY — Tanda 7/7 · Cosméticos, desbloqueos y economía
+# RUNWAY — Batch 7/7 · Cosmetics, unlocks and economy
 
-Entrega local · 22 de octubre de 2026. No se publicó el frontend ni la API. No se regeneró el ZIP de producción.
+Local delivery · October 22, 2026. Neither the frontend nor the API was published. The production ZIP was not regenerated.
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-### Catálogo y arte
+### Catalog and art
 
-- **94 accesorios originales** extraídos de la copia local `IslandDAO Assets.fig`: 12 básicos, 58 intermedios, 24 premium. Ninguna imagen faltante ni sustitución inventada.
-- Son capas del retrato LED compatibles con su piloto de origen. No añaden mallas, huesos ni colliders. El inventario conserva nombres originales, incluso sus erratas.
-- Composición base + accesorio en el lienzo original de 880 × 880. Un encuadre común por piloto contempla todos sus sombreros/halos; exportación a 256 × 256 con filtrado nearest. Dos ranuras de textura por actor permiten el cambio suave sin conservar las 94 composiciones en GPU.
-- Cada piloto recuerda un accesorio o ninguno. Los mensajes y expresiones tienen prioridad sobre el retrato.
-- **8 paracaídas nuevos**: Azure, Pearl, Tropical Split, Sunset Duo, Racing Checker, Ocean Waves, Constellation, Aurora. UV y patrones en el material existente; vértices, cuerdas, apertura y desprendimiento conservados.
-- **6 trails nuevos**: Sky, Coral, Golden Stars, Bubbles, Cloud Mist, Comet. Un sistema instanciado activo, máximo 192 partículas y 96 para humo. Forma, tamaño, duración y movimiento diferenciados; emisión por velocidad.
-- **8 bordes LED nuevos**: Lagoon, Solar, Violet, Sunset, Duo Tone, Pixel Chase, Aurora, Gold Circuit. Parámetros del shader actual, sólo franjas superior/inferior. Original continúa gratis.
-- Catálogo final: **137 productos** (12 pilotos, 94 accesorios, 12 paracaídas, 10 trails, 9 bordes LED). Los productos anteriores conservan precios y propiedad.
+- **94 original accessories** extracted from the local copy of `IslandDAO Assets.fig`: 12 basic, 58 intermediate, 24 premium. No missing images and no invented substitutes.
+- They are layers of the LED portrait, compatible with their original pilot. They add no meshes, bones or colliders. The inventory keeps the original names, typos included.
+- Base + accessory composition on the original 880 × 880 canvas. A shared framing per pilot accommodates all of their hats/halos; exported at 256 × 256 with nearest filtering. Two texture slots per actor allow smooth switching without keeping the 94 compositions on the GPU.
+- Each pilot remembers one accessory or none. Messages and expressions take priority over the portrait.
+- **8 new parachutes**: Azure, Pearl, Tropical Split, Sunset Duo, Racing Checker, Ocean Waves, Constellation, Aurora. UVs and patterns on the existing material; vertices, lines, opening and release preserved.
+- **6 new trails**: Sky, Coral, Golden Stars, Bubbles, Cloud Mist, Comet. One active instanced system, up to 192 particles and 96 for smoke. Distinct shape, size, lifetime and motion; speed-based emission.
+- **8 new LED borders**: Lagoon, Solar, Violet, Sunset, Duo Tone, Pixel Chase, Aurora, Gold Circuit. Parameters of the current shader, top/bottom stripes only. Original remains free.
+- Final catalog: **137 products** (12 pilots, 94 accessories, 12 parachutes, 10 trails, 9 LED borders). Earlier products keep their prices and ownership.
 
 ### SHOP
 
-- PILOTS / ACCESSORIES / PARACHUTES / TRAILS / HELMET, con miniaturas de los assets y capturas del render real.
-- Filtro de accesorios por piloto, vista previa de pilotos bloqueados y compra condicionada a poseer el piloto compatible.
-- Compra y equipamiento en una acción; drops sólo desbloquean. Opción de quitar accesorio.
-- Botones, navegación y composición mantienen dimensiones estables al cambiar estado; comprobados en 360 × 640, 390 × 844, 844 × 390 y 1440 × 900.
-- Recogida provisional muestra el nombre y `LAND TO KEEP`; resultados ofrecen acceso al producto adquirido.
+- PILOTS / ACCESSORIES / PARACHUTES / TRAILS / HELMET, with asset thumbnails and screenshots of the real render.
+- Accessory filter by pilot, preview of locked pilots and purchase conditional on owning the compatible pilot.
+- Purchase and equip in one action; drops only unlock. Option to remove an accessory.
+- Buttons, navigation and layout keep stable dimensions when state changes; checked at 360 × 640, 390 × 844, 844 × 390 and 1440 × 900.
+- A provisional pickup shows the name and `LAND TO KEEP`; the results screen links to the acquired product.
 
-### Economía y persistencia
+### Economy and persistence
 
-| Nivel nuevo | Precio |
+| New tier | Price |
 |---|---:|
-| Básico | 1.000.000 SOL |
-| Intermedio | 5.000.000 SOL |
-| Premium | 15.000.000 SOL |
+| Basic | 1,000,000 SOL |
+| Intermediate | 5,000,000 SOL |
+| Premium | 15,000,000 SOL |
 
-- `ShopAccount` v2 migra saldo, ingresos, recibos, compras y selecciones v1. Conserva cosméticos y objetivos históricos; no reconstruye dinero a partir del PB.
-- Rare Cargo tiene **4% total** por partida elegible, configurable entre 2% y 5%, máximo uno. Elegibilidad: accesorio no adquirido para un piloto ya poseído.
-- Selección reproducible con semilla independiente; peso por accesorio básico 4, intermedio 2, premium 1. Estos pesos no suman probabilidades de aparición.
-- Intento con ID persistido, selección fija —también cuando es vacía— y estados `active`, `abandoned`, `settled`. Recoger es provisional; aterrizar desbloquea; equipar es una acción posterior.
-- Derrota, abandono y reinicio no conceden el accesorio. Eliminada la concesión antigua que guardaba raros aun después de perder.
-- Capital, objetivos y accesorio se liquidan en una única escritura local idempotente. Compras y liquidación leen el último perfil y usan Web Locks entre pestañas. Fallo de almacenamiento no confirma compra ni recompensa.
-- Si otra pestaña compra el mismo accesorio, no se duplica, compensa con dinero ni sortea otro.
-- Almacenamiento local, sin protección contra edición manual del guardado. No se añadió otro saldo, endpoint o tabla.
+- `ShopAccount` v2 migrates v1 balance, earnings, receipts, purchases and selections. Keeps cosmetics and historical goals; does not rebuild money from the PB.
+- Rare Cargo has a **4% total** chance per eligible run, configurable between 2% and 5%, at most one. Eligibility: an accessory not yet acquired for a pilot already owned.
+- Reproducible selection with an independent seed; weight per accessory: basic 4, intermediate 2, premium 1. These weights are not summed appearance probabilities.
+- Attempt with a persisted ID, fixed selection (also when empty) and `active`, `abandoned`, `settled` states. Picking up is provisional; landing unlocks; equipping is a later action.
+- Defeat, abandoning and restarting do not grant the accessory. Removed the old grant that kept rares even after losing.
+- Capital, goals and accessory are settled in a single idempotent local write. Purchases and settlement read the latest profile and use Web Locks across tabs. A storage failure confirms neither purchase nor reward.
+- If another tab buys the same accessory, it is not duplicated, compensated with money or re-rolled.
+- Local storage, with no protection against manual editing of the save. No additional balance, endpoint or table was added.
 
-### Compatibilidad y correcciones necesarias
+### Compatibility and required fixes
 
-- Reglas competitivas `runway-3.2.0-chains` conservadas; contenido `island-cosmetics-11` actualizado también en la **copia local** del núcleo de API. PB e históricos no se reinician.
-- Comparación SHA-256 de objetos no raros en 1.000 semillas contra la base anterior: idénticos IDs, posiciones, valores y rutas. El contacto Rare Cargo continúa con valor económico cero.
-- Todas las nuevas rutas públicas usan `BASE_URL` para `/` y `/islanddao/`.
-- Durante QA se corrigió la actualización del uniform efectivo del trail: la previsualización podía cambiar de producto manteniendo la forma anterior.
-- Se corrigió la liberación de las texturas de huesos de los actores retirados del carrusel. La limpieza anterior liberaba materiales, pero conservaba esas texturas. No se modificaron poses ni rig.
+- Competitive rules `runway-3.2.0-chains` preserved; content `island-cosmetics-11` also updated in the **local copy** of the API core. PB and history are not reset.
+- SHA-256 comparison of non-rare objects over 1,000 seeds against the previous baseline: identical IDs, positions, values and routes. Rare Cargo contact still has zero economic value.
+- All new public paths use `BASE_URL` for `/` and `/islanddao/`.
+- During QA, the update of the trail's effective uniform was fixed: the preview could switch product while keeping the previous shape.
+- Fixed the release of bone textures of actors removed from the carousel. The previous cleanup released materials but kept those textures. Poses and rig were not modified.
 
-## Simulaciones reproducibles
+## Reproducible simulations
 
-Son controladores automatizados; **no son pruebas de jugadores humanos**.
+These are automated controllers; **they are not tests with human players**.
 
-### Aparición y selección: 100.000 semillas por configuración
+### Appearance and selection: 100,000 seeds per configuration
 
-| Configuración | Apariciones | Tasa medida | Básicos / intermedios / premium | Máximo por intento |
+| Configuration | Appearances | Measured rate | Basic / intermediate / premium | Max per attempt |
 |---|---:|---:|---|---:|
-| 2% | 2.005 | 2,005% | 500 / 1.235 / 270 | 1 |
-| 4% | 3.944 | 3,944% | 992 / 2.426 / 526 | 1 |
-| 5% | 4.920 | 4,920% | 1.226 / 3.044 / 650 | 1 |
+| 2% | 2,005 | 2.005% | 500 / 1,235 / 270 | 1 |
+| 4% | 3,944 | 3.944% | 992 / 2,426 / 526 | 1 |
+| 5% | 4,920 | 4.920% | 1,226 / 3,044 / 650 | 1 |
 
-Distribución calculada con los doce pilotos poseídos y los 94 accesorios sin comprar. Los pesos se renormalizan según inventario; un inventario compatible completo no genera recompensa.
+Distribution computed with all twelve pilots owned and the 94 accessories not purchased. Weights are renormalized according to inventory; a complete compatible inventory generates no reward.
 
-### Adquisición efectiva, separada de aparición
+### Effective acquisition, separate from appearance
 
-300 intentos **condicionados a que apareció** Rare Cargo, con controlador que intenta recogerlo: 137 contactos y 137 accesorios conservados tras aterrizar (45,7% de esos intentos). Esta tasa no equivale a la probabilidad de drop por partida y no constituye una estimación humana.
+300 attempts **conditional on Rare Cargo appearing**, with a controller that tries to pick it up: 137 contacts and 137 accessories kept after landing (45.7% of those attempts). This rate is not the drop probability per run and is not a human estimate.
 
-### Ahorro: 10.000 progresiones sobre 900 runs observados
+### Saving: 10,000 progressions over 900 observed runs
 
-Tres rutas × tres demoras de control × 100 semillas. Se muestrean ingresos efectivos, incluidas derrotas con cero, sin gastar antes del precio objetivo.
+Three routes × three control delays × 100 seeds. Effective earnings are sampled, including defeats with zero, without spending before the target price.
 
-| Actualización del controlador | Básico: victorias medianas | Intermedio | Premium | Premium: intentos P10–P90 |
+| Controller update | Basic: median wins | Intermediate | Premium | Premium: attempts P10–P90 |
 |---|---:|---:|---:|---|
-| Cada 2 ticks | 1 | 4 | 11 | 10–12 |
-| Cada 8 ticks | 2 | 7 | 19 | 17–21 |
-| Cada 16 ticks | 3 | 14 | 39 | 36–43 |
+| Every 2 ticks | 1 | 4 | 11 | 10–12 |
+| Every 8 ticks | 2 | 7 | 19 | 17–21 |
+| Every 16 ticks | 3 | 14 | 39 | 36–43 |
 
-El último grupo necesita una mediana de 40 intentos para 39 victorias. Se mantienen los precios acordados; la diferencia por precisión requiere contraste humano futuro, no un ajuste de reglas en esta entrega.
+The last group needs a median of 40 attempts for 39 wins. The agreed prices are kept; the difference due to precision requires future human comparison, not a rules change in this delivery.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- 31 pruebas unitarias focalizadas aprobadas: catálogo, migración, compra, insuficiencia de saldo, compatibilidad, inventario completo, semillas, colisión real de Rare Cargo, concesión única, abandono, derrota, almacenamiento fallido, persistencia, geometría del canopy y partículas existentes.
-- Matriz de 16 pruebas de navegador aprobadas en Chromium móvil/desktop y WebKit iPhone 13 emulado/desktop: SHOP, guardado, layout, shader efectivo, recogida provisional, liquidación repetida, resultados, reinicio y vuelo completo con Halo + Aurora LED + Cloud Mist + Aurora canopy.
-- 8 comprobaciones adicionales aprobadas: cambios repetidos de accesorios/pilotos y compras/liquidación entre dos pestañas, en los cuatro formatos/motores anteriores.
-- 24 cambios de accesorio y 24 cambios de piloto por motor/formato: **29 texturas residentes, sin crecimiento**; el canvas no se reconstruye.
-- Revisión visual de hoja de contacto, accesorios sobre cada piloto, estrellas, burbujas, humo, paracaídas, bordes LED, HUD provisional y resultados. Videos continuos de los vuelos y navegación guardados con las capturas.
-- Build de producción minificado y TypeScript aprobados. Build alternativo `/islanddao/` generado únicamente en `/tmp/runway-cosmetics-subpath`.
-- Cuatro smoke tests del build compilado aprobados: Chromium y WebKit, tanto en `/` como en `/islanddao/`. Carga de 137–138 recursos por prueba, compra/equipamiento en las cuatro categorías nuevas, sin 404, errores JavaScript ni rutas fuera de la base. Debug de escena ausente en producción.
-- Las llamadas a API se interceptaron durante QA: ninguna prueba envió compras, partidas o datos a producción.
+- 31 focused unit tests passed: catalog, migration, purchase, insufficient balance, compatibility, complete inventory, seeds, real Rare Cargo collision, single grant, abandon, defeat, failed storage, persistence, canopy geometry and existing particles.
+- A matrix of 16 browser tests passed in mobile/desktop Chromium and emulated iPhone 13/desktop WebKit: SHOP, save, layout, effective shader, provisional pickup, repeated settlement, results, restart and a full flight with Halo + Aurora LED + Cloud Mist + Aurora canopy.
+- 8 additional checks passed: repeated accessory/pilot changes and purchases/settlement across two tabs, in the four formats/engines above.
+- 24 accessory changes and 24 pilot changes per engine/format: **29 resident textures, no growth**; the canvas is not rebuilt.
+- Visual review of the contact sheet, accessories on each pilot, stars, bubbles, smoke, parachutes, LED borders, provisional HUD and results. Continuous videos of the flights and navigation saved with the screenshots.
+- Minified production build and TypeScript passed. Alternative `/islanddao/` build generated only in `/tmp/runway-cosmetics-subpath`.
+- Four smoke tests of the compiled build passed: Chromium and WebKit, both at `/` and `/islanddao/`. 137–138 assets loaded per test, purchase/equip in the four new categories, no 404s, JavaScript errors or paths outside the base. Scene debug absent in production.
+- API calls were intercepted during QA: no test sent purchases, runs or data to production.
 
-### Medición de render
+### Render measurement
 
-Recorrido serial de los 94 accesorios y 31 acabados, seguido de 180 frames de Cloud Mist en el SHOP. Viewport 390 × 844, en el mismo equipo anfitrión; las ejecuciones finales no compartieron carga con otro navegador de QA.
+Serial walk through the 94 accessories and 31 finishes, followed by 180 frames of Cloud Mist in the SHOP. Viewport 390 × 844, on the same host machine; the final runs did not share load with another QA browser.
 
-| Medición | Mediana de frame | P95 | Draw calls | Triángulos | Texturas / geometrías |
+| Measurement | Median frame | P95 | Draw calls | Triangles | Textures / geometries |
 |---|---:|---:|---:|---:|---:|
-| Base Chromium, SHOP anterior | 8,3 ms | 13,1 ms | 39 | 44.774 | 33 / 22 |
-| Chromium, catálogo nuevo + humo | 8,3 ms | 8,8 ms | 39 | 44.710 | 29 / 22 |
-| WebKit, catálogo nuevo + humo | 17 ms | 21 ms | 39 | 44.710 | 29 / 22 |
+| Chromium baseline, previous SHOP | 8.3 ms | 13.1 ms | 39 | 44,774 | 33 / 22 |
+| Chromium, new catalog + smoke | 8.3 ms | 8.8 ms | 39 | 44,710 | 29 / 22 |
+| WebKit, new catalog + smoke | 17 ms | 21 ms | 39 | 44,710 | 29 / 22 |
 
-Son muestras de la escena de personalización; no demuestran una mejora general de FPS ni sustituyen una sesión sostenida en móvil. Las capturas durante vuelo con cosméticos registraron 29–45 draw calls y 36.006–57.409 triángulos en los instantes muestreados (6, 18 y 36 segundos). No se afirma que sean el máximo de todos los frames.
+These are samples of the customization scene; they do not prove a general FPS improvement nor replace a sustained mobile session. Captures during flight with cosmetics recorded 29–45 draw calls and 36,006–57,409 triangles at the sampled moments (6, 18 and 36 seconds). They are not claimed to be the maximum across all frames.
 
-Los contadores de render incluyen los pases del pipeline existente. Texturas/geometrías cuentan recursos residentes; no son una medición de VRAM en bytes. Los JSON contienen muestras y errores. La prueba funcional del drop combina contacto real con avance acelerado de la simulación hasta el aterrizaje; el vuelo audiovisual completo se prueba por separado en tiempo real.
+Render counters include the passes of the existing pipeline. Textures/geometries count resident resources; they are not a VRAM measurement in bytes. The JSON files contain samples and errors. The functional drop test combines real contact with accelerated simulation until landing; the full audiovisual flight is tested separately in real time.
 
-## PARCIAL / PENDIENTE
+## PARTIAL / PENDING
 
-- **PARCIAL — rendimiento móvil físico:** se verificaron emulación y motores de escritorio. Falta prueba sostenida de diez minutos en iPhone y Android reales; no se afirma rendimiento de esos equipos.
-- **PENDIENTE — balance humano:** las simulaciones permiten comparar precios y probabilidades; falta observar jugadores reales.
-- **No incluido por alcance:** publicación y actualización del ZIP. Para una publicación futura deberá desplegarse una pareja frontend/API compatible con el nuevo CONTENT. La API alojada no se modificó ni se validó en vivo.
-- No faltan referencias o archivos de los 94 accesorios. No se implementó ninguna tanda adicional.
+- **PARTIAL — physical mobile performance:** emulation and desktop engines were verified. A sustained ten-minute test on real iPhone and Android is missing; no performance is claimed for those devices.
+- **PENDING — human balance:** the simulations allow comparing prices and probabilities; observing real players is still missing.
+- **Out of scope:** publishing and updating the ZIP. A future release must deploy a frontend/API pair compatible with the new CONTENT. The hosted API was not modified or validated live.
+- No references or files are missing for the 94 accessories. No additional batch was implemented.
 
-## Evidencia y regeneración
+## Evidence and regeneration
 
-- [Inventario con procedencia Figma](nft-inventory.csv)
-- [Hoja de contacto de los 94 accesorios y 12 bases](nft-contact-sheet.png)
-- [Catálogo y precios completos](catalog.json)
-- [Datos de simulaciones, ingresos y adquisición](simulation.json)
-- [Matriz completa de navegador](browser-full-results.json)
-- [Pruebas adicionales de memoria y pestañas](browser-results.json)
-- [Galería y métricas Chromium](chromium-render.json)
-- [Galería y métricas WebKit](webkit-render.json)
-- [Build raíz y subruta](production-results.json)
+- [Inventory with Figma provenance](nft-inventory.csv)
+- [Contact sheet of the 94 accessories and 12 bases](nft-contact-sheet.png)
+- [Full catalog and prices](catalog.json)
+- [Simulation, earnings and acquisition data](simulation.json)
+- [Full browser matrix](browser-full-results.json)
+- [Additional memory and tab tests](browser-results.json)
+- [Chromium gallery and metrics](chromium-render.json)
+- [WebKit gallery and metrics](webkit-render.json)
+- [Root and subpath build](production-results.json)
 
-Desde `runway/`, con Node 24:
+From `runway/`, with Node 24:
 
 ```sh
 npm run build
 npx vitest run tests/cosmetics42.test.ts tests/shop.test.ts tests/gameplay37.test.ts tests/items34.test.ts tests/canopy.test.ts
 node scripts/simulate-cosmetics42.mjs
 npm run dev
-# En otra terminal, con el servidor local en 5180:
+# In another terminal, with the local server on 5180:
 npx playwright test -c playwright.cosmetics.config.mjs
 node scripts/qa-cosmetics42.mjs chromium
 node scripts/qa-cosmetics42.mjs webkit
-# Verificación del build en ambas bases, sin regenerar el ZIP:
+# Build check on both bases, without regenerating the ZIP:
 npx vite build --base=/islanddao/ --outDir /tmp/runway-cosmetics-subpath --emptyOutDir
 node scripts/qa-cosmetics42-build.mjs
 ```
 
-`scripts/export-cosmetics.py` regenera composiciones e inventario desde el Figma local usando Python/Pillow. `--thumbnails` en el recorrido de catálogo regenera miniaturas desde el juego. No se añadieron bibliotecas de ejecución.
+`scripts/export-cosmetics.py` regenerates compositions and inventory from the local Figma file using Python/Pillow. `--thumbnails` in the catalog walk regenerates thumbnails from the game. No runtime libraries were added.
 
-ZIP preservado: `../entregas/RUNWAY-ISLANDDAO-PRODUCTION.zip`, 10.559.886 bytes.
+Preserved ZIP: `../entregas/RUNWAY-ISLANDDAO-PRODUCTION.zip`, 10,559,886 bytes.
 
 SHA-256: `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.

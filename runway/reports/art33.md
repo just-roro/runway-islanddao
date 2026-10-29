@@ -1,55 +1,55 @@
-# art-33 — Siete correcciones gráficas
+# art-33 — Seven graphics fixes
 
-## Causas y ejecución
+## Causes and execution
 
-| Pedido | Causa observada | Cambio |
+| Request | Observed cause | Change |
 |---|---|---|
-| Hombros unidos | La manga y el torso terminaban antes del pivote del húmero, sin tejido que cubriera la articulación. | Fuente Blender y GLB: fuelle continuo con pesos pecho/brazo y casquete de manga alrededor del pivote existente. Conserva 15 huesos, nueve clips, tres materiales y personalización. +384 triángulos de cuerpo; 5.728 en total sin casco. |
-| Destellos cuadrados del casco | Radiance map con rectángulos binarios y filtrado nearest; además, el desenfoque muestreaba la fuente completa con separaciones de una textura reducida, replicando los puntos luminosos. | Fuentes angulares suaves, HDR half-float 512×256 filtrable; prefiltrado separado antes de Gaussian X/Y. Los halos ya no forman una cuadrícula. |
-| Cuerpo mate | Inspección efectiva de material/programa confirmó IBL activo, sin maps que lo anularan. La capa de tela rugosa dispersaba el brillo y no existía un lóbulo de recubrimiento sobre los paneles. | MeshPhysical solo para la superficie recubierta; conserva base textil, colores y rugosidad. Clearcoat 0,48 / roughness 0,22. Goma y herrajes conservan sus materiales. A/B de IBL y de clearcoat por separado. |
-| Apertura sin entrada de luz | La compuerta abría entre 0,1–1,15 s, pero la iluminación interior/exterior comenzaba a mezclarse a los 2,2 s. | Misma función de apertura para geometría y luz de entrada: foco exterior localizado, glare centrado en la abertura y recuperación de exposición antes de 3,2 s. No se añade un mapa de sombras. |
-| Exterior apagado / ítems débiles | Fog desaturaba muy pronto, el hemisferio inferior del cielo era cyan uniforme, bloom poco presente y destello estático de baja intensidad. | Azul más vivo, key exterior más intenso, detalle de nubes menos lavado, mezcla radiométrica continua, saturación +6% solo exterior. Bloom graduado por fase. Estrellas ópticas analíticas de cuatro puntas más puntas secundarias, rotación continua y soporte radial que elimina bordes de sprite. |
-| Cámara de menú | Offset anterior más alto y cercano. | Cámara 0,35 unidades más atrás y 0,19 más baja; picado de menú 10,2° → 7,66°. Misma composición, FOV y trayectoria de salida. |
-| Casco se reinicia en PLAY | Instancia persistente, pero el shader cambiaba del reloj de aeropuerto al reloj de partida que empieza en cero. | Fase LED acumulada en el actor persistente, avanzando con el dt de presentación. Pausa conserva la fase; resultado conserva la detención prevista. Sin delays. |
+| Joined shoulders | The sleeve and torso ended before the humerus pivot, with no fabric covering the joint. | Blender source and GLB: continuous bellows with chest/arm weights and a sleeve cap around the existing pivot. Keeps 15 bones, nine clips, three materials and customization. +384 body triangles; 5,728 in total without the helmet. |
+| Square glints on the helmet | Radiance map with binary rectangles and nearest filtering; in addition, the blur sampled the full source with the spacing of a reduced texture, replicating the bright spots. | Soft angular sources, filterable 512×256 half-float HDR; separate prefiltering before Gaussian X/Y. The halos no longer form a grid. |
+| Matte body | Effective material/program inspection confirmed IBL active, with no maps cancelling it. The rough fabric layer scattered the shine and there was no coating lobe over the panels. | MeshPhysical only for the coated surface; keeps the textile base, colors and roughness. Clearcoat 0.48 / roughness 0.22. Rubber and hardware keep their materials. Separate A/B for IBL and for clearcoat. |
+| Door opens with no light coming in | The hatch opened between 0.1–1.15 s, but the interior/exterior lighting started blending at 2.2 s. | Same opening function for geometry and incoming light: localized exterior spotlight, glare centered on the opening and exposure recovery before 3.2 s. No shadow map is added. |
+| Dull exterior / weak items | Fog desaturated too early, the lower sky hemisphere was a uniform cyan, bloom was barely present and the static glint was low-intensity. | Livelier blue, stronger exterior key, less washed-out cloud detail, continuous radiometric blend, +6% saturation on the exterior only. Bloom graded by phase. Analytic four-point optical stars plus secondary points, continuous rotation and radial support that removes sprite edges. |
+| Menu camera | Previous offset higher and closer. | Camera 0.35 units further back and 0.19 lower; menu tilt 10.2° → 7.66°. Same composition, FOV and exit trajectory. |
+| Helmet resets on PLAY | Persistent instance, but the shader switched from the airport clock to the run clock, which starts at zero. | LED phase accumulated on the persistent actor, advancing with the presentation dt. Pause keeps the phase; the result screen keeps the intended stop. No delays. |
 
-## Verificación real
+## Real verification
 
-- Build de producción y TypeScript aprobados. Tres tests unitarios verifican transición, apertura/recuperación y contrato del GLB con pesos combinados de hombros.
-- `scripts/qa-art33.mjs`: WebKit iPhone 13 y Chromium Pixel 7 emulados. Capturas/vídeo de menú, tienda, apertura, salida y caída; muestreo de fase/UUID LED y ausencia de errores de shaders. Fase monotónica desde antes de PLAY; misma instancia durante toda la secuencia.
-- `tests/browser/art33.spec.ts`: vuelo seed 17, input del controlador de QA, apertura, planeo y aterrizaje en Jurerê. Resultado 1.755.000 / tick 3270 en ambos navegadores; no se modifican reglas, colisiones ni velocidades. Prueba de pausa del LED y comprobación de uniforms efectivos de IBL/recubrimiento.
-- WebKit full-flight corresponde al código inmediatamente anterior a convertir las texturas a half-float y explicitar PHYSICAL; capturas finales WebKit y vuelo Chromium corresponden al código final.
-- A/B de IBL al mismo tick/cámara: se desactiva únicamente envMapIntensity del cuerpo. Cambia iluminación ambiental difusa y especular; por sí solo no demuestra reflejo especular. El probe adicional `scripts/qa-coating33.mjs` elimina únicamente clearcoat, conservando luz, entorno, color y base difusa.
-- Inspección visual de menú, apertura, salida, caída, despliegue y planeo: unión visible de hombro; reflejos sobre mangas y bordes; halos continuos; destellos de ítems definidos; recuperación de contraste al salir del avión. Vídeos conservados para revisar movimiento.
+- Production build and TypeScript passed. Three unit tests verify the transition, opening/recovery and the GLB contract with combined shoulder weights.
+- `scripts/qa-art33.mjs`: emulated WebKit iPhone 13 and Chromium Pixel 7. Screenshots/video of menu, shop, opening, exit and fall; LED phase/UUID sampling and no shader errors. Monotonic phase from before PLAY; same instance throughout the sequence.
+- `tests/browser/art33.spec.ts`: seed 17 flight, QA controller input, opening, gliding and landing in Jurerê. Result 1,755,000 / tick 3270 in both browsers; rules, collisions and speeds are not modified. LED pause test and check of the effective IBL/coating uniforms.
+- The WebKit full flight corresponds to the code right before converting the textures to half-float and making PHYSICAL explicit; the final WebKit screenshots and the Chromium flight correspond to the final code.
+- IBL A/B at the same tick/camera: only the body's envMapIntensity is disabled. It changes diffuse and specular ambient lighting; on its own it does not prove specular reflection. The additional probe `scripts/qa-coating33.mjs` removes only the clearcoat, keeping light, environment, color and diffuse base.
+- Visual inspection of menu, opening, exit, fall, deployment and gliding: visible shoulder joint; reflections on sleeves and edges; continuous halos; well-defined item glints; contrast recovery when leaving the plane. Videos kept to review motion.
 
-## Evidencia
+## Evidence
 
-- [Antes: caída](evidence/art33/before-webkit/fall.png) / [después: caída](evidence/art33/final-webkit/fall.png).
-- [Antes: menú](evidence/art33/before-webkit/menu.png) / [después: menú](evidence/art33/final-webkit/menu.png).
-- [Apertura luminosa](evidence/art33/final-webkit/door.png), [salida](evidence/art33/final-webkit/exit.png), [tienda](evidence/art33/final-webkit/shop.png).
-- `evidence/art33/final-flight/`: vídeo Chromium, IBL A/B, despliegue, planeo y llegada. `full-flight/`: equivalentes WebKit.
-- `evidence/art33/coating/`: prueba aislada del lóbulo especular. `metrics.json` en cada directorio de navegador contiene la serie de transición y medidas completas.
+- [Before: fall](evidence/art33/before-webkit/fall.png) / [after: fall](evidence/art33/final-webkit/fall.png).
+- [Before: menu](evidence/art33/before-webkit/menu.png) / [after: menu](evidence/art33/final-webkit/menu.png).
+- [Lit opening](evidence/art33/final-webkit/door.png), [exit](evidence/art33/final-webkit/exit.png), [shop](evidence/art33/final-webkit/shop.png).
+- `evidence/art33/final-flight/`: Chromium video, IBL A/B, deployment, gliding and arrival. `full-flight/`: WebKit equivalents.
+- `evidence/art33/coating/`: isolated test of the specular lobe. `metrics.json` in each browser directory contains the transition series and full measurements.
 
-## Rendimiento y límites
+## Performance and limits
 
-Se conserva un mapa de sombras y no hay captura de cubemaps por frame. Se añade un pase de prefiltrado a 1/4 de resolución para corregir el kernel de bloom, un foco sin sombras y 384 triángulos de cuerpo. Máximo de vuelo: 55 draw calls / 81.369 triángulos (incluye pases).
+One shadow map is kept and there is no per-frame cubemap capture. A prefilter pass at 1/4 resolution is added to fix the bloom kernel, plus a spotlight without shadows and 384 body triangles. Flight maximum: 55 draw calls / 81,369 triangles (including passes).
 
-150 intervalos requestAnimationFrame por pose, VSync del host Apple GPU:
+150 requestAnimationFrame intervals per pose, Apple GPU host VSync:
 
-| WebKit | Base mediana/P95 | Final mediana/P95 |
+| WebKit | Baseline median/P95 | Final median/P95 |
 |---|---|---|
-| Menú | 33/48 ms | 33/37 ms |
-| Apertura | 33/43 ms | 33/37 ms |
-| Salida | 33/42 ms | 33/36 ms |
-| Caída | 33/44 ms | 33/37 ms |
+| Menu | 33/48 ms | 33/37 ms |
+| Opening | 33/43 ms | 33/37 ms |
+| Exit | 33/42 ms | 33/36 ms |
+| Fall | 33/44 ms | 33/37 ms |
 
-Chromium final: mediana 8,3–8,4 ms; P95 10,4–11,7 ms. Estas cifras son intervalos de presentación en emulación, no tiempo GPU aislado ni rendimiento de un teléfono. El host WebKit de esta sesión funcionó a ~30 Hz también antes del cambio; no se compara con los 17 ms de otra sesión light-32. Las ventanas FPS del test de vuelo que incluyen pausa/captura se excluyen como medida de rendimiento.
+Final Chromium: median 8.3–8.4 ms; P95 10.4–11.7 ms. These figures are presentation intervals under emulation, not isolated GPU time or phone performance. The WebKit host in this session also ran at ~30 Hz before the change; it is not compared with the 17 ms of another light-32 session. FPS windows of the flight test that include pause/capture are excluded as a performance measure.
 
-Pendiente: prueba sostenida en iPhone/Android físicos. La geometría ambiental low-poly existente limita la similitud con la ilustración de referencia; esta entrega mejora el pipeline solicitado, no sustituye el mundo por esa ilustración. Sin nuevas mecánicas ni rediseños UI.
+Pending: sustained test on physical iPhone/Android. The existing low-poly environment geometry limits the similarity to the reference illustration; this delivery improves the requested pipeline and does not replace the world with that illustration. No new mechanics or UI redesigns.
 
-## Publicación
+## Release
 
-Frontend art-33; API e históricos intactos. Rollback light-32: commit `64a78f3ddd081d8ec08a54c9a7ec5ef2fa33e2a6`, versión `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_a5d085abbecc8191a70e7350f94c7b94`. Confirmación de despliegue al final del registro.
+Frontend art-33; API and history untouched. Rollback to light-32: commit `64a78f3ddd081d8ec08a54c9a7ec5ef2fa33e2a6`, version `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_a5d085abbecc8191a70e7350f94c7b94`. Deployment confirmation at the end of the log.
 
-Prueba especular aislada: 5566 píxeles del recorte corporal cambiaron más de 3 niveles RGB al retirar solamente clearcoat (mismo tick/cámara, base e iluminación). Diferencia RGB media [0.33, 0.25, 0.24].
+Isolated specular test: 5566 pixels of the body crop changed by more than 3 RGB levels when only the clearcoat was removed (same tick/camera, base and lighting). Mean RGB difference [0.33, 0.25, 0.24].
 
-Publicado correctamente el 2026-10-20: commit `3b0316f901543fc2f22f6aa01ef53dda899161a1`; versión `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_47f6560812b881919dd54d8a7885ece9` (34); deployment `appgdep_6ad7eeb626ac819180cd89cf540c0e94`. https://runway-islanddao.agenciahumanfriendly.chatgpt.site/?v=art-33
+Published successfully on 2026-10-20: commit `3b0316f901543fc2f22f6aa01ef53dda899161a1`; version `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_47f6560812b881919dd54d8a7885ece9` (34); deployment `appgdep_6ad7eeb626ac819180cd89cf540c0e94`. https://runway-islanddao.agenciahumanfriendly.chatgpt.site/?v=art-33

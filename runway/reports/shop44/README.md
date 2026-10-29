@@ -1,54 +1,54 @@
-# RUNWAY — Tanda 2/6 · SHOP UX/UI
+# RUNWAY — Batch 2/6 · SHOP UX/UI
 
-Fecha: 2026-10-22. Implementación local sobre la versión de trabajo, conservando las correcciones previas de estrellas/replay. No se publicó ni se regeneró el ZIP de hosting.
+Date: 2026-10-22. Local implementation on the working version, keeping the earlier star/replay fixes. The hosting ZIP was not published or regenerated.
 
-## Diagnóstico comprobado
+## Confirmed diagnosis
 
-- El catálogo era una tira de miniaturas de 30×27 px dentro de botones de 68 px; PILOTS no tenía esa tira. Paracaídas/trails/casco usaban screenshots del preview.
-- El preview renderizaba tres pilotos. Los laterales tenían 58% de escala; el protagonista cambiaba de escala según la altura de UI y se reducía aún más al mostrar el canopy.
-- Las reglas de SHOP se repartían entre varios bloques de style.css y ui-system.css. El selector de accesorios dependía de un select nativo.
-- Al girar al actor para mostrar el trail, los billboards heredaban la rotación del padre y volvían a aplicar la de cámara: quedaban de canto. Se corrigió la conversión de orientación sólo para el preview.
+- The catalog was a strip of 30×27 px thumbnails inside 68 px buttons; PILOTS did not have that strip. Parachutes/trails/helmet used preview screenshots.
+- The preview rendered three pilots. The side ones were at 58% scale; the main one changed scale depending on the UI height and shrank even more when showing the canopy.
+- SHOP rules were spread across several blocks of style.css and ui-system.css. The accessory selector relied on a native select.
+- When the actor was turned to show the trail, the billboards inherited the parent's rotation and reapplied the camera's: they ended up edge-on. The orientation conversion was fixed for the preview only.
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-- Catálogo con dos columnas en móvil vertical y dos/tres en desktop y horizontal, scroll independiente y encabezado BACK siempre accesible.
-- Cinco categorías, selección explícita, descripción debajo del nombre, precio separado y acciones con dimensiones fijas. Conserva BUY & EQUIP, EQUIP, EQUIPPED, restricciones por piloto, retos y saldo insuficiente.
-- Miniaturas cuadradas: 12 retratos originales, 94 composiciones originales de accesorios, 12 ilustraciones de canopy, 10 trails y 9 diseños de bordes LED. Los acabados se dibujan con los colores y claves de patrón del catálogo. No se solicitan screenshots de /previews/.
-- Filtro de accesorios con retratos desplazables, sin dropdown. No accessory conserva la acción de retirar el accesorio.
-- Un actor 3D de escala constante 0.9, con pedestal y fondo de exhibición en el canvas existente. Cámara ajustada al espacio disponible: cuerpo para pilotos, retrato para accesorios/helmet, detalle del canopy y vista trasera para trails.
-- El fondo de exhibición evita que la estructura del avión tape el paracaídas. El avión y el NPC regresan al consultar la guía; al salir de SHOP se recupera el menú.
-- La guía de primera visita y la posibilidad de consultarla permanecen. El patrón histórico de casco se conserva como control independiente del texto del producto.
-- Estilos de tienda consolidados en src/shop.css, eliminando las reglas antiguas equivalentes. Sin dependencias, productos, precios, reglas económicas ni persistencia nuevos.
+- Catalog with two columns on portrait mobile and two/three on desktop and landscape, independent scrolling and a BACK header that is always reachable.
+- Five categories, explicit selection, description under the name, separate price and fixed-size actions. Keeps BUY & EQUIP, EQUIP, EQUIPPED, pilot restrictions, challenges and insufficient balance.
+- Square thumbnails: 12 original portraits, 94 original accessory compositions, 12 canopy illustrations, 10 trails and 9 LED border designs. Finishes are drawn with the catalog's colors and pattern keys. No screenshots are requested from /previews/.
+- Accessory filter with scrollable portraits, no dropdown. No accessory keeps the action to remove the accessory.
+- A single 3D actor at a constant 0.9 scale, with a pedestal and display background in the existing canvas. Camera fitted to the available space: body for pilots, portrait for accessories/helmet, canopy detail and rear view for trails.
+- The display background prevents the plane structure from covering the parachute. The plane and the NPC return when viewing the guide; leaving SHOP restores the menu.
+- The first-visit guide and the ability to view it again remain. The historical helmet pattern is kept as a control independent from the product text.
+- Shop styles consolidated in src/shop.css, removing the equivalent old rules. No new dependencies, products, prices, economic rules or persistence.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- `npm run build`: TypeScript y Vite de producción correctos. Permanece el aviso de tamaño del bundle de Three, no un error de compilación.
-- Vitest: **22/22** en cosmetics42.test.ts, shop.test.ts y dialogue.test.ts. Incluyen migración, compras, persistencia, operaciones concurrentes y errores de almacenamiento del sistema existente.
-- Playwright: **8 escenarios/navegador aprobados en total** (cuatro casos en cada motor, incluyendo el control histórico del casco y regreso al menú). Chromium y WebKit: formatos 360×640, 390×844 (iPhone 13 emulado), 844×390 y 1440×900. Capturas de las cinco categorías; comprobación de dimensiones, miniaturas cuadradas, un solo actor y escala estable.
-- Compra de Ninja, Sun Glasses, Gold Circuit, Bubbles y Racing Checker: saldo esperado de 33 M desde 60 M; equipar no vuelve a cobrar. Compra posterior de Aurora y Comet deja 3 M y bloquea un producto premium por saldo insuficiente.
-- Se comprobó accesorio incompatible con piloto bloqueado, selección por piloto, retiro del accesorio, recarga y persistencia, BACK después de scroll y consulta manual de la guía.
-- Los 94 accesorios y los 12 filtros de piloto cargan imágenes válidas. Se verificaron cantidades de productos y miniaturas propias de cada categoría. El canvas conserva identidad durante los cambios.
-- Sin errores JavaScript ni solicitudes de miniaturas antiguas en los recorridos de categorías. API interceptada con respuesta 503 durante QA; no se ejecutaron operaciones online de producción.
-- Capturas revisadas para móvil y desktop, incluyendo patrones de canopy, casco, retratos y trail en movimiento. Hojas de catálogo en captures/catalog-*.png. Videos completos de QA quedan en las carpetas locales ignoradas de este informe.
+- `npm run build`: production TypeScript and Vite OK. The Three bundle size warning remains; it is not a build error.
+- Vitest: **22/22** in cosmetics42.test.ts, shop.test.ts and dialogue.test.ts. They include migration, purchases, persistence, concurrent operations and storage errors of the existing system.
+- Playwright: **8 scenario/browser runs passed in total** (four cases per engine, including the historical helmet control and return to the menu). Chromium and WebKit: formats 360×640, 390×844 (emulated iPhone 13), 844×390 and 1440×900. Screenshots of the five categories; checks of dimensions, square thumbnails, a single actor and stable scale.
+- Purchase of Ninja, Sun Glasses, Gold Circuit, Bubbles and Racing Checker: expected balance of 33 M from 60 M; equipping does not charge again. A later purchase of Aurora and Comet leaves 3 M and blocks a premium product for insufficient balance.
+- Checked an accessory incompatible with a locked pilot, selection by pilot, accessory removal, reload and persistence, BACK after scrolling and manually opening the guide.
+- All 94 accessories and the 12 pilot filters load valid images. Product counts and each category's own thumbnails were verified. The canvas keeps its identity during changes.
+- No JavaScript errors or requests for old thumbnails in the category walks. API intercepted with a 503 response during QA; no online production operations were run.
+- Screenshots reviewed for mobile and desktop, including canopy patterns, helmet, portraits and trail in motion. Catalog sheets in captures/catalog-*.png. Full QA videos remain in this report's ignored local folders.
 
-Comando reproducible (con el servidor de desarrollo local activo):
+Reproducible command (with the local development server running):
 
 ```sh
 RUNWAY_BASE_URL=http://127.0.0.1:5181 npx playwright test tests/browser/shop44.spec.ts
 ```
 
-## PARCIAL / PENDIENTE
+## PARTIAL / PENDING
 
-- La comprobación móvil es emulación Chromium/WebKit en este equipo. No equivale a una prueba física en iPhone o Android; rendimiento sostenido y gestos en hardware real quedan pendientes.
-- Cambios locales, sin publicación. No se avanzó a otra tanda.
-- ZIP de producción intacto: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
+- The mobile check is Chromium/WebKit emulation on this machine. It is not a physical test on iPhone or Android; sustained performance and gestures on real hardware remain pending.
+- Local changes, not published. No other batch was started.
+- Production ZIP intact: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
 
-## Archivos principales
+## Main files
 
-- src/Shop.tsx: catálogo, navegación y estados existentes de transacción.
-- src/ui/CatalogIcon.tsx: iconografía de producto.
-- src/shop.css: layout responsive y jerarquía visual.
-- src/scene/World.tsx: actor único y encuadres de preview.
-- src/scene/PilotTrail.tsx: orientación correcta de los billboards del preview.
-- tests/browser/shop44.spec.ts: cobertura y captura de evidencia.
-- tests/browser/cosmetics42.spec.ts: selectores actualizados a la navegación nueva.
+- src/Shop.tsx: catalog, navigation and existing transaction states.
+- src/ui/CatalogIcon.tsx: product iconography.
+- src/shop.css: responsive layout and visual hierarchy.
+- src/scene/World.tsx: single actor and preview framing.
+- src/scene/PilotTrail.tsx: correct orientation of the preview billboards.
+- tests/browser/shop44.spec.ts: coverage and evidence capture.
+- tests/browser/cosmetics42.spec.ts: selectors updated to the new navigation.

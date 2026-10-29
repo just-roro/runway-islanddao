@@ -1,41 +1,41 @@
-# RUNWAY — Tanda 5: isla y entorno
+# RUNWAY — Batch 5: island and environment
 
-## Implementado
+## Implemented
 
-- **Puente:** reemplaza la pieza aislada en x=-104. Acceso en (35,3), orientación hacia el lado continental de la cartografía rotada, 7,2 unidades de ancho y prolongación de 1.400 unidades. Tramo suspendido cercano, viaducto simplificado a distancia y desvanecimiento por cobertura entre 180 y 690 unidades. Conserva profundidad, sin ordenar capas transparentes. Camino de acceso integrado en el shader del suelo; no añade una superficie que pueda atravesar el terreno. Es una interpretación estilizada, no una reconstrucción topográfica exacta.
-- **Terreno:** mismas posiciones de vértices y superficies físicas. Normales continuas, mezcla de arena/pasto/roca por costa y pendiente, variación procedural en varias escalas y rugosidad/microrrelieve visual. Los caminos existentes mantienen su lectura.
-- **Vegetación:** aproximadamente 1.200 ubicaciones elegibles distribuidas por la isla; solo las 256 más cercanas dentro del frustum se dibujan. Desvanecimiento de altura entre 75–140 unidades; viento anclado a la base y movimiento reducido respetado. Continúan 96 árboles y máximo 24 modelos de detalle cercano. Mejoradas las siluetas de las palmeras lejanas.
-- **Apoyos:** árbol y pasto toman altura de los triángulos renderizados, evitando el desfase con la función analítica entre vértices. Despejados playas, caminos, acceso del puente, aterrizajes, edificios y espacios de cámara.
-- **Lugar real:** se conserva `jurere-event-venue / replaceable-venue-visuals`, con unidades en metros, +Y arriba y +Z hacia la aproximación, separado de la plataforma funcional. `DESTINATIONS` sigue fijando los tres orígenes y superficies. No se agregó una casa ni arquitectura supuestamente real.
+- **Bridge:** replaces the isolated piece at x=-104. Access at (35,3), oriented toward the mainland side of the rotated map, 7.2 units wide and extended for 1,400 units. A nearby suspended span, a simplified viaduct at distance and a coverage-based fade between 180 and 690 units. Keeps depth, without sorting transparent layers. The access road is integrated into the ground shader; it adds no surface that could cut through the terrain. It is a stylized interpretation, not an exact topographic reconstruction.
+- **Terrain:** same vertex positions and physical surfaces. Continuous normals, sand/grass/rock blending by coast and slope, procedural variation at several scales and visual roughness/micro-relief. The existing paths remain readable.
+- **Vegetation:** about 1,200 eligible locations spread over the island; only the 256 closest within the frustum are drawn. Height fade between 75–140 units; wind anchored at the base and reduced motion respected. Still 96 trees and up to 24 close-detail models. Improved silhouettes of the distant palm trees.
+- **Placement:** trees and grass take their height from the rendered triangles, avoiding the mismatch with the analytic function between vertices. Beaches, paths, bridge access, landings, buildings and camera spaces are kept clear.
+- **Real venue:** `jurere-event-venue / replaceable-venue-visuals` is kept, with units in meters, +Y up and +Z toward the approach, separate from the functional platform. `DESTINATIONS` still pins the three origins and surfaces. No house or supposedly real architecture was added.
 
-## Verificación
+## Verification
 
-- `vitest run tests/island29.test.ts tests/habitat.test.ts`: **4 pruebas aprobadas**. Conexión sobre tierra, extremo más allá de la niebla, geometría del puente <4.000 triángulos, decoración fuera de áreas excluidas y altura contrastada con raycasting. Tres rutas con input/replay normal llegan a sus destinos sin cruzar el volumen del puente.
-- Vuelo completo WebKit, iPhone 13 emulado: **54,5 s**, Jurerê, **1.755.000** de capital, sin errores de JavaScript/shaders. Máximo registrado durante esta pasada: **54 draw calls / 80.771 triángulos**, incluidos pases. El último ajuste del acceso eliminó 12 triángulos y trasladó su apariencia al material.
-- [Vídeo completo](evidence-island29/flight.webm), [resultado y métricas](evidence-island29/flight-evidence.json), [aterrizaje](evidence-island29/jurere-landed.png).
-- Capturas con seed 17/input idéntico a 40, 48 y 54 segundos. [Antes](evidence-island29/before-chromium-island.png) y [después](evidence-island29/accepted-chromium-island.png), en Chromium 390×844. Geometría final inspeccionada además en WebKit.
-- WebKit móvil emulado, GPU del host: mediana **17 ms**, P95 **18 ms** en las ventanas de 180 frames de aproximación, isla y aterrizaje. Vuelo completo aproximadamente 60 FPS tras la carga. No son mediciones de un iPhone físico.
-- Chromium en el modo headless usado por el capturador: base 108–117 ms de mediana; después 108–133 ms. No alcanza el objetivo móvil en ese entorno y no se presenta como aprobación de rendimiento físico. Draw calls de las vistas: 39–50, sin aumento frente a base; geometría adicional acotada a unos pocos miles de triángulos.
-- El inspector WebKit registró una advertencia `ResizeObserver loop completed with undelivered notifications` al cambiar el viewport. Las capturas se produjeron y el vuelo completo pasó sin ese error. No se modificó UI fuera de esta tanda para perseguir esa advertencia.
-- TypeScript/Vite y `git diff --check` verificados. Sin modificaciones en `src/core`, reglas competitivas, endpoints, economía, velocidades ni controles.
+- `vitest run tests/island29.test.ts tests/habitat.test.ts`: **4 tests passed**. Connection over land, end beyond the fog, bridge geometry <4,000 triangles, decoration outside excluded areas and height checked with raycasting. Three routes with normal input/replay reach their destinations without crossing the bridge volume.
+- Full WebKit flight, emulated iPhone 13: **54.5 s**, Jurerê, **1,755,000** capital, no JavaScript/shader errors. Maximum recorded during this pass: **54 draw calls / 80,771 triangles**, including passes. The last adjustment to the access removed 12 triangles and moved its look into the material.
+- [Full video](evidence-island29/flight.webm), [result and metrics](evidence-island29/flight-evidence.json), [landing](evidence-island29/jurere-landed.png).
+- Screenshots with seed 17/identical input at 40, 48 and 54 seconds. [Before](evidence-island29/before-chromium-island.png) and [after](evidence-island29/accepted-chromium-island.png), in Chromium 390×844. Final geometry also inspected in WebKit.
+- Emulated mobile WebKit, host GPU: median **17 ms**, P95 **18 ms** in the 180-frame windows of approach, island and landing. Full flight at roughly 60 FPS after loading. These are not measurements on a physical iPhone.
+- Chromium in the headless mode used by the capturer: baseline 108–117 ms median; afterwards 108–133 ms. It does not reach the mobile target in that environment and is not presented as approval of physical performance. Draw calls of the views: 39–50, no increase over the baseline; additional geometry limited to a few thousand triangles.
+- The WebKit inspector logged a `ResizeObserver loop completed with undelivered notifications` warning when the viewport changed. The screenshots were produced and the full flight passed without that error. No UI outside this batch was modified to chase that warning.
+- TypeScript/Vite and `git diff --check` verified. No changes to `src/core`, competitive rules, endpoints, economy, speeds or controls.
 
-## Evidencia final y reproducción
+## Final evidence and reproduction
 
-- [Puente conectado](evidence-island29/release-webkit-bridge-access-lit.png)
-- [Puente hacia la niebla](evidence-island29/release-webkit-bridge-distance-lit.png)
-- [Pasto cercano](evidence-island29/detail-webkit-grass-near-lit.png)
-- [Vista general](evidence-island29/release-webkit-overview-lit.png)
-- `node scripts/qa-island29.mjs release webkit`: capturas y JSON contra Vite en 127.0.0.1:5183.
+- [Connected bridge](evidence-island29/release-webkit-bridge-access-lit.png)
+- [Bridge into the fog](evidence-island29/release-webkit-bridge-distance-lit.png)
+- [Nearby grass](evidence-island29/detail-webkit-grass-near-lit.png)
+- [Overview](evidence-island29/release-webkit-overview-lit.png)
+- `node scripts/qa-island29.mjs release webkit`: screenshots and JSON against Vite on 127.0.0.1:5183.
 - `RUNWAY_BASE_URL=http://127.0.0.1:5183 node node_modules/@playwright/test/cli.js test tests/browser/island29.spec.ts --project=webkit-mobile --workers=1`.
 
-## Pendiente / límites
+## Pending / limits
 
-- iPhone y Android físicos, diez minutos sostenidos, y valoración humana del acabado.
-- Fotografías reales de zonas/arquitectura, referencias definitivas de objetos y audio: siguen pendientes; no se sustituyeron por contenido inventado.
-- Los shaders refinan la presentación del relieve; no añaden relieve físico ni cambian dónde se aterriza.
+- Physical iPhone and Android, ten sustained minutes, and human assessment of the finish.
+- Real photos of areas/architecture, final object references and audio: still pending; they were not replaced with invented content.
+- The shaders refine the presentation of the relief; they add no physical relief and do not change where you land.
 
-## Publicación
+## Release
 
-Frontend island-29 en el Site existente, API intacta. Rollback: menu-28, versión `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_6f7c97c91da481918f2a8743e9140f59`, commit `be7869137c25186fc41d60b3f8aa08150151eb04`.
+Frontend island-29 on the existing Site, API untouched. Rollback: menu-28, version `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_6f7c97c91da481918f2a8743e9140f59`, commit `be7869137c25186fc41d60b3f8aa08150151eb04`.
 
-Publicado el 20-10-2026: versión 30, `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_c561bc902e2c8191946678ac5e96a1ba`, commit `39fcec7e9245e23b7fc693b4e2992a3f75fb3d82`. Despliegue `appgdep_6ad7b176ae9481918604da75ea13b3e5`: succeeded. URL pública https://runway-islanddao.agenciahumanfriendly.chatgpt.site/ .
+Published on 2026-10-20: version 30, `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_c561bc902e2c8191946678ac5e96a1ba`, commit `39fcec7e9245e23b7fc693b4e2992a3f75fb3d82`. Deployment `appgdep_6ad7b176ae9481918604da75ea13b3e5`: succeeded. Public URL https://runway-islanddao.agenciahumanfriendly.chatgpt.site/ .

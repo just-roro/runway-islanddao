@@ -1,51 +1,51 @@
-# Tanda 4/5 — HUD, resultados y branding (`hud-27`)
+# Batch 4/5 — HUD, results and branding (`hud-27`)
 
-Fecha: 20-10-2026. Base publicada: `npc-26`, commit `783ec13ba085e3e4b2552cb6b6c6ed252ccf90dd`. Alcance exclusivo de la tanda 4.
+Date: 2026-10-20. Published baseline: `npc-26`, commit `783ec13ba085e3e4b2552cb6b6c6ed252ccf90dd`. Exclusive scope of batch 4.
 
-## Implementado y comprobado
+## Implemented and checked
 
-- **Menú:** PNG RUNWAY oficial, saldo real de SHOP, identidad con retrato PERKS/nombre/startup arriba a la izquierda, PLAY amarillo y navegación con superficies facetadas cyan. Entrada de marca, identidad y acciones; pulsación inmediata. Se conserva la escena 3D existente.
-- **HUD:** gráfico de diez segundos a todo el ancho seguro, 120–140 px de alto, detrás del importe; segmentos verdes/rojos por cada cambio real, incluidos cambios del mismo tick. Dominio suavizado, línea estable si no hay eventos. Ninguna fluctuación inventada.
-- **Contador:** spring continuo, intensidad acumulada por importe y hasta cinco recogidas consecutivas; recuperación gradual. Escala acotada a 0,94–1,15 y espacio reservado al calcular la fuente. Pérdidas rojas con prioridad y reinicio de la intensidad positiva. Pausa congela la presentación.
-- **Victoria:** YOU LANDED en cabecera LED neón, entrada con overshoot y panel financiero inspirado directamente en la referencia. Replay de dos segundos después de la entrada; dinero final, gráfico ancho, INITIAL/GAINS/LOSSES/BONUS, BACK TO AIRPORT, ONE MORE RUN y recibo real de SHOP. El estado de verificación conserva la distinción entre vuelo local y ranking confirmado. Derrota usa RUN LOST y saldo cero.
-- **Personaje en resultados:** cámara final consume el espacio realmente disponible entre los paneles, mediante ResizeObserver y el estado de presentación. Cambia encuadre/distancia solo en resultados. La cámara de vuelo, animación y reglas permanecen iguales. Comprobado cuerpo/casco completos en las cuatro relaciones de aspecto.
-- **MY STARTUP:** auditados los endpoints existentes. Presenta la suma de los mejores vuelos verificados de hasta tres fundadores, cada contribución, asientos libres, invitación y acceso al ranking. Explica que el saldo de SHOP es independiente y cuándo se fija la membresía. Carga/error/vacío diferenciados; cambiar crew queda subordinado y se oculta cuando la membresía está bloqueada. Crear/unirse conserva los endpoints y reglas existentes.
-- **Créditos:** PNG Human Friendly original; cuatro nombres preservados. Eliminadas las secciones redundantes ISLAND OUTLINE/MAP SOURCE. © OpenStreetMap, ODbL y avisos de terceros continúan accesibles en LICENSES & DATA.
-- **Accesibilidad:** movimiento reducido sin rebotes, datos intactos; nombres accesibles, contraste sobre panel navy, importes responsivos y márgenes seguros.
+- **Menu:** official RUNWAY PNG, real SHOP balance, identity with PERKS portrait/name/startup at the top left, yellow PLAY and navigation with faceted cyan surfaces. Entry animation for brand, identity and actions; immediate press response. The existing 3D scene is kept.
+- **HUD:** ten-second chart across the full safe width, 120–140 px tall, behind the amount; green/red segments for each real change, including same-tick changes. Smoothed domain, stable line if there are no events. No invented fluctuation.
+- **Counter:** continuous spring, intensity accumulated by amount and up to five consecutive pickups; gradual recovery. Scale bounded to 0.94–1.15 and space reserved when sizing the font. Red losses take priority and reset positive intensity. Pause freezes the presentation.
+- **Victory:** YOU LANDED in a neon LED header, entry with overshoot and a financial panel directly inspired by the reference. Two-second replay after the entry; final money, wide chart, INITIAL/GAINS/LOSSES/BONUS, BACK TO AIRPORT, ONE MORE RUN and a real SHOP receipt. The verification state keeps the distinction between a local flight and a confirmed ranking. Defeat uses RUN LOST and a zero balance.
+- **Character on the results screen:** the final camera uses the space actually available between the panels, through ResizeObserver and the presentation state. It changes framing/distance only on the results screen. The flight camera, animation and rules stay the same. Full body/helmet checked in all four aspect ratios.
+- **MY STARTUP:** the existing endpoints were audited. It shows the sum of the best verified flights of up to three founders, each contribution, free seats, invitation and access to the ranking. It explains that the SHOP balance is independent and when membership is locked. Loading/error/empty states are distinct; changing crew is secondary and hidden when membership is locked. Create/join keep the existing endpoints and rules.
+- **Credits:** original Human Friendly PNG; four names preserved. Removed the redundant ISLAND OUTLINE/MAP SOURCE sections. © OpenStreetMap, ODbL and third-party notices remain available under LICENSES & DATA.
+- **Accessibility:** reduced motion without bounces, data intact; accessible names, contrast on the navy panel, responsive amounts and safe margins.
 
-No se generaron ni alteraron los PNG oficiales. [Hashes SHA-256 idénticos a los originales](evidence-hud27/original-assets.json). El logo RUNWAY añade 1.025.371 bytes al paquete; se precarga y decodifica durante el inicio. El logo HF se carga al abrir créditos.
+The official PNGs were not generated or altered. [SHA-256 hashes identical to the originals](evidence-hud27/original-assets.json). The RUNWAY logo adds 1,025,371 bytes to the package; it is preloaded and decoded at startup. The HF logo loads when the credits are opened.
 
-## Validación focalizada
+## Focused validation
 
-- TypeScript y build de producción aprobados. Se conserva el aviso existente de tamaño del chunk de Three.
-- **5 pruebas unitarias**: replay económico, mismo tick, cero, ventana móvil, agrupación y dirección por segmento.
-- **8 pruebas Chromium/WebKit aprobadas, cero flaky**, con capturas y vídeos. Formatos 390×844, 360×640, 844×390 y 1440×900. No equivale a probar teléfonos físicos.
-- Cinco SOL consecutivas produjeron escalas aproximadas **1,040 → 1,058 → 1,072 → 1,085 → 1,099**. Comprobado máximo 1,15, prioridad de pérdida y congelación en pausa.
-- Replay real del controlador existente, semilla 17 / Jurerê: **5.000 + 1.165.000 − 0 + 585.000 = 1.755.000**. Importe final y crédito en SHOP coincidentes. Un vuelo inmóvil termina derrotado con cero. Retry y regreso al menú comprobados.
-- Formularios MY STARTUP: offline/reconexión, creación, unión y membresía bloqueada con API controlada; total de prueba **750.000 + 500.000 = 1.250.000**. No se crearon equipos ni registros competitivos de QA en producción.
-- Saldos grandes del menú (12.345.678) y gráfico/contador/resultados dentro del ancho disponible en los formatos comprobados.
-- Resultado 3D: muestras **38–40 draw calls / 47.757–48.493 triángulos**. El gráfico usa SVG, sin nuevos pases WebGL. No es una prueba sostenida de rendimiento físico.
-- Las primeras comprobaciones detectaron y corrigieron el mensaje offline persistente tras reconectar y el personaje parcialmente oculto por resultados. La medición inicial del cuerpo incluía el canopy desprendido: se corrigió usando nodos explícitos de rig/casco. Movimiento reducido se valida contra la regla global existente que elimina las animaciones.
+- TypeScript and production build passed. The existing Three chunk size warning remains.
+- **5 unit tests**: economic replay, same tick, zero, moving window, grouping and direction per segment.
+- **8 Chromium/WebKit tests passed, zero flaky**, with screenshots and videos. Formats 390×844, 360×640, 844×390 and 1440×900. Not equivalent to testing physical phones.
+- Five consecutive SOL produced approximate scales of **1.040 → 1.058 → 1.072 → 1.085 → 1.099**. Checked the 1.15 maximum, loss priority and freeze on pause.
+- Real replay of the existing controller, seed 17 / Jurerê: **5,000 + 1,165,000 − 0 + 585,000 = 1,755,000**. Final amount and SHOP credit match. A motionless flight ends defeated with zero. Retry and return to the menu checked.
+- MY STARTUP forms: offline/reconnect, creation, joining and locked membership with a controlled API; test total **750,000 + 500,000 = 1,250,000**. No QA teams or competitive records were created in production.
+- Large menu balances (12,345,678) and chart/counter/results within the available width in the checked formats.
+- 3D results: samples of **38–40 draw calls / 47,757–48,493 triangles**. The chart uses SVG, with no new WebGL passes. Not a sustained physical performance test.
+- The first checks found and fixed the offline message persisting after reconnecting and the character partially hidden by the results. The initial body measurement included the released canopy: it was fixed by using explicit rig/helmet nodes. Reduced motion is validated against the existing global rule that removes animations.
 
-[Resultados y medidas verificables](evidence-hud27/verified-tests.json).
+[Verifiable results and measurements](evidence-hud27/verified-tests.json).
 
-## Evidencia visual
+## Visual evidence
 
-- Menú: [antes](evidence-hud27/before-menu.png) / [después](evidence-hud27/menu-mobile.png).
-- Resultados, misma semilla/input: [antes](evidence-hud27/before-results.png) / [después](evidence-hud27/results-mobile.png).
-- [Móvil pequeño](evidence-hud27/results-small.png), [horizontal](evidence-hud27/results-landscape.png), [desktop](evidence-hud27/results-desktop.png).
-- [HUD con pérdida](evidence-hud27/hud-loss.png), [derrota](evidence-hud27/defeat.png), [MY STARTUP](evidence-hud27/startup.png), [créditos](evidence-hud27/credits.png).
-- Vídeos y capturas por navegador: `reports/evidence-hud27/accepted/`.
+- Menu: [before](evidence-hud27/before-menu.png) / [after](evidence-hud27/menu-mobile.png).
+- Results, same seed/input: [before](evidence-hud27/before-results.png) / [after](evidence-hud27/results-mobile.png).
+- [Small mobile](evidence-hud27/results-small.png), [landscape](evidence-hud27/results-landscape.png), [desktop](evidence-hud27/results-desktop.png).
+- [HUD with loss](evidence-hud27/hud-loss.png), [defeat](evidence-hud27/defeat.png), [MY STARTUP](evidence-hud27/startup.png), [credits](evidence-hud27/credits.png).
+- Videos and screenshots per browser: `reports/evidence-hud27/accepted/`.
 
-## Pendientes reales y publicación
+## Real pending items and release
 
-- Pruebas en iPhone/Android físicos, áreas seguras físicas y rendimiento sostenido: pendientes. Solo se acredita emulación de navegador.
-- Validación de crear/unirse contra API real no ejecutada para evitar datos de prueba públicos; contrato inspeccionado y flujo verificado con respuestas controladas.
-- Valoración artística final del usuario; la referencia se tradujo a UI real responsive, no a una captura estática con cifras pintadas.
-- Tanda 5 y otras solicitudes anteriores fuera de este alcance: no iniciadas.
-- Frontend publicado como `hud-27`, versión 28. API, reglas, rutas, economía, identidades y persistencia conservadas.
-- Rollback `npc-26`, versión 27: `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_93937fa874a4819189d7bed6400ddc32`.
+- Tests on physical iPhone/Android, physical safe areas and sustained performance: pending. Only browser emulation is vouched for.
+- Create/join validation against the real API not run to avoid public test data; contract inspected and flow verified with controlled responses.
+- Final artistic assessment by the user; the reference was translated into a real responsive UI, not a static screenshot with painted figures.
+- Batch 5 and other earlier requests outside this scope: not started.
+- Frontend published as `hud-27`, version 28. API, rules, routes, economy, identities and persistence preserved.
+- Rollback `npc-26`, version 27: `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_93937fa874a4819189d7bed6400ddc32`.
 
-## Publicación confirmada
+## Release confirmed
 
-Sites confirmó el despliegue el 20-10-2026 a las 17:09 UTC. [Registro de versión, SHA y rollback](evidence-hud27/publication.json). [Smoke público](evidence-hud27/public-smoke.json): build hud-27, menú/créditos móviles revisados, ambos PNG cargados y ningún error JavaScript. API bloqueada en esta prueba para no generar identidades ni runs públicos de QA.
+Sites confirmed the deployment on 2026-10-20 at 17:09 UTC. [Version, SHA and rollback record](evidence-hud27/publication.json). [Public smoke test](evidence-hud27/public-smoke.json): build hud-27, mobile menu/credits reviewed, both PNGs loaded and no JavaScript errors. API blocked in this test to avoid generating public QA identities or runs.

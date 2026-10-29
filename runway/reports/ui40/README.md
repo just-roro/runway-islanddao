@@ -1,42 +1,42 @@
-# RUNWAY — Tanda 4/7 · UI-40
+# RUNWAY — Batch 4/7 · UI-40
 
-2026-10-21. Implementación acotada a interfaz, navegación y presentación de SHOP. Base/rollback: `world-39`, commit `ba16b8eb803aa0767542232e82297eeefd978e79`, versión Sites 40.
+2026-10-21. Implementation limited to interface, navigation and SHOP presentation. Baseline/rollback: `world-39`, commit `ba16b8eb803aa0767542232e82297eeefd978e79`, Sites version 40.
 
-## Implementado
+## Implemented
 
-| Requerimiento | Causa y cambio | Verificación |
+| Requirement | Cause and change | Verification |
 |---|---|---|
-| BACK siempre accesible | Estaba dentro del mismo scroll que el contenido. `Panel` ahora admite navegación como encabezado separado del cuerpo desplazable; aplicado a Rankings, My Startup, Options, Credits y pausa. SHOP mantiene su propio encabezado anclado. | Coordenadas idénticas antes/después de scroll; créditos con licencias expandidas. |
-| Avatar sin espera/layout shift | El PNG original ya pesaba menos de 2 KB; se solicitaba como recurso externo entre los assets 3D. Los 12 originales se incorporan en `identity-portraits.json` como data URLs para el badge, con 40×40 reservados. No se alteró el arte ni las texturas del casco. | Fuente inline y dimensiones verificadas; visible en capturas iniciales. |
-| Bordes e iconos | Un borde rectangular cortado por clip-path no dibujaba las diagonales. `Button` dibuja un trazo SVG con el tamaño real y el mismo bisel. PLAY, navegación, avión, música y categorías usan `Icon` SVG. | Capturas Chromium/WebKit; borde de pausa ocupa todo el botón. |
-| Branding | PNG Human Friendly × IslandDAO original, idéntico byte a byte, encima de RUNWAY. Movimiento y brillo sutiles de 7 s, desactivados con reduced motion. | Capturas en cinco formatos y SHA256 en summary.json. |
-| Chatlog | Los offsets fijos dependían del viewport, no del contador. Feed dentro del flujo inmediatamente después del importe; texto de 14 px, sin flechas ni sombras. | Separación de 4 px respecto al contador; ganancias/pérdidas reales y entrada/fade conservados. |
-| SHOP intro | Estado efímero al montar SHOP reiniciaba la conversación. `shopIntroSeen` se guarda en la primera visita; botón SHOP GUIDE permite volver a consultarla. Una conversación vacía ya no emite audio de expresión. | Primera visita, regreso, recarga y consulta manual. Si se abandona antes de completar la explicación, la tienda abre directamente al volver; SHOP GUIDE mantiene la consulta voluntaria. |
-| SHOP categorías/contenido | Tres toggles con iconos y estados animados. Nombre seguido de descripción. Estado de propiedad único y acción única; retirado texto redundante de ahorro local. Flechas sobre fondo sólido. | Pilots, Parachutes y Trails; compras y selección sin nuevas categorías. |
-| SHOP estabilidad | Filas reservadas para título, descripción, variantes y acción. Encaje 3D calculado desde el rectángulo de preview; escala por categoría/formato, independiente del saldo o mensaje de compra. | Rectángulos exactamente iguales para BUY, EQUIP, EQUIPPED e INSUFFICIENT FUNDS. Canvas e instancia del piloto retenidos al navegar productos; transforms estables con reduced motion. |
-| LANDED | Se retiraron marco multicapa, cuadrícula y divisores del ledger; mayor avión SVG, separación corta al texto. Retiradas frases de crédito monetario/«Capital secured»; se conservan logros reales. | Resultado 1.657.500, desglose y saldo acreditado exactos; controles visibles. |
+| BACK always reachable | It was inside the same scroll as the content. `Panel` now supports navigation as a header separate from the scrollable body; applied to Rankings, My Startup, Options, Credits and pause. SHOP keeps its own anchored header. | Identical coordinates before/after scrolling; credits with expanded licenses. |
+| Avatar without waiting/layout shift | The original PNG already weighed less than 2 KB; it was requested as an external resource among the 3D assets. The 12 originals are embedded in `identity-portraits.json` as data URLs for the badge, with 40×40 reserved. The art and helmet textures were not altered. | Inline source and dimensions verified; visible in the initial screenshots. |
+| Borders and icons | A rectangular border cut by clip-path did not draw the diagonals. `Button` draws an SVG stroke at the real size with the same bevel. PLAY, navigation, plane, music and categories use the `Icon` SVG. | Chromium/WebKit screenshots; the pause border covers the whole button. |
+| Branding | Original Human Friendly × IslandDAO PNG, byte-for-byte identical, above RUNWAY. Subtle 7 s motion and shine, disabled with reduced motion. | Screenshots in five formats and SHA256 in summary.json. |
+| Chatlog | The fixed offsets depended on the viewport, not on the counter. Feed in the flow right after the amount; 14 px text, no arrows or shadows. | 4 px separation from the counter; real gains/losses and entry/fade kept. |
+| SHOP intro | Ephemeral state when mounting SHOP restarted the conversation. `shopIntroSeen` is saved on the first visit; a SHOP GUIDE button lets you view it again. An empty conversation no longer plays expression audio. | First visit, return, reload and manual viewing. If you leave before finishing the explanation, the shop opens directly on return; SHOP GUIDE keeps the voluntary viewing. |
+| SHOP categories/content | Three toggles with icons and animated states. Name followed by description. A single ownership state and a single action; removed redundant local-savings text. Arrows on a solid background. | Pilots, Parachutes and Trails; purchases and selection with no new categories. |
+| SHOP stability | Rows reserved for title, description, variants and action. 3D fit computed from the preview rectangle; scale per category/format, independent of the balance or purchase message. | Exactly equal rectangles for BUY, EQUIP, EQUIPPED and INSUFFICIENT FUNDS. Canvas and pilot instance retained while browsing products; stable transforms with reduced motion. |
+| LANDED | Removed the multi-layer frame, grid and ledger dividers; larger SVG plane, short gap to the text. Removed monetary credit phrases/"Capital secured"; real achievements are kept. | Result 1,657,500, exact breakdown and credited balance; controls visible. |
 
-## Pruebas realizadas
+## Tests run
 
-- `npm run build`: TypeScript y Vite correctos. Se mantiene el aviso existente de tamaño del chunk Three; no se agregaron dependencias.
+- `npm run build`: TypeScript and Vite OK. The existing Three chunk size warning remains; no dependencies were added.
 - `npm test -- --run tests/shop.test.ts tests/economy.test.ts`: **11/11**.
-- `tests/browser/ui40.spec.ts`: **8 casos distintos aprobados** (4 por motor), con ejecución adicional de confirmación tras corregir la especificidad CSS del SVG de pausa.
-- Chromium/Pixel 7 y WebKit/iPhone 13, en **390×844, 360×640, 412×915, 844×390 y 1440×900**.
-- Compra de Horse y Lagoon: 3.000.000 → 250.000 SOL, propiedad/equipamiento persistidos después de reload; navegación sin compra no modifica el equipamiento.
-- Cierre con simulación determinista real, semilla 17, ruta Jurerê: 1.657.500 SOL, reflejados en resultados y saldo. Para acelerar QA se avanza la simulación hasta el final; no es una partida humana completa.
-- Reduced motion: sin movimiento ambiental del logo; navegación conserva canvas, instancia y transforms del piloto.
-- Se inspeccionaron visualmente capturas de menú, SHOP, HUD y LANDED, incluyendo móvil pequeño y horizontal. Videos de las interacciones y matriz completa quedan locales en `final/` y `confirmation/`.
+- `tests/browser/ui40.spec.ts`: **8 distinct cases passed** (4 per engine), with an additional confirmation run after fixing the CSS specificity of the pause SVG.
+- Chromium/Pixel 7 and WebKit/iPhone 13, at **390×844, 360×640, 412×915, 844×390 and 1440×900**.
+- Purchase of Horse and Lagoon: 3,000,000 → 250,000 SOL, ownership/equipment persisted after reload; browsing without buying does not change the equipment.
+- Ending with the real deterministic simulation, seed 17, Jurerê route: 1,657,500 SOL, reflected in results and balance. To speed up QA the simulation is fast-forwarded to the end; it is not a full human run.
+- Reduced motion: no ambient logo motion; navigation keeps the canvas, instance and pilot transforms.
+- Screenshots of menu, SHOP, HUD and LANDED were inspected visually, including small mobile and landscape. Videos of the interactions and the full matrix remain local in `final/` and `confirmation/`.
 
-## Evidencia
+## Evidence
 
-- [Menú anterior](preview/menu-before.png) → [Menú iPhone 13](preview/menu-iphone13.png).
-- [SHOP anterior](preview/shop-before.png) → [SHOP iPhone 13](preview/shop-iphone13.png).
-- Créditos desplazados, móvil pequeño y paracaídas: capturas adicionales locales en `final/`.
+- [Previous menu](preview/menu-before.png) → [iPhone 13 menu](preview/menu-iphone13.png).
+- [Previous SHOP](preview/shop-before.png) → [iPhone 13 SHOP](preview/shop-iphone13.png).
+- Scrolled credits, small mobile and parachutes: additional local screenshots in `final/`.
 - [Chatlog](preview/hud.png), [LANDED](preview/landed-iphone13.png).
 
-## Pendientes reales / siguiente iteración
+## Real pending items / next iteration
 
-- Validación en iPhone y Android **físicos** pendiente; emulación no equivale a dispositivos reales ni mide su rendimiento.
-- La API se respondió con 503 en QA para aislar presentación y persistencia local; no se certifica aceptación de rankings en producción con estas pruebas.
-- No se modificaron reglas, precios, objetivos, colisiones, isla ni backend. No se añadieron categorías de Tanda 7 ni se inició la siguiente tanda.
-- `identity-portraits.json` contiene base64 de los originales de `public/assets/perks`; si esos originales cambian, regenerar ese mapa en el mismo orden de `perks.json`.
+- Validation on **physical** iPhone and Android pending; emulation is not equivalent to real devices and does not measure their performance.
+- The API responded with 503 in QA to isolate presentation and local persistence; these tests do not certify ranking acceptance in production.
+- Rules, prices, goals, collisions, island and backend were not modified. No Batch 7 categories were added and the next batch was not started.
+- `identity-portraits.json` contains base64 of the originals in `public/assets/perks`; if those originals change, regenerate that map in the same order as `perks.json`.

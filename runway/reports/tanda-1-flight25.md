@@ -1,70 +1,70 @@
-# RUNWAY — Tanda 1/5 · flight-25
+# RUNWAY — Batch 1/5 · flight-25
 
-20-10-2026. Base: `shop-24`, commit `f2c0283089c467cf4b0fee2956a840e8e6b18b03`.
-Alcance cerrado: gameplay, animación y continuidad cinematográfica de esta tanda. No se inició la tanda 2.
+2026-10-20. Baseline: `shop-24`, commit `f2c0283089c467cf4b0fee2956a840e8e6b18b03`.
+Scope limited to this batch's gameplay, animation and cinematic continuity. Batch 2 was not started.
 
-## Diagnóstico sobre la base
+## Diagnosis of the baseline
 
-- La derrota congelaba la simulación competitiva y reutilizaba la pose de aterrizaje: piloto parado en el aire.
-- El reinicio interpolaba desde la posición final hasta la cabina. La cámara recorría físicamente el avión.
-- La apertura tenía inflación de canopy pero no una reacción coordinada del cuerpo. Al terminar, el canopy seguía siendo hijo del piloto y se ocultaba en 1,5 s.
-- El joystick dependía del refresco React del HUD a 20 Hz; el input ya llegaba inmediatamente.
-- El imán sí estaba generado y tenía efecto determinista. Se conservó el sistema, se verificó su alcance/caducidad y se corrigió su lectura visual positiva.
+- Defeat froze the competitive simulation and reused the landing pose: the pilot stood still in mid-air.
+- The restart interpolated from the final position back to the cabin. The camera physically travelled through the plane.
+- The opening had canopy inflation but no coordinated body reaction. At the end, the canopy was still a child of the pilot and hid after 1.5 s.
+- The joystick depended on the HUD's React refresh at 20 Hz; the input already arrived immediately.
+- The magnet was in fact generated and had a deterministic effect. The system was kept, its reach/expiry verified and its positive visual reading fixed.
 
-## Requerimientos y cierre
+## Requirements and closure
 
-| # | Requerimiento | Implementación y estado |
+| # | Requirement | Implementation and status |
 |---|---|---|
-| 1 | Cámara / iluminación interior | IMPLEMENTADO; encuadre tres cuartos desde atrás, foco más alto y dos luces existentes recolocadas con separación cálida/fría. Captura revisada. |
-| 2 | Semáforo anclado | IMPLEMENTADO; soportes sobre las paredes laterales, independientes de la compuerta. Posición y jerarquía comprobadas con compuerta completamente abierta. |
-| 3 | Salto con impulso | IMPLEMENTADO; carga de piernas, extensión, arco de separación al llegar al extremo de la rampa y apertura gradual de pose. Cámara consume la misma posición de presentación. |
-| 4 | Reinicio sin atravesar avión | IMPLEMENTADO; fundido 160/240 ms, corte de cámara/FOV bajo cobertura, sin interpolación ascendente. Reintento y vuelta al menú comprobados. |
-| 5–6 | Derrota aérea / ragdoll | IMPLEMENTADO como caída balística de presentación y reacción articulada procedural sobre los 15 huesos existentes. Continúa con gravedad después de cerrar el resultado. No es un solver de cuerpos rígidos por hueso. |
-| 7 | Reacción contra edificio | IMPLEMENTADO; flail y recuperación tras contacto real no fatal; golpe fatal entra en caída y desprende canopy. |
-| 8 | Estados compatibles | IMPLEMENTADO en escenarios probados; aterrizaje, caída terminal y reinicio diferenciados. Pausa congela reloj corporal y canopy. |
-| 9 | Joystick | IMPLEMENTADO; thumb actualizado cada paint, input sin filtro añadido y retorno visual independiente. Pointer drag verificado en viewport móvil; sensación táctil física pendiente. |
-| 10 | Imán | IMPLEMENTADO / VERIFICADO; pickup real generado, ocho segundos, alcance ampliado, renovación sin apilar potencia y atracción existente. Modelo cyan/verde para identificarlo como positivo. |
-| 11 | Picada de estrella | IMPLEMENTADO; inclinación raíz, brazos recogidos y piernas extendidas durante el impulso real; recuperación al terminar. |
-| 12 | Apertura | IMPLEMENTADO; tensión, tirón corporal, inflación, rebote amortiguado y estabilización con reloj compartido. Cuerdas siguen anclajes de manos. |
-| 13 | Desprendimiento | IMPLEMENTADO; transformación independiente en mundo, deriva lateral, gravedad, plegado y fade; persiste 3,2 s. Ya no viaja pegado al torso ni desaparece al contacto. |
+| 1 | Interior camera / lighting | IMPLEMENTED; three-quarter framing from behind, higher focus and the two existing lights repositioned with a warm/cool split. Screenshot reviewed. |
+| 2 | Anchored traffic light | IMPLEMENTED; mounts on the side walls, independent of the hatch. Position and hierarchy checked with the hatch fully open. |
+| 3 | Jump with push-off | IMPLEMENTED; leg charge, extension, separation arc when reaching the end of the ramp and gradual pose opening. The camera uses the same presentation position. |
+| 4 | Restart without crossing the plane | IMPLEMENTED; 160/240 ms fade, camera/FOV cut under cover, no upward interpolation. Retry and return to the menu checked. |
+| 5–6 | Air defeat / ragdoll | IMPLEMENTED as a ballistic presentation fall and a procedural articulated reaction on the 15 existing bones. It continues under gravity after the result closes. It is not a per-bone rigid body solver. |
+| 7 | Reaction against buildings | IMPLEMENTED; flail and recovery after real non-fatal contact; a fatal hit goes into a fall and releases the canopy. |
+| 8 | Compatible states | IMPLEMENTED in the tested scenarios; landing, terminal fall and restart are distinct. Pause freezes the body clock and canopy. |
+| 9 | Joystick | IMPLEMENTED; thumb updated every paint, input without added filtering and independent visual return. Pointer drag verified on a mobile viewport; physical touch feel pending. |
+| 10 | Magnet | IMPLEMENTED / VERIFIED; real generated pickup, eight seconds, extended reach, renewal without stacking strength and existing attraction. Cyan/green model to identify it as positive. |
+| 11 | Star dive | IMPLEMENTED; root tilt, arms tucked and legs extended during the real boost; recovery when it ends. |
+| 12 | Opening | IMPLEMENTED; tension, body jerk, inflation, damped bounce and stabilization with the shared clock. The lines follow the hand anchors. |
+| 13 | Release | IMPLEMENTED; independent world transform, lateral drift, gravity, folding and fade; persists for 3.2 s. It no longer travels stuck to the torso or disappears on contact. |
 
-El arco de salida y la caída posterior a derrota son presentación local. No modifican colliders, economía, inputs, ruta, duraciones ni replay del servidor. No se cambió la API ni la versión competitiva.
+The exit arc and the post-defeat fall are local presentation. They do not modify colliders, economy, inputs, route, durations or the server replay. The API and the competitive version were not changed.
 
-## Verificación focalizada
+## Focused verification
 
-- TypeScript sin errores.
-- 15 pruebas unitarias de coreografía, reloj de presentación, canopy y runtime aprobadas.
-- Dos pruebas existentes de magnetismo aprobadas: atracción/caducidad y renovación sin acumulación.
-- Seis casos de navegador aprobados: tres en Chromium y tres en WebKit, sin errores JavaScript.
-- Primera secuencia menú → PLAY → salida ejecutada a velocidad real. Distancia cámara/piloto entre **4,38 y 5,02 unidades**; 577 muestras Chromium y 319 WebKit.
-- Reintento: cobertura opaca antes de cambiar cámara; no recorrido visible de vuelta a la cabina.
-- Derrota aérea: descenso de **23,23 / 23,37 unidades** durante la espera de 600 ms en ambos navegadores, capital cerrado en cero.
-- Impacto de edificio: contacto de la simulación compartida activa reacción; caso fatal conserva canopy separado y visible.
-- Apertura: pausa/reanudación conserva exactamente el estado visual capturado. Anclajes de ambas manos activos antes del desprendimiento y liberados después.
-- Joystick: desplazamiento 28/−14 px produce input 0,5/0,25 y thumb 22/−11 px en el siguiente refresco; al soltar vuelve a ocultarse.
-- Imán y estrella activados mediante contactos reales. La estrella vuelve a fuerza visual cero tras finalizar.
+- TypeScript with no errors.
+- 15 unit tests of choreography, presentation clock, canopy and runtime passed.
+- Two existing magnetism tests passed: attraction/expiry and renewal without stacking.
+- Six browser cases passed: three in Chromium and three in WebKit, with no JavaScript errors.
+- First menu → PLAY → exit sequence run at real speed. Camera/pilot distance between **4.38 and 5.02 units**; 577 Chromium samples and 319 WebKit.
+- Retry: opaque cover before changing the camera; no visible travel back to the cabin.
+- Air defeat: descent of **23.23 / 23.37 units** during the 600 ms wait in both browsers, capital closed at zero.
+- Building impact: contact from the shared simulation triggers the reaction; the fatal case keeps the canopy separated and visible.
+- Opening: pause/resume keeps exactly the captured visual state. Both hand anchors active before the release and freed afterwards.
+- Joystick: a 28/−14 px displacement produces input 0.5/0.25 and thumb 22/−11 px on the next refresh; on release it hides again.
+- Magnet and star triggered through real contacts. The star returns to zero visual strength after finishing.
 
-Las pruebas de colisión/pickups usan fixtures de posición/estado y luego los contactos reales del núcleo. No representan vuelos humanos completos ni mediciones de rendimiento sostenido. El caso de salida no usa un salto temporal.
+The collision/pickup tests use position/state fixtures and then the real core contacts. They do not represent complete human flights or sustained performance measurements. The exit case does not use a time jump.
 
-## Evidencia
+## Evidence
 
-- [Resultados y muestras completas](evidence-flight25/verified-tests.json).
-- [Cabina](evidence-flight25/cabin.png), [apoyo en rampa](evidence-flight25/launch-2.45.png), [separación](evidence-flight25/launch-2.95.png), [entrada en caída](evidence-flight25/launch-3.6.png).
-- [Derrota aérea](evidence-flight25/air-defeat.png), [impacto contra edificio](evidence-flight25/building-impact.png), [derrota contra edificio](evidence-flight25/building-defeat.png).
-- [Imán](evidence-flight25/magnet-active.png), [picada](evidence-flight25/boost-dive.png), [canopy abierto](evidence-flight25/deployed.png), [desprendimiento lateral](evidence-flight25/landing-release.png).
-- Grabaciones a velocidad real: [salida](evidence-flight25/launch.webm), [derrotas y reinicio](evidence-flight25/defeat.webm), [apertura, pausa y desprendimiento](evidence-flight25/canopy-pickups.webm).
+- [Full results and samples](evidence-flight25/verified-tests.json).
+- [Cabin](evidence-flight25/cabin.png), [push-off on the ramp](evidence-flight25/launch-2.45.png), [separation](evidence-flight25/launch-2.95.png), [entering the fall](evidence-flight25/launch-3.6.png).
+- [Air defeat](evidence-flight25/air-defeat.png), [building impact](evidence-flight25/building-impact.png), [building defeat](evidence-flight25/building-defeat.png).
+- [Magnet](evidence-flight25/magnet-active.png), [dive](evidence-flight25/boost-dive.png), [open canopy](evidence-flight25/deployed.png), [lateral release](evidence-flight25/landing-release.png).
+- Real-speed recordings: [exit](evidence-flight25/launch.webm), [defeats and restart](evidence-flight25/defeat.webm), [opening, pause and release](evidence-flight25/canopy-pickups.webm).
 
-Capturas revisadas visualmente. Durante esta tanda se corrigió también el canopy que tapaba el rostro durante el desprendimiento; ahora se pliega hacia el lado contrario de la órbita.
+Screenshots reviewed visually. This batch also fixed the canopy covering the face during the release; it now folds toward the side opposite the orbit.
 
-## Pendientes reales y límites
+## Real pending items and limits
 
-- iPhone/Android físicos: latencia táctil percibida, diez minutos sostenidos y valoración de las animaciones. Emulación no acredita estas pruebas.
-- La reacción ragdoll es procedural; no incluye colisión individual de cada extremidad ni simulación de tela del canopy.
-- La calidad artística global, puente, tipografía y otros pedidos fuera de esta tanda no se declaran cerrados ni se trabajaron aquí.
-- No se añadieron sonidos ni nuevas reglas.
+- Physical iPhone/Android: perceived touch latency, ten sustained minutes and assessment of the animations. Emulation does not vouch for these tests.
+- The ragdoll reaction is procedural; it does not include individual collision for each limb or cloth simulation for the canopy.
+- Overall artistic quality, bridge, typography and other requests outside this batch are not declared closed and were not worked on here.
+- No sounds or new rules were added.
 
-## Publicación / rollback
+## Release / rollback
 
-Frontend identificado como `flight-25`; audiencia pública conservada, API sin cambios.
-Rollback: `shop-24`, versión guardada `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_07a664b751788191a90095fd5623672d`.
-La confirmación del despliegue corresponde al resultado de Sites en esta entrega.
+Frontend identified as `flight-25`; public audience kept, API unchanged.
+Rollback: `shop-24`, saved version `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_07a664b751788191a90095fd5623672d`.
+The deployment confirmation corresponds to the Sites result in this delivery.

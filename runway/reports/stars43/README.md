@@ -1,54 +1,54 @@
-# RUNWAY — Tanda 1/6: estrellas y REPLAY
+# RUNWAY — Batch 1/6: stars and REPLAY
 
-Fecha: 2026-10-22. Implementación y verificación local; no publicación ni regeneración del ZIP. No se inició la tanda 2.
+Date: 2026-10-22. Local implementation and verification; no release and no ZIP regeneration. Batch 2 was not started.
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-### Estrellas
+### Stars
 
-Causa: `Items` usaba la misma rama de recogida para monedas y estrellas: interpolación hacia el piloto, escala descendente y retirada a los 220 ms. La simulación ya excluía estrellas de la atracción magnética; el fallo visible estaba en el renderer.
+Cause: `Items` used the same pickup branch for coins and stars: interpolation toward the pilot, shrinking scale and removal at 220 ms. The simulation already excluded stars from magnetic attraction; the visible fault was in the renderer.
 
-Corrección: reacción independiente con posición capturada en el contacto, escala original constante, emisión amarilla por instancia y tres vueltas en 1,2 segundos. La curva de giro tiene velocidad y aceleración nulas al comienzo y al final. Después queda en su posición, apagada, hasta salir del volumen visible. Movimiento reducido conserva el destello sin giro rápido. La pausa conserva el instante exacto.
+Fix: an independent reaction with the position captured at contact, constant original scale, per-instance yellow emission and three turns in 1.2 seconds. The spin curve has zero velocity and acceleration at the start and end. Afterwards it stays in place, switched off, until it leaves the visible volume. Reduced motion keeps the flash without the fast spin. Pause keeps the exact moment.
 
-Colisiones: se mantiene el cruce continuo del plano en coordenadas relativas. Se elimina para aros/estrellas el descarte por altura calculado sólo sobre el extremo final del movimiento; se acepta un comienzo exactamente sobre el plano; se corrigen los ejes de estrellas verticales. La abertura de cinco puntas considera ahora el radio físico del piloto, en vez de exigir que sólo su punto central esté dentro. No se reemplaza por un círculo sobredimensionado.
+Collisions: the continuous plane crossing in relative coordinates is kept. For rings/stars, the height rejection computed only on the final end of the movement is removed; a start exactly on the plane is accepted; the axes of vertical stars are fixed. The five-point opening now takes the pilot's physical radius into account, instead of requiring only its center point to be inside. It is not replaced by an oversized circle.
 
-El impulso y los 15.000 SOL siguen naciendo del mismo evento de simulación. `collected` continúa siendo la única protección de concesión por objeto; el efecto visual nunca concede dinero ni vuelve a activar el impulso. Sin nuevas mallas ni pases: un atributo de emisión en el instancing existente.
+The boost and the 15,000 SOL still come from the same simulation event. `collected` remains the only per-object grant protection; the visual effect never grants money or re-triggers the boost. No new meshes or passes: one emission attribute on the existing instancing.
 
 ### REPLAY
 
-Causas: `createRuntime` dejaba la presentación en el origen del mundo hasta el primer avance. Como el nuevo intento se pausaba bajo el telón, ese avance no ocurría. Además, los guards de pausa impedían restaurar el rig, la rotación del cuerpo, el canopy y las partículas heredadas. Compilar shaders no restauraba esos estados.
+Causes: `createRuntime` left the presentation at the world origin until the first step. Since the new attempt was paused under the curtain, that step never happened. In addition, the pause guards prevented restoring the rig, body rotation, canopy and inherited particles. Compiling shaders did not restore those states.
 
-Corrección:
+Fix:
 
-- Inicializar la presentación a partir del estado real antes de montar el intento, sin avanzar el reloj.
-- Congelar el intento anterior desde el clic de REPLAY.
-- Restaurar explícitamente pose, cámara, FOV, framing, niebla, canopy y trail al cambiar de intento, aun con `dt=0`.
-- Asociar la confirmación de escena lista al runtime solicitado, evitando que una confirmación tardía del intento anterior abra el telón.
-- Mantener el intento nuevo pausado durante toda la preparación y apertura del telón. Reanudar al quedar completamente descubierto.
-- Mantener la continuidad normal de PLAY desde el menú y la fase del retrato LED. No remonta el canvas.
+- Initialize the presentation from the real state before mounting the attempt, without advancing the clock.
+- Freeze the previous attempt from the REPLAY click.
+- Explicitly restore pose, camera, FOV, framing, fog, canopy and trail when switching attempts, even with `dt=0`.
+- Tie the scene-ready confirmation to the requested runtime, so that a late confirmation from the previous attempt cannot open the curtain.
+- Keep the new attempt paused during the whole preparation and curtain opening. Resume once it is fully uncovered.
+- Keep the normal continuity of PLAY from the menu and the LED portrait phase. The canvas is not remounted.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- TypeScript + Vite producción: correcto. Advertencia ya existente de tamaño de chunks; sin error de compilación.
-- 24 pruebas automatizadas en seis archivos: todas correctas. Incluyen 90 combinaciones de orientación temporal, desplazamiento lateral y velocidad normal/impulso; contacto de borde, fallo real, comienzo sobre plano y sobrepaso del plano. Recompensa e impulso únicos.
-- Regresión dirigida: 100 partidas por semilla con ledger y replay exactos; comprobación de programación de render a 30/60 FPS; aros, paracaídas, cues y recogidas.
-- Chromium/Pixel 7 emulado y WebKit/iPhone 13 emulado: 6 casos, 6 correctos, 0 omitidos y 0 inestables. API interceptada con respuesta 503; ninguna partida de QA enviada a producción.
-- Estrella: 127 cuadros observados en Chromium y 45 en WebKit; posición de contacto y escala 1,65 invariantes, giro observable, una recompensa y una activación. Pico de emisión 0,996/1,000; 40 draw calls máximos observados en ese escenario.
-- Victoria real mediante controlador de input, REPLAY, derrota aérea mediante colisión de gas controlada y segundo REPLAY. Se retuvo deliberadamente `compileAsync` para comprobar cobertura opaca durante la preparación.
-- 267/253 cuadros pausados de victoria/derrota en Chromium y 69/69 en WebKit: tick 0, posición `[0,1122.2,355]`, cámara constante, pose `prepare`, canopy oculto y cero partículas del trail. También pasa el retorno al menú con compilación retenida.
-- Capturas revisadas visualmente: estrella antes y después del contacto, plano auxiliar para ver completa la silueta durante el destello y avión al terminar el reinicio. Vídeos continuos en `final/`. Los primeros intentos detectaron un problema del muestreador de QA: observaba el runtime antes del commit de React y dejaba de registrar; se corrigió para distinguir el intervalo opaco del estado ya incorporado a escena.
-- Núcleo cliente/API idéntico byte a byte. Contenido local: `island-stars-12`; reglas económicas y generación de objetos sin cambios. La próxima publicación debe llevar frontend y API compatibles.
-- ZIP de producción intacto: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
+- Production TypeScript + Vite: OK. Existing chunk size warning; no build error.
+- 24 automated tests in six files: all OK. They include 90 combinations of timing, lateral offset and normal/boost speed; edge contact, real miss, start on the plane and overshooting the plane. Single reward and boost.
+- Targeted regression: 100 runs per seed with exact ledger and replay; render scheduling check at 30/60 FPS; rings, parachutes, cues and pickups.
+- Chromium/emulated Pixel 7 and WebKit/emulated iPhone 13: 6 cases, 6 OK, 0 skipped and 0 flaky. API intercepted with a 503 response; no QA runs sent to production.
+- Star: 127 frames observed in Chromium and 45 in WebKit; contact position and 1.65 scale invariant, visible spin, one reward and one activation. Peak emission 0.996/1.000; max 40 draw calls observed in that scenario.
+- Real victory through an input controller, REPLAY, air defeat through a controlled gas collision and a second REPLAY. `compileAsync` was deliberately held to check opaque coverage during preparation.
+- 267/253 paused victory/defeat frames in Chromium and 69/69 in WebKit: tick 0, position `[0,1122.2,355]`, constant camera, `prepare` pose, hidden canopy and zero trail particles. Returning to the menu with held compilation also passes.
+- Screenshots reviewed visually: star before and after contact, an auxiliary shot to see the whole silhouette during the flash, and the plane when the restart finishes. Continuous videos in `final/`. The first attempts revealed a QA sampler problem: it observed the runtime before the React commit and stopped recording; it was fixed to distinguish the opaque interval from the state already incorporated into the scene.
+- Client/API core byte-for-byte identical. Local content: `island-stars-12`; economic rules and object generation unchanged. The next release must ship a compatible frontend and API.
+- Production ZIP intact: SHA-256 `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`.
 
-## Evidencia
+## Evidence
 
-- [Resumen de navegador](browser-summary.json)
-- [Pruebas de lógica](unit-tests.log) · [Build](build.log)
-- [Estrella amarilla](star-yellow-peak.png)
-- [REPLAY desde victoria](victory-replay-ready.png) · [REPLAY desde derrota](defeat-replay-ready.png)
-- Telemetría completa por navegador: `*-star-frames.json`, `*-victory-reset-frames.json`, `*-defeat-reset-frames.json`.
-- Capturas originales y vídeos: `final/`, conservados localmente fuera del paquete de publicación.
+- [Browser summary](browser-summary.json)
+- [Logic tests](unit-tests.log) · [Build](build.log)
+- [Yellow star](star-yellow-peak.png)
+- [REPLAY from victory](victory-replay-ready.png) · [REPLAY from defeat](defeat-replay-ready.png)
+- Full telemetry per browser: `*-star-frames.json`, `*-victory-reset-frames.json`, `*-defeat-reset-frames.json`.
+- Original screenshots and videos: `final/`, kept locally outside the release package.
 
-## PARCIAL / PENDIENTE
+## PARTIAL / PENDING
 
-No quedan funcionalidades pendientes dentro de esta tanda. La comprobación en iPhone y Android físicos queda pendiente; las pruebas anteriores usan emulación sobre desktop y no equivalen a mediciones en hardware móvil. La versión pública sigue sin cambios; la publicación no forma parte de esta intervención.
+No features remain pending within this batch. Checking on physical iPhone and Android remains pending; the tests above use emulation on desktop and are not equivalent to measurements on mobile hardware. The public version remains unchanged; publishing is not part of this intervention.

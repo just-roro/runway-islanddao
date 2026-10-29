@@ -1,77 +1,77 @@
 # NPC tutorial — cinematic 3D overhaul (local, 22 October 2026)
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-- Cuatro escenas: THE LEAP, SURVIVE, FLY & LAND, BUILD. Se eliminó la guía individual de ítems del tutorial. Escritura a 18 caracteres/segundo: unos 20 segundos de guion y transiciones, más las pausas voluntarias; READ completa inmediatamente, NEXT avanza y SKIP sale.
-- Composición estable de tres cuartos: NPC a la izquierda, proyección a la derecha y diálogo reservado abajo. En horizontal corto, la escena ocupa la izquierda y el diálogo la derecha. El jugador conserva su instancia y estado, pero su grupo visual se excluye durante el briefing; no se desplaza artificialmente.
-- La mano derecha se extiende mediante el rig existente. La luz y los rayos parten del socket `pilot-grip-R`, utilizado también por las cuerdas del paracaídas. El objeto se materializa desde ese origen. Rotación suave, barrido holográfico, color verde/rojo y desaparición antes del siguiente objeto o paso. Un solo modelo visible.
-- Gestos breves por paso, expresiones LED de caracteres y preocupación asociada al gas fee. El reloj de alternancia es independiente de los gestos y de cada carácter escrito: la escritura no reinicia el holograma. Se mantienen los sonidos digitales y sus límites existentes.
-- SKIP, finalización y Escape guardan el tutorial visto. Se conserva `npc-26` como identificador de persistencia para no obligar a repetirlo a usuarios existentes; HOW TO PLAY siempre ofrece el nuevo tutorial. SHOP mantiene su introducción única y SHOP GUIDE permite repetirla voluntariamente.
-- Sin nuevas dependencias, assets descargados ni cambios de gameplay. Se reutilizan seis geometrías de producción; no hay PNGs ni screenshots representando objetos. Se mantienen el precalentamiento de shaders, el reloj que se detiene en background y alternativas de movimiento reducido.
+- Four scenes: THE LEAP, SURVIVE, FLY & LAND, BUILD. The per-item guide was removed from the tutorial. Typing at 18 characters/second: about 20 seconds of script and transitions, plus voluntary pauses; READ completes immediately, NEXT advances and SKIP exits.
+- Stable three-quarter composition: NPC on the left, projection on the right and dialogue reserved at the bottom. In short landscape, the scene takes the left and the dialogue the right. The player keeps their instance and state, but their visual group is excluded during the briefing; it is not moved artificially.
+- The right hand extends through the existing rig. The light and rays start from the `pilot-grip-R` socket, also used by the parachute lines. The object materializes from that origin. Smooth rotation, holographic sweep, green/red color and disappearance before the next object or step. A single visible model.
+- Short gestures per step, character LED expressions and worry tied to the gas fee. The alternation clock is independent of the gestures and of each typed character: typing does not restart the hologram. The existing digital sounds and their limits are kept.
+- SKIP, finishing and Escape save the tutorial as seen. `npc-26` is kept as the persistence identifier so existing users are not forced to repeat it; HOW TO PLAY always offers the new tutorial. SHOP keeps its one-time introduction and SHOP GUIDE lets you repeat it voluntarily.
+- No new dependencies, downloaded assets or gameplay changes. Six production geometries are reused; there are no PNGs or screenshots representing objects. Shader prewarming, the clock that stops in the background and reduced-motion alternatives are kept.
 
-## Modelos originales utilizados
+## Original models used
 
-| Escena | Modelo 3D | Origen real |
+| Scene | 3D model | Real source |
 |---|---|---|
-| THE LEAP | Paracaídas amarillo | `canopyGeometry`, misma superficie que el canopy de vuelo |
-| SURVIVE | Delivery / ETH gas fee | `propGeometry('delivery' / 'gas')`, mismo modelado, colores y etiquetas del gameplay |
-| FLY & LAND | Aro encadenado / estrella hueca | `propGeometry('gate' / 'star')`, incluido shader de franjas del aro |
-| BUILD | Paracaídas / Community | Canopy equipable y medallón Community como representación del equipo |
+| THE LEAP | Yellow parachute | `canopyGeometry`, same surface as the flight canopy |
+| SURVIVE | Delivery / ETH gas fee | `propGeometry('delivery' / 'gas')`, same modeling, colors and labels as gameplay |
+| FLY & LAND | Chained ring / hollow star | `propGeometry('gate' / 'star')`, including the ring stripe shader |
+| BUILD | Parachute / Community | Equippable canopy and Community medallion representing the team |
 
-Las etiquetas integradas en los materiales originales siguen existiendo; no se usan planos con imágenes de objetos para sustituir geometría. El canopy no pasa por el shader de etiquetas de pickups, evitando atributos de superficie incorrectos.
+The labels built into the original materials still exist; no image planes of objects are used to replace geometry. The canopy does not go through the pickup label shader, avoiding incorrect surface attributes.
 
-## Ajuste necesario del guion
+## Required script adjustment
 
-STARTUP registra integrantes, invitaciones y la suma de los mejores vuelos verificados; no permite invertir SOL en una oficina. Por eso BUILD dice:
+STARTUP records members, invitations and the sum of the best verified flights; it does not allow investing SOL in an office. That is why BUILD says:
 
 > Bank your SOL. Unlock new gear in the Shop. Your best flights grow your startup’s team capital.
 
-Community representa al equipo, no una oficina ficticia. No se anuncia una mecánica de Health: el recurso que se protege es el capital. No se agregó una función de inversión ni una pantalla de gestión.
+Community represents the team, not a fictional office. No Health mechanic is announced: the resource being protected is capital. No investment feature or management screen was added.
 
-## Causas corregidas
+## Causes fixed
 
-1. El tutorial anterior tenía nueve pasos y un segundo catálogo explicativo: reemplazado por cuatro escenas breves.
-2. El proyector nacía en una posición fija del mundo: ahora sigue la mano del esqueleto, después de evaluar su pose.
-3. El encuadre anterior podía incluir al jugador detrás de los objetos: plano exclusivo del NPC y encuadre adaptado al formato.
-4. La alternancia de modelos dependía del reloj de gestos, reiniciado al comenzar a hablar: ahora depende del inicio del paso.
-5. Los modelos no desaparecían antes de cambiar el texto: salida de 320 ms antes del siguiente paso; fades exclusivos entre modelos alternados.
+1. The previous tutorial had nine steps and a second explanatory catalog: replaced by four short scenes.
+2. The projector spawned at a fixed world position: it now follows the skeleton's hand, after evaluating its pose.
+3. The previous framing could include the player behind the objects: an NPC-only shot and framing adapted to the format.
+4. Model alternation depended on the gesture clock, which restarted when speaking began: it now depends on the start of the step.
+5. Models did not disappear before the text changed: a 320 ms exit before the next step; exclusive fades between alternating models.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- `npm run build`: tipos de toda la aplicación/tests y producción correctos. Persiste la advertencia de tamaño de bundles; no es un error de compilación.
-- `npx vitest run tests/dialogue.test.ts`: 8 pruebas aprobadas; continuidad, pausa, transición exclusiva, cambios rápidos, reloj de pasos y guion/ritmo.
-- Playwright: 8 escenarios del tutorial aprobados (4 por motor), más 2 del SHOP. Chromium/Pixel 7 y WebKit/iPhone 13 emulados. Capturas adicionales en 1440×900, 844×390 y 320×568 con movimiento reducido.
-- Recorrido completo de los cuatro pasos, alternancias de objetos, READ/NEXT, SKIP, regreso, persistencia tras recarga y HOW TO PLAY.
-- Aserciones sobre la escena real: jugador no visible, un holograma, origen a 0,055 unidades sobre el socket, rostro y objeto separados entre sí y del diálogo, objetos dentro de pantalla.
-- Eventos de audio de escritura y expresión warning comprobados después de interacción. SHOP no repite su introducción y permite solicitarla de nuevo. No se hizo una evaluación auditiva humana de la mezcla en teléfonos.
-- Todas las llamadas `/api/` interceptadas con respuesta controlada 503: ninguna partida ni ranking de producción modificados.
-- Se conservan seis pruebas de continuidad y se añaden dos del nuevo guion y reloj; `npc26.spec.ts` conserva la regresión del SHOP y `tutorial47.spec.ts` sustituye las expectativas obsoletas de nueve pasos/field guide.
+- `npm run build`: types for the whole application/tests and production OK. The bundle size warning persists; it is not a build error.
+- `npx vitest run tests/dialogue.test.ts`: 8 tests passed; continuity, pause, exclusive transition, rapid changes, step clock and script/pacing.
+- Playwright: 8 tutorial scenarios passed (4 per engine), plus 2 for the SHOP. Emulated Chromium/Pixel 7 and WebKit/iPhone 13. Additional screenshots at 1440×900, 844×390 and 320×568 with reduced motion.
+- Full walk through the four steps, object alternations, READ/NEXT, SKIP, return, persistence after reload and HOW TO PLAY.
+- Assertions on the real scene: player not visible, one hologram, origin 0.055 units above the socket, face and object separated from each other and from the dialogue, objects on screen.
+- Typing and warning-expression audio events checked after interaction. SHOP does not repeat its introduction and lets you request it again. No human listening evaluation of the mix on phones was done.
+- All `/api/` calls intercepted with a controlled 503 response: no production runs or rankings were modified.
+- Six continuity tests are kept and two are added for the new script and clock; `npc26.spec.ts` keeps the SHOP regression and `tutorial47.spec.ts` replaces the obsolete nine-step/field guide expectations.
 
-### Rendimiento observado
+### Observed performance
 
-Ventana de siete segundos atravesando cambios reales de modelo, servidor Vite local y hardware del Mac; no representa teléfonos físicos.
+Seven-second window going through real model changes, local Vite server and Mac hardware; does not represent physical phones.
 
-| Motor / emulación | Mediana | P95 | Máximo | Draw calls máx. | Triángulos máx. |
+| Engine / emulation | Median | P95 | Max | Max draw calls | Max triangles |
 |---|---:|---:|---:|---:|---:|
-| Chromium / Pixel 7 | 8,3 ms | 9,1 ms | 9,3 ms | 38 | 32.950 |
-| WebKit / iPhone 13 | 17 ms | 20 ms | 34 ms | 38 | 33.030 |
+| Chromium / Pixel 7 | 8.3 ms | 9.1 ms | 9.3 ms | 38 | 32,950 |
+| WebKit / iPhone 13 | 17 ms | 20 ms | 34 ms | 38 | 33,030 |
 
-25 geometrías y 24 texturas registradas; ninguna solicitud nueva de assets durante la ventana y nunca dos hologramas visibles. Datos completos: [performance.json](performance.json). Los vídeos de cada recorrido permanecen en las carpetas locales `metrics/`, `final/` y `visual-final/`.
+25 geometries and 24 textures recorded; no new asset requests during the window and never two visible holograms. Full data: [performance.json](performance.json). The videos of each walk remain in the local folders `metrics/`, `final/` and `visual-final/`.
 
-### Evidencia visual
+### Visual evidence
 
 - [THE LEAP — iPhone 13](captures/iphone13-step-1.png)
 - [SURVIVE — iPhone 13](captures/iphone13-step-2.png)
 - [FLY & LAND — iPhone 13](captures/iphone13-step-3.png)
 - [BUILD — iPhone 13](captures/iphone13-step-4.png)
-- [Escritorio](captures/desktop.png), [horizontal](captures/landscape.png), [320×568 / movimiento reducido](captures/small-reduced.png)
+- [Desktop](captures/desktop.png), [landscape](captures/landscape.png), [320×568 / reduced motion](captures/small-reduced.png)
 
-## PENDIENTE / LÍMITES
+## PENDING / LIMITS
 
-- Validación física de iPhone/Android y escucha de audio en sus altavoces.
-- Publicación: esta intervención está implementada y compilada localmente; no se publicó ni se regeneró el ZIP de hosting.
-- Inversión de SOL en STARTUP: no existe y queda fuera de este encargo; el tutorial no la promete.
+- Physical iPhone/Android validation and listening to the audio on their speakers.
+- Release: this intervention is implemented and built locally; the hosting ZIP was not published or regenerated.
+- Investing SOL in STARTUP: does not exist and is out of scope for this task; the tutorial does not promise it.
 
-## Entorno de validación
+## Validation environment
 
-Al iniciar, iCloud había desalojado parte de las dependencias y algunos assets; el primer arranque Chromium quedó esperando la carga. Se restauraron exactamente las dependencias del lockfile desde caché local y recursos cuyo contenido coincidía con el hash Git. La carpeta anterior se conserva como `.node_modules-offloaded-tutorial47/` (ignorada). Las ejecuciones posteriores pasaron; no se añadieron bibliotecas ni se alteraron versiones.
+At the start, iCloud had offloaded part of the dependencies and some assets; the first Chromium launch was left waiting for loading. The exact lockfile dependencies were restored from the local cache, along with assets whose content matched the Git hash. The previous folder is kept as `.node_modules-offloaded-tutorial47/` (ignored). Later runs passed; no libraries were added and no versions were changed.

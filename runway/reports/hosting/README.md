@@ -1,56 +1,56 @@
-# RUNWAY — validación del paquete de hosting
+# RUNWAY — hosting package validation
 
 ZIP: `RUNWAY-ISLANDDAO-PRODUCTION.zip`  
-Tamaño: **10,559,886 bytes / 10.07 MiB**  
+Size: **10,559,886 bytes / 10.07 MiB**  
 SHA-256: `2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc`
 
-## Implementado
+## Implemented
 
-- Producción minificada con React 19.3.0, R3F 9.8.1, Three 0.186.1, TypeScript 6.0.3 y Vite 8.3.4. Dependencias y configuración gráfica sin cambios.
-- Base `/islanddao/`; función compartida para URLs de modelos y su recuperación, retratos, precargas, imágenes, audio y licencias. Vite transforma también HTML y fuentes CSS. Build habitual de raíz conservado.
-- Invitaciones del paquete a `https://humanfriendly.global/islanddao/?join=…`, tanto para compartir como copiar.
-- `npm run package:hosting`: tipos, build temporal aislado, ensamblado, ZIP, auditoría y SHA-256. Sin publicar, instalar dependencias nuevas ni contactar la API.
-- ZIP con 105 archivos de ejecución dentro de `islanddao/` y el manual fuera. Sin código fuente, node_modules, sourcemaps, credenciales, herramientas de QA ni configuración de Sites.
-- Excluidos del paquete cuatro recursos sin consumidores actuales: favicon SVG anterior, logo SVG anterior, logo Human Friendly anterior y copia JSON de geografía no utilizada en runtime. La costa actual sigue incluida en el bundle de simulación; no se alteró.
-- Gameplay, economía, reglas competitivas, diseño, materiales y animaciones no modificados. API y sitio principal intactos.
+- Minified production build with React 19.3.0, R3F 9.8.1, Three 0.186.1, TypeScript 6.0.3 and Vite 8.3.4. Dependencies and graphics configuration unchanged.
+- Base `/islanddao/`; a shared function for model URLs and their recovery, portraits, preloads, images, audio and licenses. Vite also transforms HTML and CSS fonts. The usual root build is preserved.
+- Package invitations point to `https://humanfriendly.global/islanddao/?join=…`, both for sharing and copying.
+- `npm run package:hosting`: types, isolated temporary build, assembly, ZIP, audit and SHA-256. No publishing, no new dependencies installed and no API contact.
+- ZIP with 105 runtime files inside `islanddao/` and the manual outside it. No source code, node_modules, sourcemaps, credentials, QA tools or Sites configuration.
+- Four assets with no current consumers were left out of the package: the old SVG favicon, the old SVG logo, the old Human Friendly logo and a JSON copy of the geography not used at runtime. The current coastline is still included in the simulation bundle; it was not altered.
+- Gameplay, economy, competitive rules, design, materials and animations unchanged. API and main site untouched.
 
-## Pruebas aprobadas
+## Tests passed
 
-1. TypeScript y build minificado de subdirectorio. Build habitual de raíz. Una prueba automatizada de URLs para ambas bases e invitaciones con parámetros codificados. `git diff --check`.
-2. Extraído el ZIP final, servido con un servidor HTTP estático en `/islanddao/`. Los **105 recursos** devolvieron el contenido exacto del ZIP, comprobado byte por byte. Redirección de barra final preserva `?join=`.
-3. Chromium Pixel 7 emulado (412×839), Chromium desktop (1440×900), WebKit iPhone 13 emulado (390×664, configuración de Playwright), WebKit desktop (1440×900).
-4. En las cuatro combinaciones: carga sin caché previa, menú, HOW TO PLAY, SHOP/categorías/modelos, invitación compartida y copiada, recarga con `?join=`, STARTUP, RANKING vacío y error controlado, partida en tiempo real, resultado de bancarrota, ONE MORE RUN, pausa y BACK TO PLANE.
-5. Cinco GLB y doce retratos cargados; fuentes y licencias disponibles. Sin 404 locales, solicitudes accidentales a `/assets/` raíz, errores de página/módulo ni solicitudes externas no previstas.
-6. Instrumentación de Web Audio: **69 archivos decodificados**, cero errores de decodificación y fuentes de audio iniciadas tras interacción en cada configuración. Esto verifica carga y reproducción programática; no equivale a una escucha crítica de la mezcla.
-7. Todas las solicitudes a la API fueron interceptadas en Playwright con respuestas controladas. No se certifican datos reales ni CORS mediante estos mocks.
-8. Capturas guardadas y revisadas de menú y resultados móviles; vídeos de los recorridos en `qa/`. El build entregado no contiene ni habilita hooks de desarrollo.
+1. TypeScript and minified subdirectory build. Usual root build. An automated URL test for both bases and for invitations with encoded parameters. `git diff --check`.
+2. The final ZIP was extracted and served with a static HTTP server under `/islanddao/`. All **105 assets** returned the exact ZIP content, checked byte by byte. The trailing-slash redirect preserves `?join=`.
+3. Emulated Chromium Pixel 7 (412×839), Chromium desktop (1440×900), emulated WebKit iPhone 13 (390×664, Playwright configuration), WebKit desktop (1440×900).
+4. In all four combinations: cold load, menu, HOW TO PLAY, SHOP/categories/models, shared and copied invitation, reload with `?join=`, STARTUP, empty RANKING and handled error, real-time run, bankruptcy result, ONE MORE RUN, pause and BACK TO PLANE.
+5. Five GLBs and twelve portraits loaded; fonts and licenses available. No local 404s, no accidental requests to root `/assets/`, no page/module errors and no unexpected external requests.
+6. Web Audio instrumentation: **69 files decoded**, zero decoding errors and audio sources started after interaction in every configuration. This verifies loading and programmatic playback; it is not a critical listening review of the mix.
+7. All API requests were intercepted in Playwright with controlled responses. Real data and CORS are not certified by these mocks.
+8. Screenshots of the mobile menu and results were saved and reviewed; videos of the runs in `qa/`. The delivered build neither contains nor enables development hooks.
 
-Una primera ejecución Chromium desktop falló al esperar la respuesta simulada del ranking mientras corría también la compilación. La repetición aislada del mismo ZIP pasó completa. Se conservan ambos registros; no se modificó el juego ni se ocultó el fallo inicial.
+A first Chromium desktop run failed while waiting for the mocked ranking response while the build was also running. An isolated rerun of the same ZIP passed completely. Both logs are kept; the game was not modified and the initial failure was not hidden.
 
-Avisos de build: el bundle de Three supera 500 kB, como en la base existente; se conserva su separación. Vite avisa que `curtain.css` con base explícita se resolverá en runtime; su archivo fue comprobado por HTTP y en las cuatro cargas de navegador.
+Build warnings: the Three bundle exceeds 500 kB, as in the existing baseline; its split is kept. Vite warns that `curtain.css` with an explicit base will be resolved at runtime; the file was checked over HTTP and in all four browser loads.
 
-## Pendientes reales
+## Real pending items
 
-- El responsable de la API debe autorizar `https://humanfriendly.global` (OPTIONS, GET/POST, Authorization/Content-Type). El paquete no puede habilitarlo. Sin ello, las funciones online no estarán operativas desde el dominio nuevo.
-- Configuración final de hosting, HTTPS, CSP, MIME, caché y prueba online desde la URL definitiva. No se publicó ni se accedió a Cloudflare.
-- Teléfonos físicos, sensores reales y rendimiento sostenido no probados; los formatos móviles son emulados en esta máquina.
-- No se completó un aterrizaje exitoso en este smoke test: las cuatro partidas sin maniobras terminaron en bancarrota. El recurso LANDED está incluido y comprobado por HTTP; no se afirma haber revalidado la celebración de victoria.
-- El guardado/identidad del navegador no migra entre dominios. Los históricos existentes no se modificaron.
+- The API owner must authorize `https://humanfriendly.global` (OPTIONS, GET/POST, Authorization/Content-Type). The package cannot enable it. Without it, online features will not work from the new domain.
+- Final hosting configuration, HTTPS, CSP, MIME, caching and an online test from the final URL. Nothing was published and Cloudflare was not accessed.
+- Physical phones, real sensors and sustained performance not tested; mobile formats are emulated on this machine.
+- No successful landing was completed in this smoke test: the four runs without maneuvers ended in bankruptcy. The LANDED asset is included and checked over HTTP; the victory celebration is not claimed to have been revalidated.
+- Browser save/identity does not migrate between domains. Existing history was not modified.
 
-## Regeneración y repetición
+## Regeneration and rerun
 
-En el proyecto `runway`, con Node 24 y dependencias ya instaladas:
+In the `runway` project, with Node 24 and dependencies already installed:
 
 ```sh
 npm run package:hosting
 ```
 
-En esta máquina, si el PATH tiene otra versión de Node, el comando utilizado fue:
+On this machine, if PATH has another Node version, the command used was:
 
 ```sh
 PATH=/Users/nacho/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH npm run package:hosting
 ```
 
-El ZIP se regenera en `../entregas/`. El script imprime tamaño y SHA-256 y reemplaza `PACKAGE-METADATA.json`, marcando que la nueva versión requiere su propia QA. Este informe y las capturas corresponden sólo al SHA-256 indicado arriba.
+The ZIP is regenerated in `../entregas/`. The script prints the size and SHA-256 and replaces `PACKAGE-METADATA.json`, marking that the new version needs its own QA. This report and the screenshots correspond only to the SHA-256 above.
 
-Para repetir QA, extraer el nuevo ZIP en `/private/tmp/runway-hosting-qa`, servir esa carpeta en `127.0.0.1:5191` y ejecutar `node scripts/qa-hosting.mjs` desde `runway`. El script intercepta toda salida de red externa; el administrador del hosting no necesita estas herramientas.
+To rerun QA, extract the new ZIP into `/private/tmp/runway-hosting-qa`, serve that folder on `127.0.0.1:5191` and run `node scripts/qa-hosting.mjs` from `runway`. The script intercepts all outgoing external network traffic; the hosting administrator does not need these tools.

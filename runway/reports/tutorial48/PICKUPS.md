@@ -1,16 +1,16 @@
-# Auditoría de pickups — base de la intervención 48
+# Pickup audit — baseline for intervention 48
 
-## Resultado comprobado
+## Confirmed result
 
-COMMUNITY, TERM SHEET y MAGNET se generan en todas las partidas: son slots garantizados, no entradas de la tabla probabilística de obstáculos. La resolución de clearance no los elimina. Items y ObjectGlows recorren sus definiciones y sí incluyen sus geometrías. No se encontró una probabilidad cero ni un flag deshabilitado.
+COMMUNITY, TERM SHEET and MAGNET are generated in every run: they are guaranteed slots, not entries in the probabilistic obstacle table. Clearance resolution does not remove them. Items and ObjectGlows iterate over their definitions and do include their geometries. No zero probability or disabled flag was found.
 
-La presentación previa usa radios visuales de 0,52 / 0,60 / 0,50, respectivamente, y un fog propio de los ítems entre 30 y 110 unidades. Sus posiciones Z están entre 347 y 352; el piloto termina la salida en Z341,6. Estos factores reducen la anticipación y la legibilidad si el usuario no ajusta también la profundidad del recorrido. Tres de sus siete slots están dentro de la tormenta.
+The previous presentation uses visual radii of 0.52 / 0.60 / 0.50, respectively, and the items' own fog between 30 and 110 units. Their Z positions are between 347 and 352; the pilot finishes the exit at Z341.6. These factors reduce anticipation and readability unless the user also judges the depth of the route. Three of their seven slots are inside the storm.
 
-## Frecuencias esperadas y observadas
+## Expected and observed frequencies
 
-10.000 semillas consecutivas reproducibles, 0–9999. Conteos después de generación y clearance. Los aros cuentan miembros de las secuencias; no significa que todos sean visibles simultáneamente.
+10,000 consecutive reproducible seeds, 0–9999. Counts after generation and clearance. Rings count members of the sequences; that does not mean they are all visible at once.
 
-| Ítem | Esperado por run | Observado por run | Runs con el ítem | Caída / planeo |
+| Item | Expected per run | Observed per run | Runs with the item | Fall / glide |
 |---|---:|---:|---:|---:|
 | sol | 128.0000 | 128.0000 | 100.00% | 104.0000 / 24.0000 |
 | gas | 18.0483 | 18.0910 | 100.00% | 12.4083 / 5.6827 |
@@ -25,22 +25,22 @@ La presentación previa usa radios visuales de 0,52 / 0,60 / 0,50, respectivamen
 | water | 1.0000 | 1.0000 | 100.00% | 1.0000 / 0.0000 |
 | rare | 0.0400 | 0.0375 | 3.75% | 0.0375 / 0.0000 |
 
-Para delivery/gas/rug/hacked el valor esperado acumula las probabilidades condicionales de cada slot, respetando exclusión de repetición inmediata, cap de HACK y slots sólo de obstáculos. No se presentan los pesos 4/3/2/0,6 como porcentajes globales: las restricciones cambian el reparto efectivo. Para Rare Cargo la probabilidad configurada es 4%; 3,75% observado está dentro de la fluctuación muestral esperable.
+For delivery/gas/rug/hacked, the expected value accumulates the conditional probabilities of each slot, respecting the no-immediate-repeat exclusion, the HACK cap and obstacle-only slots. The 4/3/2/0.6 weights are not presented as global percentages: the constraints change the effective split. For Rare Cargo the configured probability is 4%; the observed 3.75% is within the expected sampling fluctuation.
 
-RISK permanece como tipo y renderer residual, pero no figura en CONTENT_CATALOG ni se genera. No es un ítem habilitado eliminado por accidente. Edificios y océano pertenecen a sistemas de colisiones distintos y no se cuentan como pickups.
+RISK remains as a residual type and renderer, but it is not in CONTENT_CATALOG and is not generated. It is not an enabled item removed by accident. Buildings and ocean belong to separate collision systems and are not counted as pickups.
 
-## Visibilidad y superposición
+## Visibility and overlap
 
-Estimación analítica del encuadre estable de caída a 390×844, sin simular oclusión de geometría ni capturar el navegador: al seguir el recorrido de SOL, la ventana con diámetro ≥20px y contraste del objeto >50% promedia 0,42s para COMMUNITY, 0,63s para TERM y 0,63s para MAGNET. Es una señal de poca anticipación, no una medición visual definitiva.
+Analytic estimate of the stable fall framing at 390×844, without simulating geometry occlusion or capturing the browser: following the SOL route, the window with diameter ≥20px and object contrast >50% averages 0.42s for COMMUNITY, 0.63s for TERM and 0.63s for MAGNET. It is a sign of little anticipation, not a definitive visual measurement.
 
-En una comprobación geométrica de 1.000 semillas, la envolvente del primer MAGNET roza otras envolventes en 11,7%; el segundo, 36,6%; el último COMMUNITY, 19,4%, principalmente aros. Un aro es hueco: esto indica riesgo de superposición visual, **no un bug de colisión confirmado**. No se recomienda modificar rutas ni hitboxes sólo por esta prueba.
+In a geometric check over 1,000 seeds, the envelope of the first MAGNET touches other envelopes in 11.7% of cases; the second, 36.6%; the last COMMUNITY, 19.4%, mostly rings. A ring is hollow: this indicates a risk of visual overlap, **not a confirmed collision bug**. Changing routes or hitboxes based on this test alone is not recommended.
 
-## Verificación automatizada
+## Automated verification
 
-- `tests/pickups48.test.ts`: 2.000 semillas, determinismo, slots garantizados, catálogo habilitado completo, máximo de HACK, ausencia de repeticiones inmediatas de encounters y tasa de rareza.
-- 100 partidas con controles reales cuantizados mediante el controlador existente `tests/test-pilot.ts`, sin teletransportar ni modificar el saldo/curso; verifica recompensa efectiva de COMMUNITY/TERM, duración del MAGNET y ausencia de duplicados. Cinco runs se reproducen exactamente mediante `replay()`.
-- `reports/tutorial48/pickup-audit.mjs`: auditoría reproducible de 10.000 semillas y estimación analítica de visibilidad; salida en `pickup-audit.json`.
+- `tests/pickups48.test.ts`: 2,000 seeds, determinism, guaranteed slots, complete enabled catalog, HACK maximum, no immediate encounter repeats and rarity rate.
+- 100 runs with real quantized controls through the existing controller `tests/test-pilot.ts`, without teleporting or modifying the balance/course; verifies the effective COMMUNITY/TERM reward, MAGNET duration and no duplicates. Five runs are reproduced exactly through `replay()`.
+- `reports/tutorial48/pickup-audit.mjs`: reproducible audit of 10,000 seeds and analytic visibility estimate; output in `pickup-audit.json`.
 
-## Recomendación localizada
+## Localized recommendation
 
-Mantener cantidades, generación, economía y colisiones. Aumentar únicamente el tamaño de presentación de los tres ítems dentro de la envolvente de contacto ya existente, compartiendo ese tamaño entre modelo y glow, y hacer más legible su aproximación. Completar con QA visual del navegador para confirmar que esta mejora resuelve la percepción reportada.
+Keep quantities, generation, economy and collisions. Only increase the presentation size of the three items within the existing contact envelope, sharing that size between model and glow, and make their approach more readable. Complete it with visual browser QA to confirm that this improvement fixes the reported perception.

@@ -1,47 +1,47 @@
-# RUNWAY — Tanda 1/7: Gameplay & Controls
+# RUNWAY — Batch 1/7: Gameplay & Controls
 
-Release `gameplay-37`. Solo esta tanda. Reglas `runway-3.2.0-chains`; contenido `island-routes-10`. API y cliente comparten el mismo archivo de simulación. No cambian importes, velocidades, destinos, lift, colliders, música ni personalización.
+Release `gameplay-37`. This batch only. Rules `runway-3.2.0-chains`; content `island-routes-10`. API and client share the same simulation file. Amounts, speeds, destinations, lift, colliders, music and customization do not change.
 
-## IMPLEMENTADO
+## IMPLEMENTED
 
-- **Aros:** máquina de estados `active → completed / failed`, con índice siguiente y tick de activación. Solo el aro activo participa en render, rótulos y contactos. Al fallar se cierra esa cadena, se emite un único `sequence-missed` y no se concede premio; otra cadena sigue disponible. Los contactos duplicados son idempotentes. Aparición de 260 ms en el reloj fijo, detenida en pausa. Atlas de rótulos ampliado hasta 6/6.
-- **Longitudes y alcance:** cadenas de 3, 4 y 6 aros en caída, permutadas según semilla; dos cadenas de 3 en planeo. Espaciado de caída de ~0,88 s nominal / ~0,71 s bajo impulso máximo; desplazamientos entre centros de 1,3 unidades. En planeo, separación longitudinal de 23 y lateral de 4 unidades. Premio de 100.000 exclusivamente al completar cada cadena.
-- **Desintegración:** reutilizada y verificada la implementación existente de 24 segmentos con expansión radial, giro y fade de 720 ms. El siguiente aro se anima mientras los restos del anterior se disipan; los restos no tienen collider ni conceden dinero.
-- **SOL adherida:** no era un problema de parenting. La persecución exponencial a 14/s conservaba un retraso estable mayor que el radio de contacto durante caída. Ahora la velocidad de atracción supera la del piloto en 20 unidades/s y converge en tiempo finito. Una moneda ya atraída puede completar su recorrido al pasar a paracaídas. Se conserva la retirada visual de 220 ms después del único contacto.
-- **Variedad:** pesos centralizados Delivery 4 / Gas 3 / Rug 2 / Hacked 0,6. Selección en orden de encuentro sin sólidos idénticos consecutivos; HACK tiene máximo 4 y separación mínima de tres selecciones. Probabilidad del encuentro secundario 55%. Clearance mínimo de un radio de cada sólido +1 unidad y protección de aperturas de aros. Se conservan los 128 SOL, las líneas de recogida, los ocho patrones y los tres caminos.
-- **Controles:** preferencia persistente separada del modo efectivo. TILT por defecto cuando llegan sensores; joystick toma TOUCH inmediatamente y soltar/cancelar vuelve a TILT. PAUSE→TOUCH persiste. Recenter, calibración inicial/rotación/recuperación, zona muerta de 2° y filtro de 40 ms; respuesta táctil directa y perilla por frame, independiente del HUD. Permiso solicitado desde PLAY/TILT; rechazo, ausencia o caducidad de muestras dejan TOUCH disponible sin bloquear. Una promesa tardía de permiso no sobrescribe TOUCH manual.
-- **Tutorial:** explica revelado secuencial, longitudes, cierre por fallo y prioridad de controles.
-- **Inventario:** [CSV](item-inventory.csv). Todos los 12 tipos habilitados se observaron. `risk` mantiene geometría legacy, pero está inactivo y no se genera; no se reactivaron decisiones retiradas.
+- **Rings:** `active → completed / failed` state machine, with next index and activation tick. Only the active ring takes part in rendering, labels and contacts. On failure the chain closes, a single `sequence-missed` is emitted and no reward is granted; another chain remains available. Duplicate contacts are idempotent. 260 ms appearance on the fixed clock, stopped while paused. Label atlas extended up to 6/6.
+- **Lengths and reach:** chains of 3, 4 and 6 rings during the fall, permuted by seed; two chains of 3 while gliding. Fall spacing of ~0.88 s nominal / ~0.71 s under maximum boost; offsets of 1.3 units between centers. While gliding, 23 units of longitudinal and 4 of lateral separation. A reward of 100,000 only when each chain is completed.
+- **Disintegration:** reused and verified the existing 24-segment implementation with radial expansion, spin and a 720 ms fade. The next ring animates while the debris of the previous one dissipates; debris has no collider and grants no money.
+- **Sticky SOL:** it was not a parenting problem. The exponential chase at 14/s kept a steady lag larger than the contact radius during the fall. Now the attraction speed exceeds the pilot's by 20 units/s and converges in finite time. A coin that is already attracted can finish its path when switching to the parachute. The 220 ms visual removal after the single contact is kept.
+- **Variety:** centralized weights Delivery 4 / Gas 3 / Rug 2 / Hacked 0.6. Selection in encounter order with no identical consecutive solids; HACK has a maximum of 4 and a minimum separation of three selections. Secondary encounter probability 55%. Minimum clearance of one radius of each solid +1 unit and protection of ring openings. The 128 SOL, the pickup lines, the eight patterns and the three paths are kept.
+- **Controls:** persistent preference separate from the effective mode. TILT by default when sensors are available; the joystick takes TOUCH immediately and releasing/cancelling returns to TILT. PAUSE→TOUCH persists. Recenter, initial calibration/rotation/recovery, 2° dead zone and 40 ms filter; direct touch response and per-frame knob, independent of the HUD. Permission requested from PLAY/TILT; denial, absence or expiry of samples leave TOUCH available without blocking. A late permission promise does not overwrite manual TOUCH.
+- **Tutorial:** explains sequential reveal, lengths, closing on failure and control priority.
+- **Inventory:** [CSV](item-inventory.csv). All 12 enabled types were observed. `risk` keeps legacy geometry but is inactive and not generated; retired decisions were not reactivated.
 
-## PRUEBAS REALIZADAS
+## TESTS RUN
 
-- 48 pruebas en 8 archivos sobre simulación, controles, replays, balance de rutas, contactos de ítems y presentación afectada; más 2 pruebas de informe/API y cadenas de planeo: **50 aprobadas**. Logs adjuntos.
-- 120 recorridos aislados de cadenas de caída: 20 semillas × 3 cadenas × normal/impulso máximo sostenido. Las 120 completadas con exactamente un premio por cadena. Pruebas de fallo, recontacto, aparición y pausa.
-- 1.000 semillas: generación reproducible, 128.000 SOL, 19.000 aros, 2.000 imanes, 1.000 Water y 18 Rare Cargo. HACK: **3,656 de media y 4 máximo**, frente a 18 fijos en el generador anterior. Pesos y conteos completos en [metrics.json](metrics.json).
-- 100 partidas con controlador automatizado, distribuidas en playa/intermedia/Jurerê: **100 aterrizajes**, 34/33/33 en sus destinos. Comparación exacta de estado, eventos, contactos y saldo contra replay de la API; media de capital 1.474.495. Es evidencia automatizada, no balance humano. La prueba de planificación de render 30/60 FPS también coincide.
-- Chromium Pixel 7 y WebKit iPhone 13 emulados: 3 casos por navegador aprobados: cadenas/fragmentos, partida completa/limpieza de monedas/replay, controles/permisos/fallback. Se verificó que nunca se dibujan dos aros ni rótulos activos de la misma cadena, y que el dinero solo cambia al completar. Límite de 70 draw calls comprobado en las cadenas.
-- Eventos de orientación y permisos **simulados**. Puntero nativo sobre el joystick en ambos navegadores; touch emulado mediante CDP en Chromium. Sin errores de página en la prueba final de controles. Una primera prueba de WebKit usaba un constructor sintético que no transportaba los datos de orientación; se corrigió el fixture a eventos con campos explícitos y se repitió correctamente.
-- Inspección visual de capturas de ambos navegadores. Se detectaron y corrigieron los rótulos de futuros aros que todavía aparecían independientemente de sus modelos. Grabaciones continuas guardadas en `final-browser/` (cadenas), `controls/` (controles) y `browser/` (partidas completas).
-- Builds frontend/API completados. El núcleo del servidor es idéntico byte a byte al cliente. Los tests de semilla anterior que fijaban 4 aros y un saldo exacto se actualizaron a las reglas nuevas; se preservaron las verificaciones contables y de premios únicos.
+- 48 tests in 8 files covering simulation, controls, replays, route balance, item contacts and affected presentation; plus 2 report/API and glide-chain tests: **50 passed**. Logs attached.
+- 120 isolated runs of fall chains: 20 seeds × 3 chains × normal/sustained maximum boost. All 120 completed with exactly one reward per chain. Tests for failure, re-contact, appearance and pause.
+- 1,000 seeds: reproducible generation, 128,000 SOL, 19,000 rings, 2,000 magnets, 1,000 Water and 18 Rare Cargo. HACK: **3.656 on average and 4 maximum**, versus a fixed 18 in the previous generator. Full weights and counts in [metrics.json](metrics.json).
+- 100 runs with an automated controller, spread across beach/intermediate/Jurerê: **100 landings**, 34/33/33 at their destinations. Exact comparison of state, events, contacts and balance against the API replay; mean capital 1,474,495. This is automated evidence, not human balance. The 30/60 FPS render scheduling test also matches.
+- Emulated Chromium Pixel 7 and WebKit iPhone 13: 3 cases per browser passed: chains/fragments, full run/coin cleanup/replay, controls/permissions/fallback. Verified that two rings or active labels of the same chain are never drawn, and that money only changes on completion. The 70 draw call limit was checked on the chains.
+- Orientation and permission events **simulated**. Native pointer on the joystick in both browsers; touch emulated via CDP in Chromium. No page errors in the final controls test. A first WebKit test used a synthetic constructor that did not carry orientation data; the fixture was fixed to events with explicit fields and rerun successfully.
+- Visual inspection of screenshots from both browsers. Labels of future rings that still appeared independently of their models were detected and fixed. Continuous recordings saved in `final-browser/` (chains), `controls/` (controls) and `browser/` (full runs).
+- Frontend/API builds completed. The server core is byte-for-byte identical to the client. The earlier seed tests that pinned 4 rings and an exact balance were updated to the new rules; the accounting and single-reward checks were preserved.
 
-### Reproducir
+### Reproduce
 
 ```sh
 npm test -- tests/gameplay37.test.ts tests/controls37.test.ts tests/gameplay37-report.test.mjs tests/simulation.test.ts tests/canopy.test.ts tests/balance.test.ts tests/items34.test.ts tests/runtime.test.ts tests/storm.test.ts
 RUNWAY_BASE_URL=http://127.0.0.1:5183 npx playwright test tests/browser/gameplay37.spec.ts
 ```
 
-El informe de API requiere ejecutar antes `node ../services/runway-api/scripts/sync-core.mjs` en este checkout. Las cadenas aisladas del navegador eliminan los demás ítems para observar claramente el sistema; las partidas completas mantienen todos los ítems y usan input cuantizado normal.
+The API report requires running `node ../services/runway-api/scripts/sync-core.mjs` first in this checkout. The isolated browser chains remove the other items to observe the system clearly; full runs keep all items and use normal quantized input.
 
-## PARCIAL / PENDIENTE
+## PARTIAL / PENDING
 
-- La integración de sensores está implementada y comprobada con eventos simulados; **pendiente validación física de permiso iOS, orientación/calibración y sensación táctil en iPhone/Android**. No se afirma QA física ni medición de latencia de hardware.
-- No quedan funcionalidades de esta tanda deliberadamente postergadas. `risk` es contenido inactivo documentado, no un pickup pendiente. No se inició otra tanda.
+- Sensor integration is implemented and checked with simulated events; **physical validation of the iOS permission, orientation/calibration and touch feel on iPhone/Android is pending**. No physical QA or hardware latency measurement is claimed.
+- No features of this batch were deliberately postponed. `risk` is documented inactive content, not a pending pickup. No other batch was started.
 
-## Compatibilidad y rollback
+## Compatibility and rollback
 
-La versión de reglas separa nuevas marcas competitivas y PB. Identidad, startup, compras, saldo y resultados históricos conservan su almacenamiento y contratos. Las partidas antiguas pendientes siguen el tratamiento local existente ante incompatibilidad.
+The rules version separates new competitive marks and PB. Identity, startup, purchases, balance and historical results keep their storage and contracts. Old pending runs follow the existing local handling on incompatibility.
 
-Rollback de la pareja previa:
-- Frontend `sound-36`, commit `0f47cfdbb8049b0a098667e081b955e88cbd54cf`, Sites versión 37 (`appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_288628e602f48191b1513b548722f6f1`).
-- API commit `43997f20637feecf358d73b9148d1235fbb97fc4`, Sites versión 18 (`appgprj_6acfed30efd88191aef688e5a181c299~appgver_16d5bb387fa081919a614427a7bccc7d`).
+Rollback of the previous pair:
+- Frontend `sound-36`, commit `0f47cfdbb8049b0a098667e081b955e88cbd54cf`, Sites version 37 (`appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_288628e602f48191b1513b548722f6f1`).
+- API commit `43997f20637feecf358d73b9148d1235fbb97fc4`, Sites version 18 (`appgprj_6acfed30efd88191aef688e5a181c299~appgver_16d5bb387fa081919a614427a7bccc7d`).

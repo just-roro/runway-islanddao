@@ -1,108 +1,108 @@
-# RUNWAY — registro de alcance y continuidad
+# RUNWAY — scope and continuity log
 
-## Actualización más reciente — Tanda 5/5, island-29
+## Most recent update — Batch 5/5, island-29
 
-Ver [cambios, capturas y métricas](tanda-5-island29.md). Puente unido a costa y prolongado hacia la niebla, terreno con normales continuas y mezcla procedural, pasto distribuido con límite de 256 matas visibles, copas lejanas mejoradas y decoración apoyada en la malla real. Reglas, recorridos, API y zonas físicas sin cambios. Cuatro pruebas focalizadas aprobadas y vuelo WebKit completo hasta Jurerê. Pendientes: rendimiento en teléfonos físicos y fotografías/arquitectura reales. La cifra de FPS emulada no acredita un móvil real. No iniciar otra tanda automáticamente.
+See [changes, screenshots and metrics](tanda-5-island29.md). Bridge joined to the coast and extended into the fog, terrain with continuous normals and procedural blending, grass distributed with a limit of 256 visible tufts, improved distant tree canopies and decoration resting on the real mesh. Rules, routes, API and physical zones unchanged. Four focused tests passed and a full WebKit flight to Jurerê. Pending: performance on physical phones and real photos/architecture. The emulated FPS figure does not vouch for a real mobile device. Do not start another batch automatically.
 
-## Registro anterior — Tanda 4/5, hud-27
+## Previous log — Batch 4/5, hud-27
 
-Ver [implementación, evidencia y pendientes](tanda-4-hud27.md). HUD financiero ancho, rachas progresivas, YOU LANDED y resultados neón con datos reales, encuadre final adaptativo, menú con identidad y PNG oficial, MY STARTUP clarificado y créditos con logo original. 5 unitarias + 8 pruebas Chromium/WebKit aprobadas. Pruebas físicas y acciones de startup contra API real siguen pendientes. Publicado hud-27 (versión 28), menú/créditos comprobados en la URL pública; conservar npc-26 como rollback. Detenerse aquí: no iniciar tanda 5.
+See [implementation, evidence and pending items](tanda-4-hud27.md). Wide financial HUD, progressive streaks, YOU LANDED and neon results with real data, adaptive final framing, menu with identity and official PNG, clarified MY STARTUP and credits with the original logo. 5 unit + 8 Chromium/WebKit tests passed. Physical tests and startup actions against the real API remain pending. Published hud-27 (version 28), menu/credits checked on the public URL; keep npc-26 as rollback. Stop here: do not start batch 5.
 
-## Registro anterior — Tanda 3/5, npc-26
+## Previous log — Batch 3/5, npc-26
 
-Ver [implementación, pruebas y pendientes de NPC/tutorial](tanda-3-npc26.md). Cerrados en los navegadores probados: entrada y regreso cinematográficos, primer plano LED, tutorial y SHOP coordinados, expresiones contextuales, voz digital original temporal y hologramas de modelos reales. Música, tienda y gameplay se conservan. Pendientes: sonidos definitivos y validación audiovisual en teléfonos físicos. Publicado `npc-26` el 20-10-2026 con autorización explícita; tutorial y SHOP comprobados en la URL pública. Ver registro de despliegue. No iniciar la siguiente tanda automáticamente.
+See [NPC/tutorial implementation, tests and pending items](tanda-3-npc26.md). Closed in the tested browsers: cinematic entry and return, LED close-up, coordinated tutorial and SHOP, contextual expressions, temporary original digital voice and holograms of the real models. Music, shop and gameplay are preserved. Pending: final sounds and audiovisual validation on physical phones. Published `npc-26` on 2026-10-20 with explicit authorization; tutorial and SHOP checked on the public URL. See the deployment log. Do not start the next batch automatically.
 
-## Registro anterior — Tanda 1/5, flight-25
+## Previous log — Batch 1/5, flight-25
 
-Ver [registro y evidencia de esta tanda](tanda-1-flight25.md). Implementados y comprobados en Chromium/WebKit: encuadre/luz de cabina, semáforo sobre estructura fija, salto con carga e impulso, reinicio con fundido, caída terminal con ragdoll procedural, reacción contra edificios, joystick independiente del refresco HUD, picada de estrella, apertura y desprendimiento persistente del canopy. El imán existente fue comprobado y se mejoró su lectura visual.
+See [log and evidence for this batch](tanda-1-flight25.md). Implemented and checked in Chromium/WebKit: cabin framing/light, traffic light on a fixed structure, jump with charge and push-off, restart with fade, terminal fall with procedural ragdoll, reaction against buildings, joystick independent of HUD refresh, star dive, canopy opening and persistent release. The existing magnet was checked and its visual readability was improved.
 
-Los estados PENDIENTE/PARCIAL de esos puntos en la auditoría histórica de abajo describen la base anterior; quedan sustituidos por el registro flight-25. Tienda, economía, rutas, API y personalización se conservan.
+The PENDING/PARTIAL states of those items in the historical audit below describe the previous baseline; they are superseded by the flight-25 log. Shop, economy, routes, API and customization are preserved.
 
-Pendientes: prueba táctil/física en iPhone y Android, valoración artística humana y requerimientos de otras tandas (incluidos puente y tipografía). No iniciar automáticamente la tanda 2: el usuario pidió detenerse al terminar esta tanda.
+Pending: touch/physical test on iPhone and Android, human artistic review and requirements of other batches (including bridge and typography). Do not start batch 2 automatically: the user asked to stop after finishing this batch.
 
-Actualizado: 20-10-2026. Base auditada: `motion-23`, commit `3afa682c5c705cac31fb4aaea077a8e85ef658e6`. La inspección del código no equivale a validación visual. Este registro sustituye cualquier inferencia de que la lista posterior a motion-23 ya estaba terminada.
+Updated: 2026-10-20. Audited baseline: `motion-23`, commit `3afa682c5c705cac31fb4aaea077a8e85ef658e6`. Code inspection is not visual validation. This log replaces any inference that the list after motion-23 was already finished.
 
-## Lista original de la iteración solicitada después de motion-23
+## Original list of the iteration requested after motion-23
 
-| Requerimiento | Estado antes de esta pasada | Evidencia / cierre requerido |
+| Requirement | State before this pass | Evidence / closure required |
 |---|---|---|
-| Cámara e iluminación interior | PARCIAL | Cámara y dos point lights existentes. Falta nueva dirección del encuadre e inspección visual solicitada. |
-| Semáforo flotante al abrir compuerta | PENDIENTE | `Aircraft`: señales independientes en ±2,4 / 3,4 / 0,5; no se corrigió su montaje sobre pared. |
-| Mejorar salto | PARCIAL | Rig/clip exit y reloj común existen; el usuario pide más calidad. No equivale a terminado por tener un clip. |
-| Derrota aérea y golpe de edificio tipo ragdoll | PENDIENTE | `PilotBody` deriva a land/idle ante cualquier outcome. Falta caída articulada, encuadre y respuesta a edificio. |
-| Puente: ubicación, longitud, rotación y fog | PENDIENTE | Geometría antigua de 180 unidades en x=-104. Sin ajuste de implantación solicitado. |
-| Apertura del paracaídas | PARCIAL | Inflación, resortes y anclajes existen; no está cerrada la nueva coreografía solicitada. |
-| Reflejos en traje | PARCIAL | Tres materiales existentes; tela con roughness .76. En esta pasada se ajusta respuesta al entorno; requiere revisión visual. |
-| Skins compradas al NPC usando saldo acumulado | PENDIENTE | No había banco, transacciones ni tienda. Solo desbloqueo por comunidad. |
-| Precios y objetivos especiales para skins | PENDIENTE | El umbral por comunidad no cubría este pedido. |
-| Comprar colores de canopy y rastro | PENDIENTE | Nebula canopy era un rare; no existían catálogo, compras ni rastro personal. |
-| AIRPORT → SHOP en menú | PENDIENTE | El botón seguía abriendo la cuadrícula anterior. BACK TO AIRPORT fuera del menú sigue siendo correcto. |
-| Picada durante impulso de estrella | PENDIENTE | Boost físico existe; pitch visual responde a input/accel, no al boost. |
-| Carrusel 3D de skins | PENDIENTE | Cuadrícula de tarjetas; un solo piloto mostrado. |
-| Saldo gastable en menú | PENDIENTE | Solo capital por run/PB. |
-| Cambiar tipografía general | PENDIENTE | Rajdhani y Space originales. No se cambió todavía. |
+| Interior camera and lighting | PARTIAL | Existing camera and two point lights. The new framing direction and the requested visual inspection are missing. |
+| Floating traffic light when the hatch opens | PENDING | `Aircraft`: independent signals at ±2.4 / 3.4 / 0.5; their wall mounting was not fixed. |
+| Improve the jump | PARTIAL | Exit rig/clip and shared clock exist; the user asks for higher quality. Having a clip does not mean it is finished. |
+| Ragdoll-style air defeat and building hit | PENDING | `PilotBody` falls back to land/idle on any outcome. Articulated fall, framing and building response are missing. |
+| Bridge: placement, length, rotation and fog | PENDING | Old 180-unit geometry at x=-104. No placement adjustment as requested. |
+| Parachute opening | PARTIAL | Inflation, springs and anchors exist; the new requested choreography is not closed. |
+| Suit reflections | PARTIAL | Three existing materials; fabric with roughness .76. This pass adjusts the environment response; needs visual review. |
+| Skins bought from the NPC with accumulated balance | PENDING | There was no bank, transactions or shop. Only community unlocks. |
+| Prices and special goals for skins | PENDING | The community threshold did not cover this request. |
+| Buy canopy and trail colors | PENDING | Nebula canopy was a rare; there was no catalog, purchases or personal trail. |
+| AIRPORT → SHOP in the menu | PENDING | The button still opened the old grid. BACK TO AIRPORT outside the menu is still correct. |
+| Dive during star boost | PENDING | Physical boost exists; visual pitch responds to input/accel, not to the boost. |
+| 3D skin carousel | PENDING | Card grid; only one pilot shown. |
+| Spendable balance in the menu | PENDING | Only capital per run/PB. |
+| Change general typography | PENDING | Original Rajdhani and Space. Not changed yet. |
 
-## Alcance anterior: plan Movimiento / cinematografía / feedback
+## Previous scope: Motion / cinematography / feedback plan
 
-| Sistema | Estado y límite |
+| System | State and limit |
 |---|---|
-| Reloj compartido, pausa, captura de eventos | IMPLEMENTADO y verificado en motion-23: pruebas de pausa en siete hitos y eventos del mismo tick. |
-| Idle, preparación, carrera, salida, caída, apertura, aterrizaje | PARCIAL en acabado: clips y overlays implementados, vídeos previos existentes; calidad y casos de derrota siguen abiertos por feedback del usuario. |
-| Cámara 66°/38°, encuadre, órbita de llegada | IMPLEMENTADO en condiciones probadas en motion-23; nueva dirección interior y derrotas no resueltas. |
-| Contador elástico, pérdidas, SOL expulsadas, gráfico 10 s, feed de dos líneas | IMPLEMENTADO con pruebas de datos y navegador anteriores. Sin cambios de reglas en esta pasada. |
-| Motion UI, tutorial, simplificación HUD, AIRPORT | IMPLEMENTADO previamente; SHOP reemplaza ahora solo el acceso solicitado. |
-| Suelo, 96 árboles, pasto, 64 residentes, grupo provisional Jurerê | IMPLEMENTADO previamente con capturas y distribución comprobada. Calidad artística no certificada como equivalente a referencias. |
-| Música y efectos existentes | Conservados. Nuevos sonidos pendientes de archivos; la lista de búsqueda no es integración. |
-| QA físico y cinco testers | PENDIENTE. Emulación no sustituye iPhone/Android reales. |
+| Shared clock, pause, event capture | IMPLEMENTED and verified in motion-23: pause tests at seven milestones and same-tick events. |
+| Idle, preparation, run-up, exit, fall, opening, landing | PARTIAL in finish: clips and overlays implemented, earlier videos exist; quality and defeat cases remain open per user feedback. |
+| 66°/38° camera, framing, arrival orbit | IMPLEMENTED under the conditions tested in motion-23; new interior direction and defeats not resolved. |
+| Elastic counter, losses, ejected SOL, 10 s chart, two-line feed | IMPLEMENTED with earlier data and browser tests. No rule changes in this pass. |
+| Motion UI, tutorial, HUD simplification, AIRPORT | IMPLEMENTED earlier; SHOP now replaces only the requested entry point. |
+| Ground, 96 trees, grass, 64 residents, provisional Jurerê group | IMPLEMENTED earlier with screenshots and checked distribution. Artistic quality not certified as equivalent to the references. |
+| Existing music and effects | Preserved. New sounds pending files; the search list is not an integration. |
+| Physical QA and five testers | PENDING. Emulation does not replace real iPhone/Android. |
 
-## Orden de bloques pendientes
+## Order of pending blocks
 
-1. **Bloque funcional de esta pasada:** banco local → liquidación idempotente → catálogo/objetivos → compras/equipamiento → NPC/carrusel y previews → aplicación en vuelo. Es una funcionalidad completa ausente y no necesita rehacer física/backend.
-2. **Siguiente bloque prioritario:** derrota aérea/impacto en edificio y picada de boost; comparten pose, transición y cámara. Después salida y apertura: validar coreografía con vídeo, no solo tests.
-3. **Presentación del avión y mundo:** cámara/luz, montaje de señal y puente hacia fog. Revisar contra geometría real.
-4. **Tipografía general:** sustituir fuentes con licencia y comprobar HUD/menú/resultados tras fijar contenido de tienda.
-5. **Materiales de audio futuros y QA físico:** requieren archivos/dispositivos, no declararlos terminados.
+1. **Functional block of this pass:** local bank → idempotent settlement → catalog/goals → purchases/equipping → NPC/carousel and previews → applied in flight. It is a complete missing feature and does not require redoing physics/backend.
+2. **Next priority block:** air defeat/building impact and boost dive; they share pose, transition and camera. Then exit and opening: validate the choreography with video, not only tests.
+3. **Plane and world presentation:** camera/light, signal mounting and bridge into the fog. Review against the real geometry.
+4. **General typography:** replace fonts with licensed ones and check HUD/menu/results after fixing the shop content.
+5. **Future audio materials and physical QA:** require files/devices; do not declare them finished.
 
-## Decisiones del bloque tienda
+## Shop block decisions
 
-- SOL ficticia, saldo cosmético local separado de capital/score/ranking. Sin wallet ni dinero real.
-- Se acredita el capital final de aterrizajes exitosos desde esta versión; derrotas y abandonos no acreditan. Cada run tiene recibo único.
-- No se reconstruye una suma histórica desde el PB: no existe historial completo fiable para hacerlo. Se conservan todos los pilotos/cosméticos antes desbloqueados.
-- Nuevos perfiles: Dragon inicial. Compra de otros pilotos entre 2M y 10M; tres objetivos: Jurerê, aterrizaje sin golpes, dos secuencias en una run exitosa. Colores: 750k–2,5M. Precios iniciales, pendientes de balance humano.
-- Vista previa no equipa; comprar/equipar sí. Créditos y compras usan bloqueo de navegador y escritura antes de confirmar.
-- Saldo/propiedad no sincronizados entre dispositivos; borrar almacenamiento los elimina. No se presentan como una cuenta backend.
+- Fictional SOL, local cosmetic balance separate from capital/score/ranking. No wallet or real money.
+- The final capital of successful landings is credited from this version on; defeats and abandoned runs are not credited. Each run has a unique receipt.
+- A historical total is not rebuilt from the PB: there is no complete reliable history to do so. All previously unlocked pilots/cosmetics are kept.
+- New profiles: Dragon as the starter. Other pilots cost between 2M and 10M; three goals: Jurerê, a landing without hits, two sequences in one successful run. Colors: 750k–2.5M. Initial prices, pending human balancing.
+- Preview does not equip; buying/equipping does. Credits and purchases use a browser lock and write before confirming.
+- Balance/ownership not synced across devices; clearing storage removes them. They are not presented as a backend account.
 
-## Cierre de esta pasada
+## Closing of this pass
 
-Versión frontend: **shop-24**. Bloque prioritario implementado: tienda cosmética local completa. API, reglas competitivas, rutas, colisiones, música e históricos conservados.
+Frontend version: **shop-24**. Priority block implemented: complete local cosmetic shop. API, competitive rules, routes, collisions, music and history preserved.
 
-| Requerimiento cerrado en esta pasada | Estado final y prueba |
+| Requirement closed in this pass | Final state and test |
 |---|---|
-| NPC / compra de skins | IMPLEMENTADO y verificado. Diálogo del tripulante, catálogo, compra, equipamiento, saldo insuficiente y propiedad persistente. |
-| Precios / skins por objetivos | IMPLEMENTADO. 2–10M; Jurerê, sin golpes y dos secuencias. Reglas automatizadas; balance de precios humano PENDIENTE. |
-| Colores de paracaídas y rastro | IMPLEMENTADO y verificado en preview y vuelo completo. Cuatro variantes por categoría; tres comprables. |
-| Carrusel 3D | IMPLEMENTADO: tres pilotos articulados, deslizamiento, flechas y teclado; preview no gasta ni equipa. Veinte cambios mantienen canvas y no descargan GLB de nuevo. |
-| SHOP y saldo en menú | IMPLEMENTADO. Capital final de aterrizajes exitosos acreditado una vez, disponible al volver. |
-| Reflejos de traje | PARCIAL: tela, herrajes y goma responden de forma diferenciada; inspección visual y material comprobados. No se declara terminado el rediseño artístico del personaje. |
+| NPC / skin purchase | IMPLEMENTED and verified. Crew member dialogue, catalog, purchase, equipping, insufficient balance and persistent ownership. |
+| Prices / goal-based skins | IMPLEMENTED. 2–10M; Jurerê, no hits and two sequences. Automated rules; human price balancing PENDING. |
+| Parachute and trail colors | IMPLEMENTED and verified in preview and full flight. Four variants per category; three purchasable. |
+| 3D carousel | IMPLEMENTED: three articulated pilots, swipe, arrows and keyboard; preview neither spends nor equips. Twenty switches keep the canvas and do not re-download GLBs. |
+| SHOP and balance in the menu | IMPLEMENTED. Final capital of successful landings credited once, available on return. |
+| Suit reflections | PARTIAL: fabric, hardware and rubber respond differently; visual inspection and material checked. The artistic redesign of the character is not declared finished. |
 
-### Validación focalizada
+### Focused validation
 
-- **11 pruebas unitarias**: liquidación por run, duplicados, derrotas, objetivos, migración, compras y canopy. TypeScript y diff sin errores.
-- **6 casos de navegador aprobados**: tres casos en Chromium y WebKit; flujo de tienda, vuelo equipado completo y rechazo de doble gasto/almacenamiento fallido. El gesto de arrastre y teclado se verificó en la última repetición del caso de tienda.
-- Cinco replays reales acreditaron **8.512.500**; compras de 2M + 750k + 1,5M dejaron **4.262.500**. Repetir cada liquidación no duplicó saldo.
-- Vuelo a velocidad real con seed 17: final **1.755.000**, banco inicial 1.250.000 → **3.005.000**, mismo resultado en ambos navegadores. Pausa/reanudación mantuvo colores y rastro.
-- Máximo observado en esos vuelos: **54 draw calls / 78.663 triángulos**. Es medición de render emulado, no certificación de rendimiento físico sostenido.
-- Capturas revisadas en portrait, móvil pequeño, horizontal y desktop. Se corrigió el canopy cortado y la superposición del diálogo durante el desarrollo.
-- [Resultados estructurados](evidence-shop24/verified-tests.json), [carrusel](evidence-shop24/shop-pilot.png), [paracaídas](evidence-shop24/shop-canopy.png), [horizontal](evidence-shop24/shop-844.png), [cosméticos en vuelo](evidence-shop24/equipped-flight.png), [vídeo completo](evidence-shop24/equipped-flight.webm).
-- QA limitado a estos cambios. No se revalidaron como terminados los otros pedidos por pasar esta suite. iPhone/Android físicos y balance con personas siguen PENDIENTES.
+- **11 unit tests**: per-run settlement, duplicates, defeats, goals, migration, purchases and canopy. TypeScript and diff with no errors.
+- **6 browser cases passed**: three cases in Chromium and WebKit; shop flow, full equipped flight and rejection of double spend/failed storage. The drag gesture and keyboard were verified in the last rerun of the shop case.
+- Five real replays credited **8,512,500**; purchases of 2M + 750k + 1.5M left **4,262,500**. Repeating each settlement did not duplicate the balance.
+- Real-speed flight with seed 17: final **1,755,000**, starting bank 1,250,000 → **3,005,000**, same result in both browsers. Pause/resume kept colors and trail.
+- Maximum observed in those flights: **54 draw calls / 78,663 triangles**. This is an emulated render measurement, not a certification of sustained physical performance.
+- Screenshots reviewed in portrait, small mobile, landscape and desktop. The clipped canopy and the dialogue overlap were fixed during development.
+- [Structured results](evidence-shop24/verified-tests.json), [carousel](evidence-shop24/shop-pilot.png), [parachutes](evidence-shop24/shop-canopy.png), [landscape](evidence-shop24/shop-844.png), [cosmetics in flight](evidence-shop24/equipped-flight.png), [full video](evidence-shop24/equipped-flight.webm).
+- QA limited to these changes. The other requests were not revalidated as finished just because this suite passed. Physical iPhone/Android and balancing with people remain PENDING.
 
-### Próxima iteración, sin repetir esta auditoría
+### Next iteration, without repeating this audit
 
-Prioridad: derrota aérea / golpe contra edificio + pose de impulso; luego coreografía de salida y apertura. Después cámara/luz interior, semáforo y puente; finalmente tipografía. Conservar banco/catálogo/carousel y verificar solo sus posibles regresiones cuando otro bloque los toque.
+Priority: air defeat / building hit + boost pose; then exit and opening choreography. After that, interior camera/light, traffic light and bridge; finally typography. Keep bank/catalog/carousel and only check for possible regressions when another block touches them.
 
-### Publicación y rollback
+### Release and rollback
 
-Frontend shop-24 preparado para el Site público existente. Rollback: motion-23, commit `3afa682c5c705cac31fb4aaea077a8e85ef658e6`, versión `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_e7fc10397a448191af049bd421bc1bd5`; API sin cambios. La confirmación del despliegue queda en la entrega de esta conversación.
+Frontend shop-24 prepared for the existing public Site. Rollback: motion-23, commit `3afa682c5c705cac31fb4aaea077a8e85ef658e6`, version `appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_e7fc10397a448191af049bd421bc1bd5`; API unchanged. The deployment confirmation is in the delivery of this conversation.
 
 ## cloud-30
 Original cloud curtain, LANDED banner and favicon integrated; duplicate home pilot strip removed; BACK TO PLANE and removal of local-flight copy completed. Full flight/replay/return tested in WebKit and Chromium mobile emulation; cold-loading/reduced-motion landscape passed both. Details and evidence: reports/cloud30.md. Physical mobile validation pending.
@@ -113,8 +113,8 @@ Home PLAY no longer shows clouds. Slower ease-in-out and real scene/UI readiness
 ## light-32 — Phase 2 only
 Continuous prefiltered cabin/sky reflections; darker localized cabin illumination; stronger existing shadows/contact; distinct cloth, rubber, hardware, alloy and LED materials; restrained bloom. Build, continuity unit test, Chromium/WebKit mobile-emulated visual checks and complete WebKit flight passed. Max 54 calls / 80,759 triangles. Physical mobile sustained testing pending. Evidence and limitations: reports/lighting32.md. No next phase started.
 
-## art-33 — Siete correcciones gráficas
-Hombros deformables en fuente Blender/GLB; reflejos y bloom sin retícula; capa especular de traje validada con ablation; entrada de luz ligada a compuerta; exterior y estrellas ópticas; cámara de menú ligeramente baja/lejana; fase LED persistente al pulsar PLAY. Build, 3 unit tests, Chromium/WebKit y vuelos completos aprobados. Máximo 55 calls / 81.369 triángulos. Evidencia, causas y límites: reports/art33.md. Dispositivos físicos pendientes. No iniciar otra fase automáticamente.
+## art-33 — Seven graphics fixes
+Deformable shoulders in the Blender/GLB source; reflections and bloom without a grid; suit specular layer validated with ablation; incoming light tied to the hatch; exterior and optical stars; menu camera slightly lower/further; LED phase persists when pressing PLAY. Build, 3 unit tests, Chromium/WebKit and full flights passed. Max 55 calls / 81,369 triangles. Evidence, causes and limits: reports/art33.md. Physical devices pending. Do not start another phase automatically.
 
-## items-34 — Fase 4 solamente
-Ocho modelos remodelados desde las referencias: Gas Fee, Delivery, Water, Magnet, Term Sheet, Hacked, Rug Pull y Community. Materiales por vértice y atlas compartido, mismas geometrías en tutorial/gameplay. Aros con 24 fragmentos instanciados y trails con pool de 192 partículas, colores comprados preservados. Cuatro pruebas unitarias y seis escenarios Chromium/WebKit aprobados; vuelos con saldo y eventos iguales al replay. Inventario, evidencia, métricas y límites: reports/items34/README.md y inventory.csv. Pendientes: referencias de objetos restantes y rendimiento sostenido en dispositivos físicos. No avanzar a otra fase automáticamente.
+## items-34 — Phase 4 only
+Eight models remodeled from the references: Gas Fee, Delivery, Water, Magnet, Term Sheet, Hacked, Rug Pull and Community. Per-vertex materials and a shared atlas, same geometries in tutorial/gameplay. Rings with 24 instanced fragments and trails with a 192-particle pool, purchased colors preserved. Four unit tests and six Chromium/WebKit scenarios passed; flights with balance and events identical to the replay. Inventory, evidence, metrics and limits: reports/items34/README.md and inventory.csv. Pending: references for the remaining objects and sustained performance on physical devices. Do not move on to another phase automatically.
