@@ -1,0 +1,90 @@
+{
+  "loaded": {
+    "context": "running",
+    "voices": 1,
+    "peakVoices": 1,
+    "mixLevel": 0.19466736912727356,
+    "level": 0.11568798869848251,
+    "loops": [],
+    "loaded": 67,
+    "expected": 67,
+    "failed": [],
+    "muted": false,
+    "volume": 0.8
+  },
+  "stress": {
+    "max": 0.7253903150558472,
+    "status": {
+      "context": "running",
+      "voices": 4,
+      "peakVoices": 5,
+      "mixLevel": 0.6524105072021484,
+      "level": 0.5714547038078308,
+      "loops": [],
+      "loaded": 67,
+      "expected": 67,
+      "failed": [],
+      "muted": false,
+      "volume": 0.8
+    },
+    "events": [
+      {
+        "kind": "sol",
+        "file": "sol_pickup_01.m4a",
+        "at": 8.579773242630386,
+        "id": "stress:0",
+        "voices": 3,
+        "rate": 1
+      },
+      {
+        "kind": "term",
+        "file": "reward_big_01.m4a",
+        "at": 8.579773242630386,
+        "id": "stress:term",
+        "voices": 4,
+        "rate": 1
+      },
+      {
+        "kind": "loss",
+        "file": "hit_cash_loss_01.m4a",
+        "at": 8.579773242630386,
+        "id": "stress:loss",
+        "voices": 5,
+        "rate": 1
+      }
+    ]
+  },
+  "paused": {
+    "audio": {
+      "context": "running",
+      "voices": 0,
+      "peakVoices": 5,
+      "mixLevel": 0,
+      "level": 0,
+      "loops": [],
+      "loaded": 67,
+      "expected": 67,
+      "failed": [],
+      "muted": false,
+      "volume": 0.8
+    },
+    "music": {
+      "scene": "game",
+      "paused": true,
+      "muted": false,
+      "volume": 0.6,
+      "playing": [],
+      "offsets": {
+        "menu": 11.679637188208616,
+        "game": 4.5220861678004525
+      },
+      "loaded": {
+        "menu": 30.1,
+        "game": 27.8
+      },
+      "context": "running"
+    },
+    "tick": 303
+  },
+  "errors": []
+}

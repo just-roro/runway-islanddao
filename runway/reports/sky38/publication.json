@@ -1,0 +1,51 @@
+{
+  "build": "sky-38",
+  "date": "2026-10-21",
+  "frontend": {
+    "version": {
+      "id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_38027f1c39c08191a33aca62dc640312",
+      "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+      "version_number": 39,
+      "source": {
+        "commit_sha": "d2b5ea1ffecc8b1bf517d9465f29522ca49163be"
+      },
+      "archive_storage": {
+        "archive_format": "tar",
+        "sediment_file_id": "file_00000000ea24820e8ac0e644c583ed1c",
+        "content_hash": "sha256:d12b92e71fd90920991cb7baa4977bc8f9a47ffc34f38a51781e67bf04e2a177",
+        "size_bytes": 14643200,
+        "file_count": 109
+      },
+      "screenshot_url": null,
+      "deployment_id": null
+    },
+    "deployment": {
+      "id": "appgdep_6ad916bd33148191a2f637c364999452",
+      "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+      "title": "RUNWAY — FUND. BUILD. LAND.",
+      "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_38027f1c39c08191a33aca62dc640312",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-21T19:47:26.952550+00:00"
+    }
+  },
+  "backend": {
+    "unchanged": true,
+    "version": 19,
+    "commit": "2c119322b84673921c3d9d743847f0f1730ea0fe",
+    "rules": "runway-3.2.0-chains",
+    "content": "island-routes-10"
+  },
+  "rollback": {
+    "build": "gameplay-37",
+    "version": 38,
+    "commit": "06a89d97192a671ff9817d37cc5550ed97887e70",
+    "versionId": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_7b8ace185e74819197f43e04fb9cc88e"
+  }
+}

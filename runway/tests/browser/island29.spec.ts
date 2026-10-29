@@ -1,0 +1,10 @@
+import {test,expect} from '@playwright/test';
+test('environment preserves a complete seeded flight and render budget',async({page},info)=>{
+ test.setTimeout(120000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&/shader|WebGLProgram/i.test(m.text()))errors.push(m.text());});await page.route('**/api/**',r=>r.fulfill({status:503,body:'{}'}));
+ await page.addInitScript(()=>{localStorage.setItem('runway.profile',JSON.stringify({onboarded:true,nickname:'Island QA',startupName:'Environment',tutorialVersion:'npc-26'}));Object.defineProperty(crypto,'getRandomValues',{value:(a:Uint32Array)=>{a.fill(17);return a;}});});
+ await page.goto('/?qa=1');await expect(page.locator('#runway-boot')).toHaveCount(0,{timeout:45000});await page.getByRole('button',{name:/^PLAY/}).click();await page.waitForFunction(()=>!!(window as any).__RUNWAY_QA__);
+ await page.evaluate(async()=>{const path='/tests/test-pilot.ts',{flyToJurere}=await import(path);(window as any).__RUNWAY_CONTROLS_QA__.read=()=>flyToJurere((window as any).__RUNWAY_QA__.state);});
+ await expect(page.getByRole('heading',{name:'Welcome to Floripa. Landed.',exact:true})).toBeVisible({timeout:90000});await page.waitForTimeout(2500);await page.screenshot({path:info.outputPath('jurere-landed.png')});
+ const result=await page.evaluate(()=>{const r=(window as any).__RUNWAY_QA__,q=(window as any).__RUNWAY_SCENE_QA__,gl=q.renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');return {result:r.state.result,tick:r.state.tick,stats:r.renderStats,fps:r.renderFps,renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'unavailable'};});
+ expect(result.result.destination).toBe('jurere');expect(result.result.cashFinal).toBe(1755000);expect(result.stats.calls).toBeLessThanOrEqual(70);expect(result.stats.triangles).toBeLessThanOrEqual(90000);expect(errors).toEqual([]);await info.attach('flight-evidence',{body:JSON.stringify(result,null,2),contentType:'application/json'});console.log('ISLAND29',JSON.stringify(result));
+});

@@ -1,0 +1,120 @@
+[
+  {
+    "test": "shop: earned SOL, NPC, carousel, purchases, cosmetics and persistence",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "durationMs": 14654,
+    "shop-transactions": {
+      "earned": 8512500,
+      "balance": 4262500,
+      "owned": [
+        "pilot:0",
+        "canopy:sunrise",
+        "trail:air",
+        "pilot:9",
+        "pilot:10",
+        "pilot:1",
+        "canopy:lagoon",
+        "trail:violet"
+      ],
+      "receipts": [
+        "shop-qa-0",
+        "shop-qa-1",
+        "shop-qa-2",
+        "shop-qa-3",
+        "shop-qa-4"
+      ]
+    }
+  },
+  {
+    "test": "shop: earned SOL, NPC, carousel, purchases, cosmetics and persistence",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "durationMs": 14891,
+    "shop-transactions": {
+      "earned": 8512500,
+      "balance": 4262500,
+      "owned": [
+        "pilot:0",
+        "canopy:sunrise",
+        "trail:air",
+        "pilot:9",
+        "pilot:10",
+        "pilot:1",
+        "canopy:lagoon",
+        "trail:violet"
+      ],
+      "receipts": [
+        "shop-qa-0",
+        "shop-qa-1",
+        "shop-qa-2",
+        "shop-qa-3",
+        "shop-qa-4"
+      ]
+    }
+  },
+  {
+    "test": "purchased canopy and trail render in a real flight; final money is banked once",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "durationMs": 60910,
+    "equipped-flight": {
+      "cash": 1755000,
+      "balance": 3005000,
+      "render": {
+        "calls": 54,
+        "triangles": 78503
+      },
+      "materials": {
+        "trail": "bc83ff",
+        "count": 42,
+        "canopy": {
+          "0": 0.26249462366104126,
+          "1": 0.8555803298950195,
+          "2": 0.6961865425109863
+        },
+        "cloth": [
+          0.48
+        ]
+      }
+    }
+  },
+  {
+    "test": "duplicate purchase and denied storage cannot double-spend or equip an unowned pilot",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "durationMs": 2307
+  },
+  {
+    "test": "purchased canopy and trail render in a real flight; final money is banked once",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "durationMs": 60701,
+    "equipped-flight": {
+      "cash": 1755000,
+      "balance": 3005000,
+      "render": {
+        "calls": 54,
+        "triangles": 78663
+      },
+      "materials": {
+        "trail": "bc83ff",
+        "count": 42,
+        "canopy": {
+          "0": 0.26249462366104126,
+          "1": 0.8555803298950195,
+          "2": 0.6961865425109863
+        },
+        "cloth": [
+          0.48
+        ]
+      }
+    }
+  },
+  {
+    "test": "duplicate purchase and denied storage cannot double-spend or equip an unowned pilot",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "durationMs": 2713
+  }
+]

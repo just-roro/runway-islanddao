@@ -1,0 +1,20 @@
+{
+  "chromium": {
+    "frames": 3326,
+    "medianMs": 8.3,
+    "p95Ms": 10.1,
+    "peakCalls": 61,
+    "peakTriangles": 83785,
+    "peakTextures": 24,
+    "peakGeometries": 74
+  },
+  "webkit": {
+    "frames": 876,
+    "medianMs": 33.0,
+    "p95Ms": 40,
+    "peakCalls": 61,
+    "peakTriangles": 84847,
+    "peakTextures": 24,
+    "peakGeometries": 74
+  }
+}

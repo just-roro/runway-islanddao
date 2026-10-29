@@ -1,0 +1,5 @@
+{
+  "method": "Node 24 on local development Mac, 20 full replays, not Worker CPU accounting",
+  "medianMs": 53.771375000000035,
+  "p95Ms": 71.868334
+}

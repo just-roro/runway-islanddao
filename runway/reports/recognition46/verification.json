@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-22",
+  "frontendUnitTests": 6,
+  "backendRankingTests": 5,
+  "browserScenarios": 6,
+  "targetedFinalRechecks": 4,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "emulatedDevices": [
+    "Pixel 7",
+    "iPhone 13"
+  ],
+  "viewports": [
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      568
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "renderBudgetAssertions": {
+    "maxDrawCalls": 70,
+    "maxTriangles": 90000
+  },
+  "crown": {
+    "meshes": 1,
+    "triangles": 256,
+    "extraLights": 0,
+    "castsShadow": false
+  },
+  "fixtures": "Intercepted API responses + actual ranking SQL against local SQLite; no production scores modified",
+  "physicalDevices": "Pending; unavailable",
+  "productionZip": "Untouched"
+}

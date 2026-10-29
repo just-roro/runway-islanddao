@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "startTime": "2026-10-20T17:03:09.913Z",
+    "duration": 62922.161,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "test": "official branding, menu identity, startup meaning/actions and accessible credits",
+      "browser": "chromium-mobile",
+      "status": "passed",
+      "durationMs": 7041,
+      "proof": []
+    },
+    {
+      "test": "full-width live history, progressive bounded streak, loss priority and pause",
+      "browser": "chromium-mobile",
+      "status": "passed",
+      "durationMs": 6488,
+      "proof": [
+        {
+          "streak-scales": [
+            1.04034,
+            1.05808,
+            1.0715,
+            1.08424,
+            1.09923
+          ]
+        }
+      ]
+    },
+    {
+      "test": "YOU LANDED replay, exact settlement, bank credit, mobile sizes and defeat",
+      "browser": "chromium-mobile",
+      "status": "passed",
+      "durationMs": 14811,
+      "proof": [
+        {
+          "hero-390": {
+            "hero": {
+              "left": 0.31057481478494064,
+              "right": 0.5477089275616333,
+              "top": 0.15323290753707486,
+              "bottom": 0.40128097547516683
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.28649844490521326,
+              "height": 0.24487744372037917
+            },
+            "calls": 40,
+            "triangles": 48179
+          }
+        },
+        {
+          "hero-360": {
+            "hero": {
+              "left": 0.4008196673507438,
+              "right": 0.5251350299352168,
+              "top": 0.18038071216681956,
+              "bottom": 0.3383730937057656
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.26541748046875,
+              "height": 0.15659912109375002
+            },
+            "calls": 38,
+            "triangles": 47757
+          }
+        },
+        {
+          "hero-844": {
+            "hero": {
+              "left": 0.12612826893443974,
+              "right": 0.1965575655309882,
+              "top": 0.44854225635925943,
+              "bottom": 0.7941608325179115
+            },
+            "frame": {
+              "x": 0.18198311611374407,
+              "y": 0.6346153846153846,
+              "height": 0.34
+            },
+            "calls": 38,
+            "triangles": 48307
+          }
+        },
+        {
+          "hero-1440": {
+            "hero": {
+              "left": 0.43588770432637086,
+              "right": 0.5155642304791983,
+              "top": 0.1910972871480609,
+              "bottom": 0.479942837682725
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.3458159722222222,
+              "height": 0.28446875
+            },
+            "calls": 38,
+            "triangles": 48493
+          }
+        }
+      ]
+    },
+    {
+      "test": "reduced motion keeps financial data while disabling spring and victory bounce",
+      "browser": "chromium-mobile",
+      "status": "passed",
+      "durationMs": 3485,
+      "proof": []
+    },
+    {
+      "test": "official branding, menu identity, startup meaning/actions and accessible credits",
+      "browser": "webkit-mobile",
+      "status": "passed",
+      "durationMs": 6187,
+      "proof": []
+    },
+    {
+      "test": "full-width live history, progressive bounded streak, loss priority and pause",
+      "browser": "webkit-mobile",
+      "status": "passed",
+      "durationMs": 6225,
+      "proof": [
+        {
+          "streak-scales": [
+            1.042302,
+            1.05879,
+            1.072224,
+            1.086147,
+            1.099006
+          ]
+        }
+      ]
+    },
+    {
+      "test": "YOU LANDED replay, exact settlement, bank credit, mobile sizes and defeat",
+      "browser": "webkit-mobile",
+      "status": "passed",
+      "durationMs": 14299,
+      "proof": [
+        {
+          "hero-390": {
+            "hero": {
+              "left": 0.3103967748605546,
+              "right": 0.5477528032493025,
+              "top": 0.15323419060134819,
+              "bottom": 0.4015220513907498
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.28662803613744076,
+              "height": 0.24511070793838863
+            },
+            "calls": 40,
+            "triangles": 48179
+          }
+        },
+        {
+          "hero-360": {
+            "hero": {
+              "left": 0.3999593966169403,
+              "right": 0.525350648492031,
+              "top": 0.18035990269295432,
+              "bottom": 0.33972362161823655
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.266064453125,
+              "height": 0.157763671875
+            },
+            "calls": 38,
+            "triangles": 47757
+          }
+        },
+        {
+          "hero-844": {
+            "hero": {
+              "left": 0.12666979892986152,
+              "right": 0.19698448921845313,
+              "top": 0.44832531950160437,
+              "bottom": 0.7933786512445555
+            },
+            "frame": {
+              "x": 0.18198311611374407,
+              "y": 0.6346153846153846,
+              "height": 0.34
+            },
+            "calls": 38,
+            "triangles": 48307
+          }
+        },
+        {
+          "hero-1440": {
+            "hero": {
+              "left": 0.4354868173764157,
+              "right": 0.5154317474848504,
+              "top": 0.19125404340809937,
+              "bottom": 0.48107655711153097
+            },
+            "frame": {
+              "x": 0.5,
+              "y": 0.346328125,
+              "height": 0.285390625
+            },
+            "calls": 38,
+            "triangles": 48493
+          }
+        }
+      ]
+    },
+    {
+      "test": "reduced motion keeps financial data while disabling spring and victory bounce",
+      "browser": "webkit-mobile",
+      "status": "passed",
+      "durationMs": 3320,
+      "proof": []
+    }
+  ]
+}

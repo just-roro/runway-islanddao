@@ -1,0 +1,20 @@
+{
+  "build": "hud-27",
+  "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site/?v=hud-27",
+  "errors": [],
+  "logos": [
+    {
+      "src": "/assets/brand/runway-official.png",
+      "loaded": true
+    },
+    {
+      "src": "/assets/brand/human-friendly-official.png",
+      "loaded": true
+    }
+  ],
+  "api": "Blocked to avoid test identities/runs in production",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  }
+}

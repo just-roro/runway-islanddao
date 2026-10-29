@@ -1,0 +1,16 @@
+id,name,reference,previous_model,new_model,effect,collider,status
+sol,SOL,Not supplied,Faceted coin,Unchanged,+15000,Swept sphere and magnetic attraction,Pending reference for redesign
+term,Signed Term Sheet,TERM SHEET.png,Plain sheet with three bars,Purple layered binder with clip signature and seal,+150000,Swept sphere and magnetic attraction,Redesigned
+community,Community,COMMUNITY.png,Disc with three people,Purple and gold palm medallion with cyan hardware,+25000,Swept sphere and magnetic attraction,Redesigned
+star,Hollow Star,Not supplied,Hollow five-point extrusion,Unchanged,+15000 and existing boost,Swept five-point aperture,Pending reference for redesign
+gate,Striped Ring Sequence,Not supplied,Red-white torus and beacons,Same ring with radial segment breakup,+100000 once per complete sequence,Swept circular aperture,Collection FX improved; model retained
+magnet,Magnet,MAGNET.png,Green inverted arch,Red horseshoe with white poles and cyan terminals,8 seconds enlarged cash attraction,Swept sphere,Redesigned
+water,Water,WATERBOTTLE.png,Plain cylinder with band,Faceted cyan flask with handle lid and droplet display,Halves next hit without expiry,Swept sphere,Redesigned
+rare,Rare Cargo,Not supplied,Octahedron with orbit,Unchanged,Cosmetic unlock,Swept sphere,Pending reference for redesign
+delivery,Delivery Again,DELIVERY.png,Cardboard shipping cube,Shallow pizza box with checkers lid and latch,-25000 before section scaling,Swept sphere,Redesigned
+gas,Gas Fee,GASFEE.png,Block pump with hose,Red cream pump with screen header nozzle and hose,-37500 before section scaling,Swept sphere,Redesigned
+rug,Rug Pull,RUGPULL.png,Three flat slabs,Curved double-sided carpet with gold fringe and face,-50000 before section scaling,Swept sphere,Redesigned
+hacked,Hacked,HACKED.png,Three-bar server cube,Dark corrupt monitor with skull vents cables and LEDs,-75000 before section scaling,Swept sphere,Redesigned
+tower,Buildings and structures,Not supplied,Existing GLB and map geometry,Unchanged,-37500,Swept box,Pending reference for redesign
+ocean,Ocean,Not supplied,Existing coast and water shader,Unchanged,Loss with zero capital,Authoritative coast polygon,Unchanged environmental hazard
+risk,Risk,Not supplied,Thin orange torus,Unchanged,Inactive legacy definition,Legacy circular aperture,Inactive and not spawned

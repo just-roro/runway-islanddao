@@ -1,0 +1,76 @@
+{
+  "label": "before",
+  "engine": "chromium",
+  "metrics": [
+    {
+      "stage": "approach",
+      "state": {
+        "x": -21.98387486987337,
+        "z": 242.54718414805376,
+        "altitude": 127.41931825704714,
+        "tick": 2400
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 0,
+        "grass": 256,
+        "visibleGrass": 0
+      },
+      "calls": 45,
+      "triangles": 70515,
+      "max": {
+        "calls": 62,
+        "triangles": 70719
+      },
+      "medianMs": 108.29999999999927,
+      "p95Ms": 183.1999999999971
+    },
+    {
+      "stage": "island",
+      "state": {
+        "x": -0.019457412686350227,
+        "z": 28.277906653976657,
+        "altitude": 49.84598492371437,
+        "tick": 2880
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 5,
+        "grass": 256,
+        "visibleGrass": 64
+      },
+      "calls": 50,
+      "triangles": 61425,
+      "max": {
+        "calls": 50,
+        "triangles": 70515
+      },
+      "medianMs": 116.80000000000291,
+      "p95Ms": 158.3000000000029
+    },
+    {
+      "stage": "landing",
+      "state": {
+        "x": -0.019457412686350227,
+        "z": -96.24476001269022,
+        "altitude": 3.2,
+        "tick": 3240
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 24,
+        "grass": 256,
+        "visibleGrass": 144
+      },
+      "calls": 39,
+      "triangles": 48007,
+      "max": {
+        "calls": 50,
+        "triangles": 61425
+      },
+      "medianMs": 116.69999999999709,
+      "p95Ms": 158.8000000000029
+    }
+  ],
+  "errors": []
+}

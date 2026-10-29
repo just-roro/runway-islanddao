@@ -1,0 +1,3627 @@
+{
+  "prepared_date": "2026-10-29",
+  "frontend": {
+    "saved_version": 47,
+    "commit": "e58d1fd3366258686830d116d2c6db5d80c5de32"
+  },
+  "api": {
+    "saved_version": 28,
+    "commit": "3d74ea5a3fbc15cd9a9dcda956692c892985eb9c"
+  },
+  "included_source_files": {
+    "runway/.env.example": {
+      "sha256": "ae0df309e69cbb78713e3a7c297e534ca089414a89e2820d4d80fad7e216e32f",
+      "bytes": 146,
+      "git_mode": "100644"
+    },
+    "runway/.gitignore": {
+      "sha256": "4f951a132f20a985a07981b61ffde2e295d19fcc1510f7f725afff2c5c4852d9",
+      "bytes": 2736,
+      "git_mode": "100644"
+    },
+    "runway/.openai/hosting.json": {
+      "sha256": "573d5ef724ffe7fda0b7f7af031c52e217e9a5ace1f1a5d6a7003d15758603eb",
+      "bytes": 106,
+      "git_mode": "100644"
+    },
+    "runway/README.md": {
+      "sha256": "2bf0f3fac269b820de428cf765da72ad4a46b00a73c1d976572038ca3cade1c2",
+      "bytes": 3184,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/brand/runway-original.svg": {
+      "sha256": "2f7d2b9c622c0e334c6fb153093b094b40c946aace40e8882afaa15a99184c8f",
+      "bytes": 6586087,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/brand/sol-reference.png": {
+      "sha256": "0df174f6301e0ce80926f4285c07224a236dc1eace732e5889b9262b2d65844e",
+      "bytes": 812334,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/runway-aircraft.blend": {
+      "sha256": "0fae1ab15e4cbd0836e4f340af98645e34c204d07a6f4b3ed2f69da32abc1fd9",
+      "bytes": 159624,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/runway-city.blend": {
+      "sha256": "75adbf7f558e9cd25c1d79c3f69df3cae907143441cc68f5376774f58bee80cf",
+      "bytes": 150914,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/runway-hatch.blend": {
+      "sha256": "20bc0fc6cbb77295696aa86d393b6ae95ba01511d7faf630d694a7b52d7d7cbd",
+      "bytes": 108966,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/runway-jurere-provisional.blend": {
+      "sha256": "f9c70ed2ebadd45e15bd92c280f736aae89a66c668c64e2dbcddbb5c35a33e05",
+      "bytes": 96746,
+      "git_mode": "100644"
+    },
+    "runway/assets-source/runway-pilot.blend": {
+      "sha256": "b7762817c4973b17299133d50dc02f5b0a003256032844144c1915bf54d4921f",
+      "bytes": 367158,
+      "git_mode": "100644"
+    },
+    "runway/docs/CANOPY17.md": {
+      "sha256": "8f80f676b2c7a44c9cd0f4fa726b497407307c7b2f8439b6eca84cc2fb7c1523",
+      "bytes": 4528,
+      "git_mode": "100644"
+    },
+    "runway/docs/FLIGHT8.md": {
+      "sha256": "0213e782878624a5c667d954367b21db0e4a546a376434f31d6bcfe5e55c8f52",
+      "bytes": 1112,
+      "git_mode": "100644"
+    },
+    "runway/docs/INSTRUCCIONES-HOSTING.md": {
+      "sha256": "e7bbe1ab198e0d32f4b80aa7b8cccdef9a53797b44138182ae8d802fa71ff5bf",
+      "bytes": 6442,
+      "git_mode": "100644"
+    },
+    "runway/docs/JURERE10.md": {
+      "sha256": "f3955486590099be861bd4984b283a707d805bee01629a4f87d8b24b076d34b9",
+      "bytes": 5588,
+      "git_mode": "100644"
+    },
+    "runway/docs/POLISH16.md": {
+      "sha256": "b05e875076c65bd99ffc2c7a429ec7ea15458f7855ea165f4b35938264f34f33",
+      "bytes": 3796,
+      "git_mode": "100644"
+    },
+    "runway/docs/RUSH19.md": {
+      "sha256": "d7917fa1f95857ca5746d642db0ed7886b4c1c6300c38360bc7936824c9ebcc1",
+      "bytes": 5604,
+      "git_mode": "100644"
+    },
+    "runway/docs/STORM18.md": {
+      "sha256": "21b8789315eadb13d317147d6922b6214be6c8ba1fffb81484945d7954972974",
+      "bytes": 4574,
+      "git_mode": "100644"
+    },
+    "runway/docs/TROPICAL9.md": {
+      "sha256": "7d2ff590aab8b177b167f2c3fe0bfe073ffca2d49447a1fab221bd7c54c667ae",
+      "bytes": 1525,
+      "git_mode": "100644"
+    },
+    "runway/index.html": {
+      "sha256": "61c5a35eec1482cadeb022b11527da3e5853bb611ec7c68a6a700d933cb7e664",
+      "bytes": 1314,
+      "git_mode": "100644"
+    },
+    "runway/package-lock.json": {
+      "sha256": "d497172a23b9e6ef34039970fd3cadb69ccf814027c52499065b1e776605322d",
+      "bytes": 54816,
+      "git_mode": "100644"
+    },
+    "runway/package.json": {
+      "sha256": "cd60579d3eea3a3cc215790d1b3c5b96f262aacf9e08be17bbb23aea61cbaff1",
+      "bytes": 657,
+      "git_mode": "100644"
+    },
+    "runway/playwright.config.ts": {
+      "sha256": "6c588f165dfb3e34fa76463317adf087cae591358ddb93dc32d598385ab4c0bc",
+      "bytes": 487,
+      "git_mode": "100644"
+    },
+    "runway/playwright.cosmetics.config.mjs": {
+      "sha256": "3fcc246112d6975461bf58544c1b2b9bcdd4e49244c21d11aad6c578b29f3e44",
+      "bytes": 861,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/cloud-left.png": {
+      "sha256": "58756b1b482c9d9ba921901b90de66f2e18c1159bcb27f328fe55991ba72d61a",
+      "bytes": 1124103,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/cloud-right.png": {
+      "sha256": "f198bff03756664a02205066e24cff39de8943856b80cccc18ff3b9a78f0d112",
+      "bytes": 1132522,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/favicon.png": {
+      "sha256": "bae7e1fcadb8dffca75b1858e6091d8bd05d3e4874c661c4e2e443c285e2bd3d",
+      "bytes": 1929355,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/human-friendly-official.png": {
+      "sha256": "78020d92ff3a473d9ecea90f7c83514d5d3df2980b773407e3d11e3790147bc2",
+      "bytes": 36345,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/human-friendly.png": {
+      "sha256": "8965f1ca257c8c966efc9444dd4e356776558f5b9b05ff20396be89fcdf87714",
+      "bytes": 14487,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/humanxisland.png": {
+      "sha256": "af9ef72b1c1ffff403f6ae3fb3b5398c6ca4bc28ee423325be47c602f605f063",
+      "bytes": 289150,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/landed.png": {
+      "sha256": "f5cf5f121dcaf073f8be3bc48a3ff9dabc4fe1382ca4ea59db95258ca2c4b4b8",
+      "bytes": 1616406,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/runway-logo.svg": {
+      "sha256": "e1c87733c9048ea9d64c3ba1fc804faa9c2ec283709fb9b6e192821b89df5c07",
+      "bytes": 764448,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/runway-official.png": {
+      "sha256": "eae684364705993f3f9b2ff6090f18496fa92c0ac48230f4f91ccdfafb5f18f1",
+      "bytes": 1025371,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/brand/sol-coin.webp": {
+      "sha256": "30eb0eb3e563b4abac22b6d0b645a360db3c2c61e4f36b3054787fbf63f430c6",
+      "bytes": 9116,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-fire-fighter-helmet.png": {
+      "sha256": "7165ed33086e7ef1b4dde4b6cbaa410ddf74a403e2a0f9aac837d224b4253799",
+      "bytes": 1863,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-king-crown.png": {
+      "sha256": "422c8865650b98bb9e526b16e619d349086e0c53bc2dadf728c89cbc9d905226",
+      "bytes": 1967,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-lab-visor.png": {
+      "sha256": "f987b8591056bf35334ceab71dd8dda22d9e3514acfa08a1ad2717599adb3de4",
+      "bytes": 1870,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-mohawk.png": {
+      "sha256": "eed5b3a5d89d6a17ca824648afb5328ecba22b0f847c2e4eb885bee227ef89f8",
+      "bytes": 2121,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-none.png": {
+      "sha256": "c07d59c35a8f10c32a14c006ca3a5305b8535c235a79c26e747f080345db130d",
+      "bytes": 1707,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-pirate.png": {
+      "sha256": "f15cd9abe3c18b2032e247f963328041b5a925e60819d48b0f39d8b1f52f4fc1",
+      "bytes": 2102,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-racing-helmet.png": {
+      "sha256": "1f87356d53d2fdf0ed99d13ef3a6f89c174a1fdf9649a4bf93b0e46600e1cc45",
+      "bytes": 1660,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-viking-helmet.png": {
+      "sha256": "7ba1f16de16a6cedde75059768c2340bc42783fad81d90d344f0e25b58ecf573",
+      "bytes": 2095,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ape-zombie-cap.png": {
+      "sha256": "4399480a2938ad8958ade72a35e1c49feb01e43b76b158641017498d06fee0a4",
+      "bytes": 1810,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-bonk.png": {
+      "sha256": "97c3c03117b39fa3e16ae97b152fd42366bc88055e7ab81631e89d993b9c3582",
+      "bytes": 1531,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-bucket-hat.png": {
+      "sha256": "be1700a779bc6dd3d7001b75cc3464e425b18b910a9d333324a6031e5f0814d3",
+      "bytes": 1496,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-kabuto.png": {
+      "sha256": "6c5ef22e49abbac0b3f7a5042beac65cbb3e76cf7c204c98aabbbc14c9fc2d0e",
+      "bytes": 1689,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-none.png": {
+      "sha256": "e3b54399204c721adc0f962d0a2061c0fa6c7de4cd8b519a8714d4c8baaa5efd",
+      "bytes": 1247,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-red-turban.png": {
+      "sha256": "4038b82b909a0b93e77e3890d0525e48f7f0099c42f37d366890edd83a97c7a7",
+      "bytes": 1383,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-ski-mask.png": {
+      "sha256": "a647d3ea47d8833490a02faccb6ae5853fe1639b03b665a14ea4b1ba249a6ea0",
+      "bytes": 1192,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-soda-hat.png": {
+      "sha256": "8de212230a6b38fc9fcf1ab6f0abc63b3c26be00594d8e163706eac335ade430",
+      "bytes": 1397,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-visor.png": {
+      "sha256": "aaa19e9e90f039d5c9e4270ef246dca454c0a8b8163a19d157e9f1fe7eaa631c",
+      "bytes": 1413,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dog-vr-gogles.png": {
+      "sha256": "b78ad925714ce3d0dfd7289b3302949bf28df9c811026e98d42e1aad91318e79",
+      "bytes": 1303,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-aviation-gogle.png": {
+      "sha256": "4001d478c86d31ebe1962b0ab88f5446e67119f6986eeaee1a1d36c12ce4325b",
+      "bytes": 1919,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-cig.png": {
+      "sha256": "042db8a79e301527eae2bd50d5f4a1ed3030b0e76ae8ab5aed08d3a86ef9b3ba",
+      "bytes": 2051,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-greek-crown.png": {
+      "sha256": "fd0962198ee521b067638e764e0eab3d01ab4154e30c414d18dbcc5d94b14b04",
+      "bytes": 2078,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-halo.png": {
+      "sha256": "9ffee6d2fd50cada4e8c31804fadaf69a83ab19e8efca1cfb80884d15b03a3a5",
+      "bytes": 2042,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-jester.png": {
+      "sha256": "af93d74c095cefffcc37fc9e82a8ab72dbca6e95f033c822a572069713720c49",
+      "bytes": 2112,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-ninja.png": {
+      "sha256": "d300e61252e2be562481318ccc18544319e265cec82b6b75ab6f497cf17c3f80",
+      "bytes": 1872,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-none.png": {
+      "sha256": "66b7b8e77b7deb9ef940ef566e0fc0975870abcbe6c63d8f5ddb698f446d5335",
+      "bytes": 1813,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-tiny-crown.png": {
+      "sha256": "2a0dd80d15f556e89e22fad8d8496da520de4ba6b2d26fc172c0a381da486e36",
+      "bytes": 1884,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/dragon-zoro.png": {
+      "sha256": "871bca678773e4d0bc416ab11b5e75fb911040b9ba7cb0833617ef3067cf72da",
+      "bytes": 1917,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-biker-helmet.png": {
+      "sha256": "c6254a0be7897da60d5577627cb4df8a7f41c08a48f9171ee2c96f20e5ef7176",
+      "bytes": 1479,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-hunter-hat.png": {
+      "sha256": "8e8315cff17fe2a5a94d85f9299eed86f96c6c20050b7ba7a5e586b90a60042f",
+      "bytes": 1728,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-leprechaun-hat.png": {
+      "sha256": "a787c2c19197a99ce50a319fddf63986e037c9f1df0aa0a34acc92a4af9f4915",
+      "bytes": 1556,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-miner-helmet.png": {
+      "sha256": "386dc3356c8e5cd120b3fa902268abe57ac4c286e89f56ea81e7445482b81a71",
+      "bytes": 1608,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-none.png": {
+      "sha256": "1ef014e216159457ea59267dcf524f016f54d70d7639ad84c26a206d28db9df6",
+      "bytes": 1514,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-pirate-band.png": {
+      "sha256": "6ace4e1217bd18cd5461a99041c17f9015025b4a5305551d857c19fc59e26471",
+      "bytes": 1605,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-shaman.png": {
+      "sha256": "49a811bfae36d63a398f2eebb65097cb05a345155fb964e4ec19ed62c252bfbb",
+      "bytes": 1836,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/goat-wrestler-mask.png": {
+      "sha256": "72c7e1aa70b48951ac92536f8ccae51351d34f7ba36abaebf81c88ed1632f298",
+      "bytes": 1653,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-aztec-crown.png": {
+      "sha256": "098be1d04e6ece894e92256f705ed2eaeb13a02e4e4d0827f9a30011497114e7",
+      "bytes": 1808,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-green-beret.png": {
+      "sha256": "3c1f23771b2f168778f7275821207e4a12da3b22f5abac116a570849d30581ef",
+      "bytes": 1601,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-none.png": {
+      "sha256": "dd3c3b4377d3403c1d23f3ed1f0adf09a8a4ebaf5effed154ea119253cb15db6",
+      "bytes": 1574,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-rastacap.png": {
+      "sha256": "b82d38e274d69129e3a5ba2acb147f8c23f8f00247a1e9a5d135ada6af283b61",
+      "bytes": 1793,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-sherrif-hat.png": {
+      "sha256": "b1babcdcf9b7f6ff4dcfbf67badc27698b1ad4c3d11ff25952762382fbefd8e7",
+      "bytes": 1608,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-sombrero.png": {
+      "sha256": "f0c91949985ba72bd89c2889aab73829e12ecac4b97a9e5cbb4167ff31154300",
+      "bytes": 1776,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-sun-glasses.png": {
+      "sha256": "0b875048cd808a925288782ef47a3a06ac93a4f2d4933f95297878f233f4c098",
+      "bytes": 1619,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-tennis-cap.png": {
+      "sha256": "35e9740ccbb1c55a238530f6ec294591cbd402a8f25e3a847e736e562b33f0a8",
+      "bytes": 1547,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/horse-white-turban.png": {
+      "sha256": "21b3fb64394c1c195c4a260b368ac90deacc102ad672b6848d78ab367e8fb55b",
+      "bytes": 1580,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-bandage.png": {
+      "sha256": "a1e1b71b851b7d38f96856cbe3cf85dd9e6bf24ec4d1dca5c33f2b681e77a9ee",
+      "bytes": 1493,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-birdie-horn.png": {
+      "sha256": "9535fc4754cd01d67ffe1647b374d794eaa5a53541cbfed22efdda35e74879fb",
+      "bytes": 1852,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-gladiator.png": {
+      "sha256": "63d468573255cbe473172729c27f64798db6319d35455932fc3de617f550e979",
+      "bytes": 1453,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-leavie-horn.png": {
+      "sha256": "2570eac95f18d8130c2e48db90d4f1ce2a93296004b2919e806e5af872c9324d",
+      "bytes": 1758,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-lifted-cap.png": {
+      "sha256": "78debe15d7f7c4e243971a925d6eb2cbbd485b90524d096cf837184e3b8cfcac",
+      "bytes": 1504,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-none.png": {
+      "sha256": "2e169345f67ce9bff3594152a1184a836416f6324d551053d68a0056d3e5f66b",
+      "bytes": 1433,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-screen-face.png": {
+      "sha256": "8ce2afae1465419c2dd41e113462507a580e17c9a4533fc1dd6187fbb4541dd5",
+      "bytes": 1436,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-templar.png": {
+      "sha256": "06d170d827fbcab6def0dbd3a94fc9cb453eb6dff4eaedd0eed3b0c04d0d7252",
+      "bytes": 1842,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/ox-ushanka.png": {
+      "sha256": "e16400eb754dada16da9c0073f7903bfe8a128420ff5e42a8938097b18a28bc7",
+      "bytes": 1606,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-circus-hat.png": {
+      "sha256": "675679ec5cbaeaca22a2daa8b1345aee1a10a68c56e7bf89c166314b88ec8a38",
+      "bytes": 1566,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-gogle-hat.png": {
+      "sha256": "6c96afead1f42ff5cf5248af85c5fdf5fc09eb3a06392af27a45d91082aa90ec",
+      "bytes": 1458,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-headseat.png": {
+      "sha256": "b40206394bd83e1e6106c89bfe8d3b743e4d958c2a90b982b2a746a4e4c21c12",
+      "bytes": 1367,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-mad-scientist.png": {
+      "sha256": "6144ff089001d34002f3d79db9f35181ff596434c2147da8d7688560ae1d5219",
+      "bytes": 1789,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-mario-hat.png": {
+      "sha256": "2e2d8ba843a6da6c4a30e33c1134f8bef02609cd1eabe1435c707bc1293de69b",
+      "bytes": 1324,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-none.png": {
+      "sha256": "314045a15726c7f13b98ef06b8ec924c808ce6f192e22e652b915600c9db369e",
+      "bytes": 1200,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-ranger.png": {
+      "sha256": "36e8e9ab3bc2e435d3fa73fa1445a9f8effd701e8fc2dfb5e4746f4524708a2e",
+      "bytes": 1680,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-royal-crown.png": {
+      "sha256": "dbd00c3392f8ea181e54e962e4bd25474450e146468e081938c27596dbd44d89",
+      "bytes": 1711,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/pig-tiny-hats.png": {
+      "sha256": "932fe12f6fae625c8b0e60e341acd2284207d803ce37724ca30a5ad47ff6213e",
+      "bytes": 1385,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-aurora.png": {
+      "sha256": "223e781f01fdeef0e896e796f244d72ddd97a5887412a0a3f412050e40198a0a",
+      "bytes": 27416,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-azure.png": {
+      "sha256": "df23750fcce229f8976b962ea07fe93d5f03f3896f8eecd9a3ccef7df8922cbc",
+      "bytes": 26462,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-constellation.png": {
+      "sha256": "e3f886b9dadc4671f9635f331487a5e6381e1ccc86384f409ad3d5d04ff72437",
+      "bytes": 27797,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-coral.png": {
+      "sha256": "4a272f1e61aeea3717f304e21322ec8456d177fb736fe391a8d1838c343f7930",
+      "bytes": 27298,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-lagoon.png": {
+      "sha256": "440f4a80f82985e67e80cfa675c90cc8432e0ba97843ce7a3ecd30630411003f",
+      "bytes": 27095,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-ocean.png": {
+      "sha256": "db9ea5091956413b9c604e0c1cc13af9fb9aff7390cd1fdb86df7f89f6b61a6d",
+      "bytes": 28090,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-orchid.png": {
+      "sha256": "ec78074bb0ef17b54131bcb58b83189cacdafd63764c9dab612db3dfae4d84ba",
+      "bytes": 27094,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-pearl.png": {
+      "sha256": "c78a98f1b1ac85852d5b2d2704c980ac61c6a9640c417831a8fe28ef991834a3",
+      "bytes": 26731,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-racing.png": {
+      "sha256": "a94e7a91b1e713b22309d633aea3eccc5819fa448da8d19192e06783adc9c30b",
+      "bytes": 28734,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-sunrise.png": {
+      "sha256": "958701b9dd408b1cdab4196812e4b295d27eb77d6d2e0925b364511aef77e29e",
+      "bytes": 27137,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-sunset.png": {
+      "sha256": "5dc5986c660ba3fb7640b05eb89b62af4f6e0e69328c8c80c2679ba22d00e560",
+      "bytes": 26930,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/canopy-tropical.png": {
+      "sha256": "3815b0561e120a10a10c728cf832a7bb35e34c3d765b5bce6158bd6eea6ef885",
+      "bytes": 26769,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-aurora.png": {
+      "sha256": "3b9ffc7123d67076577914a69384f1bbb119a1a86b7223851bfc73dd30217e3f",
+      "bytes": 28226,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-circuit.png": {
+      "sha256": "40eb3172fd1473c3095a0100b40ab30cef58234c7cb0a6cf8b1f4237060eead1",
+      "bytes": 28635,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-duo.png": {
+      "sha256": "78306ef5e690cd8bf9390a86c149a2d4a7285de9ee11bfc3e1f0e27b44d81ff5",
+      "bytes": 28136,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-lagoon.png": {
+      "sha256": "1b036f2a8ea592f4ecac1e272f41dd33cffd1687b50f9211fb1d8305cafcf819",
+      "bytes": 27711,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-original.png": {
+      "sha256": "557aab25684c75359a0fe626452bc431004b1417fa6ff481eb68dba385d8f3c7",
+      "bytes": 27119,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-pixels.png": {
+      "sha256": "03706e871a090a7bf4532a63f5af0a7ffdab3c325e760cda45b1b88f7a1e4752",
+      "bytes": 28063,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-solar.png": {
+      "sha256": "8c7edf43240da4103174cc8f7a0d2284eef0c6a55ad7a9a77e67bcb0635d8050",
+      "bytes": 28082,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-sunset.png": {
+      "sha256": "fced3f27a74b9df279886e51e0171bf483259f7513b41c23b4858f5a8b8b1bd5",
+      "bytes": 28152,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/helmet-violet.png": {
+      "sha256": "5268bbb7b8969c24774abb7f4670134c5cdf9dc14cac7b280285f230d7dd5528",
+      "bytes": 28197,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-air.png": {
+      "sha256": "89deca46b64d44318d5087da6a2d5015e6ae6c740147d9779710d635038c6664",
+      "bytes": 29683,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-bubbles.png": {
+      "sha256": "f9465c6f22428d315c570568e1e37d4336456beac5de88735d36a7e730e0dcba",
+      "bytes": 29964,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-comet.png": {
+      "sha256": "79bbbd68bcbcd420c96ba45119b3964b2c3d67fc98bc54f4163e87feff9189b7",
+      "bytes": 30898,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-coral.png": {
+      "sha256": "69085269338951a3ce5b9b7f78a1d77a90a744097d1d6734802c104c742c4d0b",
+      "bytes": 28747,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-gold.png": {
+      "sha256": "f8d373b29a901d9de2424a59152c19c6720179ff0a683f026ceb836c60e368a2",
+      "bytes": 29003,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-mint.png": {
+      "sha256": "bf08eb15975a215ce7b49c1d3c28aa69b7b691c06c7b09e447ed1604c6f2142c",
+      "bytes": 28650,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-mist.png": {
+      "sha256": "02053371a5992225ebcfde30c5d3cf297a3487c8f658fddfb4773bc26fff7e10",
+      "bytes": 28536,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-sky.png": {
+      "sha256": "972842dd12ac15c145202baa18584c1fca3472245dc6f33d2a64394a3b623114",
+      "bytes": 28663,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-stars.png": {
+      "sha256": "146a9be75fde7bc2e2480a9a17aed4c0007a8ddc3b64214f0dd189c4d3fbca22",
+      "bytes": 29734,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/previews/trail-violet.png": {
+      "sha256": "9dcd1b8478650c263468dc82f7bf659e962c8da19995c6d23a63fcb876284e57",
+      "bytes": 28936,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-baseball-helmet.png": {
+      "sha256": "94ddfdc1a8055d60a8286de0cb9a7bbdc65e49fa4a76c68186714d4e71e8579f",
+      "bytes": 1654,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-cyclops-gogles.png": {
+      "sha256": "2cfc504ed452c4fa95578e50c3d98639215b6af295a88db3dc12277d4a063c16",
+      "bytes": 1621,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-gold-gogles.png": {
+      "sha256": "13eceaaca6b8d0f491ba0d647d6efc1ddabef4dcc7ae43b5c71b9cb678211da2",
+      "bytes": 1735,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-none.png": {
+      "sha256": "5c9c22230c23e221879cecdf847b073ebb4962a3a742720981b63e5c342fea7d",
+      "bytes": 1533,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-party-hat.png": {
+      "sha256": "1f4462256b7c3d894c8b8dc08366e92c0b340c92a02f8448734d1c401b72b541",
+      "bytes": 1862,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-ronin-hat.png": {
+      "sha256": "06dc9a447b0f749c048b8965461672cb064c73f7a4f6748be65f8b4e14eac636",
+      "bytes": 1615,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-roses-crown.png": {
+      "sha256": "05f3629e26b2f6d41ecd56232842a3da3b00853efe56fe719d3eb114f8cac613",
+      "bytes": 1836,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-shushi-band.png": {
+      "sha256": "d750a9680c39fc1e42e87b8920811ce79317505effb03aa77b70a922d339c5af",
+      "bytes": 1623,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rabbit-snap-back.png": {
+      "sha256": "dae9eea72811f44ec6ccc1395008c5188323ad913f3ada2df7a471307d9220e1",
+      "bytes": 1570,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-brain-hat.png": {
+      "sha256": "ddbc9e78c153f314115ddec616f836a48c2cdf7454448d08576cec099cc550c3",
+      "bytes": 1500,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-cheff.png": {
+      "sha256": "8989bc38898c043b672ce4249a208cd921ef45bf4abc054f863d623e4bae1440",
+      "bytes": 1506,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-doctor.png": {
+      "sha256": "8299ff3d0dec384fa8a47035ebf9e32fc5340f86ac0808f454b5a6029c56c929",
+      "bytes": 1336,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-fedora.png": {
+      "sha256": "4060380884de26f141f00533b03e197e35093d616f82b4e9b3bd81ee309ed447",
+      "bytes": 1315,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-none.png": {
+      "sha256": "9cae0cfa66470a0d7fcd3e925b160a0622d336c31b49c86982b79a6a57879fc9",
+      "bytes": 1282,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-sailor.png": {
+      "sha256": "9eced46a189bd53445d9a35a77658cc4582e90bd2e849f662f3edb8f5555af9b",
+      "bytes": 1335,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-santa-elves.png": {
+      "sha256": "b43b64bf0ecdafdb5a6e9a03bfdca343b48c753448d50fa683767397e50138ea",
+      "bytes": 1458,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-santa-hat.png": {
+      "sha256": "0b37637b347d63761ef214ef20c7a12581d97c340f2c55132e0c07b1a47a36a5",
+      "bytes": 1446,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rat-turkish-hat.png": {
+      "sha256": "3702912251d5ea6dbd15fc6cebe267c1b87eb47bf46ec085c781bbdb95320e71",
+      "bytes": 1464,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-box.png": {
+      "sha256": "27caa2cca01a3b1f683cbdb96c07621c62d38bcdbe30f8105d8b88e1364729b4",
+      "bytes": 1539,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-cowboy-hat.png": {
+      "sha256": "21c71a9cd3ddaa88cdc6213d765859a0037486e2996ba4bdbf9269fbf7a1e7e1",
+      "bytes": 1587,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-helmet.png": {
+      "sha256": "1d6073486988fdd0ec9999c2eb768822d33afd7995e438ce78baf2ce48f69c6e",
+      "bytes": 1575,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-none.png": {
+      "sha256": "ba8a0db944a0784ec36c314b79a4d3b0f9847c00a1f0f9b386d6e306800c06bb",
+      "bytes": 1472,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-ronin-kasa.png": {
+      "sha256": "c6c812db8da680236eb345446e24fcbbb18bd766069582b9cf76c0d3eb2c6b40",
+      "bytes": 1632,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-sleeping-hat.png": {
+      "sha256": "5aa72d852ee003203dd02b665371024226834750bdf988b16077d21d5486cce2",
+      "bytes": 1592,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-spartan-helmet.png": {
+      "sha256": "a05af1184bd5310a34f70d5c6736afffa1dda56359b605645bfb36918bc18b6f",
+      "bytes": 1891,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-traffic-cone.png": {
+      "sha256": "f36b1650e9b7714c27b3d6f5cf9b76797cc8ef740b8eb57594c38b23b164afd6",
+      "bytes": 1576,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/rooster-wizard-hat.png": {
+      "sha256": "43c9247a29f5675df424137d22d056d992d83c69f0bbcd3cd72dc5b66b56ad02",
+      "bytes": 1683,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-bloody-axe.png": {
+      "sha256": "fc9c0f959ff8130f1194c00f07abcf2d90cefec7920d837e70e9839398c48e6a",
+      "bytes": 1606,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-monocle.png": {
+      "sha256": "69a4ff1d04c5d42b2375a1c1e436ca15a49fa758b06b8cc592e702d59262e905",
+      "bytes": 1329,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-mushroom-cap.png": {
+      "sha256": "d1405e2959966bead2b1f4aa336655979c137a72817eab09a90b43db30ff757b",
+      "bytes": 1456,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-none.png": {
+      "sha256": "ad974a68b404e9c9d2fab0585a222db24b852e2094a3a76877357070cbaad45c",
+      "bytes": 1224,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-pharoh.png": {
+      "sha256": "3d64f0e81b3ea489137b165bb6bfb22f52ad32e2a2abaf97e4fd9c48b3cc9f1c",
+      "bytes": 1779,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-red-horn.png": {
+      "sha256": "3003052efbcb940b87fcb5a5156d1136074bbc744d492033872bd21c28897412",
+      "bytes": 1549,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-shalin.png": {
+      "sha256": "55d894527dc7a3667679276f72f7f92732ddcdadc0901a2e876bc93df8a4ebfb",
+      "bytes": 1592,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/snake-valkry.png": {
+      "sha256": "a9581ea011a4c8bbecc48a68d9307d26ef25d1be47a19b3fcf56c81d34db8ee8",
+      "bytes": 1484,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-arrow-on-head.png": {
+      "sha256": "8a037d49eba11b806d824308e6836bb1b976cf283ac1667321282f4bcb3bb7be",
+      "bytes": 1755,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-druid-horn.png": {
+      "sha256": "0d195918b7b9f6fd9a4f7ad24c03c8e4226346bd9a16fd7492793ad5a144dd82",
+      "bytes": 2193,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-gatsby-cap.png": {
+      "sha256": "66c8290c2de7b5af7d9128f5d73e806282958c14a0c8fa6cc2778763528308bf",
+      "bytes": 1647,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-magician-hat.png": {
+      "sha256": "d082d3e6ef71364b412debeef48a79693ddfe3de83d99389713dca291a674367",
+      "bytes": 1817,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-ninja-hat.png": {
+      "sha256": "dd3549c0638678e19f39dbf45b5add529bdb3727a38d66093f70a6c5944f2f07",
+      "bytes": 1725,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-none.png": {
+      "sha256": "c8231e74bac03536cba72551e2eeee04b459ebd08532ad3995a7544b9a023a04",
+      "bytes": 1624,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-oni.png": {
+      "sha256": "63c6bc350da789a8daaee6c947ae7828e4e0d353b3fc62c6e03421107a8816cd",
+      "bytes": 1859,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-straw-hat.png": {
+      "sha256": "1ad4fa62fb2b184822e06dfccca32660a1029db3cbb146a996e040fadc1468b9",
+      "bytes": 1750,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/cosmetics/tiger-welding-mask.png": {
+      "sha256": "3247e143af08ca3c61abaa6d3e79de078af8a574740170ef141b126a93e9a123",
+      "bytes": 1645,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/fonts/Rajdhani-Bold.ttf": {
+      "sha256": "691470dd3286a14e9677940d0bf75796179841ba5215cbda1a2c8910a3226afd",
+      "bytes": 400680,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/fonts/Rajdhani-OFL.txt": {
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f",
+      "bytes": 4373,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/fonts/SpaceGrotesk-OFL.txt": {
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+      "bytes": 4495,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/fonts/SpaceGrotesk.ttf": {
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+      "bytes": 136676,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/geography/santa-catarina.json": {
+      "sha256": "64e278ae08105e64f78018227eebe34707ed65366002430ea48eb258723549e5",
+      "bytes": 9382,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/models/runway-aircraft.glb": {
+      "sha256": "e5a53a1a41bee23466ae32195bf61dbb945c39fe0a16f792a48ff51d9a057762",
+      "bytes": 479156,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/models/runway-city.glb": {
+      "sha256": "6a9edab78573fc46cf9c591eb7594bad7e0f6590233c1e6a8c62b379bf6f57e5",
+      "bytes": 441904,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/models/runway-hatch.glb": {
+      "sha256": "9449d1bb95636f1eb5839f3b6f162fc9b1acf5453c16aca308d7987620267243",
+      "bytes": 71088,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/models/runway-jurere-provisional.glb": {
+      "sha256": "eeb61ef8e2e52618a7ef1193ca53c2f3b27746694db3589053ad40c9cd8f8de0",
+      "bytes": 19232,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/models/runway-pilot.glb": {
+      "sha256": "bfd3411d6058a3b1314685563be9ea24ad3287bec77942d29f0c351b5df2ccd4",
+      "bytes": 810360,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/music/inicio_espera.mp3": {
+      "sha256": "dacea7985473ef1e0d0d0d6e49683009c122910633ef75f2e086b5ad4b43725c",
+      "bytes": 691818,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/music/jugando.mp3": {
+      "sha256": "66dac32486c5c2f702896c2129d420fc59a478b8d5611e08fc468f9f97ddc64f",
+      "bytes": 584442,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/music/mus_win_01.mp3": {
+      "sha256": "346861b2d7d5bed2a657f685408efdaa5e25fc86947df37f3ae4e4545fff5340",
+      "bytes": 131475,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/ape.png": {
+      "sha256": "216eb7c70ed76e173f03385c467438c4be1a87f64eba65d5ccfc321ee6f8644b",
+      "bytes": 1662,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/dog.png": {
+      "sha256": "aa7b145ceceb7c4accd8485a17f15b0b7c780c18d5cc9e56b7153fc8faf14d31",
+      "bytes": 1307,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/dragon.png": {
+      "sha256": "69c4b41148c41aa81da5c50d4a5d77d17c803ad99a89c2544bfe60dc9b542c4d",
+      "bytes": 1904,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/goat.png": {
+      "sha256": "02cd0292c9b04a960acd731e9224b30cd84142a5769836fc4ca694620ace21c9",
+      "bytes": 1442,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/horse.png": {
+      "sha256": "4a9d55323555cadb9d441b9838af4c473417111e6f46634e58fc6ebdcff289f7",
+      "bytes": 1624,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/ox.png": {
+      "sha256": "ac86eee5aba78c95b6eb23463faffb391e83c5c5c6ac91f7395d69d288a92449",
+      "bytes": 1477,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/pig.png": {
+      "sha256": "8fc698a8017b43c5d621987da53359239782aacf41dc736df20231ccddb79ff6",
+      "bytes": 1313,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/rabbit.png": {
+      "sha256": "bd772cf98dc36962e969c27bec563846c08b9c0d7844f66132ebd3d732361f29",
+      "bytes": 1507,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/rat.png": {
+      "sha256": "4bd38b5c77fbd576c6d9189804aa8590690f49339aa5450a33e66f17c0fe583f",
+      "bytes": 1336,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/rooster.png": {
+      "sha256": "4afb972951e10a0b726d7a2765f3b8352e73de805c52f5237f02e8f6486e331a",
+      "bytes": 1515,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/snake.png": {
+      "sha256": "6417ac31db23bff3610a66e3e0ab91ec376331bbc1b1ab649d0a28032baa0878",
+      "bytes": 1306,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/perks/tiger.png": {
+      "sha256": "c18ef4c272fa56d3f21038d859b12f4026423b748cf945c516fd6132a29bd2b4",
+      "bytes": 1668,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/amb_freefall_placeholder_01.m4a": {
+      "sha256": "20fedb5c0c62365cc77329e2e3495b1d36a4333ad6cedb16cd3229079baac6e3",
+      "bytes": 253771,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/amb_glide_placeholder_01.m4a": {
+      "sha256": "29e8190874b73547598da22a3dcf12a0cc4eddbcbea31a2aca8d10d0e618ecdf",
+      "bytes": 254004,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/boost_air_01.m4a": {
+      "sha256": "dc80ab6c0063e4c13896b02ce02b9a55d80a7a790f0656b5d62e597a364c4dd7",
+      "bytes": 15896,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/boost_air_02.m4a": {
+      "sha256": "e3aa0420e6cab765243d38570679240d2de1e0923abd7d6b762d9ee2be927d2e",
+      "bytes": 18145,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/fail_air_01.m4a": {
+      "sha256": "914e09eb94f9890f58962e9f102dc574929aa9543bdea59bb4df29fa56d2daf1",
+      "bytes": 22337,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/fail_air_02.m4a": {
+      "sha256": "572599b5e4c2ddadd4a7e32059ab83ea31e25b4a064b1335e6ef712bc4bc46ec",
+      "bytes": 24169,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/hit_cash_loss_01.m4a": {
+      "sha256": "6ed8b632b40345169ed9ef4ccaff4dd550787cbc9d223f1b380c7eab0e586b4a",
+      "bytes": 17852,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/hit_cash_loss_02.m4a": {
+      "sha256": "7736894bd503a737c3bb3728722b1195fffb49e258f3ee9ef50800b896b5bdec",
+      "bytes": 18673,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/hit_cash_loss_03.m4a": {
+      "sha256": "99fbbecd5387e0d31d22eddb8401e5a48ae32b24d2f9f0dbd38f889cdaebb01b",
+      "bytes": 18548,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/island_reveal_shimmer_01.m4a": {
+      "sha256": "2d93a1960b8f27cc90da00fbe63aa47635dd8302bfac62e51bac03326846ca68",
+      "bytes": 57806,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/island_reveal_shimmer_02.m4a": {
+      "sha256": "e697ce88a8df9396eaf598480702bf76cc4d740d0c17f8e3ffacdba367cd1898",
+      "bytes": 56494,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/island_token_01.m4a": {
+      "sha256": "f90809087214e20fc2292fa2ebf324b9f5d63011b937be9fc8738ace6d6092f0",
+      "bytes": 18203,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/island_token_02.m4a": {
+      "sha256": "93b1a0e8aefe21e91af10acd5fa102ede2d3e9e6db0ce438021677cff2a07f24",
+      "bytes": 18265,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/land_bonus_01.m4a": {
+      "sha256": "cc7840f0d5800fe77f2f0881931cdb04c6512784032989fb1876a1d2796130ae",
+      "bytes": 38560,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/land_bonus_02.m4a": {
+      "sha256": "81b0bca863a851c8842a7d6dfc827c9618cd26441175591cc9d8ba412b4da8fe",
+      "bytes": 39462,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_01.wav": {
+      "sha256": "acc233ddbd90b27596f6eea1728faf8c815da6daba9cc3c478df8a5e05d6f369",
+      "bytes": 15236,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_02.wav": {
+      "sha256": "5401368a166b84aaae9e33d2abc34f4294bcb770a1ca0268bdc30e64a3bd1d13",
+      "bytes": 14956,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_03.wav": {
+      "sha256": "1d0eb4cbbc910da906141af2d7254de92b237b93f9d4cbdd8a4a899b572ef62b",
+      "bytes": 14356,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_04.wav": {
+      "sha256": "b2264648f559db57e0ec632f79e287d4bdd83b3c085c60b7b5851035ad593863",
+      "bytes": 12176,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_05.wav": {
+      "sha256": "d9e6bbd26471535341f1ff01046566bf22e7e01559c23ba8e8ffad5813a7943b",
+      "bytes": 15304,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/npc_blip_06.wav": {
+      "sha256": "1355f29b62af8a836749e8ba195e71f9e32e4c5c8f6ecf7bd5e2ddac54719083",
+      "bytes": 12784,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/powerup_magnet_01.m4a": {
+      "sha256": "3d73751fc50a7401f0d42ee713f4dc2e24a66de9371d08ba860e249dd48b4411",
+      "bytes": 17839,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/powerup_magnet_02.m4a": {
+      "sha256": "6e8724ff7adb330aa313090f6c90e5751decacedde119431a4c61013f15dfd13",
+      "bytes": 18227,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/powerup_water_01.m4a": {
+      "sha256": "922a0b5aae03b8b74c448c3ffbd8702b96fea187d6f009f99f9a89144d825d55",
+      "bytes": 17429,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/powerup_water_02.m4a": {
+      "sha256": "c1ceb7ed2ab92cf4b598416b377fcdc0af43e45bde86c22837516834312377c3",
+      "bytes": 17498,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/rare_cargo_01.m4a": {
+      "sha256": "d4f16acb09f2ad8203dc50e8b33439b524d15525d3ea2f3351e235f9d4782b2b",
+      "bytes": 23037,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/rare_cargo_02.m4a": {
+      "sha256": "a1f5f7a50ecec1cf38f3f1dc178df6c59f20f2c3f34e8819508b069ec05636f8",
+      "bytes": 23480,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/results_count_start_01.m4a": {
+      "sha256": "9bc6f0c27b4f4775799e3c8a40d74d6033dd49c2d4c3a50ecf001d2c7bb90763",
+      "bytes": 16837,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/results_count_tick_01.wav": {
+      "sha256": "c5e397b0bbdbac4b45337bbcc4ac6bddfc6c6e7fcd3fddc30b56144daf087aab",
+      "bytes": 9528,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/results_count_tick_02.wav": {
+      "sha256": "80e13ba07e67c375d2c79107517e419c3dcdd0ba32ec8e90b61d57fb699a7690",
+      "bytes": 9524,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/results_count_tick_03.wav": {
+      "sha256": "c8d84149864968562bbf9d4f89c47c98e09e1a100c278d191358bca71a52576c",
+      "bytes": 9524,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/results_final_01.m4a": {
+      "sha256": "9cc7857e594d2364272ea3864a32a4830d691b309a0c798630705f58fcfc752c",
+      "bytes": 36657,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/reward_big_01.m4a": {
+      "sha256": "c4a3288c0f3abbfd60e8bd32943366d68c9394b07d86cbace6a9be05e5dd5ad0",
+      "bytes": 30803,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/reward_big_02.m4a": {
+      "sha256": "a24c4cf42c2f4da7c5b4761991db3fe259163ae572291b0a9a3bf77c926b01bd",
+      "bytes": 31364,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/reward_big_03.m4a": {
+      "sha256": "4a5521e26cba0c32bc18913dd466903585d47e6826b6d6198479b0c1e01bb2a3",
+      "bytes": 31266,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_01.m4a": {
+      "sha256": "3e2f1332546caf69fe0fc9b1660de9a1a851f598633d64513c0a3a019fbd7598",
+      "bytes": 13600,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_02.m4a": {
+      "sha256": "abee360ac54ba4751178eafcfcc6e00407fc455e4c30d20ed488602ff090472d",
+      "bytes": 13726,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_03.m4a": {
+      "sha256": "ab389d44cbd95c4f8e9b7a7f5e3d763d0ef5fa9301aab0ef3dbbc6d3b6cf7b38",
+      "bytes": 13486,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_04.m4a": {
+      "sha256": "ac36e760de63013651db039d751b7d21f25a89ee1ae56abaec13ee5abea6d163",
+      "bytes": 13660,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_05.m4a": {
+      "sha256": "0d4acfdc3737d408d5dbbeddeb0797dc64625b8b95e1ce225ada26ce024f4e94",
+      "bytes": 13709,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_06.m4a": {
+      "sha256": "d9cae3670937cb37b4c6331a5797c7ff111b214767c169d225062b5c9470187a",
+      "bytes": 13594,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_07.m4a": {
+      "sha256": "cd7ea16088bfbabc040b7fffa685d8d525354b3fc01c40ad5ceb48a3fa253bbc",
+      "bytes": 13589,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ring_note_08.m4a": {
+      "sha256": "9877e62815f72cdc3f11a09ff64eb9d5480af5d898fea5980d4e27447f2ffac2",
+      "bytes": 13098,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sequence_complete_01.m4a": {
+      "sha256": "f37eb2d84f168de15d780787645c39589c981555d796bd17dac4fa931640d66e",
+      "bytes": 25921,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sequence_complete_02.m4a": {
+      "sha256": "f6254cde72c702c02a8b1c46e7d1c866da9dc2515809f9470fd6712b73b57096",
+      "bytes": 25885,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/shop_buy_denied_01.m4a": {
+      "sha256": "a478179101734bb7181382eefb2ec2871aa9e4ec9e80f58d8eb9c0a065e44285",
+      "bytes": 5379,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/shop_buy_denied_02.m4a": {
+      "sha256": "c18faa403897a102df29e67dd0c30ec2eb6c4dbb5d73bfd002a06d7c8ca78a2f",
+      "bytes": 5293,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/shop_buy_ok_01.m4a": {
+      "sha256": "196508a115c0f3c9633d1e176adedd7ed07262f12f7e02bd75bad39aaf25d5e5",
+      "bytes": 16738,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/shop_buy_ok_02.m4a": {
+      "sha256": "6785665c9703cc5ac04bac8e22c1583424c24ead9427ea400c7c576a62037b36",
+      "bytes": 17846,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sol_pickup_01.m4a": {
+      "sha256": "459297e2b8f9757d30c82da080bb079e13ff1cd418d0238c49a891497bee2675",
+      "bytes": 12105,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sol_pickup_02.m4a": {
+      "sha256": "1dc3cf6804a6c207cc8dc224d5ff6fa0856f4e8d4603829fc2c0beaa45833a66",
+      "bytes": 11986,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sol_pickup_03.m4a": {
+      "sha256": "af27535cd9a7a664e121d1aef31b138d9ee3f2f855c52c439c8760f9ae60918d",
+      "bytes": 11117,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sol_pickup_04.m4a": {
+      "sha256": "d44940ae807a7aad2313843e54ba84a84387c1305bc36d3ca794ae4ec6c4caf4",
+      "bytes": 11563,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/sol_pickup_05.m4a": {
+      "sha256": "7a3160b40609c11da132a740ea16535b78887bbef60f8f5162c702e8a83b4683",
+      "bytes": 10720,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/star_activate_01.m4a": {
+      "sha256": "12282513085d2bc5c975637d6ef2799a568973bfc76fc34108ad8ca51a4c5405",
+      "bytes": 20196,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/star_activate_02.m4a": {
+      "sha256": "40b18c778e3d3d22626a6bf7f50c78c414af0e3d5d7e7e4c030656cc1fe41a16",
+      "bytes": 19652,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_back_01.m4a": {
+      "sha256": "4a51a8f8b0c62c4974808838928d79452e92f6be7a46588acad0c2d90374069a",
+      "bytes": 8464,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_back_02.m4a": {
+      "sha256": "5f69b2710822c085c11891bfda1e20b04da55346187e0a8c60761dcea313c501",
+      "bytes": 8751,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_confirm_01.m4a": {
+      "sha256": "ec045a2267b785bfcd10ae14a92bf83fdea84dce5a8091fd08e093caf0e8c11e",
+      "bytes": 8725,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_confirm_02.m4a": {
+      "sha256": "56fc0fd5d7ffbc5c640a4e0d0df8c66d8c1d1c5f9bb50f9a02d143aa59d12b8a",
+      "bytes": 8430,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_press_01.wav": {
+      "sha256": "8a115f15cba183c4197a5021d1ec23ec363aa50f191f167693f6d393299089c1",
+      "bytes": 7632,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_press_02.wav": {
+      "sha256": "7330c2569fa49b203900cf35bd0ec0afd86220012a697e265450c2d360484e9a",
+      "bytes": 7664,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_press_03.wav": {
+      "sha256": "891a170628c21e6282800dab282eed9ca7232d2f21777e83360eb520e386b80b",
+      "bytes": 7644,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_skin_change_01.m4a": {
+      "sha256": "07e0547f2464cb3e26f4e091ef53a4497ff30c84bc6b257dc317e26c4e03aa92",
+      "bytes": 5811,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_skin_change_02.m4a": {
+      "sha256": "3c42af822d72f2814e187c87da9e2c3e434368a5916040f063ddff3e5f2bc672",
+      "bytes": 5838,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/ui_skin_change_03.m4a": {
+      "sha256": "14c530e69907984076c7c2c39704a349327ab6ae56f54032900f37d9033bd603",
+      "bytes": 5876,
+      "git_mode": "100644"
+    },
+    "runway/public/assets/sfx/updraft_placeholder_01.m4a": {
+      "sha256": "4557549bf37f2a987febc58d7ac5da78a961a4057b279eefa03fa7705799a53d",
+      "bytes": 154981,
+      "git_mode": "100644"
+    },
+    "runway/public/curtain.css": {
+      "sha256": "dc1e1b7eaffc03bdacd4343bf4c2dfa510b5f8223d9e410f0bb134b6129910b6",
+      "bytes": 1337,
+      "git_mode": "100644"
+    },
+    "runway/public/favicon.svg": {
+      "sha256": "4eb3e6dcc5582888d6ef93e94ce6b4a401ac213715419038274a4de261f9b6d0",
+      "bytes": 284,
+      "git_mode": "100644"
+    },
+    "runway/public/licenses.txt": {
+      "sha256": "79004645a3558e689a5523fec307dba82e428b268a5fde3950b55f403a312636",
+      "bytes": 5161,
+      "git_mode": "100644"
+    },
+    "runway/reports/art33.md": {
+      "sha256": "38b8bdf01a4960bf0e5079d6399a581ba1e0562c9a54c2682ca65be6bb1e470a",
+      "bytes": 6932,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/README.md": {
+      "sha256": "cbbac9635cf28320b9b65e48d398bc5b76fdda9f8e203f999adf6d490bd958c4",
+      "bytes": 5791,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/chromium-mobile-flight-metrics.json": {
+      "sha256": "6373dfa31603945482e73b6b2beaf16422f682a432e840e3e2e1b28783b9831c",
+      "bytes": 19951,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/chromium-mobile-integration.json": {
+      "sha256": "165cfd5f90d92064315823cbefba687a583127f67c8d4d73f484483f2d593d0b",
+      "bytes": 1795,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/sound-map.csv": {
+      "sha256": "a805216195c7fcfa184fb31be9f9f8337f89e9df43f679154063e5fa177a3970",
+      "bytes": 5005,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/webkit-mobile-flight-metrics.json": {
+      "sha256": "3073397e75115d8f13a85c16f36f4a9fb684cbf5bdc8f1819fc3ae9a7f23e376",
+      "bytes": 19802,
+      "git_mode": "100644"
+    },
+    "runway/reports/audio36/webkit-mobile-integration.json": {
+      "sha256": "49dc740d46d1031cd5cc849f61b54bed4fdf1011b54b1ffba873495f95a49f37",
+      "bytes": 1829,
+      "git_mode": "100644"
+    },
+    "runway/reports/balance-routes.json": {
+      "sha256": "42a27fae673f44c31a3bac26b0d09da95de3b253143249eeaff38e8306f37652",
+      "bytes": 163425,
+      "git_mode": "100644"
+    },
+    "runway/reports/cloud30.md": {
+      "sha256": "92ac3af920613c34e76c3469d2bb55a2932f2575ce581409d266c3e41c225ab1",
+      "bytes": 2090,
+      "git_mode": "100644"
+    },
+    "runway/reports/cloud31.md": {
+      "sha256": "960cb79ad336033ad401d4498fc7802f92746d85dfe61443ab718fb9acbd8a77",
+      "bytes": 1505,
+      "git_mode": "100644"
+    },
+    "runway/reports/content-inventory.csv": {
+      "sha256": "5191138cab5ed026cf8379ba310a1355bea7336cd10f511a4c95da1eb66af9f7",
+      "bytes": 4924,
+      "git_mode": "100644"
+    },
+    "runway/reports/content-inventory.md": {
+      "sha256": "93ee9f476c4da7ef8e1d473e9039a13c01142d845b92c0794cfd95893babe61a",
+      "bytes": 5698,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/README.md": {
+      "sha256": "76dcd78a60c72f829e8d3465cf008b2b332c84e5e37daa461f4ac93c071ab0ce",
+      "bytes": 11592,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/before-performance.json": {
+      "sha256": "b3a23a4475667f3a4004f3473af2a0049a4c49e609629bbba82debc6f3633d95",
+      "bytes": 233,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/browser-full-results.json": {
+      "sha256": "c3bc1cddbe19fdb133ce90db9de40c30b6db845f05e58ef4fcd5f33c92e14f7b",
+      "bytes": 39102,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/browser-results.json": {
+      "sha256": "2133fb1830fb812541a82e47e90599d3cad21ecc363623214dbb17b5caf4b6a7",
+      "bytes": 18354,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/catalog.json": {
+      "sha256": "b32b85da3209bc9fb88552a3df43fff18dd5b55c749a4a99aa86fb0e6952f87f",
+      "bytes": 47203,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/chromium-render.json": {
+      "sha256": "2ba1e0be715ded3b1535f94431613ce8a1ab026067e49973809f98abb04ae1de",
+      "bytes": 15249,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/nft-inventory.csv": {
+      "sha256": "8e28ddd058797131f007719f6f22a90ab9de30024a89fda970000fc2a542373f",
+      "bytes": 19119,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/production-results.json": {
+      "sha256": "6ee655a77e015f15f6b46d04fc3848ded3f12852536d2fbb8d6c2161f118bf27",
+      "bytes": 522,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/publication.json": {
+      "sha256": "4dffbd30ec61e661bf8087fd843066fe68be1dfc10a1dffb9578179ea050a73f",
+      "bytes": 1476,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/simulation.json": {
+      "sha256": "a8918e2b0a006cf5ae82bd955f67c9eafe9da47c0280e45e8329c1c83cc09993",
+      "bytes": 211351,
+      "git_mode": "100644"
+    },
+    "runway/reports/cosmetics42/webkit-render.json": {
+      "sha256": "51343874c6e96671e83b1a454e28b006b2a43c90a102f30670c3e5ceb9edb4f1",
+      "bytes": 15218,
+      "git_mode": "100644"
+    },
+    "runway/reports/dao41/README.md": {
+      "sha256": "b66ef569bb3b40fed22d6229e995047bad33b684697e457b8c0bb9e262b32e4d",
+      "bytes": 5490,
+      "git_mode": "100644"
+    },
+    "runway/reports/dao41/publication-followup.json": {
+      "sha256": "eab89e215f626b6c0eb172f6075a301f413771b8725e58f99d3fc983451de00f",
+      "bytes": 1527,
+      "git_mode": "100644"
+    },
+    "runway/reports/dao41/publication.json": {
+      "sha256": "9e59bc21f6a4f97cbdef00070ac02b01b5687538f30a0e08cce17d3d962f1edc",
+      "bytes": 3248,
+      "git_mode": "100644"
+    },
+    "runway/reports/dao41/summary.json": {
+      "sha256": "08b054d349fd1732e7a6711cd0a6c6c1edfd8875d661fe4726df5a03f4bad7b9",
+      "bytes": 630,
+      "git_mode": "100644"
+    },
+    "runway/reports/delivery35.md": {
+      "sha256": "89799a970ace53cae0d94885ae8cc81684fbc30f1974eb3f2cedfcfc0ae3b4cc",
+      "bytes": 1331,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-flight25/verified-tests.json": {
+      "sha256": "d10edf8ec7af50f0bc9a697c1fab997d78037ffccd7d061f9560cabbc65105ea",
+      "bytes": 572238,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-hud27/accepted/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-hud27/original-assets.json": {
+      "sha256": "d996d1682dd2a8a15e8f8800c570a9bd8855cbe40a0e21a7e87a9997959643ec",
+      "bytes": 608,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-hud27/public-smoke.json": {
+      "sha256": "0f77a8ac79292b58a0e9615568f8bcb81be4b2b42a7b6060f65fdd73c1a3c004",
+      "bytes": 434,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-hud27/publication.json": {
+      "sha256": "fa4355e41e761ff03fe77f93cf742ddffc29bda43dc7a121563179440085b8a9",
+      "bytes": 1466,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-hud27/verified-tests.json": {
+      "sha256": "2994d2633561b005743acf95c5de074267f9e6028bf786b338c364cfb52ea540",
+      "bytes": 5939,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/accepted-chromium.json": {
+      "sha256": "01c14609743c1bcb59b01bd0d6c0b92b5d40fda72426f77b96fe94d80ddd7059",
+      "bytes": 1527,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/accepted-webkit.json": {
+      "sha256": "842434600ba2de30289c0251d371a84778883e51c43bf677256481e10d5d24fd",
+      "bytes": 1544,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/before-chromium.json": {
+      "sha256": "dfec30949b12995c4dd029d9a6195a90caf543524f209d7aed82e267787c1f00",
+      "bytes": 1564,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/detail-webkit.json": {
+      "sha256": "bb7fdfd0e22bd6182af951917e7065d03af705a52cf23bd3b75882d7d44448fb",
+      "bytes": 149,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/flight-evidence.json": {
+      "sha256": "2408fbe8ee3636d43ce6927fb9dd25141cbabeeb61d113c0414c6073775cfc38",
+      "bytes": 1097,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-island29/release-webkit.json": {
+      "sha256": "2e005df6b58a1260152b7d8f4d9b541cf482c616013c7b47ab4473dd6a3a381a",
+      "bytes": 1543,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-motion23/comparison.json": {
+      "sha256": "ee981ce6f83c7d4ffd976fa7c7f36b5c195c537ca3c711b76b821c896aec1275",
+      "bytes": 792,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-motion23/motion-measurements-chromium-mobile.json": {
+      "sha256": "b6ef5b3f88e30e67d4938f25a653b0573fca436188038285a783f08e35d15b42",
+      "bytes": 61689,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-motion23/motion-measurements-webkit-mobile.json": {
+      "sha256": "0c137df6343b999cf51fab880a5a1535eb7d348fd952bd5eb4b7a1f4693b9867",
+      "bytes": 61703,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-motion23/settlement-framing-chromium-mobile.json": {
+      "sha256": "77d2a32779124b2a2a517b2f69bbd011beae9c67149ce067ac57481d51c3d593",
+      "bytes": 5332,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-motion23/settlement-framing-webkit-mobile.json": {
+      "sha256": "2a36ac192f12f48bd7ab6870c3c26d4af484458fbc6536c7fecc9c140c671fdb",
+      "bytes": 5311,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-npc26/publication.json": {
+      "sha256": "7a0a6ca14b2f22661aec9656b4323af04caf2139acb584bf5466fda71122f9b4",
+      "bytes": 523,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-npc26/verified-tests.json": {
+      "sha256": "043f2da4c5540194517f75955e39d768f9eb5e95460b3d6826aed6079b1ecf47",
+      "bytes": 29120,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-polish22/after.json": {
+      "sha256": "3f6ec744998231e65992edac3af761a8cc43c5de8bfe660afdf49faef145a09d",
+      "bytes": 6140,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-polish22/before.json": {
+      "sha256": "1f7dfcc357fa3ce2d757a91395f8602c3a238f3dda9feec911634f341e3f67e8",
+      "bytes": 4661,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence-shop24/verified-tests.json": {
+      "sha256": "c096f84e1e99db0c234c6373d136d646e53720b95f1373a5587cfe002ca7701c",
+      "bytes": 2752,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/before-webkit/metrics.json": {
+      "sha256": "ad59f84a08bb867090db4d2576021aad1a45e4f74fd8f734030f5c6cda677f80",
+      "bytes": 502822,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/coating/difference.json": {
+      "sha256": "d366dcd56d14fa360c18985f85d29bad9031efd2ddd13d1c2219341108b78b53",
+      "bytes": 228,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/coating/probe.json": {
+      "sha256": "03b8888126785d8237eacbf528f6fa267d82e4ac1d1734801dff6a1d7699b0c3",
+      "bytes": 163,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/final-chromium/metrics.json": {
+      "sha256": "32213c6f27904db17ea7c3e43a1062b7eb919f73a3879a6c94a64e5cf37465ac",
+      "bytes": 1175453,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/final-flight/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/final-flight/art33-reflective-suit-pers-16d03-oulders-and-complete-flight-chromium-mobile/ibl-ablation.json": {
+      "sha256": "db5bccf944dfe2e99ad7e3a11ec288971be4e19522bba57145a9495cc0772394",
+      "bytes": 221,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/final-webkit/metrics.json": {
+      "sha256": "e786ebe08bad81c43caa999032640f45cb09b26191ab447604fde2b55c091cad",
+      "bytes": 673039,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/full-flight/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/art33/full-flight/art33-reflective-suit-pers-16d03-oulders-and-complete-flight-webkit-mobile/ibl-ablation.json": {
+      "sha256": "331092f5bd2f791fff4ae9071c062798370b36cc8abaaab33067b7856d92f14b",
+      "bytes": 218,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/cloud30/cold/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/cloud31-gpu/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/cloud31-webkit/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/cloud31/.last-run.json": {
+      "sha256": "6a7260e11b03bc42f2bc629911a52e818206f6b59ccf065beff927147aec53af",
+      "bytes": 96,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/cloud31/cloud30-cloud-boot-landing-artwork-plane-return-and-replay-webkit-mobile/error-context.md": {
+      "sha256": "849ed16c6664509fc0e20971b95841ff7f32e523ee4c56df40c196121dd85309",
+      "bytes": 5132,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/comparison.json": {
+      "sha256": "5aec28ee9ddffba45c98c4716ddbf61ecd3e213d64d3356fa272fa28959c6de1",
+      "bytes": 1580,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/items34/before-chromium/metrics.json": {
+      "sha256": "3c6f60020635e9f6c9f0f81a727118c9135ca6eaf4d787f1d980d60774eb485d",
+      "bytes": 951,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/items34/final-chromium/metrics.json": {
+      "sha256": "31696e983d97d94654a690a1f976a0c45a87038fadc333d73e32de8a8eab1a7b",
+      "bytes": 950,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/items34/final/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/items34/flight-final/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/light32/before-webkit/metrics.json": {
+      "sha256": "c92342a396f8005e7ea763ebe99ee804d1bc9c057c28ab4817dab611203c1439",
+      "bytes": 37644,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/light32/full-flight-final/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/light32/release-chromium/metrics.json": {
+      "sha256": "6a07f35987b45b156792f6ca8817b6031196e999d40d5c033dedcc31ff56c2d8",
+      "bytes": 316129,
+      "git_mode": "100644"
+    },
+    "runway/reports/evidence/light32/release-webkit/metrics.json": {
+      "sha256": "df9b5abb602a29016279e41b64d6b913b0b9fbb6d314c79afa634b74eeb4a3d1",
+      "bytes": 213531,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/README.md": {
+      "sha256": "92c0881081fe8b002550df299ed1f578a406aa23f1d45fe17cdb6e2006618781",
+      "bytes": 7184,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/browser/.last-run.json": {
+      "sha256": "7f636a30b9b037ff0cd951e78161f5dc9c5713683a98cdefd4f4ddb79deabc00",
+      "bytes": 96,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/chains-browser.log": {
+      "sha256": "d065f6521c828a29db571387964cb9814e413c49d9c5f10dcae7794dedd470cd",
+      "bytes": 1523,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/controls-browser.log": {
+      "sha256": "b52e6bb3b52ef7bd3cc9d55129400fe1768e6803da71451786f4b22ca8024b93",
+      "bytes": 1229,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/controls/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/final-browser/.last-run.json": {
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/item-inventory.csv": {
+      "sha256": "98ef94cd9be0c403f0c841c54a1a8f44704197493556479f151fb622aae2edf6",
+      "bytes": 1569,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/metrics.json": {
+      "sha256": "80bd700a7f67354cc81ac5925fe52afcf05c761f8061e6c6b8b6014e44f39e4b",
+      "bytes": 26276,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/publication.json": {
+      "sha256": "5e1144f09a46c4254d0ba6e12983e7bdc738e70a292cfd68d8bd95a5f1949e3b",
+      "bytes": 2307,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/replay-tests.log": {
+      "sha256": "16ffc9bd3e3cc26b48f702579f8aa72bfee34fced91ac5ff934bde91362ec857",
+      "bytes": 317,
+      "git_mode": "100644"
+    },
+    "runway/reports/gameplay37/unit-tests.log": {
+      "sha256": "4f0f6029d94351b5c8473ce1f3f00e86c6a3040908983b2fea048d41a820714d",
+      "bytes": 1113,
+      "git_mode": "100644"
+    },
+    "runway/reports/hosting/README.md": {
+      "sha256": "f184bdbc350a725bf4ef945b64acd27e80b2efc292d3290a6e766929b8009d45",
+      "bytes": 5396,
+      "git_mode": "100644"
+    },
+    "runway/reports/items34/README.md": {
+      "sha256": "38627a72fda4eaedabbb30363445ff77408bc6a666de0d56c6e3e1cdc603c26d",
+      "bytes": 6692,
+      "git_mode": "100644"
+    },
+    "runway/reports/items34/inventory.csv": {
+      "sha256": "3b326b6670b3dce317ff22f018edb3650c4c3fca8b1e706c8e3cde5961bd9eb5",
+      "bytes": 2335,
+      "git_mode": "100644"
+    },
+    "runway/reports/iteration-status.md": {
+      "sha256": "fab79f2ca3a40950f0eb9246ff1d1018a782b84bb82b5b01aae98caa432679b6",
+      "bytes": 14277,
+      "git_mode": "100644"
+    },
+    "runway/reports/lighting32.md": {
+      "sha256": "376b30041e4b6e1e44548d027199638f55f47cb80eb20002d22e7d56cdf0a470",
+      "bytes": 4487,
+      "git_mode": "100644"
+    },
+    "runway/reports/menu-28.md": {
+      "sha256": "71577af8c3827c4f7750164760354846ed2ae3d0ef475d5c1fb39fed183a5526",
+      "bytes": 683,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/README.md": {
+      "sha256": "b13116bdd2e99505f8f2d85e789f9a8a9b3b9e7ae350212fd2ae2583674e279a",
+      "bytes": 8302,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/course-before.json": {
+      "sha256": "477c9d3dfb31ca034df2b373b802117a58bb4204c50158c512f4cd17d8cf07bc",
+      "bytes": 67001,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/publication.json": {
+      "sha256": "3ed671b59fe938caa14d39796371e120abc381aad9d749e79b235c5dab9a7d80",
+      "bytes": 1476,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/route-before.json": {
+      "sha256": "ac4985ec50d8f8e0afab59ce47173f0002a1c5876573143bb0ac3017140279c3",
+      "bytes": 3942,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/routes.json": {
+      "sha256": "b75ac97cd8be80f8454338590fb340551f35810e4b47804bb461f534c17961d8",
+      "bytes": 19561,
+      "git_mode": "100644"
+    },
+    "runway/reports/parachute45/verification.json": {
+      "sha256": "6ede4508985637bfc7ae5dbe2f5f1bb023725da9eda42c75f3f5ad03169e07bd",
+      "bytes": 1912,
+      "git_mode": "100644"
+    },
+    "runway/reports/recognition46/README.md": {
+      "sha256": "fe81d8d4b58e992dd91f00645627936e98df30dc42efa568a47704a341224967",
+      "bytes": 4475,
+      "git_mode": "100644"
+    },
+    "runway/reports/recognition46/publication.json": {
+      "sha256": "610ceab736e28ac8da2f6ef6484fb66e78537786bfbd61c589360e9d346d7002",
+      "bytes": 410,
+      "git_mode": "100644"
+    },
+    "runway/reports/recognition46/verification.json": {
+      "sha256": "9b0d13ceb81a323cf065f50f03c7659e67fcbdcdc768ea91f0b54ab9a26fe757",
+      "bytes": 784,
+      "git_mode": "100644"
+    },
+    "runway/reports/replay-performance.json": {
+      "sha256": "5b8fe43ea42f40287e008dd84a7d5ec438a3cf10e70dcbc47c48334c264b2d2a",
+      "bytes": 150,
+      "git_mode": "100644"
+    },
+    "runway/reports/shop44/README.md": {
+      "sha256": "e74b57238b37fabe3f67e691fca594d3da679e0135a1fa7b97027634e7cbd1ce",
+      "bytes": 5321,
+      "git_mode": "100644"
+    },
+    "runway/reports/shop44/verification.json": {
+      "sha256": "7997e6bd491016eb9c27f05da611a150d6afb2f42ec7dee8366a294f7f14444e",
+      "bytes": 831,
+      "git_mode": "100644"
+    },
+    "runway/reports/sky38/README.md": {
+      "sha256": "af5114ad384a1eb49cdb29225dbf60c30afc0dac14b75ed418f34fd053640989",
+      "bytes": 7242,
+      "git_mode": "100644"
+    },
+    "runway/reports/sky38/comparison.html": {
+      "sha256": "f63f9feec37db80932232d5df2ef9fa10732123569e586df69a93c93c1221588",
+      "bytes": 5437,
+      "git_mode": "100644"
+    },
+    "runway/reports/sky38/publication.json": {
+      "sha256": "fe8c2f94b8277a4b5536a96cf11616cd6580c471d366312c895004b9d8755916",
+      "bytes": 1826,
+      "git_mode": "100644"
+    },
+    "runway/reports/sky38/summary.json": {
+      "sha256": "aef0cd6e77e39123dd38ba80a36d00e6201d2a959ab65bebeaf27fc23136ae07",
+      "bytes": 5630,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/README.md": {
+      "sha256": "68a5c1b29c8d1f915b58f31e0ba5f109eb53003e620a3598327f995d2d9a14a9",
+      "bytes": 5724,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/browser-summary.json": {
+      "sha256": "1d5001bba0a07eab1b1ecb8f7b9e80b5a422c76c2083fcd19ebdda50f84ac040",
+      "bytes": 2477,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/build.log": {
+      "sha256": "ce4774daf73d10f0d4903d0390da151c5334dc63ebba1a981a0cee7152514f7d",
+      "bytes": 947,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/chromium-mobile-defeat-reset-frames.json": {
+      "sha256": "461a5c3788922b452382f06641e713ad875c4abb2e2b9f441b10166583f0e0bd",
+      "bytes": 97287,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/chromium-mobile-star-frames.json": {
+      "sha256": "52824459ebb8ec420dbc3e156243a814a1eb39a30178cf7ec04b035b83254bca",
+      "bytes": 60015,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/chromium-mobile-victory-reset-frames.json": {
+      "sha256": "9be91a50ce78e79495df4bc1a845ed11cacc0e55ea40f8d188c0d6375d314048",
+      "bytes": 104514,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/unit-tests.log": {
+      "sha256": "d5dedfdcffe59531f76d353e5e6bef2d5ef21d4e7dd7b3b576aa8e8aefc6c18c",
+      "bytes": 243,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/webkit-mobile-defeat-reset-frames.json": {
+      "sha256": "701b1a337cefbdcda905980235dd1c575529c5f0c1c591f2ede7938c8325cd50",
+      "bytes": 26690,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/webkit-mobile-star-frames.json": {
+      "sha256": "06fd99d9f75221c313a21389c1a8651b983fb0f9787058244467790dcc5bf955",
+      "bytes": 21820,
+      "git_mode": "100644"
+    },
+    "runway/reports/stars43/webkit-mobile-victory-reset-frames.json": {
+      "sha256": "701b1a337cefbdcda905980235dd1c575529c5f0c1c591f2ede7938c8325cd50",
+      "bytes": 26690,
+      "git_mode": "100644"
+    },
+    "runway/reports/tanda-1-flight25.md": {
+      "sha256": "0277efdd29e310a52f40d13dff605a0f0bb2957d581ea35fb77facfaccf80064",
+      "bytes": 6872,
+      "git_mode": "100644"
+    },
+    "runway/reports/tanda-3-npc26.md": {
+      "sha256": "f0c763ff0dbc15f9ba454a26fe8c43cb72be0c25b98781f903b8ec4cdf2e932e",
+      "bytes": 6418,
+      "git_mode": "100644"
+    },
+    "runway/reports/tanda-4-hud27.md": {
+      "sha256": "d6527f35ea89b5d5b6694a0bc0ac9da6cb0d6722f4b253b8095598f5b9f83c2c",
+      "bytes": 6571,
+      "git_mode": "100644"
+    },
+    "runway/reports/tanda-5-island29.md": {
+      "sha256": "cc0f9e0046e3a26726123f33fead2c2de2fa20794879a4b60badc8a2daec5d05",
+      "bytes": 5391,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial47/README.md": {
+      "sha256": "1671f21e236fbe972f121dd3307f4bd905528c1af4fc2013dce9730ebaae0cb4",
+      "bytes": 7144,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial47/performance.json": {
+      "sha256": "ff20bcd84058590249d868e3d8b5c73f2688d82db7fecb9164f93825e6c005c7",
+      "bytes": 860,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial47/publication.json": {
+      "sha256": "47a8c08afdb88d42412fd352e175fdae4ef6bde2b22a8055d0ffb78481175cea",
+      "bytes": 300,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/PICKUPS.md": {
+      "sha256": "97f72617bd605730057fe0503b89a9647ec0fdc1c4758e1c26d00a514efc7d48",
+      "bytes": 4350,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/README.md": {
+      "sha256": "a4adb15c7efacd73cac25229fac154c18b27d7a3266fb0a1a246f65ac2848c09",
+      "bytes": 8018,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/performance.json": {
+      "sha256": "232657ce3fbcf23d181ff3dc40a71e2f47e9b2920080d077874f80fdcd26540a",
+      "bytes": 356,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/pickup-audit.json": {
+      "sha256": "72421bda1be327950783c1c0365c7dcc82d65a131b3792d4abfcb02c2c1f8427",
+      "bytes": 6715,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/pickup-audit.mjs": {
+      "sha256": "7ffb35727dafb15ff0656d452e8ad0714cc6cdf07999bf85ecdf0ee0093a7c5e",
+      "bytes": 4666,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/victory-audio-chromium.json": {
+      "sha256": "598b7023c20e40c7d48b2c0dd86ee3400939d1b144bd63a0954af5457f220038",
+      "bytes": 919,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/victory-audio-webkit.json": {
+      "sha256": "88ddd384adb90b6dce1f0d6c1b91fe7cae0d05425bf6b56bc390e953de736811",
+      "bytes": 903,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/visual-check.mjs": {
+      "sha256": "b3d1f0ac47dac4ec70eef13c13ef84422adc11511b01831a7e2ebf2c00765c23",
+      "bytes": 2271,
+      "git_mode": "100644"
+    },
+    "runway/reports/tutorial48/visual-fixtures.json": {
+      "sha256": "f2dcc349eafeb2a2e4ce2dd481ab9aa961645ce34ad29441f9818c7f09051679",
+      "bytes": 964,
+      "git_mode": "100644"
+    },
+    "runway/reports/ui40/README.md": {
+      "sha256": "90ab8f0373e74a6a78258fa54cb3d28f6ec3d90a9a1c80dd97f81a29211ce8ef",
+      "bytes": 5445,
+      "git_mode": "100644"
+    },
+    "runway/reports/ui40/publication.json": {
+      "sha256": "c288cf2a76bf6d96d5bc79aeb78502b617c16c37f1d0f4c999e57adc105f3225",
+      "bytes": 1545,
+      "git_mode": "100644"
+    },
+    "runway/reports/ui40/summary.json": {
+      "sha256": "4c52b5c808beb7691e05babc21c71caa23c55e9f25235dbd5e7c880186508a6a",
+      "bytes": 1166,
+      "git_mode": "100644"
+    },
+    "runway/reports/validation-finish22.md": {
+      "sha256": "d9ee9a9e29dde79aca9f63e7e7b0e63117b8f49e1f6e55480a52f8adbc6128cf",
+      "bytes": 5610,
+      "git_mode": "100644"
+    },
+    "runway/reports/validation-motion23.md": {
+      "sha256": "359cde4ab9dba80c1fc3649247c741bc73f629f34bdcceb63fa3f36a0c79be8f",
+      "bytes": 7236,
+      "git_mode": "100644"
+    },
+    "runway/reports/validation-routes21.md": {
+      "sha256": "11f94556660ea559ef031e47e07ce478ba7fcb359c9d2cc53c1b0721fc650adc",
+      "bytes": 7946,
+      "git_mode": "100644"
+    },
+    "runway/reports/world39/README.md": {
+      "sha256": "856e115437a465de2ccef04691e7b14f361be50f3d8d4764ec16800fce12abc4",
+      "bytes": 9641,
+      "git_mode": "100644"
+    },
+    "runway/reports/world39/comparison.html": {
+      "sha256": "c820abe96cba1947fbcc66563eb0295245050e61511376ed1f12e1144d126370",
+      "bytes": 2662,
+      "git_mode": "100644"
+    },
+    "runway/reports/world39/geometry-checks.json": {
+      "sha256": "3448f6860520e069bd1108ce3cfb307b600151a0414e4b2679ffe2e56eb7f41f",
+      "bytes": 134,
+      "git_mode": "100644"
+    },
+    "runway/reports/world39/publication.json": {
+      "sha256": "6985878f57db6015ad7bd213f31fff00f311010161ef97bf570aa75c69955618",
+      "bytes": 1574,
+      "git_mode": "100644"
+    },
+    "runway/reports/world39/summary.json": {
+      "sha256": "4bb09cf447c66b7c97b13710dca78f7779ff06067b96ac1b8103b1144a322cf7",
+      "bytes": 9560,
+      "git_mode": "100644"
+    },
+    "runway/scripts/balance.mjs": {
+      "sha256": "bfafb5fc2a75509726f930cf491568a75c9257e04af0a91ab229478fbb2506d4",
+      "bytes": 2012,
+      "git_mode": "100644"
+    },
+    "runway/scripts/content-inventory.mjs": {
+      "sha256": "aac66a4e5ea951d58bd4932ea38a33c6b3126b17c9e8e11a03d50782bee1e4a6",
+      "bytes": 4198,
+      "git_mode": "100644"
+    },
+    "runway/scripts/create-city.py": {
+      "sha256": "06a66d93fd02ff2d2e67fc323f69055f87b2a433dc1c88c3434818402d943205",
+      "bytes": 4116,
+      "git_mode": "100644"
+    },
+    "runway/scripts/create-models.py": {
+      "sha256": "9c83bf62134fea5c00dd064ac4de6bf903169652d7fb435314f1e4193e877b43",
+      "bytes": 9532,
+      "git_mode": "100644"
+    },
+    "runway/scripts/create-pilot.py": {
+      "sha256": "d20c2bb65270c73b0e6b19871dc925db8280a7baac6982d64ab481c7f3c892ed",
+      "bytes": 20735,
+      "git_mode": "100644"
+    },
+    "runway/scripts/export-cosmetics.py": {
+      "sha256": "f698828e1b92d52114b9fe92552d4946c186d44cb2072704ba68f22453787d58",
+      "bytes": 2683,
+      "git_mode": "100644"
+    },
+    "runway/scripts/import-coast.py": {
+      "sha256": "a179ae47dc8b59932954a10ffe8db867c0813d3749aea83443e6b3ede58c958a",
+      "bytes": 2350,
+      "git_mode": "100644"
+    },
+    "runway/scripts/package-hosting.mjs": {
+      "sha256": "5916d8e3195b0137453f94f3005f02b418ed5892cc3b02c6cdcb141782ea576c",
+      "bytes": 4601,
+      "git_mode": "100644"
+    },
+    "runway/scripts/prepare-brand.py": {
+      "sha256": "06ebb8eeccbbbda35969c23b0750ffbb83de825174fe718ad40a2a39d08ac9c2",
+      "bytes": 964,
+      "git_mode": "100644"
+    },
+    "runway/scripts/prepare-sfx.mjs": {
+      "sha256": "3128b5ee72a2957f53ef6205e372a5980826802a1bf825471c40b788bc44dac9",
+      "bytes": 994,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-art33.mjs": {
+      "sha256": "a45f935443265fbd6180217fd1aa51c81aa9085e5cde81ee06c533396728ff73",
+      "bytes": 4279,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-coating33.mjs": {
+      "sha256": "077f6337f8a1e031bad036f2be49a7fe69627fe86c1c0fd66276b2010ee1efef",
+      "bytes": 1319,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-cosmetics42-build.mjs": {
+      "sha256": "4b6fcde78f635f5395c412ce24c59ec9beac6f19b9e80a01d70ae11796fdd2f1",
+      "bytes": 3954,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-cosmetics42.mjs": {
+      "sha256": "7c4c6b6c959a95c368e208433fc97b4f56e751b8cf4cd659a23c5df74dd1ded1",
+      "bytes": 4969,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-hosting.mjs": {
+      "sha256": "e457b86837baab9b53e1f98d57567c6bc8108c4d126dc85c2b1d2f81363c9c3b",
+      "bytes": 8941,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-island29.mjs": {
+      "sha256": "998c61a1395a36f10bbf49644bc2ea88553e3b6c0a9e23d3dd75ef6c362ac13b",
+      "bytes": 3918,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-items34.mjs": {
+      "sha256": "477006ec1e26492ac2dfdb576e4b1dfeff9d27dbdc178400c4961313a0e934b4",
+      "bytes": 3924,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-light32.mjs": {
+      "sha256": "9360be4194d85364065d6e9b206597ebb0eec15ce5aae324b26c5bdb9203beef",
+      "bytes": 3195,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-world39-detail.mjs": {
+      "sha256": "ef35314bc786803df31c90e421d33301867626b54947fe7dea3a15182332342a",
+      "bytes": 3274,
+      "git_mode": "100644"
+    },
+    "runway/scripts/qa-world39.mjs": {
+      "sha256": "e27a6c909f7ca3e7d21c8f9a0dcb19c4a2dd9f60abebf19f99994417e60fa979",
+      "bytes": 4388,
+      "git_mode": "100644"
+    },
+    "runway/scripts/simulate-cosmetics42.mjs": {
+      "sha256": "b678680d9cb7c732be416a0d079c0dd4aa6970b4069f039939e505b08754ed79",
+      "bytes": 4558,
+      "git_mode": "100644"
+    },
+    "runway/scripts/world-layout.json": {
+      "sha256": "7fd439160df85bc21196615d38f0983bad29f41033e2b5e39043f7c9eb53c208",
+      "bytes": 3221,
+      "git_mode": "100644"
+    },
+    "runway/src/App.tsx": {
+      "sha256": "54449b1c396ba2b2eef2f69be5cf8d5c3d4ac63bc9b44ec938f5388088ba7db2",
+      "bytes": 22073,
+      "git_mode": "100644"
+    },
+    "runway/src/CapitalChart.tsx": {
+      "sha256": "d4e8170f94e4c7670216c651cc1cd7e0e073404ee6b9f320dd9f9a2bc281f20c",
+      "bytes": 1893,
+      "git_mode": "100644"
+    },
+    "runway/src/CloudCurtain.tsx": {
+      "sha256": "884b95d19ed1e7224db83134367af53e4792bc52c43f0c6dbc947b6f11f4d474",
+      "bytes": 2159,
+      "git_mode": "100644"
+    },
+    "runway/src/DaoRanking.tsx": {
+      "sha256": "c2e52340537bb04f5fa8e5661d4e47509cc3088eba87ad75767652900ecf1100",
+      "bytes": 9989,
+      "git_mode": "100644"
+    },
+    "runway/src/Joystick.tsx": {
+      "sha256": "cfa3016b4c1a0c128679dd7c61ac9dce69e9447fed88a07dce31b9fc83aa1139",
+      "bytes": 862,
+      "git_mode": "100644"
+    },
+    "runway/src/Money.tsx": {
+      "sha256": "25de9b3e273becba81fc5fef650e5aeec195e6eef430942fe807195f20837f2e",
+      "bytes": 5621,
+      "git_mode": "100644"
+    },
+    "runway/src/NarrativeTutorial.tsx": {
+      "sha256": "261aefd6772b4d79dcc832085f21a8347b724c7af7e883adc31e4171cd165b94",
+      "bytes": 3286,
+      "git_mode": "100644"
+    },
+    "runway/src/RankingProgress.tsx": {
+      "sha256": "d6e9bbf8a49570adae6c4a0a0beec3c1d7f815622f5de1afc44e5b0e93b6705c",
+      "bytes": 2875,
+      "git_mode": "100644"
+    },
+    "runway/src/Results.tsx": {
+      "sha256": "73bc85ca355a727639e85767e5cb9f6d5ee4160e0f848d4d5ed450da0f4c99d2",
+      "bytes": 5467,
+      "git_mode": "100644"
+    },
+    "runway/src/Shop.tsx": {
+      "sha256": "239baa42756f63bf20dabc1064b481f5f19a7ab0b092df0b73e6cbeaeb7f16a8",
+      "bytes": 8585,
+      "git_mode": "100644"
+    },
+    "runway/src/Startup.tsx": {
+      "sha256": "9632ee7696a604187cafe66cf3da68af0862266c7757d923bddfdfc5bc5bee36",
+      "bytes": 7197,
+      "git_mode": "100644"
+    },
+    "runway/src/UI.tsx": {
+      "sha256": "901f4f9719489f848e72620d4b3b1cd09cf362f09caddc43ec02621b1dca49db",
+      "bytes": 4070,
+      "git_mode": "100644"
+    },
+    "runway/src/assets/accessories.json": {
+      "sha256": "b232562a2240eea62d8ca79966244b132bbe3137ee1b781c0487c9741d902a59",
+      "bytes": 34565,
+      "git_mode": "100644"
+    },
+    "runway/src/assets/identity-portraits.json": {
+      "sha256": "1a4b25ce85db4a05b54b43207b5b4c524f85a54e4c169855dded88a30c4a7613",
+      "bytes": 24412,
+      "git_mode": "100644"
+    },
+    "runway/src/assets/perks.json": {
+      "sha256": "74e6b05004fc84ab074bd4554587d2bfd0b0faf774e70def17d511d420fc8f81",
+      "bytes": 7399,
+      "git_mode": "100644"
+    },
+    "runway/src/core/simulation.ts": {
+      "sha256": "c11aad9e032b98df16577af7634fda91cfae173e4753dce8583c46b9992589c2",
+      "bytes": 32042,
+      "git_mode": "100644"
+    },
+    "runway/src/dao.css": {
+      "sha256": "10a8675ccf931f67ed89f9c04e1e49520dc81f84b482a2ccd70b893ce768a612",
+      "bytes": 8343,
+      "git_mode": "100644"
+    },
+    "runway/src/economy.ts": {
+      "sha256": "18fb30d6862ced4632f5a9fc922cf941842573b05e8c19874c282f622fcbfd46",
+      "bytes": 2418,
+      "git_mode": "100644"
+    },
+    "runway/src/hud-results.css": {
+      "sha256": "3d8ab3004a288257ef28df6940bf4d2be746b7c22ccc7bdba7cd4854fe368027",
+      "bytes": 13436,
+      "git_mode": "100644"
+    },
+    "runway/src/main.tsx": {
+      "sha256": "bdcf2fd8904a09ef7370c58e144943c8e0423811951da1a5c4f6ad4c357fd3aa",
+      "bytes": 190,
+      "git_mode": "100644"
+    },
+    "runway/src/perks.ts": {
+      "sha256": "8809ddca400cd90587b621050565231c10bfc7f99857faaede76008a47105aed",
+      "bytes": 151,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/AtmosphericEffects.tsx": {
+      "sha256": "03f9586d34fb9fdb3025e13d8d173a5dd71ad946d6a31ced57077d913eae2880",
+      "bytes": 4798,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/BeachLife.tsx": {
+      "sha256": "4c55fbe742de10914cf29f8914b996f988240a5c9091bf178f56aa52f46d219d",
+      "bytes": 11072,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/FlightEffects.tsx": {
+      "sha256": "3463b1f10572946b17ba11c242cbeba710bab69c0203236ee32b2db2173cc5dd",
+      "bytes": 6637,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/GlideEnvironment.tsx": {
+      "sha256": "d49b44f8e3f9aadd81e59d7f6c4abe004db5de2d500fe0ffee534193aa5538f2",
+      "bytes": 5560,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/Island.tsx": {
+      "sha256": "e82a683412ebe32a452497ba95262d4233456cf48cd841c7c46b2d83d3d942f5",
+      "bytes": 11285,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/IslandLife.tsx": {
+      "sha256": "3569e365a66d83938132c8249a7d69022523238611ef51566e14e22e389fdeb7",
+      "bytes": 10140,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/LandingZones.tsx": {
+      "sha256": "89df283cea6ac238ba0ffde260a0012cfd1ef4c0a0c9003fdb09959265df0809",
+      "bytes": 7076,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/Parachute.tsx": {
+      "sha256": "5ead1d00dd8f62f12a0f7a0344ebbf814f6a2149d71ab0429c2d08860bf531fa",
+      "bytes": 9801,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/PilotBody.tsx": {
+      "sha256": "aa64fdd627e6649e9ecc8e60026ed3fbe9321d074edb4e36b2ea19871f57568a",
+      "bytes": 14689,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/PilotTrail.tsx": {
+      "sha256": "f6bb17d724cf7847aad8354abd00e584351de3361a9988df3815bbf0d4ca1cc1",
+      "bytes": 5951,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/RecognitionCrown.tsx": {
+      "sha256": "32562aab1fd99c2ab2c97da677e612ab18dd194fe2017f8009dfe32b8c9eac18",
+      "bytes": 1491,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/SpeedBlur.tsx": {
+      "sha256": "c743364dd751288e76f2d0d93bd872975e197a18ac8f820bbb14d8411a3b22de",
+      "bytes": 8721,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/Vegetation.tsx": {
+      "sha256": "e4c0b8b214234f170b00f8e837387ab974166c3739300825fa9c7527e07bbf8b",
+      "bytes": 8303,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/Weather.tsx": {
+      "sha256": "c788faccce22945c365be81a8e211c6a9b9cbef4d77b98201306a1d03387c780",
+      "bytes": 13336,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/World.tsx": {
+      "sha256": "5dce30ea346cb48fa67683fa73dd7c414d6b36db6ceea22f576e4792659e8dbc",
+      "bytes": 47724,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/WorldLife.tsx": {
+      "sha256": "c2ae4506c039c5bcc02e75fc50dbf84d556124bf2264bcc76eecb08091b3a980",
+      "bytes": 7428,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/atmosphere.ts": {
+      "sha256": "ee7398dfd82f825ff182fa5106613f67821ef2d3cff1bc003da930e8b4928682",
+      "bytes": 809,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/camera.ts": {
+      "sha256": "5af16169f2bfefe396d965e31f4935c0c8973a169627c6082d1e56cc05aafd14",
+      "bytes": 4033,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/cloudField.ts": {
+      "sha256": "9639254935e4fe2e80f3976d16a8fcd1aa68950d0ca1ba7565f5f7b87bcffbae",
+      "bytes": 3235,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/cosmeticPortrait.ts": {
+      "sha256": "9a4cf35113f73e4958816f6645148d540a4f05539331cb93b95bf45ff6920fd8",
+      "bytes": 1058,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/environmentLayout.ts": {
+      "sha256": "37e03a67b6621fc0a6f866d366d7f76f73e44f40cc8e0b5e76015084578caaf3",
+      "bytes": 991,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/environments.ts": {
+      "sha256": "df8123397bea298d638cb3d5bd6c33fba2b864d0efd7640dd8993f88bceaa8d1",
+      "bytes": 4485,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/ground.ts": {
+      "sha256": "30b91aaae358dd95df8cf13254a3ca1d34f482d766a025e53982d60a11d0827a",
+      "bytes": 3465,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/habitat.ts": {
+      "sha256": "fd87a4ce222b33667c14fe7687fb02877f73f5649cee96f6d1f97d86a6fb95cb",
+      "bytes": 2681,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/itemArt.ts": {
+      "sha256": "c5f076afb2d25efb314f291c65776557ab5b3723fcdd72966c131429e7fc4bcd",
+      "bytes": 12140,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/itemVisibility.ts": {
+      "sha256": "bf9fce1dfefec8b19e4350c343b1d68ce188a3ca8b3f2ec4b6eb0616492f904a",
+      "bytes": 515,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/lighting.ts": {
+      "sha256": "e3f733e530ba990bf64cc12a194add416f69d4dce7ed2e33ce2fb7032297623f",
+      "bytes": 175,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/particleMotion.ts": {
+      "sha256": "dabae9b81bd9569fd34cc524d1579606d1afc959ef2b9cd11ba17e7cf98db3c9",
+      "bytes": 489,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/props.ts": {
+      "sha256": "e7780bbbd9503b806971f663b914038e54bba069f99d3904e3028adf5b66c392",
+      "bytes": 3096,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/roadTexture.ts": {
+      "sha256": "3a16ec1e7ed09951fc378967951d15889b58084d49e9fc0cdf0d90288e2a4fcf",
+      "bytes": 1420,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/roads.ts": {
+      "sha256": "1069976df4916329d8a8826c49efb27b46c22429cc4564446f3535356aa41e07",
+      "bytes": 3494,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/starEffect.ts": {
+      "sha256": "e9427a4b17f4022b6028f96fc3f3bdc8540fad14896d92f5a6dafdc6c49f59e7",
+      "bytes": 640,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/stormBank.ts": {
+      "sha256": "527a7079e66a9fc50a3aa0690fb87cc027a322c287b75f33b966902d93d43005",
+      "bytes": 2470,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/worldAssets.ts": {
+      "sha256": "3d0482edcf55d8f114186757e1a7518c633dc69125f9a71d35bedd2e7a697796",
+      "bytes": 8544,
+      "git_mode": "100644"
+    },
+    "runway/src/scene/worldLayout.ts": {
+      "sha256": "b0298810bc8dbce5b4bb4d3179614c306a635923b303ff3f5998805e0c79ae3c",
+      "bytes": 2952,
+      "git_mode": "100644"
+    },
+    "runway/src/services/audio.ts": {
+      "sha256": "c98862800b099835c19265af3d5a6ab9106d71450e8829da2a97d2e7ac7581e5",
+      "bytes": 15124,
+      "git_mode": "100644"
+    },
+    "runway/src/services/audioCatalog.ts": {
+      "sha256": "3c642e3bf70efa7a954c7b4c0da2f6e382fa3621a9ead7d88586975bb414fea1",
+      "bytes": 3337,
+      "git_mode": "100644"
+    },
+    "runway/src/services/audioTimeline.ts": {
+      "sha256": "c03fe5a85a469a269ef661e118597fea97cef1e4fc035aa552ff24963639b5ab",
+      "bytes": 417,
+      "git_mode": "100644"
+    },
+    "runway/src/services/choreography.ts": {
+      "sha256": "4ed8829ddb5a30132a360b9fdce68b487ed4ae695f6a1a5659312bacda9753c7",
+      "bytes": 1768,
+      "git_mode": "100644"
+    },
+    "runway/src/services/controls.ts": {
+      "sha256": "fe8ec8b85b2045bcb62e63a7832ceb800b72d342d7fc28ee9045aefbe48b857b",
+      "bytes": 4377,
+      "git_mode": "100644"
+    },
+    "runway/src/services/dialogue.ts": {
+      "sha256": "d6386d4c68f8a113f7da8654016d6cd5d7b6d0fb9c91a892b43e00ea34a858b8",
+      "bytes": 3687,
+      "git_mode": "100644"
+    },
+    "runway/src/services/presentation.ts": {
+      "sha256": "75fca1908d7e9b6059f8eb10d834f0e907ebb97aec6a46a02d85396ddf3c704d",
+      "bytes": 2818,
+      "git_mode": "100644"
+    },
+    "runway/src/services/recognition.ts": {
+      "sha256": "b17ff51b6c9f9dc6d700e8bc997c8a6d7b248018a3e600bdaeaed531a36b9e49",
+      "bytes": 2296,
+      "git_mode": "100644"
+    },
+    "runway/src/services/runtime.ts": {
+      "sha256": "8081508f882ac14ea66d6c1cda7231f78ce067aca142d6766a07eb1af10c55c5",
+      "bytes": 3411,
+      "git_mode": "100644"
+    },
+    "runway/src/services/session.ts": {
+      "sha256": "598e76cd0fe312ee89175ea6161b379f30ee397b5babef631a9937c409905d3b",
+      "bytes": 9599,
+      "git_mode": "100644"
+    },
+    "runway/src/shop.css": {
+      "sha256": "f489709ffb2367965279e9d439d66eb3dcc95c257441745b9058d0749124eec6",
+      "bytes": 8373,
+      "git_mode": "100644"
+    },
+    "runway/src/shopCatalog.ts": {
+      "sha256": "ed4db338eebf2e5998c8b30ce6a30bca1d53977848ec1cfa1a68afc1c088a946",
+      "bytes": 7183,
+      "git_mode": "100644"
+    },
+    "runway/src/style.css": {
+      "sha256": "2fa5ed7b518b0fb2fff1072ea001f93e977a963b5ed63d2095552eeb42e383e8",
+      "bytes": 29893,
+      "git_mode": "100644"
+    },
+    "runway/src/ui-system.css": {
+      "sha256": "19b9374b42d2663088a4da8cc3e43cf3e9a55f0cd24575d6f887a1ede81bb92f",
+      "bytes": 7939,
+      "git_mode": "100644"
+    },
+    "runway/src/ui/CatalogIcon.tsx": {
+      "sha256": "471df02653ede71093d4c5dbada62528b80bffee811fa78e0a7f86982d5fa373",
+      "bytes": 4420,
+      "git_mode": "100644"
+    },
+    "runway/src/ui/Icon.tsx": {
+      "sha256": "89e54ede4038751093826499fb56502e3b789cce2788c38ba56bc531b8ff7b4c",
+      "bytes": 2997,
+      "git_mode": "100644"
+    },
+    "runway/src/urls.ts": {
+      "sha256": "d478fe38c4e3dc123dfe355c635ee9c4ddf4a07d3274ca949096623feaf66128",
+      "bytes": 371,
+      "git_mode": "100644"
+    },
+    "runway/tests/arcade.test.ts": {
+      "sha256": "0946f4e4484401dc0e7535762ba0d7d4775138811deb551256104a8ae3d5afaf",
+      "bytes": 751,
+      "git_mode": "100644"
+    },
+    "runway/tests/art33.test.mjs": {
+      "sha256": "b1c15516bb9fa6e134a2c94d87a839f2c012f85eae9ae0694cc89ff7487d04f9",
+      "bytes": 1628,
+      "git_mode": "100644"
+    },
+    "runway/tests/audio36.test.mjs": {
+      "sha256": "ecea3e542cb99278de1ce2189bb4402def8c27f8f357fd14d7cc2dde070ce0c5",
+      "bytes": 2204,
+      "git_mode": "100644"
+    },
+    "runway/tests/balance.test.ts": {
+      "sha256": "6fdec1178ffb507be78fdff2c416fcf88a771b13c0b7caea376808f9bd9e6172",
+      "bytes": 2953,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/arcade.spec.ts": {
+      "sha256": "41828d8ce53918b91cd76fc9435b8dc2ef084f6008747c73ffc72c0eaa4087d5",
+      "bytes": 11268,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/art33.spec.ts": {
+      "sha256": "9bea41ca09f7dbf17500362053f18879faaef163e93a6c36a9463a934b3dd549",
+      "bytes": 4712,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/audio36.spec.mjs": {
+      "sha256": "33221563d1026be882c3aafe17adf8f98af2bd6fe9f2858406a7df6dd517813d",
+      "bytes": 11495,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/canopy.spec.ts": {
+      "sha256": "84d33427554465692d70db8066c4e736657e9cc4ac4f66e539de45ffb389a2dd",
+      "bytes": 2919,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/cloud30.spec.ts": {
+      "sha256": "352c76f73ffb378ea47b67d32f08dadd80451eb8539486e914e9f51d5ae421e9",
+      "bytes": 3870,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/cloud31.spec.ts": {
+      "sha256": "ee51ba247dfa5f231b5cccc0992a60f054e8a721dbfc4baa2e9ef49541f54d65",
+      "bytes": 1689,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/cosmetics42.spec.ts": {
+      "sha256": "7df35c793579fd02ec71e4df3dc2da209905afe8e486574e410d77271daf94e5",
+      "bytes": 12544,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/dao41.integration.spec.ts": {
+      "sha256": "a4aa12ab11c72c0743ecb37f4d267e70d78172b7bcc8aa76dfb49509c30f4349",
+      "bytes": 4771,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/dao41.spec.ts": {
+      "sha256": "f3d28c425cf8992298d2d119cfa94d78f1c599b91d7f8b85e56f1a155cb5a491",
+      "bytes": 10811,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/delivery35.spec.ts": {
+      "sha256": "7f0d22688f4a0f037b5aa7de16f87007a2b2601ae7c551c0273f47c49ffb3fbb",
+      "bytes": 1993,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/feedback.spec.ts": {
+      "sha256": "e4d7551819d1674f40db826d588b9e1b0fb820123ba8abaf86fdf3445f86d749",
+      "bytes": 3796,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/flight25.spec.ts": {
+      "sha256": "a089ef5e5de1e90501c2513f6f0b032e700dd7ce95bcf56723eddfafd6874ffe",
+      "bytes": 9587,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/flight8.spec.ts": {
+      "sha256": "9d5e5dd6c691443409bc38f9d7464dbbb8d259cc0abe261c761ff2d3c0aea498",
+      "bytes": 1025,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/flow.spec.ts": {
+      "sha256": "43a7c49cc328b8711933b4ea781cffb095319cdd507432d6a6cabdc2e045ad82",
+      "bytes": 4593,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/gameplay37.spec.ts": {
+      "sha256": "9cba0f097f948d2df102be2678bf5f8952581b37ccd16f70f4754ef6920737e7",
+      "bytes": 8692,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/hud27.spec.ts": {
+      "sha256": "ddf7efeb92cd7cbeddbf23200b8f36f61586d9aab586be509379a630863db807",
+      "bytes": 10849,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/integration48.spec.mjs": {
+      "sha256": "cecbf4b34886d651050fe4197b82f4a32e978cea52481f4350d00e38debedb9d",
+      "bytes": 11372,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/island29.spec.ts": {
+      "sha256": "4fe51f969bdcc07a59e6dcf6f5b7f1f9a6b44bf4ac7dd3016ba1e2faf280b535",
+      "bytes": 2066,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/items34.spec.ts": {
+      "sha256": "1ac889c984ac9df3e639e39cec6168cf2bbbab31a8001cd3b76ef47091031bb1",
+      "bytes": 9217,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/jetpack.spec.ts": {
+      "sha256": "5044ebfc6502ed9a27ec04fa0754a5877c587429aaed15faa58766d99cb11c8a",
+      "bytes": 4921,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/landing.spec.ts": {
+      "sha256": "db9ce2436899a1bb2f54a03c1fa56f97bb28a003e8c9dcd474833d2e170b25a4",
+      "bytes": 1859,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/motion.spec.ts": {
+      "sha256": "8ce98466da7a2801d6ca616546c4520d4b876780db9fb535fc20e9b0d5ca2d06",
+      "bytes": 3847,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/npc26.spec.ts": {
+      "sha256": "eb708b7c51d3c8fdab78c125af9781aad356779e69beb7715edfedef6d1845d4",
+      "bytes": 1513,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/parachute45.spec.mjs": {
+      "sha256": "6412256b7bb434f469cd5be9658ff94a21b67741fbd30c3f336019d01c1e199f",
+      "bytes": 7906,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/polish.spec.ts": {
+      "sha256": "dd2e9ef8e405b71edf311cdf951ac16d1dea49b66289ca475d7e4a0b1a117bd4",
+      "bytes": 4112,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/presentation.spec.ts": {
+      "sha256": "2e764be6f101267bd2a9404a62bfd509e92d182aa9cc5d7ed04d05ea92bdfebd",
+      "bytes": 3596,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/recognition46.spec.ts": {
+      "sha256": "84dad8521fc074ff430b944868235b4ef319fa0408c726b69ad3620d35c048cf",
+      "bytes": 10145,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/routes.spec.ts": {
+      "sha256": "100ad37d1a7c7e24ae5807f24c8fbac7250055a94ed0258fe2cddc78037e402a",
+      "bytes": 3753,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/rush-realtime.spec.ts": {
+      "sha256": "c5e53c077cdfd5f92af649cf3b076a87de7ffd43cac4a812627bc0704ce3ea5c",
+      "bytes": 1806,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/rush.spec.ts": {
+      "sha256": "5c46b6e2800737c187d370dd432537ca459c8498be1f4509de2292d68b0041ff",
+      "bytes": 4966,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/shop.spec.ts": {
+      "sha256": "2e5caf284cf63baadc21ecc13967048d63102813b6d0ed112577220c4993218b",
+      "bytes": 10720,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/shop44.spec.ts": {
+      "sha256": "1078a37869acee8dd055cc67296854ba01ce5305044637303381786fc32dd5a9",
+      "bytes": 10434,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/sky38.spec.mjs": {
+      "sha256": "9f636e76647674e79fee8e3146d2083ce085607d8ad80d38a7bde310cc97ddf5",
+      "bytes": 9357,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/stars43.spec.ts": {
+      "sha256": "b36cf908fd4fd9f66a61eb47a15af09274d96ee1cc592ead474de5797667663f",
+      "bytes": 8341,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/storm.spec.ts": {
+      "sha256": "c7612d0ae196c117af320ca595db84d4e1da44813e3ea3eafda1768cd08f0f8e",
+      "bytes": 3683,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/tutorial47.spec.ts": {
+      "sha256": "1eb006302d83479740e9823ccf1dbaddd9ab6609f3dff0b966d83e6441763ba8",
+      "bytes": 7818,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/ui40.spec.ts": {
+      "sha256": "882d984d13cbeec4efa4da1958d6246b7f195c49b5146cf49da3cf9daf9fe821",
+      "bytes": 10726,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/visual.spec.ts": {
+      "sha256": "47ecfb37cf5f2cee4623b298fde6157a86cd0f2265195b130335548f092c0f6c",
+      "bytes": 1234,
+      "git_mode": "100644"
+    },
+    "runway/tests/browser/world39.spec.mjs": {
+      "sha256": "e757cf9db4fef0d0d59e3c53cefd3a69f280563f5e085a5bd99464d0a998a6b0",
+      "bytes": 6701,
+      "git_mode": "100644"
+    },
+    "runway/tests/camera.test.ts": {
+      "sha256": "7cde7e4d4eb1966fd04ccad3a293316f43b0a7a8ad77a131fd97b45c3b2e5e4c",
+      "bytes": 970,
+      "git_mode": "100644"
+    },
+    "runway/tests/canopy.test.ts": {
+      "sha256": "9f0a3ee329c814c2c9397fc4cef01dce921d5f013f11867c32d01d9cd7ac999b",
+      "bytes": 2506,
+      "git_mode": "100644"
+    },
+    "runway/tests/choreography.test.ts": {
+      "sha256": "a30472bc6c258bd661c442399cc6ec844a6107a41ed4a9579921eec93a197561",
+      "bytes": 2617,
+      "git_mode": "100644"
+    },
+    "runway/tests/content-gallery.html": {
+      "sha256": "f031e4f7b618a12e0d48083ce4cb232e9df4bd9899a0bd3e3c2df9aa46f3a20e",
+      "bytes": 5676,
+      "git_mode": "100644"
+    },
+    "runway/tests/controls37.test.ts": {
+      "sha256": "c788e553c0c03bb005acc5714e565e85de116809a3713ad8a45d7a8419719050",
+      "bytes": 2868,
+      "git_mode": "100644"
+    },
+    "runway/tests/cosmetics42.test.ts": {
+      "sha256": "eae3e739febd85144e3fea3a613ec9648e7218e6022504a49cea4cd92caf036b",
+      "bytes": 9064,
+      "git_mode": "100644"
+    },
+    "runway/tests/delivery35.test.ts": {
+      "sha256": "495e9bb1c4b0e1c3f366ef6751fd392cf663d1f7df4e91ca083c0209b2d5833a",
+      "bytes": 1017,
+      "git_mode": "100644"
+    },
+    "runway/tests/dialogue.test.ts": {
+      "sha256": "9d873a8caf98ed85117a15df5c4ee748a249f34de0156d92fd9a2d16857745ef",
+      "bytes": 3909,
+      "git_mode": "100644"
+    },
+    "runway/tests/economy.test.ts": {
+      "sha256": "fc3a11ddd039a12975b807056369fa29bc5f08b38d7a038beb539ca5f93f8226",
+      "bytes": 2945,
+      "git_mode": "100644"
+    },
+    "runway/tests/fixtures/cosmetics42-course-baseline.json": {
+      "sha256": "0127a1a32f701e76099a418f6e0c11ccbe686bd667b44d4508ebda37fd6ede13",
+      "bytes": 72087,
+      "git_mode": "100644"
+    },
+    "runway/tests/gameplay37-report.test.mjs": {
+      "sha256": "4fb1a700e6df78858462f355ecfb3182688f042d47e7ed9ae867391b4a8cb987",
+      "bytes": 3015,
+      "git_mode": "100644"
+    },
+    "runway/tests/gameplay37.test.ts": {
+      "sha256": "f149e957b83aa8029255b005dea0ae2f5b76029004adaa6a4796afbf5542ff25",
+      "bytes": 5882,
+      "git_mode": "100644"
+    },
+    "runway/tests/habitat.test.ts": {
+      "sha256": "bb01932418f19a6ff515c0676f53c18a01687cde1058bc05c8039c7f5af64aa4",
+      "bytes": 1148,
+      "git_mode": "100644"
+    },
+    "runway/tests/hosting.test.ts": {
+      "sha256": "ab922cda6492189c423147d9770f234e0e8aa68e28d4798a6a9418e7cdea831d",
+      "bytes": 854,
+      "git_mode": "100644"
+    },
+    "runway/tests/island29.test.ts": {
+      "sha256": "e6ec0a0776aec57c7061e2e8674a5e6d11f09d68c330bc6c00041ea295abe41b",
+      "bytes": 2280,
+      "git_mode": "100644"
+    },
+    "runway/tests/items34.test.ts": {
+      "sha256": "9b5d64a8d6144a7df909e8394e240f3d5247ad02ba2c0527c8b5c3798f6bccae",
+      "bytes": 2897,
+      "git_mode": "100644"
+    },
+    "runway/tests/lighting32.test.ts": {
+      "sha256": "2984a0b1dfbfe2127ecb360592289022a740b99450fba82bb8c818b2d6eab861",
+      "bytes": 648,
+      "git_mode": "100644"
+    },
+    "runway/tests/parachute45.test.mjs": {
+      "sha256": "acc1efb2d78373926adf986c8fbe64b58728e10fd100cc20f0687b9c4eb19421",
+      "bytes": 2851,
+      "git_mode": "100644"
+    },
+    "runway/tests/pickups48.test.ts": {
+      "sha256": "37e890bff5ca18aeba604b0e9ec43791ab4f7bd130b472ad94a10f3243195db1",
+      "bytes": 3190,
+      "git_mode": "100644"
+    },
+    "runway/tests/presentation-clock.test.ts": {
+      "sha256": "fc243224e31860988d717ca4c09af437e61cc52849164a939f92b1d331e757f9",
+      "bytes": 1305,
+      "git_mode": "100644"
+    },
+    "runway/tests/props.test.ts": {
+      "sha256": "4383e1a3e27818090bc3dd2f3042410e8bcdb53859164eef369082b8a67418a3",
+      "bytes": 971,
+      "git_mode": "100644"
+    },
+    "runway/tests/queue46.test.ts": {
+      "sha256": "83e7bf75b4b18e9290dc0a7c9eaa9ac51f6ff6bea3e9bf39fa7a047c4ca414be",
+      "bytes": 1080,
+      "git_mode": "100644"
+    },
+    "runway/tests/recognition46.test.ts": {
+      "sha256": "7318b368a321d043054f338e9f82906449363aeac0963c286bb41d8e51abe043",
+      "bytes": 3083,
+      "git_mode": "100644"
+    },
+    "runway/tests/runtime.test.ts": {
+      "sha256": "0ad45c681c52e99191e383f4aa97697b549ca46c63aecf880c241ee8d663dda0",
+      "bytes": 1320,
+      "git_mode": "100644"
+    },
+    "runway/tests/rush.test.ts": {
+      "sha256": "68dff521a34e53b8a72c442a1c329455ad2f5ae2a78ebbbf181b79bb4ffc62de",
+      "bytes": 2172,
+      "git_mode": "100644"
+    },
+    "runway/tests/shop.test.ts": {
+      "sha256": "565e01c247d05afc03a2c29ca5d241f0e0b7fde10ebd37fe6a113e5d0f0c249f",
+      "bytes": 2659,
+      "git_mode": "100644"
+    },
+    "runway/tests/simulation.test.ts": {
+      "sha256": "731b7bd9a453ac8970df09d926298c11480d4c989a6f67825cc72dd63e9b759d",
+      "bytes": 7240,
+      "git_mode": "100644"
+    },
+    "runway/tests/sky38.test.ts": {
+      "sha256": "e15d667eedaa4ead386f18f9548a7b7db05d8219487a7ce9f5f059363081477c",
+      "bytes": 3033,
+      "git_mode": "100644"
+    },
+    "runway/tests/stars43.test.ts": {
+      "sha256": "5a605968fbe3c470329186d8a126b36bfc1f276daff7ae2bb33fb4d7416765f4",
+      "bytes": 4020,
+      "git_mode": "100644"
+    },
+    "runway/tests/storm.test.ts": {
+      "sha256": "b4045ee0ee6b809f0195b9b49d023c8f6579696740a6ffe51933389d306ea2de",
+      "bytes": 1501,
+      "git_mode": "100644"
+    },
+    "runway/tests/storm48.test.ts": {
+      "sha256": "e21dcbb9088bbb4abb809793cf8ed8473de959890d4aa505f8dacf2a0d9ace92",
+      "bytes": 2062,
+      "git_mode": "100644"
+    },
+    "runway/tests/test-pilot.ts": {
+      "sha256": "8bf8483e170ea1ee6951d315ab46a30fa4865626eba2e688f32e2ac3046c0d7c",
+      "bytes": 1007,
+      "git_mode": "100644"
+    },
+    "runway/tests/world39.test.ts": {
+      "sha256": "635b0ef57f36fbb10fa05a81a08b55e6800186ff30a58ad79a233e8e9907b60a",
+      "bytes": 5439,
+      "git_mode": "100644"
+    },
+    "runway/tsconfig.json": {
+      "sha256": "bd219f150eeddf0046c23b69f94b5a213441ee5dbb0472a7db0046ac41e78d58",
+      "bytes": 354,
+      "git_mode": "100644"
+    },
+    "runway/vite.config.ts": {
+      "sha256": "fefe35e65b69af0625ca11b79044a33278e01f0217db5d3c089aae0eaf496d84",
+      "bytes": 378,
+      "git_mode": "100644"
+    },
+    "runway/vitest.config.ts": {
+      "sha256": "7753243bb5cfb7a4249d01a899e13be467ef376e0f06acf0eeb320b7a7435ab1",
+      "bytes": 119,
+      "git_mode": "100644"
+    },
+    "services/runway-api/.gitignore": {
+      "sha256": "0f953d59d28b539e23e7e95ce94cef7be8b982c1d2c89b152fec2fddc278d6fa",
+      "bytes": 839,
+      "git_mode": "100644"
+    },
+    "services/runway-api/.npmrc": {
+      "sha256": "a3909ac0447c469fda12c57374993be70f47ce73e49fd3124678c7c047f2214d",
+      "bytes": 45,
+      "git_mode": "100644"
+    },
+    "services/runway-api/.openai/hosting.json": {
+      "sha256": "cfea62c83fa5454681010cf63452ea6074beb02bf71049a68c661514892e6b58",
+      "bytes": 91,
+      "git_mode": "100644"
+    },
+    "services/runway-api/README.md": {
+      "sha256": "b670ba0eff3b6b1598f619278ca1f61eb609bebc1f80f68c56829905d715dac7",
+      "bytes": 10120,
+      "git_mode": "100644"
+    },
+    "services/runway-api/app/api/[[...path]]/route.ts": {
+      "sha256": "b90e03b14c07a10d2c2e0ead29f6a29ca0afeb943fcb93197e409508ded1ff1d",
+      "bytes": 10130,
+      "git_mode": "100644"
+    },
+    "services/runway-api/app/chatgpt-auth.ts": {
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+      "bytes": 2550,
+      "git_mode": "100644"
+    },
+    "services/runway-api/app/globals.css": {
+      "sha256": "8546d9b115f0addd582f7ceaaa6b1c069310bcc77c43ee7b8acfe0020be3afd7",
+      "bytes": 3928,
+      "git_mode": "100644"
+    },
+    "services/runway-api/app/layout.tsx": {
+      "sha256": "94560652a45747616c14874089c8a3ab330402f285f5a361484031beb80ba5ea",
+      "bytes": 281,
+      "git_mode": "100644"
+    },
+    "services/runway-api/app/page.tsx": {
+      "sha256": "555cd131aa752326129a507a893dfd7dec69455f0b367cf6885dc19fa3e50101",
+      "bytes": 106,
+      "git_mode": "100644"
+    },
+    "services/runway-api/build/connector-preview-plugin.mjs": {
+      "sha256": "a6a9fe2086e302f94a3f91e3c1a68a45bb3aa07d4a79faf01b14732191eb4e80",
+      "bytes": 7211,
+      "git_mode": "100644"
+    },
+    "services/runway-api/build/connector-preview-worker.mjs": {
+      "sha256": "c1b6b2c420cb67d9e28f8f4ae440f578c0dfd4cb840a12cfe4b58076629a17ba",
+      "bytes": 594,
+      "git_mode": "100644"
+    },
+    "services/runway-api/build/sites-vite-plugin.LICENSE": {
+      "sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713",
+      "bytes": 1063,
+      "git_mode": "100644"
+    },
+    "services/runway-api/build/sites-vite-plugin.ts": {
+      "sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834",
+      "bytes": 7185,
+      "git_mode": "100644"
+    },
+    "services/runway-api/build/sites-worker.ts": {
+      "sha256": "28a75f74adfc226a773d1c00d5779c26412eea40a104da5c77f7d0f0fc30f0e8",
+      "bytes": 1279,
+      "git_mode": "100644"
+    },
+    "services/runway-api/cloudflare-env.d.ts": {
+      "sha256": "8b0eca84aa3364cc7ccc43cc3af6beb88dd34ebd410de08690bf094ce39fbcb0",
+      "bytes": 99,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components.json": {
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd",
+      "bytes": 420,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/connector-error.tsx": {
+      "sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155",
+      "bytes": 1082,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/accordion.tsx": {
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0",
+      "bytes": 2048,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/alert-dialog.tsx": {
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311",
+      "bytes": 5439,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/alert.tsx": {
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b",
+      "bytes": 1614,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/aspect-ratio.tsx": {
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407",
+      "bytes": 274,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/attachment.tsx": {
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790",
+      "bytes": 6002,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/avatar.tsx": {
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34",
+      "bytes": 2916,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/badge.tsx": {
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97",
+      "bytes": 1776,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/breadcrumb.tsx": {
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5",
+      "bytes": 2350,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/bubble.tsx": {
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b",
+      "bytes": 4699,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/button-group.tsx": {
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0",
+      "bytes": 2202,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/button.tsx": {
+      "sha256": "cc36af0f8b5019c33cc039fbf03bb952a513072b15b55b53c592b78af3e5f4c4",
+      "bytes": 2392,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/calendar.tsx": {
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84",
+      "bytes": 7832,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/card.tsx": {
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c",
+      "bytes": 1987,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/carousel.tsx": {
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3",
+      "bytes": 5556,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/chart.tsx": {
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a",
+      "bytes": 10614,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/checkbox.tsx": {
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27",
+      "bytes": 1214,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/collapsible.tsx": {
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b",
+      "bytes": 795,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/combobox.tsx": {
+      "sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735",
+      "bytes": 9158,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/command.tsx": {
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a",
+      "bytes": 4818,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/context-menu.tsx": {
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017",
+      "bytes": 8268,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/dialog.tsx": {
+      "sha256": "dce39c6adc47d997bd2567f8b7a72f466b0134715105cd42f9194007b8ecdb14",
+      "bytes": 4303,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/direction.tsx": {
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6",
+      "bytes": 506,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/drawer.tsx": {
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f",
+      "bytes": 4255,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/dropdown-menu.tsx": {
+      "sha256": "98f0dcdae38225b73734aceeb9213dd751fea2c72ea520df31003cd133deac8a",
+      "bytes": 8418,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/empty.tsx": {
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0",
+      "bytes": 2396,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/field.tsx": {
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd",
+      "bytes": 6159,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/form.tsx": {
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e",
+      "bytes": 3757,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/hover-card.tsx": {
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8",
+      "bytes": 1526,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/input-group.tsx": {
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0",
+      "bytes": 5065,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/input-otp.tsx": {
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299",
+      "bytes": 2254,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/input.tsx": {
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db",
+      "bytes": 962,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/item.tsx": {
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f",
+      "bytes": 4486,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/kbd.tsx": {
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13",
+      "bytes": 862,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/label.tsx": {
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c",
+      "bytes": 606,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/marker.tsx": {
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0",
+      "bytes": 1864,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/menubar.tsx": {
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb",
+      "bytes": 8389,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/message-scroller.tsx": {
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf",
+      "bytes": 3992,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/message.tsx": {
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185",
+      "bytes": 2232,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/native-select.tsx": {
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c",
+      "bytes": 1995,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/navigation-menu.tsx": {
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044",
+      "bytes": 6658,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/pagination.tsx": {
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1",
+      "bytes": 2717,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/popover.tsx": {
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447",
+      "bytes": 2357,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/progress.tsx": {
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d",
+      "bytes": 755,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/radio-group.tsx": {
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce",
+      "bytes": 1460,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/resizable.tsx": {
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c",
+      "bytes": 1815,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/scroll-area.tsx": {
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043",
+      "bytes": 1639,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/select.tsx": {
+      "sha256": "0b796a108a4eb5ba52d9ad938b7aea36dc56ae66c703a6d0a23dbc24f96daff3",
+      "bytes": 6353,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/separator.tsx": {
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e",
+      "bytes": 694,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/sheet.tsx": {
+      "sha256": "63863cf2df8f8973e52b3459ac9bdbf81be1262dbc70eb53d5271ffb03488e16",
+      "bytes": 4188,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/sidebar.tsx": {
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e",
+      "bytes": 21526,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/skeleton.tsx": {
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239",
+      "bytes": 276,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/slider.tsx": {
+      "sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3",
+      "bytes": 1991,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/sonner.tsx": {
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f",
+      "bytes": 1034,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/spinner.tsx": {
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9",
+      "bytes": 331,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/switch.tsx": {
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae",
+      "bytes": 1408,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/table.tsx": {
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3",
+      "bytes": 2478,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/tabs.tsx": {
+      "sha256": "865d0194331b9b2be36723fa79d3575dc83078b4cb941cafee87cb72fc2cff46",
+      "bytes": 3782,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/textarea.tsx": {
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979",
+      "bytes": 759,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/toggle-group.tsx": {
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e",
+      "bytes": 2308,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/toggle.tsx": {
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16",
+      "bytes": 1565,
+      "git_mode": "100644"
+    },
+    "services/runway-api/components/ui/tooltip.tsx": {
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4",
+      "bytes": 1830,
+      "git_mode": "100644"
+    },
+    "services/runway-api/db/index.ts": {
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "bytes": 423,
+      "git_mode": "100644"
+    },
+    "services/runway-api/db/schema.ts": {
+      "sha256": "053828b57ead29cf6c2ee7162a6e87886cdacd109bd63b5e29fd4647ff1a84eb",
+      "bytes": 2146,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle.config.ts": {
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "bytes": 148,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle/0000_loud_black_widow.sql": {
+      "sha256": "5515901f3317ed1bcae2b0a7bdf5739c215a744b8948bb1e60e840f39e31b116",
+      "bytes": 1841,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle/0001_normal_edwin_jarvis.sql": {
+      "sha256": "8ad4c7aeee91d08d87ab1b3fb837842a14152c61c9820f4fea7ce96552fcabaa",
+      "bytes": 384,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle/meta/0000_snapshot.json": {
+      "sha256": "37d8e95114ed64f3cb1f0983e05fbf9911209ef3677bd51259d64f174a8c4e41",
+      "bytes": 8618,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle/meta/0001_snapshot.json": {
+      "sha256": "f431a7b6803555f7ae6d4ac94529a479e89f7dc77745cd570b22fea4767f2af4",
+      "bytes": 10951,
+      "git_mode": "100644"
+    },
+    "services/runway-api/drizzle/meta/_journal.json": {
+      "sha256": "9705763c7fa966756e2c42d772cd23d479f169821614c8856cfd9b18875e7a02",
+      "bytes": 353,
+      "git_mode": "100644"
+    },
+    "services/runway-api/eslint.config.mjs": {
+      "sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06",
+      "bytes": 846,
+      "git_mode": "100644"
+    },
+    "services/runway-api/examples/d1/app/api/notes/route.ts": {
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "bytes": 1700,
+      "git_mode": "100644"
+    },
+    "services/runway-api/examples/d1/db/schema.ts": {
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "bytes": 370,
+      "git_mode": "100644"
+    },
+    "services/runway-api/hooks/use-mobile.ts": {
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+      "bytes": 565,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/competitive.ts": {
+      "sha256": "35afc44599df937d0597c49d5dae73bf92ed54175dfdeb1edcc4a822cdf23724",
+      "bytes": 1332,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/connector-context.ts": {
+      "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
+      "bytes": 612,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/connector-contract.mts": {
+      "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e",
+      "bytes": 5362,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/connector-errors.mts": {
+      "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871",
+      "bytes": 2717,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/connector-preview.d.ts": {
+      "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642",
+      "bytes": 433,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/connectors.ts": {
+      "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
+      "bytes": 416,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/legacy/island-boost-14.ts": {
+      "sha256": "5cec19534b665ec0b4e146b51b1f7db2f0a78e2c6a01497ac532c39db01affa7",
+      "bytes": 33187,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/legacy/island-glide-13.ts": {
+      "sha256": "c11aad9e032b98df16577af7634fda91cfae173e4753dce8583c46b9992589c2",
+      "bytes": 32042,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/legacy/island-routes-10.ts": {
+      "sha256": "3d14592a377d36dd517fd77187c820b580a0d69ccd8facba18b7b8c1fbc970ed",
+      "bytes": 31042,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/namePolicy.ts": {
+      "sha256": "10e9fa71019eaf20519f617067f60dc476dfcc4a5a7bf169d93325e578d84797",
+      "bytes": 828,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/rankings.ts": {
+      "sha256": "a8bb212f5be8c58dd546f28d3f71a3bc07e97cbc6d1ba9db6be42353464a8dfb",
+      "bytes": 5208,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/simulation.ts": {
+      "sha256": "441682253a28a6db51338c65f9abfedc5be31fde7e22039f60d528e795073dfb",
+      "bytes": 34120,
+      "git_mode": "100644"
+    },
+    "services/runway-api/lib/utils.ts": {
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68",
+      "bytes": 177,
+      "git_mode": "100644"
+    },
+    "services/runway-api/next.config.ts": {
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "bytes": 133,
+      "git_mode": "100644"
+    },
+    "services/runway-api/package-lock.json": {
+      "sha256": "eedaeab6870c0f70f9db869fcaa24abae9b0f945cbc9acb8a43b6e7ed6bcbfca",
+      "bytes": 504152,
+      "git_mode": "100644"
+    },
+    "services/runway-api/package.json": {
+      "sha256": "776e613497bc8bb132f7242c8f5a29e8eb2cb041d269a7e1f6c140de806c9c6b",
+      "bytes": 2137,
+      "git_mode": "100644"
+    },
+    "services/runway-api/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94,
+      "git_mode": "100644"
+    },
+    "services/runway-api/public/favicon.svg": {
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "bytes": 712,
+      "git_mode": "100644"
+    },
+    "services/runway-api/public/file.svg": {
+      "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+      "bytes": 392,
+      "git_mode": "100644"
+    },
+    "services/runway-api/public/globe.svg": {
+      "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+      "bytes": 1036,
+      "git_mode": "100644"
+    },
+    "services/runway-api/public/window.svg": {
+      "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+      "bytes": 386,
+      "git_mode": "100644"
+    },
+    "services/runway-api/reports/production-leaderboards/README.md": {
+      "sha256": "2c1b0f1756ccd22586b8ed8e235cc8b55333fc14305b1d20beebea455d5674f0",
+      "bytes": 5175,
+      "git_mode": "100644"
+    },
+    "services/runway-api/reports/production-leaderboards/live-api.json": {
+      "sha256": "481ab94372b28fe5dc196ca7d2d929daa633252b102d73b7b39e971878381838",
+      "bytes": 980,
+      "git_mode": "100644"
+    },
+    "services/runway-api/reports/production-leaderboards/publication.json": {
+      "sha256": "2b1801fb960df812a7c97f014beb00d1842ef167c10e99b1f037c0f999399f3c",
+      "bytes": 1402,
+      "git_mode": "100644"
+    },
+    "services/runway-api/reports/production-leaderboards/published-core.json": {
+      "sha256": "b67dce5a543e55592680dcc61aad7635ef62bba72188e54c8c9f675a863901dc",
+      "bytes": 154,
+      "git_mode": "100644"
+    },
+    "services/runway-api/reports/production-leaderboards/validation.json": {
+      "sha256": "a4a5763ac31d1545fead54299c1b81a61d82abc3725613e474ee4f5800f7a052",
+      "bytes": 1438,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/build-verified.sh": {
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68",
+      "bytes": 661,
+      "git_mode": "100755"
+    },
+    "services/runway-api/scripts/connector-preview/connector-preview-session.mjs": {
+      "sha256": "57224ad185a25115a14fccc68d3217e55b199260c3dd98a2c807beffec1a0a9b",
+      "bytes": 6855,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/connector-preview/host-binding.mjs": {
+      "sha256": "9e44ab6864133a5c82f834a5904ebb7d6104cb783c24efba3c0fe1a161182cea",
+      "bytes": 7793,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/connector-preview/protocol.mjs": {
+      "sha256": "111e062ebf08d3f180130f5bc3dcb3c1414c1d7be3c032c9d675a61c0c7513a8",
+      "bytes": 1781,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/execution-profile.mjs": {
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630",
+      "bytes": 624,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/install-ci.mjs": {
+      "sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7",
+      "bytes": 1685,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/install-ci.sh": {
+      "sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0",
+      "bytes": 6783,
+      "git_mode": "100755"
+    },
+    "services/runway-api/scripts/install-pnpm.sh": {
+      "sha256": "a684c02c2b493dfbf262a66252a5cd36f81ca995a4024761728662ae63aa40c0",
+      "bytes": 9015,
+      "git_mode": "100755"
+    },
+    "services/runway-api/scripts/npm-install.mjs": {
+      "sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6",
+      "bytes": 7025,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/pnpm-install.mjs": {
+      "sha256": "a83164e344c1947053def83b546be8115deaa827314bbaead7afe6b6451c5cdf",
+      "bytes": 10633,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/run-framework.mjs": {
+      "sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca",
+      "bytes": 993,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/sites-env.mjs": {
+      "sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88",
+      "bytes": 906,
+      "git_mode": "100644"
+    },
+    "services/runway-api/scripts/sites-env.sh": {
+      "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+      "bytes": 1530,
+      "git_mode": "100755"
+    },
+    "services/runway-api/scripts/sync-core.mjs": {
+      "sha256": "0ad3295a75be6221d7f45298059343fa3f29b50fe10f87eb3b02609c07c924c1",
+      "bytes": 221,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tests/api.integration.mjs": {
+      "sha256": "a6ad4e34616de6fd19e4cf12c597c5d841909e94f3bd569b7f0d95cbd515388c",
+      "bytes": 4030,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tests/dao41/README.md": {
+      "sha256": "8b2b112a33999beb8efe48d5c2290c8629829b71f191d4efa050babcd00be117",
+      "bytes": 872,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tests/dao41/rankings.test.mjs": {
+      "sha256": "eca548ae016a81786e22827465c3a9bd3d345e74f73349352641a56245a27eda",
+      "bytes": 6088,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tests/production-leaderboards/api.test.mjs": {
+      "sha256": "466b3ec03af083db3ea9b391095288fe11faccd99bc50f1576d3b9eed0a077e8",
+      "bytes": 13435,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tests/startup48/join.test.mjs": {
+      "sha256": "2f4f45f70e5ea197b39a8616cdb447895ab608862d177aba282074b3ad88c69c",
+      "bytes": 3608,
+      "git_mode": "100644"
+    },
+    "services/runway-api/tsconfig.json": {
+      "sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4",
+      "bytes": 800,
+      "git_mode": "100644"
+    },
+    "services/runway-api/vendor/shadcn-tailwind-4.13.0.LICENSE.md": {
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
+      "bytes": 1063,
+      "git_mode": "100644"
+    },
+    "services/runway-api/vendor/shadcn-tailwind-4.13.0.css": {
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a",
+      "bytes": 16041,
+      "git_mode": "100644"
+    },
+    "services/runway-api/vite.config.ts": {
+      "sha256": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b",
+      "bytes": 3115,
+      "git_mode": "100644"
+    }
+  },
+  "source_modified": false,
+  "database_exported": false,
+  "production_modified": false,
+  "scope": "latest saved source snapshots; no unsaved local development"
+}

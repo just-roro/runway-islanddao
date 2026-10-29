@@ -1,0 +1,314 @@
+[
+  {
+    "id": "dragon",
+    "name": "Dragon",
+    "image": "/assets/perks/dragon.png",
+    "accent": "#a98bff",
+    "color": "Purple",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Dragon Kit",
+      "frame": "Dragon",
+      "node": "Purple",
+      "imageHash": "6b4798fdd8284be815f4ebe35a7249bc51bb0ec2",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        140,
+        240,
+        840,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "horse",
+    "name": "Horse",
+    "image": "/assets/perks/horse.png",
+    "accent": "#76bbff",
+    "color": "Blue",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Horse Kit",
+      "frame": "Horses",
+      "node": "Blue",
+      "imageHash": "9ab5ff6eec0eb2f3b8c029bde3b0bc10781dc5cd",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        180,
+        200,
+        680,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "ape",
+    "name": "Ape",
+    "image": "/assets/perks/ape.png",
+    "accent": "#ffb266",
+    "color": "Orange",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Ape Kit",
+      "frame": "Ape",
+      "node": "Orange",
+      "imageHash": "ef2423da0af2e5dd0b10288cecf77c8f42a50fec",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        80,
+        320,
+        720,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "goat",
+    "name": "Goat",
+    "image": "/assets/perks/goat.png",
+    "accent": "#91d5a0",
+    "color": "Green",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Goat Kit",
+      "frame": "Goat",
+      "node": "Green",
+      "imageHash": "b9590fa7bfbcd5bf099576ee1414f01c26c7f567",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        220,
+        240,
+        680,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "dog",
+    "name": "Dog",
+    "image": "/assets/perks/dog.png",
+    "accent": "#ff797e",
+    "color": "Red",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Dog Kit",
+      "frame": "Inu",
+      "node": "Red",
+      "imageHash": "44eca8d4b0fa907d5efc921202923ca542519640",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        240,
+        360,
+        660,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "image": "/assets/perks/tiger.png",
+    "accent": "#ffb266",
+    "color": "Orange",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Tiget Kit",
+      "frame": "Tiger",
+      "node": "Orange",
+      "imageHash": "d1b039658db57f6ff6ee9d5058d8c031d8a7e5f5",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        200,
+        280,
+        720,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "rat",
+    "name": "Rat",
+    "image": "/assets/perks/rat.png",
+    "accent": "#76bbff",
+    "color": "Blue",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Rat Kit",
+      "frame": "Rats",
+      "node": "Blue ",
+      "imageHash": "6cb23c4dd73c1330d920bd9d8377430e57771b95",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        140,
+        400,
+        680,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "ox",
+    "name": "Ox",
+    "image": "/assets/perks/ox.png",
+    "accent": "#a98bff",
+    "color": "Purple",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Ox Kit",
+      "frame": "Ox",
+      "node": "Purple",
+      "imageHash": "3b5c99824878a57ea0c1f5239733661a1a9299ab",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        160,
+        300,
+        720,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "pig",
+    "name": "Pig",
+    "image": "/assets/perks/pig.png",
+    "accent": "#ffa7cb",
+    "color": "Pink",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Pig Kit",
+      "frame": "Pig",
+      "node": "Pink",
+      "imageHash": "7b37ffc137e28b995c8d0b19cfb98af233cce6e6",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        220,
+        400,
+        700,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "rabbit",
+    "name": "Rabbit",
+    "image": "/assets/perks/rabbit.png",
+    "accent": "#91d5a0",
+    "color": "Green",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Rabbit Kit",
+      "frame": "Rabbit",
+      "node": "Green",
+      "imageHash": "6d9b13c5302c2d0c10c1664bc01b0d2cb4c321f1",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        240,
+        220,
+        680,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "rooster",
+    "name": "Rooster",
+    "image": "/assets/perks/rooster.png",
+    "accent": "#ff797e",
+    "color": "Red",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Rooster Kit",
+      "frame": "Rooster",
+      "node": "Red",
+      "imageHash": "b386f3b599251bafefbae2a9069bd489927ffd12",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        240,
+        300,
+        680,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  },
+  {
+    "id": "snake",
+    "name": "Snake",
+    "image": "/assets/perks/snake.png",
+    "accent": "#91d5a0",
+    "color": "Green",
+    "source": {
+      "file": "IslandDAO Assets.fig",
+      "page": "NFTs",
+      "section": "Snake Kit",
+      "frame": "Snake",
+      "node": "Green",
+      "imageHash": "981151c1d7d144cc44662e64499143cf64fb8bce",
+      "originalSize": [
+        880,
+        880
+      ],
+      "alphaBounds": [
+        240,
+        420,
+        660,
+        880
+      ]
+    },
+    "processing": "Transparent margins cropped; square padding; nearest-neighbor resize; 256px PNG. No artwork redrawn."
+  }
+]

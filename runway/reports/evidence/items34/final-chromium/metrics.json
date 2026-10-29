@@ -1,0 +1,53 @@
+{
+  "geometry": [
+    {
+      "kind": "gas",
+      "triangles": 906,
+      "radius": 0.999999992648084
+    },
+    {
+      "kind": "delivery",
+      "triangles": 674,
+      "radius": 0.9999999858986132
+    },
+    {
+      "kind": "water",
+      "triangles": 846,
+      "radius": 0.9999999824966398
+    },
+    {
+      "kind": "magnet",
+      "triangles": 706,
+      "radius": 0.9999999828533549
+    },
+    {
+      "kind": "term",
+      "triangles": 406,
+      "radius": 0.9999999865994823
+    },
+    {
+      "kind": "hacked",
+      "triangles": 994,
+      "radius": 1.0000000271510794
+    },
+    {
+      "kind": "rug",
+      "triangles": 1116,
+      "radius": 0.9999999631284534
+    },
+    {
+      "kind": "community",
+      "triangles": 800,
+      "radius": 1.000000007834151
+    }
+  ],
+  "metrics": {
+    "median": 8.299999952316284,
+    "p95": 14.099999904632568,
+    "stats": {
+      "calls": 38,
+      "triangles": 49890
+    }
+  },
+  "errors": []
+}

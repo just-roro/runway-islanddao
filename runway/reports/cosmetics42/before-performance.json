@@ -1,0 +1,15 @@
+{
+  "median": 8.299999952316284,
+  "p95": 13.099999904632568,
+  "render": {
+    "frame": 2673,
+    "calls": 39,
+    "triangles": 44774,
+    "points": 0,
+    "lines": 0
+  },
+  "memory": {
+    "geometries": 22,
+    "textures": 33
+  }
+}

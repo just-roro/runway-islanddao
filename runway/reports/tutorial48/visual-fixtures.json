@@ -1,0 +1,53 @@
+[
+  {
+    "kind": "community",
+    "object": {
+      "id": "community-163",
+      "kind": "community",
+      "t": 6.829878399736883,
+      "x": 4,
+      "y": 352,
+      "r": 0.5,
+      "motion": 0,
+      "penaltyScale": 0.02,
+      "alt": 1029,
+      "fallSpeed": 1.8
+    },
+    "time": 6.379878399736882,
+    "rendered": 1
+  },
+  {
+    "kind": "term",
+    "object": {
+      "id": "term-161",
+      "kind": "term",
+      "t": 9.306021999506655,
+      "x": -4,
+      "y": 347,
+      "r": 0.5,
+      "motion": 0,
+      "penaltyScale": 0.02,
+      "alt": 955.5,
+      "fallSpeed": 1.4
+    },
+    "time": 8.856021999506655,
+    "rendered": 1
+  },
+  {
+    "kind": "magnet",
+    "object": {
+      "id": "magnet-179",
+      "kind": "magnet",
+      "t": 11.428430799309318,
+      "x": -3,
+      "y": 350,
+      "r": 0.5,
+      "motion": 0,
+      "penaltyScale": 0.2,
+      "alt": 892.5,
+      "fallSpeed": 3.1
+    },
+    "time": 10.978430799309319,
+    "rendered": 1
+  }
+]

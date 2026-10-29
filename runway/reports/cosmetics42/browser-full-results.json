@@ -1,0 +1,814 @@
+{
+  "config": {
+    "argv": [
+      "/Users/nacho/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.cosmetics.config.mjs"
+    ],
+    "configFile": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/playwright.cosmetics.config.mjs",
+    "rootDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-mobile",
+        "name": "chromium-mobile",
+        "testDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "cosmetics42.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone13",
+        "name": "webkit-iphone13",
+        "testDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "cosmetics42.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "cosmetics42.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-desktop",
+        "name": "webkit-desktop",
+        "testDir": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "cosmetics42.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/cosmetics42/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "cosmetics42.spec.ts",
+      "file": "cosmetics42.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "catalog purchases, per-pilot equipment, thumbnails, stable mobile layout and persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-mobile",
+              "projectName": "chromium-mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:23:13.967Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-catalog-purcha-d08ab-bile-layout-and-persistence-chromium-mobile/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-ef37f2a135ec6d006cb8",
+          "file": "cosmetics42.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "bounded GPU textures, actual shader styles and no canvas reconstruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-mobile",
+              "projectName": "chromium-mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:23:35.594Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "texture-counts",
+                      "contentType": "application/json",
+                      "body": "WzM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1XQ=="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-bounded-GPU-te-ded16-nd-no-canvas-reconstruction-chromium-mobile/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-db45622a6f675719dee0",
+          "file": "cosmetics42.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "real rare contact, provisional HUD, landing settlement, pause and retry idempotency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-mobile",
+              "projectName": "chromium-mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9019,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:23:48.055Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-real-rare-cont-a31b9-pause-and-retry-idempotency-chromium-mobile/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-21dd4f012a017c74a50b",
+          "file": "cosmetics42.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "equipped finishes in flight, deployment and landing keep cash and LED events intact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-mobile",
+              "projectName": "chromium-mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 61529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:23:57.079Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "flight-stats",
+                      "contentType": "application/json",
+                      "body": "W3sicm91dGUiOjYuMDE2NjY2NjY2NjY2NjUxLCJsZWQiOnsicGhhc2UiOjkuODI5MTk5OTk5MzMyNDM4LCJtYXRlcmlhbCI6ImU2MWNkOTI0LTIzMjItNGNjZS1iNTVhLTM3MGE5ZWRhYTI4YiIsInBpbG90IjowLCJjb2xvciI6ImE5OGJmZiIsInBvcnRyYWl0IjoiaHR0cDovLzEyNy4wLjAuMTo1MTgwL2Fzc2V0cy9jb3NtZXRpY3MvZHJhZ29uLWhhbG8ucG5nIiwiYWNjZXNzb3J5IjoiYWNjZXNzb3J5OmRyYWdvbi1oYWxvIiwiaGVsbWV0IjoiaGVsbWV0OmF1cm9yYSIsInJpbU1vZGUiOjUsIm1peCI6MC45OTk5OTk5OTk5OTk5OTk4LCJtZXNzYWdlIjowfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjEsImJhbmsiOjAsInBpdGNoIjowLjExNzQ3NzQ2MjUwOTM4MjU1LCJkZXRhY2hlZCI6ZmFsc2UsImxvb3NlQWdlIjowLCJvcGFjaXR5IjoxLCJ3b3JsZCI6WzAsMTEyMi4yLDM1NV0sImdyaXBzQXR0YWNoZWQiOlt0cnVlLHRydWVdfSwicGFydGljbGVzIjo3NCwicmVuZGVyIjp7ImZyYW1lIjo0NDY4LCJjYWxscyI6MzAsInRyaWFuZ2xlcyI6NDA1ODgsInBvaW50cyI6MCwibGluZXMiOjB9LCJtZW1vcnkiOnsiZ2VvbWV0cmllcyI6NDIsInRleHR1cmVzIjozNH19LHsicm91dGUiOjE4LjEyMzM0ODE5Mzg3MzA4NSwibGVkIjp7InBoYXNlIjoyMS4xNTU3OTk5OTkyMzcwOSwibWF0ZXJpYWwiOiJlNjFjZDkyNC0yMzIyLTRjY2UtYjU1YS0zNzBhOWVkYWEyOGIiLCJwaWxvdCI6MCwiY29sb3IiOiJhOThiZmYiLCJwb3J0cmFpdCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTE4MC9hc3NldHMvY29zbWV0aWNzL2RyYWdvbi1oYWxvLnBuZyIsImFjY2Vzc29yeSI6ImFjY2Vzc29yeTpkcmFnb24taGFsbyIsImhlbG1ldCI6ImhlbG1ldDphdXJvcmEiLCJyaW1Nb2RlIjo1LCJtaXgiOjAuOTk5OTk5OTk5OTk5OTk5OSwibWVzc2FnZSI6MH0sImNhbm9weSI6eyJ2aXNpYmxlIjp0cnVlLCJvcGVuaW5nIjoxLCJiYW5rIjowLCJwaXRjaCI6MC4xMTc0Nzc0NjI1MDkzODI1NSwiZGV0YWNoZWQiOmZhbHNlLCJsb29zZUFnZSI6MCwib3BhY2l0eSI6MSwid29ybGQiOlswLDExMjIuMiwzNTVdLCJncmlwc0F0dGFjaGVkIjpbdHJ1ZSx0cnVlXX0sInBhcnRpY2xlcyI6NzQsInJlbmRlciI6eyJmcmFtZSI6OTY0OCwiY2FsbHMiOjI5LCJ0cmlhbmdsZXMiOjM2Nzk2LCJwb2ludHMiOjAsImxpbmVzIjowfSwibWVtb3J5Ijp7Imdlb21ldHJpZXMiOjQyLCJ0ZXh0dXJlcyI6MzR9fSx7InJvdXRlIjozNi4wMjY2ODg5NTc0NzUxOSwibGVkIjp7InBoYXNlIjozOC41NTk3OTk5OTk0NzUwNzUsIm1hdGVyaWFsIjoiZTYxY2Q5MjQtMjMyMi00Y2NlLWI1NWEtMzcwYTllZGFhMjhiIiwicGlsb3QiOjAsImNvbG9yIjoiYTk4YmZmIiwicG9ydHJhaXQiOiJodHRwOi8vMTI3LjAuMC4xOjUxODAvYXNzZXRzL2Nvc21ldGljcy9kcmFnb24taGFsby5wbmciLCJhY2Nlc3NvcnkiOiJhY2Nlc3Nvcnk6ZHJhZ29uLWhhbG8iLCJoZWxtZXQiOiJoZWxtZXQ6YXVyb3JhIiwicmltTW9kZSI6NSwibWl4IjowLjk5OTk5OTk5OTk5OTk5OTksIm1lc3NhZ2UiOi0xfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjAuNDQyMzIxNzM1NTY5MzI5NjMsImJhbmsiOjAuMDA0Mjg0NTExNjEwOTMxNDc5LCJwaXRjaCI6MC4xMjI1NDI5MzAxMDExNTMzOSwiZGV0YWNoZWQiOmZhbHNlLCJsb29zZUFnZSI6MCwib3BhY2l0eSI6MSwid29ybGQiOlstMy45MTQwNDcyOTYzOTA2OTIsMTY0LjM2NzYxODgyNjAyNjYxLDM1Mi4wMDMxNTQxMzUwNjE0NF0sImdyaXBzQXR0YWNoZWQiOlt0cnVlLHRydWVdfSwicGFydGljbGVzIjo3NiwicmVuZGVyIjp7ImZyYW1lIjoxNzk0OCwiY2FsbHMiOjQ0LCJ0cmlhbmdsZXMiOjQ4Nzc1LCJwb2ludHMiOjAsImxpbmVzIjowfSwibWVtb3J5Ijp7Imdlb21ldHJpZXMiOjcwLCJ0ZXh0dXJlcyI6Mzl9fV0="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-equipped-finis-71805--cash-and-LED-events-intact-chromium-mobile/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-d192b10d179f669dc421",
+          "file": "cosmetics42.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "catalog purchases, per-pilot equipment, thumbnails, stable mobile layout and persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone13",
+              "projectName": "webkit-iphone13",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19532,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:24:59.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-catalog-purcha-d08ab-bile-layout-and-persistence-webkit-iphone13/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-31967e480fd89bf9eff1",
+          "file": "cosmetics42.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "bounded GPU textures, actual shader styles and no canvas reconstruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone13",
+              "projectName": "webkit-iphone13",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10533,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:25:19.280Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "texture-counts",
+                      "contentType": "application/json",
+                      "body": "WzM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1XQ=="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-bounded-GPU-te-ded16-nd-no-canvas-reconstruction-webkit-iphone13/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-4776800c33a65ba39d02",
+          "file": "cosmetics42.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "real rare contact, provisional HUD, landing settlement, pause and retry idempotency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone13",
+              "projectName": "webkit-iphone13",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9703,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:25:29.823Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-real-rare-cont-a31b9-pause-and-retry-idempotency-webkit-iphone13/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-2d1fbc893e46f3d8b8c3",
+          "file": "cosmetics42.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "equipped finishes in flight, deployment and landing keep cash and LED events intact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone13",
+              "projectName": "webkit-iphone13",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60808,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:25:39.531Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "flight-stats",
+                      "contentType": "application/json",
+                      "body": "W3sicm91dGUiOjYuMDE2NjY2NjY2NjY2NjUxLCJsZWQiOnsicGhhc2UiOjguODY2OTk5OTk5OTk5OTgzLCJtYXRlcmlhbCI6ImQwMDIyZmI5LTI4ODYtNDYyMC1hNjNmLTViYmQ5Mjg0YTA4YyIsInBpbG90IjowLCJjb2xvciI6ImE5OGJmZiIsInBvcnRyYWl0IjoiaHR0cDovLzEyNy4wLjAuMTo1MTgwL2Fzc2V0cy9jb3NtZXRpY3MvZHJhZ29uLWhhbG8ucG5nIiwiYWNjZXNzb3J5IjoiYWNjZXNzb3J5OmRyYWdvbi1oYWxvIiwiaGVsbWV0IjoiaGVsbWV0OmF1cm9yYSIsInJpbU1vZGUiOjUsIm1peCI6MC45OTk5OTk5OTk5OTk5OTk5LCJtZXNzYWdlIjowfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjEsImJhbmsiOjAsInBpdGNoIjowLjA2MzM1MTY5NjMzODExMDAzLCJkZXRhY2hlZCI6ZmFsc2UsImxvb3NlQWdlIjowLCJvcGFjaXR5IjoxLCJ3b3JsZCI6WzAsMTEyMi4yLDM1NV0sImdyaXBzQXR0YWNoZWQiOlt0cnVlLHRydWVdfSwicGFydGljbGVzIjo3NCwicmVuZGVyIjp7ImZyYW1lIjoyMjkwLCJjYWxscyI6MzAsInRyaWFuZ2xlcyI6NDE5NzAsInBvaW50cyI6MCwibGluZXMiOjB9LCJtZW1vcnkiOnsiZ2VvbWV0cmllcyI6NDIsInRleHR1cmVzIjozNH19LHsicm91dGUiOjE4LjEwMzM0MDc2MzYwMzMyNCwibGVkIjp7InBoYXNlIjoyMC4zNTkwMDAwMDAwMDAwMSwibWF0ZXJpYWwiOiJkMDAyMmZiOS0yODg2LTQ2MjAtYTYzZi01YmJkOTI4NGEwOGMiLCJwaWxvdCI6MCwiY29sb3IiOiJhOThiZmYiLCJwb3J0cmFpdCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTE4MC9hc3NldHMvY29zbWV0aWNzL2RyYWdvbi1oYWxvLnBuZyIsImFjY2Vzc29yeSI6ImFjY2Vzc29yeTpkcmFnb24taGFsbyIsImhlbG1ldCI6ImhlbG1ldDphdXJvcmEiLCJyaW1Nb2RlIjo1LCJtaXgiOjAuOTk5OTk5OTk5OTk5OTk5OSwibWVzc2FnZSI6Nn0sImNhbm9weSI6eyJ2aXNpYmxlIjp0cnVlLCJvcGVuaW5nIjoxLCJiYW5rIjowLCJwaXRjaCI6MC4wNjMzNTE2OTYzMzgxMTAwMywiZGV0YWNoZWQiOmZhbHNlLCJsb29zZUFnZSI6MCwib3BhY2l0eSI6MSwid29ybGQiOlswLDExMjIuMiwzNTVdLCJncmlwc0F0dGFjaGVkIjpbdHJ1ZSx0cnVlXX0sInBhcnRpY2xlcyI6NzUsInJlbmRlciI6eyJmcmFtZSI6NDk0MiwiY2FsbHMiOjI5LCJ0cmlhbmdsZXMiOjM2MDA2LCJwb2ludHMiOjAsImxpbmVzIjowfSwibWVtb3J5Ijp7Imdlb21ldHJpZXMiOjQyLCJ0ZXh0dXJlcyI6MzR9fSx7InJvdXRlIjozNi4wNjAwMjIyOTA4MDg2NywibGVkIjp7InBoYXNlIjozNy4yMjc5OTk5OTk5OTk5NDUsIm1hdGVyaWFsIjoiZDAwMjJmYjktMjg4Ni00NjIwLWE2M2YtNWJiZDkyODRhMDhjIiwicGlsb3QiOjAsImNvbG9yIjoiYTk4YmZmIiwicG9ydHJhaXQiOiJodHRwOi8vMTI3LjAuMC4xOjUxODAvYXNzZXRzL2Nvc21ldGljcy9kcmFnb24taGFsby5wbmciLCJhY2Nlc3NvcnkiOiJhY2Nlc3Nvcnk6ZHJhZ29uLWhhbG8iLCJoZWxtZXQiOiJoZWxtZXQ6YXVyb3JhIiwicmltTW9kZSI6NSwibWl4IjowLjk5OTk5OTk5OTk5OTk5OTksIm1lc3NhZ2UiOi0xfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjAuNDkyMjA3NjI5Njc4MzM4NzUsImJhbmsiOjAuMDA0MDk3Nzc4NjAwNTUxNjkyLCJwaXRjaCI6MC4wMjY1OTU1NzQ0Mjc3NjYzNzUsImRldGFjaGVkIjpmYWxzZSwibG9vc2VBZ2UiOjAsIm9wYWNpdHkiOjEsIndvcmxkIjpbLTMuOTI0MDAxNzg0MDk5NDY3NiwxNjMuNjkzNDQzNzc0MTg1NjgsMzUxLjk5OTY3OTM4ODY2NTg3XSwiZ3JpcHNBdHRhY2hlZCI6W3RydWUsdHJ1ZV19LCJwYXJ0aWNsZXMiOjc4LCJyZW5kZXIiOnsiZnJhbWUiOjg5NTgsImNhbGxzIjo0MywidHJpYW5nbGVzIjo0ODk3MywicG9pbnRzIjowLCJsaW5lcyI6MH0sIm1lbW9yeSI6eyJnZW9tZXRyaWVzIjo3MCwidGV4dHVyZXMiOjM5fX1d"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-equipped-finis-71805--cash-and-LED-events-intact-webkit-iphone13/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-9d7d04ea088efbaa40be",
+          "file": "cosmetics42.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "catalog purchases, per-pilot equipment, thumbnails, stable mobile layout and persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:26:40.703Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-catalog-purcha-d08ab-bile-layout-and-persistence-chromium-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-0990a3819cb85a19b3a1",
+          "file": "cosmetics42.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "bounded GPU textures, actual shader styles and no canvas reconstruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:26:57.996Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "texture-counts",
+                      "contentType": "application/json",
+                      "body": "WzM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1LDM1XQ=="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-bounded-GPU-te-ded16-nd-no-canvas-reconstruction-chromium-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-7342d67332252a26cd45",
+          "file": "cosmetics42.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "real rare contact, provisional HUD, landing settlement, pause and retry idempotency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8001,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:27:07.625Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-real-rare-cont-a31b9-pause-and-retry-idempotency-chromium-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-417f1c4eb1c0bc6b948f",
+          "file": "cosmetics42.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "equipped finishes in flight, deployment and landing keep cash and LED events intact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 59179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:27:15.630Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "flight-stats",
+                      "contentType": "application/json",
+                      "body": "W3sicm91dGUiOjYuMDE2NjY2NjY2NjY2NjUxLCJsZWQiOnsicGhhc2UiOjguNTE5MDk5OTk5NjY2MTkyLCJtYXRlcmlhbCI6ImY3NTZhYTM1LWVjYzgtNDJlZi1iZDAyLTJjNWMyM2M0MjI1YiIsInBpbG90IjowLCJjb2xvciI6ImE5OGJmZiIsInBvcnRyYWl0IjoiaHR0cDovLzEyNy4wLjAuMTo1MTgwL2Fzc2V0cy9jb3NtZXRpY3MvZHJhZ29uLWhhbG8ucG5nIiwiYWNjZXNzb3J5IjoiYWNjZXNzb3J5OmRyYWdvbi1oYWxvIiwiaGVsbWV0IjoiaGVsbWV0OmF1cm9yYSIsInJpbU1vZGUiOjUsIm1peCI6MC45OTk5OTk5OTk5OTk5OTk2LCJtZXNzYWdlIjowfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjEsImJhbmsiOjAsInBpdGNoIjowLjAyMzgzOTQxODA4MDQ3OTk0MywiZGV0YWNoZWQiOmZhbHNlLCJsb29zZUFnZSI6MCwib3BhY2l0eSI6MSwid29ybGQiOlswLDExMjIuMiwzNTVdLCJncmlwc0F0dGFjaGVkIjpbdHJ1ZSx0cnVlXX0sInBhcnRpY2xlcyI6NzQsInJlbmRlciI6eyJmcmFtZSI6NDA0NiwiY2FsbHMiOjMxLCJ0cmlhbmdsZXMiOjQyOTQ2LCJwb2ludHMiOjAsImxpbmVzIjowfSwibWVtb3J5Ijp7Imdlb21ldHJpZXMiOjQzLCJ0ZXh0dXJlcyI6MzR9fSx7InJvdXRlIjoxOC4wNzMzNDgxOTM4NzMxMSwibGVkIjp7InBoYXNlIjoyMC4wMjQ5OTk5OTk3NjE1NSwibWF0ZXJpYWwiOiJmNzU2YWEzNS1lY2M4LTQyZWYtYmQwMi0yYzVjMjNjNDIyNWIiLCJwaWxvdCI6MCwiY29sb3IiOiJhOThiZmYiLCJwb3J0cmFpdCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTE4MC9hc3NldHMvY29zbWV0aWNzL2RyYWdvbi1oYWxvLnBuZyIsImFjY2Vzc29yeSI6ImFjY2Vzc29yeTpkcmFnb24taGFsbyIsImhlbG1ldCI6ImhlbG1ldDphdXJvcmEiLCJyaW1Nb2RlIjo1LCJtaXgiOjAuOTk5OTk5OTk5OTk5OTk5OSwibWVzc2FnZSI6MH0sImNhbm9weSI6eyJ2aXNpYmxlIjp0cnVlLCJvcGVuaW5nIjoxLCJiYW5rIjowLCJwaXRjaCI6MC4wMjM4Mzk0MTgwODA0Nzk5NDMsImRldGFjaGVkIjpmYWxzZSwibG9vc2VBZ2UiOjAsIm9wYWNpdHkiOjEsIndvcmxkIjpbMCwxMTIyLjIsMzU1XSwiZ3JpcHNBdHRhY2hlZCI6W3RydWUsdHJ1ZV19LCJwYXJ0aWNsZXMiOjc3LCJyZW5kZXIiOnsiZnJhbWUiOjk0MzQsImNhbGxzIjoyOSwidHJpYW5nbGVzIjozODIwMiwicG9pbnRzIjowLCJsaW5lcyI6MH0sIm1lbW9yeSI6eyJnZW9tZXRyaWVzIjo0MywidGV4dHVyZXMiOjM0fX0seyJyb3V0ZSI6MzYuMDAzMzc3OTE0OTUxNTgsImxlZCI6eyJwaGFzZSI6MzYuNzc4OTk5OTk5NTIyOTQsIm1hdGVyaWFsIjoiZjc1NmFhMzUtZWNjOC00MmVmLWJkMDItMmM1YzIzYzQyMjViIiwicGlsb3QiOjAsImNvbG9yIjoiYTk4YmZmIiwicG9ydHJhaXQiOiJodHRwOi8vMTI3LjAuMC4xOjUxODAvYXNzZXRzL2Nvc21ldGljcy9kcmFnb24taGFsby5wbmciLCJhY2Nlc3NvcnkiOiJhY2Nlc3Nvcnk6ZHJhZ29uLWhhbG8iLCJoZWxtZXQiOiJoZWxtZXQ6YXVyb3JhIiwicmltTW9kZSI6NSwibWl4IjowLjk5OTk5OTk5OTk5OTk5OTksIm1lc3NhZ2UiOi0xfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjAuNDA3NzEzNzQ4NzMwODE1MywiYmFuayI6MC4wMDQ5MTQwNzQwNDg3MDUyMiwicGl0Y2giOjAuMTE4NzE4MTcwNzMxOTMxODUsImRldGFjaGVkIjpmYWxzZSwibG9vc2VBZ2UiOjAsIm9wYWNpdHkiOjEsIndvcmxkIjpbLTMuOTExMzcyMzk5NDc5MDQ2LDE2NC44NTAxNDYwODAxMjc2MiwzNTEuOTk5NzE3MDEwMDY1NzVdLCJncmlwc0F0dGFjaGVkIjpbdHJ1ZSx0cnVlXX0sInBhcnRpY2xlcyI6NzQsInJlbmRlciI6eyJmcmFtZSI6MTc0MzgsImNhbGxzIjo0NCwidHJpYW5nbGVzIjo0ODc2OSwicG9pbnRzIjowLCJsaW5lcyI6MH0sIm1lbW9yeSI6eyJnZW9tZXRyaWVzIjo3MSwidGV4dHVyZXMiOjM5fX1d"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-equipped-finis-71805--cash-and-LED-events-intact-chromium-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-98c930346e8085ef5ec8",
+          "file": "cosmetics42.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "catalog purchases, per-pilot equipment, thumbnails, stable mobile layout and persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-desktop",
+              "projectName": "webkit-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:28:15.203Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-catalog-purcha-d08ab-bile-layout-and-persistence-webkit-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-76b398cec9905bc5599c",
+          "file": "cosmetics42.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "bounded GPU textures, actual shader styles and no canvas reconstruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-desktop",
+              "projectName": "webkit-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11589,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:28:33.750Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "texture-counts",
+                      "contentType": "application/json",
+                      "body": "WzI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5LDI5XQ=="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-bounded-GPU-te-ded16-nd-no-canvas-reconstruction-webkit-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-32d1a7ff8125125a8c41",
+          "file": "cosmetics42.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "real rare contact, provisional HUD, landing settlement, pause and retry idempotency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-desktop",
+              "projectName": "webkit-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:28:45.363Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-real-rare-cont-a31b9-pause-and-retry-idempotency-webkit-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-2533c3acec8faa052fdd",
+          "file": "cosmetics42.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "equipped finishes in flight, deployment and landing keep cash and LED events intact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-desktop",
+              "projectName": "webkit-desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60568,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T04:28:53.976Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "flight-stats",
+                      "contentType": "application/json",
+                      "body": "W3sicm91dGUiOjYuMDMzMzMzMzMzMzMzMzE3LCJsZWQiOnsicGhhc2UiOjguOTQ0OTk5OTk5OTk5OTg0LCJtYXRlcmlhbCI6IjFmOTRlYjE5LWEyOGItNGZhZS1hY2E2LWIxYTMyNDdkZTFhOCIsInBpbG90IjowLCJjb2xvciI6ImE5OGJmZiIsInBvcnRyYWl0IjoiaHR0cDovLzEyNy4wLjAuMTo1MTgwL2Fzc2V0cy9jb3NtZXRpY3MvZHJhZ29uLWhhbG8ucG5nIiwiYWNjZXNzb3J5IjoiYWNjZXNzb3J5OmRyYWdvbi1oYWxvIiwiaGVsbWV0IjoiaGVsbWV0OmF1cm9yYSIsInJpbU1vZGUiOjUsIm1peCI6MC45OTk5OTk5OTk5OTk5OTk5LCJtZXNzYWdlIjowfSwiY2Fub3B5Ijp7InZpc2libGUiOnRydWUsIm9wZW5pbmciOjEsImJhbmsiOjAsInBpdGNoIjowLjA1MjI1ODE2NjMyNjY4MjcsImRldGFjaGVkIjpmYWxzZSwibG9vc2VBZ2UiOjAsIm9wYWNpdHkiOjEsIndvcmxkIjpbMCwxMTIyLjIsMzU1XSwiZ3JpcHNBdHRhY2hlZCI6W3RydWUsdHJ1ZV19LCJwYXJ0aWNsZXMiOjc1LCJyZW5kZXIiOnsiZnJhbWUiOjIzMTIsImNhbGxzIjoyOSwidHJpYW5nbGVzIjo0MzMxOCwicG9pbnRzIjowLCJsaW5lcyI6MH0sIm1lbW9yeSI6eyJnZW9tZXRyaWVzIjo0MywidGV4dHVyZXMiOjI1fX0seyJyb3V0ZSI6MTguMDUzMzQwNzYzNjAzMzI3LCJsZWQiOnsicGhhc2UiOjIwLjY3NTAwMDAwMDAwMDAxNSwibWF0ZXJpYWwiOiIxZjk0ZWIxOS1hMjhiLTRmYWUtYWNhNi1iMWEzMjQ3ZGUxYTgiLCJwaWxvdCI6MCwiY29sb3IiOiJhOThiZmYiLCJwb3J0cmFpdCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTE4MC9hc3NldHMvY29zbWV0aWNzL2RyYWdvbi1oYWxvLnBuZyIsImFjY2Vzc29yeSI6ImFjY2Vzc29yeTpkcmFnb24taGFsbyIsImhlbG1ldCI6ImhlbG1ldDphdXJvcmEiLCJyaW1Nb2RlIjo1LCJtaXgiOjAuOTk5OTk5OTk5OTk5OTk5OSwibWVzc2FnZSI6MH0sImNhbm9weSI6eyJ2aXNpYmxlIjp0cnVlLCJvcGVuaW5nIjoxLCJiYW5rIjowLCJwaXRjaCI6MC4wNTIyNTgxNjYzMjY2ODI3LCJkZXRhY2hlZCI6ZmFsc2UsImxvb3NlQWdlIjowLCJvcGFjaXR5IjoxLCJ3b3JsZCI6WzAsMTEyMi4yLDM1NV0sImdyaXBzQXR0YWNoZWQiOlt0cnVlLHRydWVdfSwicGFydGljbGVzIjo3MywicmVuZGVyIjp7ImZyYW1lIjo1MTEyLCJjYWxscyI6MjksInRyaWFuZ2xlcyI6Mzg4NDYsInBvaW50cyI6MCwibGluZXMiOjB9LCJtZW1vcnkiOnsiZ2VvbWV0cmllcyI6NDMsInRleHR1cmVzIjoyNX19LHsicm91dGUiOjM2LjAxMzM2MzA1NDQxMTc5LCJsZWQiOnsicGhhc2UiOjM3Ljc2MywibWF0ZXJpYWwiOiIxZjk0ZWIxOS1hMjhiLTRmYWUtYWNhNi1iMWEzMjQ3ZGUxYTgiLCJwaWxvdCI6MCwiY29sb3IiOiJhOThiZmYiLCJwb3J0cmFpdCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTE4MC9hc3NldHMvY29zbWV0aWNzL2RyYWdvbi1oYWxvLnBuZyIsImFjY2Vzc29yeSI6ImFjY2Vzc29yeTpkcmFnb24taGFsbyIsImhlbG1ldCI6ImhlbG1ldDphdXJvcmEiLCJyaW1Nb2RlIjo1LCJtaXgiOjAuOTk5OTk5OTk5OTk5OTk5OSwibWVzc2FnZSI6LTF9LCJjYW5vcHkiOnsidmlzaWJsZSI6dHJ1ZSwib3BlbmluZyI6MC40MjI0OTczNTQwMzY2Njg0NCwiYmFuayI6MC4wMDYxNTAwMjk3Njc3MDc3OTMsInBpdGNoIjowLjEyMDA1MjA3NzM1MjYyOTA2LCJkZXRhY2hlZCI6ZmFsc2UsImxvb3NlQWdlIjowLCJvcGFjaXR5IjoxLCJ3b3JsZCI6Wy0zLjkxMjI1NDc0NTEzNDc5NTUsMTY0LjY0MjM1NzgwNTU3MzM3LDM1Mi4wMDA0MDgzNzY5NjMxNV0sImdyaXBzQXR0YWNoZWQiOlt0cnVlLHRydWVdfSwicGFydGljbGVzIjo3MywicmVuZGVyIjp7ImZyYW1lIjo5MjA0LCJjYWxscyI6NDUsInRyaWFuZ2xlcyI6NTc0MDksInBvaW50cyI6MCwibGluZXMiOjB9LCJtZW1vcnkiOnsiZ2VvbWV0cmllcyI6NzEsInRleHR1cmVzIjozMH19XQ=="
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway/reports/cosmetics42/browser/cosmetics42-equipped-finis-71805--cash-and-LED-events-intact-webkit-desktop/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2f382e9cc7d2bc1d618c-78f10e1c991344197856",
+          "file": "cosmetics42.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-22T04:23:13.686Z",
+    "duration": 400962.928,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

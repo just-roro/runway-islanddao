@@ -1,0 +1,930 @@
+{
+  "result": {
+    "status": "funded",
+    "outcome": "landed",
+    "destination": "jurere",
+    "cashFinal": 1755000,
+    "score": 1755000,
+    "breakdown": {
+      "initial": 5000,
+      "earned": 1165000,
+      "lost": 0,
+      "bonus": 585000
+    },
+    "landing": 187,
+    "emergency": false
+  },
+  "replay": {
+    "status": "funded",
+    "outcome": "landed",
+    "destination": "jurere",
+    "cashFinal": 1755000,
+    "score": 1755000,
+    "breakdown": {
+      "initial": 5000,
+      "earned": 1165000,
+      "lost": 0,
+      "bonus": 585000
+    },
+    "landing": 187,
+    "emergency": false
+  },
+  "events": [
+    {
+      "kind": "ui",
+      "file": "synthesis",
+      "at": 0.005804988662131519,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "back",
+      "file": "ui_back_01.m4a",
+      "at": 1.2248526077097506,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "confirm",
+      "file": "ui_confirm_01.m4a",
+      "at": 1.5151020408163265,
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "door",
+      "file": "synthesis",
+      "at": 2.3510204081632655,
+      "id": "17-1792551108408:phase:door",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "jump",
+      "file": "synthesis",
+      "at": 4.7194557823129255,
+      "id": "17-1792551108408:phase:jump",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 6.9543764172335605,
+      "id": "17-1792551108408:0",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 7.128526077097506,
+      "id": "17-1792551108408:1",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 7.320090702947846,
+      "id": "17-1792551108408:2",
+      "voices": 3,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 7.505850340136054,
+      "id": "17-1792551108408:3",
+      "voices": 4,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 8.25469387755102,
+      "id": "17-1792551108408:4",
+      "voices": 2,
+      "rate": 1.1400000000000001
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 8.463673469387755,
+      "id": "17-1792551108408:5",
+      "voices": 2,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 8.655238095238095,
+      "id": "17-1792551108408:6",
+      "voices": 3,
+      "rate": 1.175
+    },
+    {
+      "kind": "boost",
+      "file": "boost_air_01.m4a",
+      "at": 8.89904761904762,
+      "id": "17-1792551108408:7:air",
+      "voices": 5,
+      "rate": 1
+    },
+    {
+      "kind": "star",
+      "file": "star_activate_01.m4a",
+      "at": 8.89904761904762,
+      "id": "17-1792551108408:7",
+      "voices": 5,
+      "rate": 1
+    },
+    {
+      "kind": "community",
+      "file": "island_token_01.m4a",
+      "at": 9.038367346938776,
+      "id": "17-1792551108408:8",
+      "voices": 5,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 9.624671201814058,
+      "id": "17-1792551108408:9",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 10.646349206349207,
+      "id": "17-1792551108408:10",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 10.866938775510205,
+      "id": "17-1792551108408:11",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 12.004716553287983,
+      "id": "17-1792551108408:12",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 12.207891156462585,
+      "id": "17-1792551108408:13",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 13.165714285714285,
+      "id": "17-1792551108408:14",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 13.322448979591837,
+      "id": "17-1792551108408:15",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "boost",
+      "file": "boost_air_02.m4a",
+      "at": 13.566258503401361,
+      "id": "17-1792551108408:16:air",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "star",
+      "file": "star_activate_02.m4a",
+      "at": 13.566258503401361,
+      "id": "17-1792551108408:16",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 14.303492063492063,
+      "id": "17-1792551108408:17",
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 15.354195011337868,
+      "id": "17-1792551108408:18",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 15.539954648526077,
+      "id": "17-1792551108408:19",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 16.23074829931973,
+      "id": "17-1792551108408:20",
+      "voices": 3,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 16.497777777777777,
+      "id": "17-1792551108408:21",
+      "voices": 2,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 16.683537414965986,
+      "id": "17-1792551108408:22",
+      "voices": 3,
+      "rate": 1.1400000000000001
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 16.904126984126986,
+      "id": "17-1792551108408:23",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 17.618140589569162,
+      "id": "17-1792551108408:24",
+      "voices": 2,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 18.04190476190476,
+      "id": "17-1792551108408:25",
+      "voices": 2,
+      "rate": 1.175
+    },
+    {
+      "kind": "boost",
+      "file": "boost_air_01.m4a",
+      "at": 18.239274376417235,
+      "id": "17-1792551108408:26:air",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "star",
+      "file": "star_activate_01.m4a",
+      "at": 18.239274376417235,
+      "id": "17-1792551108408:26",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 18.674648526077096,
+      "id": "17-1792551108408:27",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 18.819773242630387,
+      "id": "17-1792551108408:28",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 18.9881179138322,
+      "id": "17-1792551108408:29",
+      "voices": 5,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 19.13904761904762,
+      "id": "17-1792551108408:30",
+      "voices": 6,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 20.009795918367345,
+      "id": "17-1792551108408:31",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 20.20716553287982,
+      "id": "17-1792551108408:33",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 21.167891156462584,
+      "id": "17-1792551108408:34",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 21.373968253968254,
+      "id": "17-1792551108408:35",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 21.559727891156463,
+      "id": "17-1792551108408:36",
+      "voices": 3,
+      "rate": 1.07
+    },
+    {
+      "kind": "cloud",
+      "file": "synthesis",
+      "at": 21.751292517006803,
+      "id": "17-1792551108408:phase:cloud",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "thunder",
+      "file": "synthesis",
+      "at": 22.105396825396827,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 22.5059410430839,
+      "id": "17-1792551108408:37",
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 23.481179138321995,
+      "id": "17-1792551108408:38",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 23.65532879818594,
+      "id": "17-1792551108408:39",
+      "voices": 3,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 23.84108843537415,
+      "id": "17-1792551108408:40",
+      "voices": 3,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 24.044263038548753,
+      "id": "17-1792551108408:41",
+      "voices": 4,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 24.589931972789117,
+      "id": "17-1792551108408:42",
+      "voices": 3,
+      "rate": 1.1400000000000001
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 24.787301587301588,
+      "id": "17-1792551108408:43",
+      "voices": 3,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 24.98467120181406,
+      "id": "17-1792551108408:44",
+      "voices": 3,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 25.170430839002268,
+      "id": "17-1792551108408:45",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "thunder",
+      "file": "synthesis",
+      "at": 25.501315192743764,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 26.13986394557823,
+      "id": "17-1792551108408:46",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 26.308208616780046,
+      "id": "17-1792551108408:47",
+      "voices": 3,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 26.52299319727891,
+      "id": "17-1792551108408:48",
+      "voices": 4,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 26.98739229024943,
+      "id": "17-1792551108408:49",
+      "voices": 5,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 27.20798185941043,
+      "id": "17-1792551108408:50",
+      "voices": 4,
+      "rate": 1.1400000000000001
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 27.422766439909296,
+      "id": "17-1792551108408:51",
+      "voices": 3,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 27.637551020408164,
+      "id": "17-1792551108408:52",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 28.601179138321996,
+      "id": "17-1792551108408:53",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 28.781133786848073,
+      "id": "17-1792551108408:54",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "thunder",
+      "file": "synthesis",
+      "at": 28.908843537414967,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 28.984308390022676,
+      "id": "17-1792551108408:55",
+      "voices": 4,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 29.57061224489796,
+      "id": "17-1792551108408:56",
+      "voices": 4,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 29.72154195011338,
+      "id": "17-1792551108408:57",
+      "voices": 4,
+      "rate": 1.1400000000000001
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 29.924716553287983,
+      "id": "17-1792551108408:58",
+      "voices": 4,
+      "rate": 1.175
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 30.122086167800454,
+      "id": "17-1792551108408:59",
+      "voices": 5,
+      "rate": 1.175
+    },
+    {
+      "kind": "boost",
+      "file": "boost_air_02.m4a",
+      "at": 30.354285714285716,
+      "id": "17-1792551108408:60:air",
+      "voices": 6,
+      "rate": 1
+    },
+    {
+      "kind": "star",
+      "file": "star_activate_02.m4a",
+      "at": 30.354285714285716,
+      "id": "17-1792551108408:60",
+      "voices": 6,
+      "rate": 1
+    },
+    {
+      "kind": "ring",
+      "file": "ring_note_01.m4a",
+      "at": 30.818684807256236,
+      "id": "17-1792551108408:61",
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 31.973877551020408,
+      "id": "17-1792551108408:62",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "thunder",
+      "file": "synthesis",
+      "at": 32.037732426303855,
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 32.13641723356009,
+      "id": "17-1792551108408:63",
+      "voices": 3,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 33.082630385487526,
+      "id": "17-1792551108408:64",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 33.274195011337866,
+      "id": "17-1792551108408:65",
+      "voices": 3,
+      "rate": 1.035
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 33.46575963718821,
+      "id": "17-1792551108408:66",
+      "voices": 4,
+      "rate": 1.07
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 33.674739229024944,
+      "id": "17-1792551108408:67",
+      "voices": 5,
+      "rate": 1.105
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 34.63836734693878,
+      "id": "17-1792551108408:68",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 34.80671201814059,
+      "id": "17-1792551108408:69",
+      "voices": 2,
+      "rate": 1.035
+    },
+    {
+      "kind": "thunder",
+      "file": "synthesis",
+      "at": 35.43365079365079,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "parachute",
+      "file": "synthesis",
+      "at": 36.86748299319728,
+      "id": "17-1792551108408:phase:parachute",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "reveal",
+      "file": "island_reveal_shimmer_01.m4a",
+      "at": 37.755646258503404,
+      "id": "17-1792551108408:phase:reveal",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 40.13569160997732,
+      "id": "17-1792551108408:70",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 41.15736961451247,
+      "id": "17-1792551108408:71",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 42.15582766439909,
+      "id": "17-1792551108408:72",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_02.m4a",
+      "at": 43.13687074829932,
+      "id": "17-1792551108408:73",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_03.m4a",
+      "at": 44.14693877551021,
+      "id": "17-1792551108408:74",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_04.m4a",
+      "at": 46.13804988662132,
+      "id": "17-1792551108408:75",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_05.m4a",
+      "at": 49.13342403628118,
+      "id": "17-1792551108408:76",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "sol",
+      "file": "sol_pickup_01.m4a",
+      "at": 52.12299319727891,
+      "id": "17-1792551108408:77",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "landing",
+      "file": "synthesis",
+      "at": 54.75845804988662,
+      "id": "17-1792551108408:outcome",
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "bonus",
+      "file": "land_bonus_01.m4a",
+      "at": 54.75845804988662,
+      "id": "17-1792551108408:79",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "unlock",
+      "file": "rare_cargo_01.m4a",
+      "at": 56.801814058956914,
+      "id": "17-1792551108408:unlock",
+      "voices": 2,
+      "rate": 1
+    },
+    {
+      "kind": "countStart",
+      "file": "results_count_start_01.m4a",
+      "at": 57.21977324263039,
+      "id": "results:17:3270:start",
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_01.wav",
+      "at": 57.21977324263039,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_02.wav",
+      "at": 57.42875283446712,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_03.wav",
+      "at": 57.568072562358275,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_01.wav",
+      "at": 57.71900226757369,
+      "voices": 4,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_02.wav",
+      "at": 57.84090702947846,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_03.wav",
+      "at": 57.980226757369614,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_01.wav",
+      "at": 58.10793650793651,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_02.wav",
+      "at": 58.218231292517004,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_03.wav",
+      "at": 58.32852607709751,
+      "voices": 3,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_01.wav",
+      "at": 58.63038548752834,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_02.wav",
+      "at": 58.78131519274376,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_03.wav",
+      "at": 58.95546485260771,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "countTick",
+      "file": "results_count_tick_01.wav",
+      "at": 59.06575963718821,
+      "voices": 1,
+      "rate": 1
+    },
+    {
+      "kind": "final",
+      "file": "results_final_01.m4a",
+      "at": 59.23410430839002,
+      "id": "results:17:3270:final",
+      "voices": 1,
+      "rate": 1
+    }
+  ],
+  "status": {
+    "context": "running",
+    "voices": 1,
+    "peakVoices": 6,
+    "mixLevel": 0.04807821288704872,
+    "level": 0.056944649666547775,
+    "loops": [],
+    "loaded": 67,
+    "expected": 67,
+    "failed": [],
+    "muted": false,
+    "volume": 0.8
+  },
+  "median": 8.30000000000291,
+  "p95": 16.5,
+  "maxVoices": 6,
+  "maxLevel": 0.5850104093551636,
+  "maxMixLevel": 0.5836093425750732,
+  "maxCalls": 55,
+  "maxTriangles": 87545,
+  "errors": []
+}

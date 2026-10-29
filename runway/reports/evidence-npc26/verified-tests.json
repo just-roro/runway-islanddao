@@ -1,0 +1,1147 @@
+[
+  {
+    "scope": "functional",
+    "test": "first identity, cinematic tutorial, real holograms, expressions and return",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "duration_ms": 19039,
+    "errors": [],
+    "proof": {
+      "scene-proof": {
+        "closeup": {
+          "head": {
+            "left": 0.15966793472201157,
+            "right": 0.8016798874408169,
+            "top": 0.1878779357589352,
+            "bottom": 0.5038546627346009
+          },
+          "opacity": 0.9995530214718663,
+          "expression": {},
+          "conversation": {
+            "presence": 0.999439482446933,
+            "focus": 0.999439482446933,
+            "expression": "welcome",
+            "letters": 23,
+            "talking": true,
+            "position": [
+              -1.5506445951860273,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.289138872891155
+          },
+          "camera": [
+            -1.546795960740032,
+            1123.0501001262264,
+            360.19944930575207
+          ],
+          "calls": 37,
+          "triangles": 42210
+        },
+        "projection": {
+          "head": {
+            "left": 0.0645794145416953,
+            "right": 0.4569981807850488,
+            "top": 0.25930533916110854,
+            "bottom": 0.4512652887640959
+          },
+          "opacity": 0.9999997675986493,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9999995261855277,
+            "focus": 0.9999995261855277,
+            "expression": "confident",
+            "letters": 23,
+            "talking": true,
+            "position": [
+              -1.5500005448866434,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.291590577115217
+          },
+          "camera": [
+            -1.0068497347482253,
+            1123.0500000521056,
+            362.1750855238915
+          ],
+          "calls": 41,
+          "triangles": 42722
+        },
+        "returned": {
+          "head": {
+            "left": -1.293258440067167,
+            "right": 0,
+            "top": 0.2930241339308485,
+            "bottom": 0.5452087157929424
+          },
+          "opacity": 0,
+          "expression": {},
+          "conversation": {
+            "presence": 0,
+            "focus": 0,
+            "expression": "welcome",
+            "letters": 141,
+            "talking": false,
+            "position": [
+              -2.7,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 3.1452710350501536
+          },
+          "camera": [
+            1.6444676063652184,
+            1123.149826809869,
+            359.6509877841471
+          ],
+          "calls": 27,
+          "triangles": 24706
+        }
+      }
+    }
+  },
+  {
+    "scope": "functional",
+    "test": "SHOP conversation, continuous music, voice rate, mute and no catch-up after skip",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "duration_ms": 11594,
+    "errors": [],
+    "proof": {
+      "dialogue-audio": {
+        "intro": {
+          "head": {
+            "left": 0.1620165187608295,
+            "right": 0.8033781079895973,
+            "top": 0.19044331304461065,
+            "bottom": 0.506023894090385
+          },
+          "opacity": 0.9999950166091257,
+          "expression": {},
+          "conversation": {
+            "presence": 0.999994216202011,
+            "focus": 0.999994216202011,
+            "expression": "welcome",
+            "letters": 64,
+            "talking": true,
+            "position": [
+              -1.5500115675959782,
+              1122.2,
+              356.0999681891111
+            ],
+            "heroYaw": 0.17754192372139885
+          },
+          "camera": [
+            -1.5499809952644445,
+            1123.0500000000375,
+            360.2000178854763
+          ],
+          "calls": 37,
+          "triangles": 42210
+        },
+        "voice": [
+          {
+            "cue": "welcome",
+            "at": 0.8881632653061224,
+            "group": 0
+          },
+          {
+            "cue": "type",
+            "at": 1.1203628117913833,
+            "group": 2
+          },
+          {
+            "cue": "type",
+            "at": 1.230657596371882,
+            "group": 3
+          },
+          {
+            "cue": "type",
+            "at": 1.3467573696145125,
+            "group": 4
+          },
+          {
+            "cue": "type",
+            "at": 1.4628571428571429,
+            "group": 5
+          },
+          {
+            "cue": "type",
+            "at": 1.5731519274376418,
+            "group": 6
+          },
+          {
+            "cue": "type",
+            "at": 1.689251700680272,
+            "group": 7
+          },
+          {
+            "cue": "type",
+            "at": 1.8053514739229024,
+            "group": 8
+          },
+          {
+            "cue": "type",
+            "at": 1.9156462585034013,
+            "group": 9
+          },
+          {
+            "cue": "type",
+            "at": 2.0317460317460316,
+            "group": 10
+          },
+          {
+            "cue": "type",
+            "at": 2.147845804988662,
+            "group": 11
+          },
+          {
+            "cue": "type",
+            "at": 2.2639455782312927,
+            "group": 12
+          },
+          {
+            "cue": "type",
+            "at": 2.36843537414966,
+            "group": 13
+          },
+          {
+            "cue": "type",
+            "at": 2.4903401360544217,
+            "group": 14
+          },
+          {
+            "cue": "type",
+            "at": 2.6064399092970523,
+            "group": 15
+          },
+          {
+            "cue": "type",
+            "at": 2.7109297052154195,
+            "group": 16
+          },
+          {
+            "cue": "type",
+            "at": 2.9547392290249435,
+            "group": 17
+          }
+        ],
+        "end": {
+          "voice": [
+            {
+              "cue": "welcome",
+              "at": 0.8881632653061224,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 1.1203628117913833,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 1.230657596371882,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 1.3467573696145125,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 1.4628571428571429,
+              "group": 5
+            },
+            {
+              "cue": "type",
+              "at": 1.5731519274376418,
+              "group": 6
+            },
+            {
+              "cue": "type",
+              "at": 1.689251700680272,
+              "group": 7
+            },
+            {
+              "cue": "type",
+              "at": 1.8053514739229024,
+              "group": 8
+            },
+            {
+              "cue": "type",
+              "at": 1.9156462585034013,
+              "group": 9
+            },
+            {
+              "cue": "type",
+              "at": 2.0317460317460316,
+              "group": 10
+            },
+            {
+              "cue": "type",
+              "at": 2.147845804988662,
+              "group": 11
+            },
+            {
+              "cue": "type",
+              "at": 2.2639455782312927,
+              "group": 12
+            },
+            {
+              "cue": "type",
+              "at": 2.36843537414966,
+              "group": 13
+            },
+            {
+              "cue": "type",
+              "at": 2.4903401360544217,
+              "group": 14
+            },
+            {
+              "cue": "type",
+              "at": 2.6064399092970523,
+              "group": 15
+            },
+            {
+              "cue": "type",
+              "at": 2.7109297052154195,
+              "group": 16
+            },
+            {
+              "cue": "type",
+              "at": 2.9547392290249435,
+              "group": 17
+            },
+            {
+              "cue": "confident",
+              "at": 3.512018140589569,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 3.7384126984126986,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 3.8545124716553287,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 3.9648072562358276,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 4.080907029478458,
+              "group": 5
+            },
+            {
+              "cue": "type",
+              "at": 4.197006802721089,
+              "group": 6
+            },
+            {
+              "cue": "type",
+              "at": 4.307301587301588,
+              "group": 7
+            },
+            {
+              "cue": "type",
+              "at": 4.423401360544218,
+              "group": 8
+            },
+            {
+              "cue": "type",
+              "at": 4.539501133786848,
+              "group": 9
+            },
+            {
+              "cue": "type",
+              "at": 4.655600907029479,
+              "group": 10
+            },
+            {
+              "cue": "curious",
+              "at": 5.270929705215419,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 5.497324263038549,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 5.613424036281179,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 5.723718820861678,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 5.839818594104308,
+              "group": 5
+            },
+            {
+              "cue": "type",
+              "at": 6.048798185941043,
+              "group": 6
+            },
+            {
+              "cue": "celebrate",
+              "at": 6.182312925170068,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 6.513197278911565,
+              "group": 0
+            }
+          ],
+          "status": {
+            "active": false,
+            "muted": false,
+            "context": "running"
+          },
+          "music": {
+            "scene": "menu",
+            "paused": false,
+            "muted": false,
+            "volume": 0.6,
+            "playing": [
+              "menu"
+            ],
+            "offsets": {
+              "menu": 8.318548752834467,
+              "game": 0
+            },
+            "loaded": {
+              "menu": 30.1,
+              "game": 0
+            },
+            "context": "running"
+          }
+        }
+      }
+    }
+  },
+  {
+    "scope": "functional",
+    "test": "landscape conversation and reduced-motion guide remain readable",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "duration_ms": 8140,
+    "errors": [],
+    "proof": {
+      "landscape-proof": {
+        "head": {
+          "left": 0.23072343397969558,
+          "right": 0.3763302821619091,
+          "top": 0.18996101659312975,
+          "bottom": 0.5054657477251785
+        },
+        "opacity": 0.9995742252046353,
+        "expression": {},
+        "conversation": {
+          "presence": 0.9994884166332848,
+          "focus": 0.9994884166332848,
+          "expression": "welcome",
+          "letters": 92,
+          "talking": false,
+          "position": [
+            -1.5505883208717228,
+            1122.2,
+            356.1
+          ],
+          "heroYaw": 5.289342686645247
+        },
+        "camera": [
+          -1.5469483036331035,
+          1123.0500953655112,
+          360.19947548968696
+        ],
+        "calls": 39,
+        "triangles": 42486
+      }
+    }
+  },
+  {
+    "scope": "functional",
+    "test": "first identity, cinematic tutorial, real holograms, expressions and return",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "duration_ms": 18269,
+    "errors": [],
+    "proof": {
+      "scene-proof": {
+        "closeup": {
+          "head": {
+            "left": 0.22102916159456554,
+            "right": 0.7531476971258984,
+            "top": 0.18838992250530828,
+            "bottom": 0.501026948160056
+          },
+          "opacity": 0.9997238316736314,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9996572468331393,
+            "focus": 0.9996572468331393,
+            "expression": "welcome",
+            "letters": 32,
+            "talking": true,
+            "position": [
+              -1.55039416614189,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.290052664988689
+          },
+          "camera": [
+            -1.5480552389236524,
+            1123.0500607737836,
+            360.19966574419004
+          ],
+          "calls": 37,
+          "triangles": 42210
+        },
+        "projection": {
+          "head": {
+            "left": 0.1361566636351328,
+            "right": 0.46394598019773825,
+            "top": 0.25919119381145267,
+            "bottom": 0.4509948457632332
+          },
+          "opacity": 0.9999998935935882,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9999997919526211,
+            "focus": 0.9999997919526211,
+            "expression": "confident",
+            "letters": 24,
+            "talking": true,
+            "position": [
+              -1.550000239254486,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.291591718947959
+          },
+          "camera": [
+            -1.0062014126770504,
+            1123.0500000234292,
+            362.17744655328426
+          ],
+          "calls": 41,
+          "triangles": 42722
+        },
+        "returned": {
+          "head": {
+            "left": -0.9996299291878283,
+            "right": 0,
+            "top": 0.29303648119862435,
+            "bottom": 0.5451274683367545
+          },
+          "opacity": 0,
+          "expression": {},
+          "conversation": {
+            "presence": 0,
+            "focus": 0,
+            "expression": "welcome",
+            "letters": 141,
+            "talking": false,
+            "position": [
+              -2.7,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 3.1428842311928706
+          },
+          "camera": [
+            1.6478000627829108,
+            1123.1499311538316,
+            359.6503900727435
+          ],
+          "calls": 27,
+          "triangles": 24706
+        }
+      }
+    }
+  },
+  {
+    "scope": "functional",
+    "test": "SHOP conversation, continuous music, voice rate, mute and no catch-up after skip",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "duration_ms": 11531,
+    "errors": [],
+    "proof": {
+      "dialogue-audio": {
+        "intro": {
+          "head": {
+            "left": 0.21835127015968664,
+            "right": 0.7543415179578847,
+            "top": 0.190400872459644,
+            "bottom": 0.5058232067142743
+          },
+          "opacity": 0.9999931960007932,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9999855743112537,
+            "focus": 0.9999855743112537,
+            "expression": "welcome",
+            "letters": 57,
+            "talking": true,
+            "position": [
+              -1.550028851377493,
+              1122.2,
+              356.09992065871194
+            ],
+            "heroYaw": 0.17488993473501674
+          },
+          "camera": [
+            -1.5499745256719337,
+            1123.0500000000652,
+            360.2000239735183
+          ],
+          "calls": 37,
+          "triangles": 42210
+        },
+        "voice": [
+          {
+            "cue": "welcome",
+            "at": 0.8591383219954648,
+            "group": 0
+          },
+          {
+            "cue": "type",
+            "at": 1.0797278911564625,
+            "group": 2
+          },
+          {
+            "cue": "type",
+            "at": 1.1929251700680272,
+            "group": 3
+          },
+          {
+            "cue": "type",
+            "at": 1.3090249433106576,
+            "group": 4
+          },
+          {
+            "cue": "type",
+            "at": 1.4251247165532879,
+            "group": 5
+          },
+          {
+            "cue": "type",
+            "at": 1.5441269841269842,
+            "group": 6
+          },
+          {
+            "cue": "type",
+            "at": 1.6631292517006804,
+            "group": 7
+          },
+          {
+            "cue": "type",
+            "at": 1.7589115646258504,
+            "group": 8
+          },
+          {
+            "cue": "type",
+            "at": 1.8779138321995466,
+            "group": 9
+          },
+          {
+            "cue": "type",
+            "at": 1.9940136054421769,
+            "group": 10
+          },
+          {
+            "cue": "type",
+            "at": 2.110113378684807,
+            "group": 11
+          },
+          {
+            "cue": "type",
+            "at": 2.2262131519274377,
+            "group": 12
+          },
+          {
+            "cue": "type",
+            "at": 2.342312925170068,
+            "group": 13
+          },
+          {
+            "cue": "type",
+            "at": 2.461315192743764,
+            "group": 14
+          },
+          {
+            "cue": "type",
+            "at": 2.56,
+            "group": 15
+          },
+          {
+            "cue": "type",
+            "at": 2.6760997732426306,
+            "group": 16
+          }
+        ],
+        "end": {
+          "voice": [
+            {
+              "cue": "welcome",
+              "at": 0.8591383219954648,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 1.0797278911564625,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 1.1929251700680272,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 1.3090249433106576,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 1.4251247165532879,
+              "group": 5
+            },
+            {
+              "cue": "type",
+              "at": 1.5441269841269842,
+              "group": 6
+            },
+            {
+              "cue": "type",
+              "at": 1.6631292517006804,
+              "group": 7
+            },
+            {
+              "cue": "type",
+              "at": 1.7589115646258504,
+              "group": 8
+            },
+            {
+              "cue": "type",
+              "at": 1.8779138321995466,
+              "group": 9
+            },
+            {
+              "cue": "type",
+              "at": 1.9940136054421769,
+              "group": 10
+            },
+            {
+              "cue": "type",
+              "at": 2.110113378684807,
+              "group": 11
+            },
+            {
+              "cue": "type",
+              "at": 2.2262131519274377,
+              "group": 12
+            },
+            {
+              "cue": "type",
+              "at": 2.342312925170068,
+              "group": 13
+            },
+            {
+              "cue": "type",
+              "at": 2.461315192743764,
+              "group": 14
+            },
+            {
+              "cue": "type",
+              "at": 2.56,
+              "group": 15
+            },
+            {
+              "cue": "type",
+              "at": 2.6760997732426306,
+              "group": 16
+            },
+            {
+              "cue": "type",
+              "at": 2.809614512471655,
+              "group": 17
+            },
+            {
+              "cue": "confident",
+              "at": 3.378503401360544,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 3.5932879818594103,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 3.709387755102041,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 3.825487528344671,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 3.9415873015873015,
+              "group": 5
+            },
+            {
+              "cue": "type",
+              "at": 4.060589569160998,
+              "group": 6
+            },
+            {
+              "cue": "type",
+              "at": 4.179591836734694,
+              "group": 7
+            },
+            {
+              "cue": "type",
+              "at": 4.275374149659864,
+              "group": 8
+            },
+            {
+              "cue": "type",
+              "at": 4.39437641723356,
+              "group": 9
+            },
+            {
+              "cue": "type",
+              "at": 4.51047619047619,
+              "group": 10
+            },
+            {
+              "cue": "curious",
+              "at": 5.262222222222222,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 5.494421768707483,
+              "group": 2
+            },
+            {
+              "cue": "type",
+              "at": 5.6105215419501135,
+              "group": 3
+            },
+            {
+              "cue": "type",
+              "at": 5.726621315192744,
+              "group": 4
+            },
+            {
+              "cue": "type",
+              "at": 5.8920634920634924,
+              "group": 5
+            },
+            {
+              "cue": "celebrate",
+              "at": 6.095238095238095,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 6.426122448979592,
+              "group": 0
+            },
+            {
+              "cue": "type",
+              "at": 7.259138321995465,
+              "group": 5
+            }
+          ],
+          "status": {
+            "active": false,
+            "muted": false,
+            "context": "running"
+          },
+          "music": {
+            "scene": "menu",
+            "paused": false,
+            "muted": false,
+            "volume": 0.6,
+            "playing": [
+              "menu"
+            ],
+            "offsets": {
+              "menu": 8.510113378684807,
+              "game": 0
+            },
+            "loaded": {
+              "menu": 30.1,
+              "game": 0
+            },
+            "context": "running"
+          }
+        }
+      }
+    }
+  },
+  {
+    "scope": "functional",
+    "test": "landscape conversation and reduced-motion guide remain readable",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "duration_ms": 7699,
+    "errors": [],
+    "proof": {
+      "landscape-proof": {
+        "head": {
+          "left": 0.2307130576358079,
+          "right": 0.37631989109371344,
+          "top": 0.18996627080820577,
+          "bottom": 0.5054721709004448
+        },
+        "opacity": 0.9995218088452122,
+        "expression": {},
+        "conversation": {
+          "presence": 0.9994427519026163,
+          "focus": 0.9994427519026163,
+          "expression": "welcome",
+          "letters": 92,
+          "talking": false,
+          "position": [
+            -1.5506408353119914,
+            1122.2,
+            356.1
+          ],
+          "heroYaw": 5.289111948225722
+        },
+        "camera": [
+          -1.5466347206124302,
+          1123.0501051649808,
+          360.19942159260523
+        ],
+        "calls": 39,
+        "triangles": 42486
+      }
+    }
+  },
+  {
+    "scope": "final-projections",
+    "test": "first identity, cinematic tutorial, real holograms, expressions and return",
+    "browser": "chromium-mobile",
+    "status": "passed",
+    "duration_ms": 19118,
+    "errors": [],
+    "proof": {
+      "scene-proof": {
+        "closeup": {
+          "head": {
+            "left": 0.16423191331190923,
+            "right": 0.805805344300865,
+            "top": 0.1871985824547689,
+            "bottom": 0.5028712934371141
+          },
+          "opacity": 0.9995568268473113,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9994465006609808,
+            "focus": 0.9994465006609808,
+            "expression": "welcome",
+            "letters": 23,
+            "talking": true,
+            "position": [
+              -1.5506365242398723,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.289185246708517
+          },
+          "camera": [
+            -1.546823217672646,
+            1123.0500992744476,
+            360.19945399053745
+          ],
+          "calls": 36,
+          "triangles": 40738
+        },
+        "projection": {
+          "head": {
+            "left": 0.06483952032371665,
+            "right": 0.4575874618715264,
+            "top": 0.25977208816426567,
+            "bottom": 0.4518673602204635
+          },
+          "opacity": 0.9999997556953928,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9999996165091212,
+            "focus": 0.9999996165091212,
+            "expression": "confident",
+            "letters": 25,
+            "talking": true,
+            "position": [
+              -1.550000441014511,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.29159097348599
+          },
+          "camera": [
+            -1.0067319958004635,
+            1123.0500000548047,
+            362.17551333652546
+          ],
+          "calls": 41,
+          "triangles": 42698
+        },
+        "returned": {
+          "head": {
+            "left": -1.2937867057730963,
+            "right": 0,
+            "top": 0.2930393607818613,
+            "bottom": 0.5451066246496591
+          },
+          "opacity": 0,
+          "expression": {},
+          "conversation": {
+            "presence": 0,
+            "focus": 0,
+            "expression": "welcome",
+            "letters": 141,
+            "talking": false,
+            "position": [
+              -2.7,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 3.1422948548095797
+          },
+          "camera": [
+            1.6486400950563158,
+            1123.1499574288648,
+            359.650242764448
+          ],
+          "calls": 27,
+          "triangles": 24706
+        }
+      }
+    }
+  },
+  {
+    "scope": "final-projections",
+    "test": "first identity, cinematic tutorial, real holograms, expressions and return",
+    "browser": "webkit-mobile",
+    "status": "passed",
+    "duration_ms": 17679,
+    "errors": [],
+    "proof": {
+      "scene-proof": {
+        "closeup": {
+          "head": {
+            "left": 0.2209837347687253,
+            "right": 0.7535028954674889,
+            "top": 0.18812783344623335,
+            "bottom": 0.5010654551588133
+          },
+          "opacity": 0.9996824896049967,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9996299972056287,
+            "focus": 0.9996299972056287,
+            "expression": "welcome",
+            "letters": 31,
+            "talking": true,
+            "position": [
+              -1.5504255032135272,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.289937887521168
+          },
+          "camera": [
+            -1.5477649092058317,
+            1123.0500698465871,
+            360.1996158437698
+          ],
+          "calls": 37,
+          "triangles": 42210
+        },
+        "projection": {
+          "head": {
+            "left": 0.1357887412248347,
+            "right": 0.4638060832593588,
+            "top": 0.25928524766245625,
+            "bottom": 0.45120081496470227
+          },
+          "opacity": 0.999999876558688,
+          "expression": {},
+          "conversation": {
+            "presence": 0.9999997575571926,
+            "focus": 0.9999997575571926,
+            "expression": "confident",
+            "letters": 23,
+            "talking": true,
+            "position": [
+              -1.5500002788092289,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 5.291591573872244
+          },
+          "camera": [
+            -1.0066150399384128,
+            1123.0500000271902,
+            362.17594199581777
+          ],
+          "calls": 41,
+          "triangles": 42698
+        },
+        "returned": {
+          "head": {
+            "left": -0.999189160042038,
+            "right": 0,
+            "top": 0.29302124618261666,
+            "bottom": 0.5452301393590611
+          },
+          "opacity": 0,
+          "expression": {},
+          "conversation": {
+            "presence": 0,
+            "focus": 0,
+            "expression": "welcome",
+            "letters": 141,
+            "talking": false,
+            "position": [
+              -2.7,
+              1122.2,
+              356.1
+            ],
+            "heroYaw": 3.145906248809016
+          },
+          "camera": [
+            1.6436185198806885,
+            1123.14980030925,
+            359.65112965870725
+          ],
+          "calls": 27,
+          "triangles": 24706
+        }
+      }
+    }
+  }
+]

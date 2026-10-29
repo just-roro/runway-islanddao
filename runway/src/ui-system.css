@@ -1,0 +1,81 @@
+/* Shared UI surfaces: the stroke follows the same physical bevel as the button. */
+.arcade-button>.button-frame{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:var(--frame-color,#48deef);z-index:1}
+:is(.primary,.secondary,.home nav button,.icon-button,.pilot-card,.tabs button,.control-choice button,.closing-links button){border:0!important;clip-path:var(--cut)}
+:is(.primary,.secondary,.home nav button,.icon-button,.pilot-card,.tabs button,.control-choice button,.closing-links button)>.button-frame{display:block}
+.primary{--frame-color:#b1ffe7}.play-button{--frame-color:#fff4a1}.primary:before,.secondary:before,.home nav button:before{border:0}
+.arcade-button:focus-visible>.button-frame{color:var(--yellow);stroke-width:3}.arcade-button:focus-visible{filter:drop-shadow(0 0 4px #fff2a8)}
+/* Only the content scrolls. Navigation is a sibling with a reserved, opaque row. */
+.arcade-panel.panel-window{display:flex;flex-direction:column;overflow:hidden;padding:0;max-height:calc(100dvh - 32px);min-height:0}
+.panel-navigation{flex:none;position:relative;z-index:2;padding:8px 16px;background:#06283f;border-bottom:1px solid #397088}
+.panel-navigation .back,.shop-header .back{margin:0;display:flex;gap:6px;align-items:center;min-height:44px;color:#a2f4ff;padding:4px 6px;white-space:nowrap}
+.panel-navigation .back svg,.shop-header .back svg{width:20px;height:20px}
+.panel-content{overflow:auto;overscroll-behavior:contain;min-height:0;padding:20px;scrollbar-gutter:stable}
+.panel-content .primary{width:100%}.panel-window .human-friendly{margin-top:12px}
+.home-identity img{width:40px;height:40px;min-width:40px;background:#05233d}
+.partners-logo{display:block;width:90%;height:auto;aspect-ratio:8/1;object-fit:contain;max-height:36px;margin:8px auto -6px}
+.home .runway-logo{animation:brand-breathe 7s ease-in-out infinite}
+@keyframes brand-breathe{0%,100%{transform:translateY(0);filter:drop-shadow(0 6px 3px #021a3890) brightness(1)}50%{transform:translateY(-3px);filter:drop-shadow(0 7px 6px #51cfff45) brightness(1.08)}}
+.play-button>svg:not(.button-frame){width:34px;height:34px}
+/* Feed is in normal flow directly after the responsive amount, above the chart. */
+.flight-hud .economic-feed{position:relative;inset:auto;z-index:2;width:calc(100% - 64px);max-width:420px;height:70px;margin:4px 0 0 5px}
+.economic-feed>div{text-shadow:none;font-size:14px;gap:10px;min-height:31px}.economic-feed b{font-size:24px;min-width:0}.economic-feed img{filter:none}
+/* Quiet ledger, stronger action. Financial data and replay remain unchanged. */
+.cinematic-result .financial-panel{background:#042638ed;border:1px solid #3a7888;border-radius:12px;box-shadow:none}
+.cinematic-result .closing-chart{border:0;clip-path:none;background:none}
+.cinematic-result .settlement-log{border:0;clip-path:none}.cinematic-result .settlement-log>div{border:0}
+.cinematic-result .closing-total strong{text-shadow:none}.result-actions>.primary{gap:8px;outline:0}
+.result-actions>.primary>svg:not(.button-frame){width:38px;height:38px}.closing-links button{display:flex;align-items:center;justify-content:center;gap:8px}
+.settlement-receipt{background:none;border:0;clip-path:none;min-height:20px;padding:5px}
+@media(max-height:720px) and (orientation:portrait){.partners-logo{max-height:28px;margin-top:4px}.home .runway-logo{max-height:20dvh}}
+@media(min-aspect-ratio:1/1){.partners-logo{margin-top:0}}
+@media(prefers-reduced-motion:reduce){.home .runway-logo{animation:none}}
+.cargo-pending{color:#dcb2ff!important;background:#30204ddf!important;max-width:90vw}
+.drop-result{font-size:12px;min-height:30px;padding:4px 12px;background:#123b55;display:inline-flex;align-items:center;gap:6px}.drop-result svg:not(.button-frame){width:16px;height:16px}
+
+/* Recognition 46: one SVG vocabulary; SVG geometry cannot become emoji on iOS. */
+.ui-icon{display:inline-block;width:1.25em;height:1.25em;flex-shrink:0;vertical-align:middle}
+.home .home-utilities{display:grid;grid-template-columns:1.3fr 1fr 1fr .85fr;gap:4px;margin-top:6px}
+.home .home-utilities button{width:auto;min-height:44px;padding:4px 2px;display:flex;align-items:center;justify-content:center;gap:4px;font:700 12px Rajdhani;letter-spacing:.04em;color:#a5efff}
+.home .home-utilities .credits-link{color:#74ffc4;background:#073c38cc;border-radius:6px}
+.pause-modal{overflow-y:auto;max-height:calc(100dvh - 32px)}
+.pause-home{width:100%;display:flex;gap:8px;align-items:center;justify-content:center;margin:8px 0}
+.modifiers>span{display:inline-flex;align-items:center;gap:5px}.brand-mini .ui-icon{width:14px;height:14px}
+.lesson-icon .ui-icon{width:32px;height:32px}.speech-bubble i .ui-icon{width:12px;height:12px}
+.rank-progress{min-height:46px;margin:3px 0;padding:4px 8px;border-radius:7px;background:#062538e8;color:#b1e3ed;font:600 12px Rajdhani;line-height:1.2;font-variant-numeric:tabular-nums}
+.rank-progress-title{display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px;letter-spacing:.04em;color:#e5cf8d}
+.rank-places{display:flex;gap:10px;align-items:center;justify-content:center}.rank-places>span{display:flex;flex-direction:column;min-width:50px}.rank-places small{font-size:8px}.rank-places b{font-size:18px;line-height:1.1}.rank-places strong{font-size:10px;max-width:70px}
+.rank-milestone{grid-column:1/-1;display:block;color:#ffdf69;margin-top:2px;letter-spacing:.08em}.rank-new{animation:rank-arrive .5s cubic-bezier(.2,.8,.2,1) both}
+.rank-progress.offline button{display:inline-flex;align-items:center;gap:4px;min-height:32px;padding:2px 8px;color:#a5efff}.rank-progress:not(.ready){display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+@keyframes rank-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.rank-new{animation:none}}
+@media(max-width:360px){.home .home-utilities button{font-size:11px;gap:2px}.home .home-utilities .ui-icon{width:13px}}
+@media(max-height:740px) and (orientation:portrait){
+ .cinematic-result .result-bottom{padding-top:0}
+ .cinematic-result .financial-panel{padding:10px 12px 8px}
+ .cinematic-result .closing-chart,.cinematic-result .closing-chart svg{height:50px}
+ .cinematic-result .settlement-receipt{padding:3px}
+ .cinematic-result .landed-banner{max-height:17dvh}
+}
+/* Reserve a clear silhouette above the helmet, including the TOP 3 crown. */
+@media(orientation:portrait){.home .runway-logo{max-height:17dvh}}
+@media(orientation:landscape) and (max-height:600px){
+ .cinematic-result .financial-panel{padding:8px 12px 6px}
+ .cinematic-result .closing-chart,.cinematic-result .closing-chart svg{height:48px}
+ .cinematic-result .settlement-receipt{padding:2px}
+}
+
+@media(min-width:800px) and (min-height:601px){.cinematic-result .result-bottom{padding-top:14dvh}}
+
+.rank-progress.ready{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:center;column-gap:5px}.rank-progress-title .ui-icon{width:13px;height:13px}.rank-places{gap:6px}
+@media(orientation:portrait){.cinematic-result .closing-chart,.cinematic-result .closing-chart svg{height:48px}}
+@media(max-height:620px) and (orientation:portrait){
+ .cinematic-result .landed-banner{max-height:12dvh}
+ .cinematic-result .closing-header p{font-size:15px;margin-top:2px}
+ .cinematic-result .result-actions{grid-template-columns:1fr 1fr}
+ .cinematic-result .result-actions>.primary{font-size:16px;min-height:44px;gap:4px;margin:0}
+ .cinematic-result .result-actions>.primary>.ui-icon{width:22px;height:22px}
+ .cinematic-result .closing-links button{width:100%;min-height:44px;font-size:14px;padding:4px}
+ .cinematic-result .settlement-receipt{grid-column:1/-1}
+}
+
+.startup-join{border-top:1px solid #56dce844;padding-top:18px;margin-top:18px}.startup-join h3{margin:0 0 10px}.startup-join form{display:grid;gap:10px}.startup-join input{text-transform:uppercase;letter-spacing:.12em}.startup-join .hint{margin:4px 0 10px}

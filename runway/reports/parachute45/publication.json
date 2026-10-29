@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-22",
+  "frontend": {
+    "id": "appgdep_6ada4ca344808191aab8500a27dc40b3",
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "title": "RUNWAY — FUND. BUILD. LAND.",
+    "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_c02d3b769aac819199dc3700d1644994",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-22T17:49:40.771640+00:00"
+  },
+  "api": {
+    "id": "appgdep_6ada4c7b251c8191833c76031077751c",
+    "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+    "title": "RUNWAY · Event API",
+    "version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_f78b281dab848191a43c50cb0da58552",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://runway-api.agenciahumanfriendly.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acfed30efd88191aef688e5a181c299",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-22T17:49:02.896855+00:00"
+  },
+  "frontendVersion": 45,
+  "apiVersion": 22,
+  "frontendCommit": "94a3cdac5ed4e5bb3f2966f00080c166c1a178f0",
+  "apiCommit": "27811c0728e4a89f94ec768dd6bf00ba4cea5be0"
+}

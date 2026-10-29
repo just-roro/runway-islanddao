@@ -1,0 +1,230 @@
+[
+  {
+    "case": "before/sky38-sky-deck-cloud-exit--73daf-ng-on-the-real-flight-clock-chromium-mobile",
+    "samples": 7024,
+    "result": 1657500,
+    "stats": {
+      "calls": 56,
+      "triangles": 82573
+    },
+    "errors": [],
+    "medianMs": 8.30000000000291,
+    "p95Ms": 9,
+    "maxCalls": 56,
+    "maxTriangles": 82573,
+    "replayMatches": null,
+    "minLandingClearance": 1.872338748197854,
+    "finalClip": "celebrate",
+    "finalOrbit": null
+  },
+  {
+    "case": "final/sky38-horizon-coverage-on--ec62b-d-reduced-motion-adaptation-chromium-mobile",
+    "samples": 0,
+    "result": null,
+    "stats": null,
+    "errors": [],
+    "pauseStable": true,
+    "bearings": [
+      {
+        "near": 0,
+        "middle": 16,
+        "far": 15,
+        "triangles": 1310,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 0,
+        "middle": 12,
+        "far": 13,
+        "triangles": 986,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 0,
+        "middle": 14,
+        "far": 16,
+        "triangles": 1152,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 0,
+        "middle": 22,
+        "far": 14,
+        "triangles": 1788,
+        "extent": 2100,
+        "immersion": 0
+      }
+    ]
+  },
+  {
+    "case": "final/sky38-horizon-coverage-on--ec62b-d-reduced-motion-adaptation-webkit-mobile",
+    "samples": 0,
+    "result": null,
+    "stats": null,
+    "errors": [],
+    "pauseStable": true,
+    "bearings": [
+      {
+        "near": 0,
+        "middle": 20,
+        "far": 17,
+        "triangles": 1634,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 0,
+        "middle": 13,
+        "far": 18,
+        "triangles": 1076,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 0,
+        "middle": 19,
+        "far": 19,
+        "triangles": 1558,
+        "extent": 2100,
+        "immersion": 0
+      },
+      {
+        "near": 2,
+        "middle": 26,
+        "far": 19,
+        "triangles": 2278,
+        "extent": 2100,
+        "immersion": 0
+      }
+    ]
+  },
+  {
+    "case": "final/sky38-landing-formats-desktop-beach-chromium-mobile",
+    "samples": 840,
+    "result": 1005000,
+    "stats": {
+      "calls": 51,
+      "triangles": 60399
+    },
+    "errors": [],
+    "minLandingClearance": 3.720825845908946,
+    "finalClip": "idle",
+    "finalOrbit": 2.0943951278534065,
+    "maxConsecutiveCameraDisplacement": 0.39490021562239014,
+    "maxConsecutiveCameraDegrees": 3.5495470975365278
+  },
+  {
+    "case": "final/sky38-landing-formats-desktop-beach-webkit-mobile",
+    "samples": 304,
+    "result": 1005000,
+    "stats": {
+      "calls": 51,
+      "triangles": 60403
+    },
+    "errors": [],
+    "minLandingClearance": 3.7547688169621303,
+    "finalClip": "idle",
+    "finalOrbit": 2.0943951319382657,
+    "maxConsecutiveCameraDisplacement": 0.8036544835150795,
+    "maxConsecutiveCameraDegrees": 3.4286062724981003
+  },
+  {
+    "case": "final/sky38-landing-formats-landscape-terrace-chromium-mobile",
+    "samples": 800,
+    "result": 1270750,
+    "stats": {
+      "calls": 52,
+      "triangles": 60227
+    },
+    "errors": [],
+    "minLandingClearance": 4.16905764423244,
+    "finalClip": "idle",
+    "finalOrbit": 2.094395118403285,
+    "maxConsecutiveCameraDisplacement": 0.24323935985961737,
+    "maxConsecutiveCameraDegrees": 2.2467532770815914
+  },
+  {
+    "case": "final/sky38-landing-formats-landscape-terrace-webkit-mobile",
+    "samples": 388,
+    "result": 1270750,
+    "stats": {
+      "calls": 52,
+      "triangles": 60225
+    },
+    "errors": [],
+    "minLandingClearance": 4.169566210456677,
+    "finalClip": "idle",
+    "finalOrbit": 2.0943951189768764,
+    "maxConsecutiveCameraDisplacement": 0.38333727955097574,
+    "maxConsecutiveCameraDegrees": 3.271061727816474
+  },
+  {
+    "case": "final/sky38-landing-formats-small-jurere-chromium-mobile",
+    "samples": 799,
+    "result": 1657500,
+    "stats": {
+      "calls": 48,
+      "triangles": 57421
+    },
+    "errors": [],
+    "minLandingClearance": 3.4653509242052265,
+    "finalClip": "idle",
+    "finalOrbit": 2.0943951201149744,
+    "maxConsecutiveCameraDisplacement": 1.1508478144592291,
+    "maxConsecutiveCameraDegrees": 2.3424184944989848
+  },
+  {
+    "case": "final/sky38-landing-formats-small-jurere-webkit-mobile",
+    "samples": 411,
+    "result": 1657500,
+    "stats": {
+      "calls": 48,
+      "triangles": 57417
+    },
+    "errors": [],
+    "minLandingClearance": 3.485408342556118,
+    "finalClip": "idle",
+    "finalOrbit": 2.0943951392409392,
+    "maxConsecutiveCameraDisplacement": 1.431432976325869,
+    "maxConsecutiveCameraDegrees": 3.5977385217568525
+  },
+  {
+    "case": "final/sky38-sky-deck-cloud-exit--73daf-ng-on-the-real-flight-clock-chromium-mobile",
+    "samples": 6986,
+    "result": 1657500,
+    "stats": {
+      "calls": 57,
+      "triangles": 79539
+    },
+    "errors": [],
+    "medianMs": 8.30000000000291,
+    "p95Ms": 9.099999999998545,
+    "maxCalls": 57,
+    "maxTriangles": 79539,
+    "replayMatches": true,
+    "minLandingClearance": 3.3437030249393924,
+    "finalClip": "idle",
+    "finalOrbit": null
+  },
+  {
+    "case": "final/sky38-sky-deck-cloud-exit--73daf-ng-on-the-real-flight-clock-webkit-mobile",
+    "samples": 3578,
+    "result": 1657500,
+    "stats": {
+      "calls": 57,
+      "triangles": 79695
+    },
+    "errors": [],
+    "medianMs": 17.0,
+    "p95Ms": 20,
+    "maxCalls": 57,
+    "maxTriangles": 79695,
+    "replayMatches": true,
+    "minLandingClearance": 3.472133759919341,
+    "finalClip": "idle",
+    "finalOrbit": null
+  }
+]

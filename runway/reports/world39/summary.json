@@ -1,0 +1,384 @@
+{
+  "build": "world-39",
+  "date": "2026-10-21",
+  "base": "sky-38",
+  "scope": "Tanda 3/7 only, frontend presentation",
+  "unitTests": {
+    "passed": 15,
+    "files": 4
+  },
+  "browserTests": {
+    "passed": 8,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ]
+  },
+  "before": {
+    "label": "before",
+    "engine": "chromium",
+    "metrics": [
+      {
+        "stage": "approach",
+        "state": {
+          "x": -21.984672993630735,
+          "z": 242.54836766080416,
+          "altitude": 127.41931825704478,
+          "tick": 2400
+        },
+        "habitat": {
+          "trees": 96,
+          "near": 0,
+          "grass": 1253,
+          "visibleGrass": 0
+        },
+        "calls": 49,
+        "triangles": 73095,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 68,
+          "textures": 22
+        },
+        "geometryBytes": 4439152,
+        "max": {
+          "calls": 49,
+          "triangles": 73097
+        },
+        "medianMs": 8.299999999999272,
+        "p95Ms": 9.099999999999454
+      },
+      {
+        "stage": "island",
+        "state": {
+          "x": -0.015706246148723787,
+          "z": 28.279108077041116,
+          "altitude": 49.84598492371201,
+          "tick": 2880
+        },
+        "habitat": {
+          "trees": 96,
+          "near": 5,
+          "grass": 1253,
+          "visibleGrass": 256
+        },
+        "calls": 50,
+        "triangles": 61767,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 68,
+          "textures": 22
+        },
+        "geometryBytes": 4439152,
+        "max": {
+          "calls": 50,
+          "triangles": 73095
+        },
+        "medianMs": 8.299999999999272,
+        "p95Ms": 9.200000000000728
+      },
+      {
+        "stage": "landing",
+        "state": {
+          "x": -0.015706246148723787,
+          "z": -96.24355858962576,
+          "altitude": 3.2,
+          "tick": 3240
+        },
+        "habitat": {
+          "trees": 96,
+          "near": 24,
+          "grass": 1253,
+          "visibleGrass": 256
+        },
+        "calls": 39,
+        "triangles": 48743,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 68,
+          "textures": 22
+        },
+        "geometryBytes": 4439152,
+        "max": {
+          "calls": 50,
+          "triangles": 61767
+        },
+        "medianMs": 8.299999999999272,
+        "p95Ms": 9.100000000000364
+      }
+    ],
+    "errors": []
+  },
+  "after": {
+    "label": "after",
+    "engine": "chromium",
+    "metrics": [
+      {
+        "stage": "approach",
+        "state": {
+          "x": -21.984672993630735,
+          "z": 242.54836766080416,
+          "altitude": 127.41931825704478,
+          "tick": 2400
+        },
+        "habitat": {
+          "trees": 112,
+          "near": 0,
+          "grass": 2230,
+          "visibleGrass": 0
+        },
+        "calls": 54,
+        "triangles": 75095,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 70,
+          "textures": 23
+        },
+        "geometryBytes": 4761104,
+        "max": {
+          "calls": 54,
+          "triangles": 75097
+        },
+        "medianMs": 8.300000000000182,
+        "p95Ms": 9.900000000000546
+      },
+      {
+        "stage": "island",
+        "state": {
+          "x": -0.015706246148723787,
+          "z": 28.279108077041116,
+          "altitude": 49.84598492371201,
+          "tick": 2880
+        },
+        "habitat": {
+          "trees": 112,
+          "near": 6,
+          "grass": 2230,
+          "visibleGrass": 768
+        },
+        "calls": 56,
+        "triangles": 74683,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 74,
+          "textures": 23
+        },
+        "geometryBytes": 4761104,
+        "max": {
+          "calls": 56,
+          "triangles": 75095
+        },
+        "medianMs": 8.300000000001091,
+        "p95Ms": 9.899999999999636
+      },
+      {
+        "stage": "landing",
+        "state": {
+          "x": -0.015706246148723787,
+          "z": -96.24355858962576,
+          "altitude": 3.2,
+          "tick": 3240
+        },
+        "habitat": {
+          "trees": 112,
+          "near": 16,
+          "grass": 2230,
+          "visibleGrass": 768
+        },
+        "calls": 45,
+        "triangles": 58913,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "memory": {
+          "geometries": 76,
+          "textures": 23
+        },
+        "geometryBytes": 4761104,
+        "max": {
+          "calls": 56,
+          "triangles": 74683
+        },
+        "medianMs": 8.300000000001091,
+        "p95Ms": 9.899999999999636
+      }
+    ],
+    "errors": []
+  },
+  "scenarios": [
+    {
+      "scenario": "world39-world39-full-fligh-15483-ic-and-successful-fireworks-chromium-mobile",
+      "frames": 6534,
+      "medianMs": 8.3,
+      "p95Ms": 10,
+      "max": {
+        "calls": 60,
+        "triangles": 88051
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "jurere",
+        "cashFinal": 1657500,
+        "score": 1657500,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1100000,
+          "lost": 0,
+          "bonus": 552500
+        },
+        "landing": 187,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 3.3432283006795216,
+      "errors": []
+    },
+    {
+      "scenario": "world39-world39-full-fligh-15483-ic-and-successful-fireworks-webkit-mobile",
+      "frames": 3310,
+      "medianMs": 17,
+      "p95Ms": 20,
+      "max": {
+        "calls": 60,
+        "triangles": 87863
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "jurere",
+        "cashFinal": 1657500,
+        "score": 1657500,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1100000,
+          "lost": 0,
+          "bonus": 552500
+        },
+        "landing": 187,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 3.6516548906549104,
+      "errors": []
+    },
+    {
+      "scenario": "world39-world39-landscape-platform-terrace-chromium-mobile",
+      "frames": 1027,
+      "medianMs": 8.3,
+      "p95Ms": 10,
+      "max": {
+        "calls": 59,
+        "triangles": 76769
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "terrace",
+        "cashFinal": 1270750,
+        "score": 1270750,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1100000,
+          "lost": 0,
+          "bonus": 165750
+        },
+        "landing": 422,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 4.276166816536511,
+      "errors": []
+    },
+    {
+      "scenario": "world39-world39-landscape-platform-terrace-webkit-mobile",
+      "frames": 523,
+      "medianMs": 17,
+      "p95Ms": 24,
+      "max": {
+        "calls": 59,
+        "triangles": 76429
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "terrace",
+        "cashFinal": 1270750,
+        "score": 1270750,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1100000,
+          "lost": 0,
+          "bonus": 165750
+        },
+        "landing": 422,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 4.39159871851824,
+      "errors": []
+    },
+    {
+      "scenario": "world39-world39-small-platform-beach-chromium-mobile",
+      "frames": 1062,
+      "medianMs": 8.3,
+      "p95Ms": 10,
+      "max": {
+        "calls": 55,
+        "triangles": 68135
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "beach",
+        "cashFinal": 1005000,
+        "score": 1005000,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1000000,
+          "lost": 0,
+          "bonus": 0
+        },
+        "landing": 499,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 4.133656095864086,
+      "errors": []
+    },
+    {
+      "scenario": "world39-world39-small-platform-beach-webkit-mobile",
+      "frames": 528,
+      "medianMs": 17,
+      "p95Ms": 20,
+      "max": {
+        "calls": 55,
+        "triangles": 68097
+      },
+      "result": {
+        "status": "funded",
+        "outcome": "landed",
+        "destination": "beach",
+        "cashFinal": 1005000,
+        "score": 1005000,
+        "breakdown": {
+          "initial": 5000,
+          "earned": 1000000,
+          "lost": 0,
+          "bonus": 0
+        },
+        "landing": 499,
+        "emergency": false
+      },
+      "replayMatches": true,
+      "minLandingClearance": 4.066404494955507,
+      "errors": []
+    }
+  ],
+  "geometry": {
+    "maxTrafficPitchDegrees": 32.80511929886289,
+    "terrainTriangles": 3741,
+    "roads": 6,
+    "rockCandidates": 306,
+    "swimmers": 10
+  },
+  "physicalDevices": "Pending; mobile emulation on Apple M5 host only",
+  "memoryNote": "Geometry bytes are CPU buffer sizes, not driver VRAM. One new RGBA road texture: 580 \u00d7 1340 \u00d7 4 = 3108800 base bytes, approximately 4145067 with mipmaps. No real-time reflection or shadow targets added."
+}

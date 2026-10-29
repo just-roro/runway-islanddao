@@ -1,0 +1,213 @@
+{
+  "buildings": [
+    {
+      "id": "building-2",
+      "x": 4,
+      "z": -85,
+      "w": 6,
+      "d": 5,
+      "h": 10,
+      "style": 2
+    },
+    {
+      "id": "building-3",
+      "x": -4,
+      "z": -85,
+      "w": 4,
+      "d": 6,
+      "h": 8,
+      "style": 0
+    },
+    {
+      "id": "building-4",
+      "x": -12,
+      "z": -85,
+      "w": 5,
+      "d": 5,
+      "h": 6,
+      "style": 1
+    },
+    {
+      "id": "building-5",
+      "x": -20,
+      "z": -85,
+      "w": 6,
+      "d": 6,
+      "h": 13,
+      "style": 2
+    },
+    {
+      "id": "building-7",
+      "x": 12,
+      "z": -73,
+      "w": 5,
+      "d": 6,
+      "h": 9,
+      "style": 1
+    },
+    {
+      "id": "building-8",
+      "x": 4,
+      "z": -73,
+      "w": 6,
+      "d": 5,
+      "h": 7,
+      "style": 2
+    },
+    {
+      "id": "building-9",
+      "x": -4,
+      "z": -73,
+      "w": 4,
+      "d": 6,
+      "h": 5,
+      "style": 0
+    },
+    {
+      "id": "building-10",
+      "x": -12,
+      "z": -73,
+      "w": 5,
+      "d": 5,
+      "h": 12,
+      "style": 1
+    },
+    {
+      "id": "building-11",
+      "x": -20,
+      "z": -73,
+      "w": 6,
+      "d": 6,
+      "h": 10,
+      "style": 2
+    },
+    {
+      "id": "building-14",
+      "x": 4,
+      "z": -61,
+      "w": 6,
+      "d": 5,
+      "h": 13,
+      "style": 2
+    },
+    {
+      "id": "building-15",
+      "x": -4,
+      "z": -61,
+      "w": 4,
+      "d": 6,
+      "h": 11,
+      "style": 0
+    },
+    {
+      "id": "building-16",
+      "x": -12,
+      "z": -61,
+      "w": 5,
+      "d": 5,
+      "h": 9,
+      "style": 1
+    },
+    {
+      "id": "building-17",
+      "x": -20,
+      "z": -61,
+      "w": 6,
+      "d": 6,
+      "h": 7,
+      "style": 2
+    },
+    {
+      "id": "building-20",
+      "x": 4,
+      "z": -49,
+      "w": 6,
+      "d": 5,
+      "h": 10,
+      "style": 2
+    },
+    {
+      "id": "building-21",
+      "x": -4,
+      "z": -49,
+      "w": 4,
+      "d": 6,
+      "h": 8,
+      "style": 0
+    },
+    {
+      "id": "building-22",
+      "x": -12,
+      "z": -49,
+      "w": 5,
+      "d": 5,
+      "h": 6,
+      "style": 1
+    },
+    {
+      "id": "building-23",
+      "x": -20,
+      "z": -49,
+      "w": 6,
+      "d": 6,
+      "h": 13,
+      "style": 2
+    }
+  ],
+  "destinations": [
+    {
+      "id": "beach",
+      "name": "South Beach",
+      "x": 30,
+      "z": 50,
+      "height": 4.6,
+      "color": "#72f3cb",
+      "radius": 8,
+      "difficulty": "OPEN",
+      "bonus": 0,
+      "style": "SAFE LANDING"
+    },
+    {
+      "id": "terrace",
+      "name": "Island Terrace",
+      "x": 0,
+      "z": -30,
+      "height": 5.2,
+      "color": "#8ce1ff",
+      "radius": 7,
+      "difficulty": "PRECISION",
+      "bonus": 0.15,
+      "style": "+15%"
+    },
+    {
+      "id": "jurere",
+      "name": "Jurerê",
+      "x": 0,
+      "z": -100,
+      "height": 2,
+      "color": "#ffc55e",
+      "radius": 6,
+      "difficulty": "CURRENTS REQUIRED",
+      "bonus": 0.5,
+      "style": "+50%"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "jurere-left",
+      "x": -10,
+      "z": -96,
+      "w": 3,
+      "d": 3,
+      "h": 9
+    },
+    {
+      "id": "jurere-right",
+      "x": 10,
+      "z": -96,
+      "w": 3,
+      "d": 3,
+      "h": 9
+    }
+  ]
+}

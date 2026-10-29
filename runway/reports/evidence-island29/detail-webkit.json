@@ -1,0 +1,8 @@
+{
+  "label": "detail",
+  "engine": "webkit",
+  "metrics": [],
+  "errors": [
+    "ResizeObserver loop completed with undelivered notifications."
+  ]
+}

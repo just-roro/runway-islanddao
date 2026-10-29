@@ -1,0 +1,114 @@
+import { writeFile } from 'node:fs/promises';
+import { test, expect } from '@playwright/test';
+async function setup(page) { page.setDefaultTimeout(15000); await page.route('**/api/**', r => r.fulfill({ status: 503, body: '{}' })); await page.addInitScript(() => { localStorage.setItem('runway.profile', JSON.stringify({ onboarded: true, nickname: 'Sound QA', startupName: 'Runway', tutorialVersion: 'npc-26', shop: { version: 1, balance: 3000000, earned: 3000000, owned: ['pilot:0', 'canopy:sunrise', 'trail:air'], receipts: [], canopy: 'canopy:sunrise', trail: 'trail:air' } })); Object.defineProperty(crypto, 'getRandomValues', { value: (a) => { a.fill(17); return a; } }); }); await page.goto('/?qa=1'); await expect(page.locator('#runway-boot')).toHaveCount(0, { timeout: 60000 }); await page.getByRole('button', { name: 'OPTIONS', exact: true }).click(); await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.prepareAudio()); await page.getByRole('button', { name: 'BACK', exact: true }).click(); }
+const events = (page) => page.evaluate(() => window.__RUNWAY_AUDIO_QA__.events);
+test('supplied audio, NPC, purchase, denial, equip, pause, background and bounded voices', async ({ page }, info) => {
+    test.setTimeout(120000);
+    const errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    await setup(page);
+    const loaded = await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.status());
+    expect(loaded.failed).toEqual([]);
+    expect(loaded.loaded).toBe(loaded.expected);
+    await page.getByRole('button', { name: 'HOW TO PLAY', exact: true }).click();
+    await page.waitForTimeout(1800);
+    expect((await events(page)).some((e) => e.kind === 'type' && e.file.startsWith('npc_blip'))).toBe(true);
+    await page.getByRole('button', { name: 'CLOSE', exact: true }).click();
+    const musicBefore = await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.musicStatus().offsets.menu);
+    await page.getByRole('button', { name: 'SHOP', exact: true }).click();
+    await page.getByRole('button', { name: /READ|LET’S SEE THE GEAR/ }).click();
+    await page.getByRole('button', { name: /LET’S SEE THE GEAR/ }).click();
+    await page.getByRole('button', { name: 'Next item', exact: true }).click();
+    await page.getByRole('button', { name: /BUY & EQUIP/ }).click();
+    await expect(page.getByRole('button', { name: 'EQUIPPED', exact: true })).toBeVisible();
+    expect((await events(page)).filter((e) => e.kind === 'buy')).toHaveLength(1);
+    await page.getByRole('button', { name: 'Next item', exact: true }).click();
+    await page.getByRole('button', { name: /BUY & EQUIP/ }).click();
+    await page.waitForTimeout(100);
+    expect((await events(page)).filter((e) => e.kind === 'denied')).toHaveLength(1);
+    await page.getByRole('button', { name: 'Previous item', exact: true }).click();
+    await page.getByRole('button', { name: 'Previous item', exact: true }).click();
+    await page.getByRole('button', { name: 'EQUIP', exact: true }).click();
+    expect((await events(page)).filter((e) => e.kind === 'equip')).toHaveLength(1);
+    await page.getByRole('button', { name: /← BACK/ }).click();
+    const musicAfter = await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.musicStatus());
+    expect(musicAfter.playing).toEqual(['menu']);
+    expect(musicAfter.offsets.menu).not.toBe(musicBefore);
+    // Deliberate simultaneous-event stress; no simulation money is created here.
+    const stress = await page.evaluate(async () => { const a = window.__RUNWAY_AUDIO_QA__; for (let i = 0; i < 30; i++)
+        a.sound('sol', { id: 'stress:' + i, delta: 15000 }); a.sound('term', { id: 'stress:term', delta: 150000 }); a.sound('loss', { id: 'stress:loss' }); for (let i = 0; i < 20; i++)
+        a.sound('term', { id: 'stress:term', delta: 150000 }); let max = 0; for (let i = 0; i < 20; i++) {
+        await new Promise(requestAnimationFrame);
+        max = Math.max(max, a.status().level);
+    } return { max, status: a.status(), events: a.events.filter((e) => e.id?.startsWith('stress:')) }; });
+    expect(stress.max).toBeGreaterThan(.00001);
+    expect(stress.max).toBeLessThan(.99);
+    expect(stress.status.peakVoices).toBeLessThanOrEqual(10);
+    expect(stress.events.filter((e) => e.id === 'stress:term')).toHaveLength(1);
+    expect(stress.events.filter((e) => e.kind === 'sol').length).toBeLessThanOrEqual(1);
+    await page.getByRole('button', { name: 'OPTIONS', exact: true }).click();
+    await page.getByRole('button', { name: 'SFX ON', exact: true }).click();
+    expect(await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.status().voices)).toBe(0);
+    await page.getByRole('button', { name: 'SFX OFF', exact: true }).click();
+    await page.getByRole('button', { name: 'BACK', exact: true }).click();
+    await page.getByRole('button', { name: /^PLAY/ }).click();
+    await page.waitForFunction(() => window.__RUNWAY_QA__?.state.routeTime > 5);
+    await page.getByRole('button', { name: /Pause/i }).click();
+    const paused = await page.evaluate(() => ({ audio: window.__RUNWAY_AUDIO_QA__.status(), music: window.__RUNWAY_AUDIO_QA__.musicStatus(), tick: window.__RUNWAY_QA__.state.tick }));
+    expect(paused.audio.loops).toEqual([]);
+    expect(paused.music.playing).toEqual([]);
+    await page.waitForTimeout(200);
+    expect(await page.evaluate(() => window.__RUNWAY_QA__.state.tick)).toBe(paused.tick);
+    await page.getByRole('button', { name: /RESUME FLIGHT/ }).click();
+    await page.waitForFunction(() => window.__RUNWAY_AUDIO_QA__.status().loops.includes('fall'));
+    await page.evaluate(() => { Object.defineProperty(document, 'hidden', { configurable: true, get: () => true }); document.dispatchEvent(new Event('visibilitychange')); });
+    expect(await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.status().voices)).toBe(0);
+    expect(await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.status().loops)).toEqual([]);
+    await page.evaluate(() => { delete document.hidden; document.dispatchEvent(new Event('visibilitychange')); });
+    await page.getByRole('button', { name: /RESUME FLIGHT/ }).click();
+    await page.evaluate(() => window.__RUNWAY_AUDIO_QA__.interrupt());
+    await page.locator('main').click({ position: { x: 20, y: 400 }, force: true });
+    await page.waitForFunction(() => window.__RUNWAY_AUDIO_QA__.status().context === 'running');
+    expect(errors).toEqual([]);
+    await writeFile(info.outputPath('integration.json'), JSON.stringify({ loaded, stress, paused, errors }, null, 2));
+    await info.attach('audio-integration', { body: JSON.stringify({ loaded, stress, paused, errors, events: await events(page) }, null, 2), contentType: 'application/json' });
+});
+test('complete seeded flight preserves replay, plays cinematic cues once and reports mobile frame time', async ({ page }, info) => {
+    test.setTimeout(150000);
+    const errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    await setup(page);
+    await page.evaluate(() => { const w = window; const mime = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/mp4'; w.__audioRecording = []; w.__audioRecorder = new MediaRecorder(w.__RUNWAY_AUDIO_QA__.capture(), { mimeType: mime }); w.__audioRecorder.ondataavailable = (e) => w.__audioRecording.push(e.data); w.__audioRecorder.start(); });
+    await page.getByRole('button', { name: /^PLAY/ }).click();
+    await page.waitForFunction(() => !!window.__RUNWAY_QA__);
+    await page.evaluate(async () => { const w = window, { flyToJurere } = await import('/tests/test-pilot.ts'); w.__RUNWAY_CONTROLS_QA__.read = () => flyToJurere(w.__RUNWAY_QA__.state); const samples = []; w.__audioSamples = samples; let last = performance.now(); const draw = (now) => { const r = w.__RUNWAY_QA__; samples.push({ ms: now - last, ...w.__RUNWAY_AUDIO_QA__.status(), calls: r.renderStats.calls, triangles: r.renderStats.triangles }); last = now; if (!r.state.result)
+        requestAnimationFrame(draw); }; requestAnimationFrame(draw); });
+    await expect(page.getByRole('heading', { name: 'Welcome to Floripa. Landed.', exact: true })).toBeVisible({ timeout: 100000 });
+    await page.waitForTimeout(3000);
+    const result = await page.evaluate(async () => { const w = window, r = w.__RUNWAY_QA__, a = w.__RUNWAY_AUDIO_QA__, { replay } = await import('/src/core/simulation.ts'); const ms = w.__audioSamples.map((s) => s.ms).sort((a, b) => a - b); return { result: r.state.result, replay: replay(r.state.seed, r.frames).result, events: a.events, status: a.status(), median: ms[Math.floor(ms.length * .5)], p95: ms[Math.floor(ms.length * .95)], maxVoices: Math.max(...w.__audioSamples.map((s) => s.voices)), maxLevel: Math.max(...w.__audioSamples.map((s) => s.level)), maxMixLevel: Math.max(...w.__audioSamples.map((s) => s.mixLevel)), maxCalls: Math.max(...w.__audioSamples.map((s) => s.calls)), maxTriangles: Math.max(...w.__audioSamples.map((s) => s.triangles)) }; });
+    const recording = await page.evaluate(async () => { const w = window; await new Promise(resolve => { w.__audioRecorder.onstop = () => resolve(); w.__audioRecorder.stop(); }); const blob = new Blob(w.__audioRecording, { type: w.__audioRecorder.mimeType }); const data = await new Promise(resolve => { const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.readAsDataURL(blob); }); return { type: blob.type, data: data.split(',')[1] }; });
+    await writeFile(info.outputPath(recording.type.includes('webm') ? 'flight-audio.webm' : 'flight-audio.mp4'), Buffer.from(recording.data, 'base64'));
+    await writeFile(info.outputPath('flight-metrics.json'), JSON.stringify({ ...result, errors }, null, 2));
+    expect(result.result).toEqual(result.replay);
+    expect(result.result.cashFinal).toBe(1755000);
+    for (const kind of ['door', 'jump', 'parachute', 'reveal', 'landing', 'final', 'countStart'])
+        expect(result.events.filter((e) => e.kind === kind)).toHaveLength(1);
+    const ids = result.events.filter((e) => e.id).map((e) => e.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(result.maxVoices).toBeLessThanOrEqual(10);
+    expect(result.maxLevel).toBeLessThan(.99);expect(result.maxMixLevel).toBeLessThan(.99);
+    expect(result.maxCalls).toBeLessThanOrEqual(70);
+    expect(result.maxTriangles).toBeLessThanOrEqual(90000);
+    expect(errors).toEqual([]);
+    await page.screenshot({ path: info.outputPath('audio-flight-results.png') });
+    await info.attach('complete-flight-audio', { body: JSON.stringify({ ...result, errors }, null, 2), contentType: 'application/json' });
+    console.log('AUDIO36', JSON.stringify({ ...result, events: undefined }));
+    // Actual canonical bankruptcy contact, separate controlled scenario after retry.
+    await page.getByRole('button', { name: 'ONE MORE RUN', exact: true }).click();
+    await page.waitForFunction(() => window.__RUNWAY_QA__?.state.routeTime > 5 && !window.__RUNWAY_QA__.state.result);
+    await page.evaluate(() => { const s = window.__RUNWAY_QA__.state; s.cash = 100; s.shield = 0; s.immuneUntil = 0; s.objects = [{ id: 'qa-building-hit', kind: 'gas', x: s.x, y: s.y, t: s.routeTime, alt: s.altitude - .2, r: 1.15, motion: 0, fallSpeed: 0, penaltyScale: 1 }]; });
+    await expect(page.getByRole('heading', { name: 'RUN LOST', exact: true })).toBeVisible();
+    const defeat = await events(page);
+    expect(defeat.filter((e) => e.kind === 'defeat')).toHaveLength(1);
+    expect(defeat.filter((e) => e.kind === 'loss')).toHaveLength(1);
+});

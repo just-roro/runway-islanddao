@@ -1,0 +1,78 @@
+{
+  "label": "accepted",
+  "engine": "webkit",
+  "metrics": [
+    {
+      "stage": "approach",
+      "state": {
+        "x": -21.98387486987337,
+        "z": 242.54718414805376,
+        "altitude": 127.41931825704714,
+        "tick": 2400
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 0,
+        "grass": 1229,
+        "visibleGrass": 0
+      },
+      "calls": 47,
+      "triangles": 73361,
+      "max": {
+        "calls": 62,
+        "triangles": 73361
+      },
+      "medianMs": 17,
+      "p95Ms": 18
+    },
+    {
+      "stage": "island",
+      "state": {
+        "x": -0.019457412686349783,
+        "z": 28.277906653976657,
+        "altitude": 49.84598492371437,
+        "tick": 2880
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 5,
+        "grass": 1229,
+        "visibleGrass": 256
+      },
+      "calls": 50,
+      "triangles": 64933,
+      "max": {
+        "calls": 50,
+        "triangles": 73361
+      },
+      "medianMs": 17,
+      "p95Ms": 18
+    },
+    {
+      "stage": "landing",
+      "state": {
+        "x": -0.019457412686349783,
+        "z": -96.24476001269022,
+        "altitude": 3.2,
+        "tick": 3240
+      },
+      "habitat": {
+        "trees": 96,
+        "near": 24,
+        "grass": 1229,
+        "visibleGrass": 0
+      },
+      "calls": 40,
+      "triangles": 51637,
+      "max": {
+        "calls": 50,
+        "triangles": 64933
+      },
+      "medianMs": 17,
+      "p95Ms": 18
+    }
+  ],
+  "errors": [
+    "ResizeObserver loop completed with undelivered notifications."
+  ]
+}

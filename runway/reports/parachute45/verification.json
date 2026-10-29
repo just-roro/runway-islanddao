@@ -1,0 +1,71 @@
+{
+  "before-chromium": {
+    "frames": 3553,
+    "frameMedianMs": 8.3,
+    "frameP95Ms": 8.9,
+    "maxCalls": 60,
+    "maxTriangles": 88015,
+    "maxCameraStepInTransition": 5.95,
+    "replayMatches": true,
+    "outcome": "landed",
+    "stars": [],
+    "errors": [],
+    "maxCameraStepExcludingCaptureStalls": 0.575
+  },
+  "final-chromium": {
+    "frames": 3343,
+    "frameMedianMs": 8.4,
+    "frameP95Ms": 10,
+    "maxCalls": 61,
+    "maxTriangles": 89071,
+    "maxCameraStepInTransition": 8.409,
+    "replayMatches": true,
+    "outcome": "landed",
+    "stars": [
+      {
+        "tick": 2379,
+        "kind": "star",
+        "delta": 15000,
+        "balance": 940000,
+        "sourceId": "glide-star-0"
+      }
+    ],
+    "errors": [],
+    "gpuObjectCounts": {
+      "geometries": 79,
+      "textures": 24
+    },
+    "maxCameraStepExcludingCaptureStalls": 0.97
+  },
+  "final-webkit": {
+    "frames": 898,
+    "frameMedianMs": 33.0,
+    "frameP95Ms": 38,
+    "maxCalls": 61,
+    "maxTriangles": 88985,
+    "maxCameraStepInTransition": 4.965,
+    "replayMatches": true,
+    "outcome": "landed",
+    "stars": [
+      {
+        "tick": 2379,
+        "kind": "star",
+        "delta": 15000,
+        "balance": 940000,
+        "sourceId": "glide-star-0"
+      }
+    ],
+    "errors": [],
+    "gpuObjectCounts": {
+      "geometries": 79,
+      "textures": 24
+    },
+    "maxCameraStepExcludingCaptureStalls": 1.148
+  },
+  "notes": [
+    "Frame time is RAF interval on the host in emulated viewports, not physical mobile GPU timing.",
+    "Screenshot capture introduces isolated stalls; no GPU-memory MB measurement is claimed.",
+    "Initial supplemental habitat test expected 96 trees; corrected to the pre-existing generator count of 112.",
+    "WebKit emitted a ResizeObserver warning during artificial viewport resizing; recorded in verified/scenery.json and filtered from graphics errors in the final test."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "build": "dao-41",
+  "scope": "TANDA 5/7 DAO Ranking & Startup UX",
+  "sqlTests": 4,
+  "browserCases": 10,
+  "enhancedInvitationCases": 2,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "viewports": [
+    [
+      390,
+      844
+    ],
+    [
+      360,
+      640
+    ],
+    [
+      412,
+      915
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "localD1ReplayCapital": 2392500,
+  "rulesChanged": false,
+  "physicalDevices": "not tested",
+  "historicalLeaderDates": "unknown; labeled explicitly",
+  "hours": "not stored; not inferred",
+  "officeProgression": "not implemented, per scope"
+}

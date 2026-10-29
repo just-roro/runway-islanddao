@@ -1,0 +1,15 @@
+{
+  "build": "npc-26",
+  "commit": "783ec13ba085e3e4b2552cb6b6c6ed252ccf90dd",
+  "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_93937fa874a4819189d7bed6400ddc32",
+  "deployment_id": "appgdep_6ad7959d09b88191a048b6f4b48fd5f4",
+  "status": "succeeded",
+  "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+  "public_smoke": {
+    "browser": "Chromium mobile viewport",
+    "tutorial": true,
+    "shop": true,
+    "javascript_errors": [],
+    "api": "blocked for read-only frontend QA"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "seeds": 10000,
+  "rows": [
+    {
+      "kind": "sol",
+      "total": 1280000,
+      "mean": 128,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 128,
+      "fallMean": 104,
+      "glideMean": 24
+    },
+    {
+      "kind": "gas",
+      "total": 180910,
+      "mean": 18.091,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 18.048327819558637,
+      "fallMean": 12.4083,
+      "glideMean": 5.6827
+    },
+    {
+      "kind": "star",
+      "total": 180000,
+      "mean": 18,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 18,
+      "fallMean": 16,
+      "glideMean": 2
+    },
+    {
+      "kind": "community",
+      "total": 30000,
+      "mean": 3,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 3,
+      "fallMean": 3,
+      "glideMean": 0
+    },
+    {
+      "kind": "delivery",
+      "total": 117902,
+      "mean": 11.7902,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 11.829264798397345,
+      "fallMean": 11.7902,
+      "glideMean": 0
+    },
+    {
+      "kind": "term",
+      "total": 20000,
+      "mean": 2,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 2,
+      "fallMean": 2,
+      "glideMean": 0
+    },
+    {
+      "kind": "gate",
+      "total": 190000,
+      "mean": 19,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 19,
+      "fallMean": 13,
+      "glideMean": 6
+    },
+    {
+      "kind": "hacked",
+      "total": 36634,
+      "mean": 3.6634,
+      "runs": 9982,
+      "runPercent": 99.82,
+      "expectedMean": 3.673615873593266,
+      "fallMean": 2.8683,
+      "glideMean": 0.7951
+    },
+    {
+      "kind": "magnet",
+      "total": 20000,
+      "mean": 2,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 2,
+      "fallMean": 2,
+      "glideMean": 0
+    },
+    {
+      "kind": "rug",
+      "total": 155134,
+      "mean": 15.5134,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 15.506791508463127,
+      "fallMean": 9.9912,
+      "glideMean": 5.5222
+    },
+    {
+      "kind": "water",
+      "total": 10000,
+      "mean": 1,
+      "runs": 10000,
+      "runPercent": 100,
+      "expectedMean": 1,
+      "fallMean": 1,
+      "glideMean": 0
+    },
+    {
+      "kind": "rare",
+      "total": 375,
+      "mean": 0.0375,
+      "runs": 375,
+      "runPercent": 3.75,
+      "expectedMean": 0.04,
+      "fallMean": 0.0375,
+      "glideMean": 0
+    }
+  ],
+  "expected": {
+    "sol": 128,
+    "term": 2,
+    "community": 3,
+    "magnet": 2,
+    "water": 1,
+    "star": 18,
+    "gate": 19,
+    "rare": 0.04,
+    "encounterWeights": {
+      "delivery": 4,
+      "gas": 3,
+      "rug": 2,
+      "hacked": 0.6
+    },
+    "maxHacked": 4
+  },
+  "visibility": {
+    "hold": {
+      "runs": 100,
+      "metrics": {
+        "community": {
+          "instances": 300,
+          "with20pxWindow": 100,
+          "seconds20px": 6.6666666666666625,
+          "maxPixels": 2104.875283866543,
+          "mean20pxSeconds": 0.02222222222222221,
+          "meanMaxPixels": 7.016250946221811
+        },
+        "term": {
+          "instances": 200,
+          "with20pxWindow": 100,
+          "seconds20px": 80.00000000000014,
+          "maxPixels": 5830.426846594953,
+          "mean20pxSeconds": 0.4000000000000007,
+          "meanMaxPixels": 29.152134232974763
+        },
+        "magnet": {
+          "instances": 200,
+          "with20pxWindow": 100,
+          "seconds20px": 26.866666666666664,
+          "maxPixels": 2641.492796177687,
+          "mean20pxSeconds": 0.1343333333333333,
+          "meanMaxPixels": 13.207463980888436
+        }
+      },
+      "events": {
+        "gas": 87,
+        "sequence-missed": 100,
+        "rug": 86,
+        "hacked": 27
+      }
+    },
+    "gold": {
+      "runs": 100,
+      "metrics": {
+        "community": {
+          "instances": 300,
+          "with20pxWindow": 289,
+          "seconds20px": 124.74999999999993,
+          "maxPixels": 21815.54556974647,
+          "mean20pxSeconds": 0.4158333333333331,
+          "meanMaxPixels": 72.71848523248823
+        },
+        "term": {
+          "instances": 200,
+          "with20pxWindow": 200,
+          "seconds20px": 125.71666666666687,
+          "maxPixels": 13378.205204916294,
+          "mean20pxSeconds": 0.6285833333333344,
+          "meanMaxPixels": 66.89102602458146
+        },
+        "magnet": {
+          "instances": 200,
+          "with20pxWindow": 192,
+          "seconds20px": 125.15000000000016,
+          "maxPixels": 13794.121212728722,
+          "mean20pxSeconds": 0.6257500000000008,
+          "meanMaxPixels": 68.97060606364361
+        }
+      },
+      "events": {
+        "sol": 6126,
+        "star": 668,
+        "community": 73,
+        "sequence-missed": 300,
+        "hacked": 10,
+        "term": 58,
+        "sequence-ring": 101,
+        "delivery": 46,
+        "gas": 52,
+        "magnet": 23,
+        "rug": 30,
+        "water": 4
+      }
+    }
+  },
+  "authoredSpecials": [
+    {
+      "id": "community-159",
+      "kind": "community",
+      "seconds": 6.829878399736883,
+      "x": 4,
+      "z": 352,
+      "radius": 0.52,
+      "storm": false
+    },
+    {
+      "id": "term-157",
+      "kind": "term",
+      "seconds": 9.306021999506655,
+      "x": -4,
+      "z": 347,
+      "radius": 0.6,
+      "storm": false
+    },
+    {
+      "id": "magnet-175",
+      "kind": "magnet",
+      "seconds": 11.428430799309318,
+      "x": -3,
+      "z": 350,
+      "radius": 0.5,
+      "storm": false
+    },
+    {
+      "id": "community-160",
+      "kind": "community",
+      "seconds": 17.795657198717304,
+      "x": -4,
+      "z": 352,
+      "radius": 0.52,
+      "storm": false
+    },
+    {
+      "id": "term-158",
+      "kind": "term",
+      "seconds": 28.761435997697728,
+      "x": 4,
+      "z": 347,
+      "radius": 0.6,
+      "storm": true
+    },
+    {
+      "id": "magnet-176",
+      "kind": "magnet",
+      "seconds": 29.468905597631945,
+      "x": 3,
+      "z": 350,
+      "radius": 0.5,
+      "storm": true
+    },
+    {
+      "id": "community-161",
+      "kind": "community",
+      "seconds": 33.00625359730305,
+      "x": 4,
+      "z": 352,
+      "radius": 0.52,
+      "storm": true
+    }
+  ],
+  "notes": [
+    "Seeded generation counts actual objects after clearance, not registry entries.",
+    "Visibility is an analytical steady-follow camera estimate at 390x844, not a browser render. Readable threshold is >=20px diameter and >50% object/fog contrast; no world occlusion counted.",
+    "Hold = no control. Gold uses existing QA lane-following policy unchanged; run death can truncate opportunities.",
+    "Risk has residual renderer/type but no generated content and no catalog entry; intentionally inactive."
+  ]
+}

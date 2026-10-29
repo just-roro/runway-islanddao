@@ -1,0 +1,17 @@
+import type {CeoSnapshot} from './recognition';
+import {crossedAudio} from './audioTimeline';
+import {initialState,step,quantize,decoded, TIMING,type State} from '../core/simulation';
+import {createPresentation,captureCues,updatePresentation,type Presentation} from './presentation';
+import {controls} from './controls';
+import {sound,windAudio,beginAudioRun,victoryMusic} from './audio';
+import type {Ticket} from './session';
+export type Runtime={rankingBefore?:CeoSnapshot|null;presentation:Presentation;id:string;drop:string|null;state:State;frames:number[][];ticket?:Ticket;competitive:boolean;paused:boolean;accumulator:number;input:{x:number;y:number};eventIndex:number;onFinish:(run:Runtime)=>void;reported:boolean;renderFps:number[];renderStats:{calls:number;triangles:number}};
+export function createRuntime(seed:number,ticket:Ticket|undefined,onFinish:Runtime['onFinish']):Runtime{beginAudioRun();const runtime:Runtime={presentation:createPresentation(),id:ticket?.id??crypto.randomUUID(),drop:null,state:initialState(seed),frames:[],ticket,competitive:!!ticket,paused:false,accumulator:0,input:{x:0,y:0},eventIndex:0,onFinish,reported:false,renderFps:[],renderStats:{calls:0,triangles:0}};updatePresentation(runtime.presentation,runtime.state,0);if(import.meta.env.DEV&&typeof window!=='undefined'&&new URLSearchParams(location.search).get('qa')==='1')Object.assign(window,{__RUNWAY_QA__:runtime});return runtime;}
+export function advance(run:Runtime,delta:number){if(run.paused||(typeof document!=='undefined'&&document.hidden)){run.presentation.dt=0;return;}if(delta>.5){run.accumulator=0;run.presentation.dt=0;return;}if(run.reported){updatePresentation(run.presentation,run.state,delta);return;} /* Visibility/pause explicitly disqualify; a GPU stall alone does not. */run.accumulator+=delta;let steps=0;while(run.accumulator>=1/60&&steps++<20&&!run.state.result){if(run.state.tick%2===0){const q=quantize(controls.read());run.frames.push(q);run.input=decoded(q);}const beforeOutcome=run.state.outcome,beforeRoute=run.state.routeTime,eventStart=run.state.events.length,fallVelocity=run.state.verticalSpeed;step(run.state,run.input);captureCues(run.presentation,run.state,eventStart,run.id,fallVelocity);for(const kind of crossedAudio(beforeRoute,run.state.routeTime))sound(kind,{id:`${run.id}:phase:${kind}`});if(!beforeOutcome&&run.state.outcome){sound(run.state.outcome==='landed'?'landing':'defeat',{id:`${run.id}:outcome`});if(run.state.outcome==='landed'&&run.state.destination)victoryMusic(run.id);}run.accumulator-=1/60;controls.calibrating=run.state.tick<TIMING.exit*60-10;}
+ // Stay aligned with fixed-step contacts even when a slow frame leaves catch-up work.
+ const visualTime=run.state.tick/60+Math.min(run.accumulator,1/60);
+ updatePresentation(run.presentation,run.state,Math.max(0,visualTime-run.presentation.time));
+ const events=run.state.events;for(;run.eventIndex<events.length;run.eventIndex++)sound(events[run.eventIndex].kind,{id:`${run.id}:${run.eventIndex}`,delta:events[run.eventIndex].delta,order:events[run.eventIndex].kind==='sequence-ring'?run.state.objects.find(o=>o.id===events[run.eventIndex].sourceId)?.order:undefined});
+ windAudio(run.state.tick>TIMING.exit*60&&!run.state.outcome,run.state.routeTime<TIMING.glide?1:.35,run.state.inUpdraft,Math.hypot(run.state.vx,run.state.vy)/25);
+ if(run.state.result&&!run.reported){run.reported=true;run.onFinish(run);}
+}

@@ -1,0 +1,54 @@
+{
+  "release": "gameplay-37",
+  "frontend": {
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway",
+    "commit_sha": "06a89d97192a671ff9817d37cc5550ed97887e70",
+    "archive": "/private/tmp/runway-front-gameplay37.tar.gz",
+    "version": 38,
+    "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_7b8ace185e74819197f43e04fb9cc88e",
+    "deployment": {
+      "id": "appgdep_6ad900eec99c819180719b70be1e024b",
+      "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+      "title": "RUNWAY — FUND. BUILD. LAND.",
+      "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_7b8ace185e74819197f43e04fb9cc88e",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-21T18:14:23.174818+00:00"
+    }
+  },
+  "api": {
+    "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+    "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/services/runway-api",
+    "commit_sha": "2c119322b84673921c3d9d743847f0f1730ea0fe",
+    "archive": "/private/tmp/runway-back-gameplay37.tar.gz",
+    "version": 19,
+    "version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_0401dfa7db088191b4bb563fae21ffbf",
+    "deployment": {
+      "id": "appgdep_6ad900959e78819190399672abef666f",
+      "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+      "title": "RUNWAY · Event API",
+      "version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_0401dfa7db088191b4bb563fae21ffbf",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://runway-api.agenciahumanfriendly.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acfed30efd88191aef688e5a181c299",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-21T18:12:56.796760+00:00"
+    }
+  },
+  "health": {
+    "ok": true,
+    "rules": "runway-3.2.0-chains",
+    "content": "island-routes-10"
+  }
+}

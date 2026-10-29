@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "startTime": "2026-10-22T15:18:46.328Z",
+    "duration": 118440.99799999999,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "browser": "chromium-mobile",
+      "test": "return curtain stays closed until the new scene finishes GPU preparation",
+      "status": "passed",
+      "durationMs": 14957
+    },
+    {
+      "browser": "webkit-mobile",
+      "test": "return curtain stays closed until the new scene finishes GPU preparation",
+      "status": "passed",
+      "durationMs": 14071
+    },
+    {
+      "browser": "chromium-mobile",
+      "test": "star stays in the world, flashes yellow and spins once without shrinking or suction",
+      "status": "passed",
+      "durationMs": 17801
+    },
+    {
+      "browser": "chromium-mobile",
+      "test": "victory and airborne defeat replay stay opaque until a fully restored stationary scene is ready",
+      "status": "passed",
+      "durationMs": 80261
+    },
+    {
+      "browser": "webkit-mobile",
+      "test": "star stays in the world, flashes yellow and spins once without shrinking or suction",
+      "status": "passed",
+      "durationMs": 17173
+    },
+    {
+      "browser": "webkit-mobile",
+      "test": "victory and airborne defeat replay stay opaque until a fully restored stationary scene is ready",
+      "status": "passed",
+      "durationMs": 69868
+    }
+  ],
+  "metrics": {
+    "chromium-mobile-star-frames": {
+      "observedFrames": 127,
+      "events": 1,
+      "cash": 20000,
+      "maxFlash": 0.9955974817276001,
+      "calls": 40
+    },
+    "chromium-mobile-victory-reset-frames": {
+      "pausedFrames": 267,
+      "ticks": [
+        0
+      ],
+      "position": [
+        0,
+        1122.2,
+        355
+      ]
+    },
+    "chromium-mobile-defeat-reset-frames": {
+      "pausedFrames": 253,
+      "ticks": [
+        0
+      ],
+      "position": [
+        0,
+        1122.2,
+        355
+      ]
+    },
+    "webkit-mobile-star-frames": {
+      "observedFrames": 45,
+      "events": 1,
+      "cash": 20000,
+      "maxFlash": 0.9998894333839417,
+      "calls": 40
+    },
+    "webkit-mobile-victory-reset-frames": {
+      "pausedFrames": 69,
+      "ticks": [
+        0
+      ],
+      "position": [
+        0,
+        1122.2,
+        355
+      ]
+    },
+    "webkit-mobile-defeat-reset-frames": {
+      "pausedFrames": 69,
+      "ticks": [
+        0
+      ],
+      "position": [
+        0,
+        1122.2,
+        355
+      ]
+    }
+  }
+}

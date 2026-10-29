@@ -1,0 +1,58 @@
+{
+  "build": "ui-40",
+  "rollback": "world-39",
+  "scope": "Tanda 4/7 UI System, Main Menu & Shop Polish",
+  "technical": {
+    "build": "passed",
+    "unitTests": 11,
+    "browserCases": 8,
+    "engines": [
+      "Chromium / Pixel 7 emulation",
+      "WebKit / iPhone 13 emulation"
+    ],
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        360,
+        640
+      ],
+      [
+        412,
+        915
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "shopBalanceAfterPurchases": 250000,
+    "landedCash": 1657500,
+    "layoutInvariant": [
+      "BUY & EQUIP",
+      "EQUIP",
+      "EQUIPPED",
+      "INSUFFICIENT FUNDS"
+    ],
+    "canvasIdentity": "retained",
+    "reducedMotion": "passed",
+    "originalLogoSHA256": "634110d19b0172ceb8096ad57b9bd0f69c40cb2b63fd156b7ebee0df7399ecd0"
+  },
+  "pending": [
+    "Physical iPhone and Android validation",
+    "Live API ranking acceptance not exercised; local browser tests stub API unavailable."
+  ],
+  "unchanged": [
+    "Core rules",
+    "API",
+    "Prices and unlock objectives",
+    "World geometry",
+    "No new shop categories"
+  ]
+}

@@ -1,0 +1,4 @@
+import{it,expect}from'vitest';import{propGeometry}from'../src/scene/props';import type{Kind}from'../src/core/simulation';
+it('all runtime props produce valid geometry, including mixed rare and community parts',()=>{for(const kind of ['sol','term','community','gate','risk','delivery','gas','rug','hacked','water','rare','magnet'] as Kind[]){const geometry=propGeometry(kind);expect(geometry.attributes.position.count).toBeGreaterThan(0);expect(geometry.attributes.position.count).toBeLessThan(6000);for(const n of geometry.attributes.position.array)expect(Number.isFinite(n)).toBe(true);geometry.dispose();}});
+
+it('solid prop silhouettes share a unit collision envelope',()=>{for(const kind of ['sol','term','community','delivery','gas','rug','hacked','water','rare','magnet'] as const){const g=propGeometry(kind);g.computeBoundingSphere();expect(g.boundingSphere!.radius).toBeCloseTo(1,4);expect(g.boundingSphere!.center.length()).toBeLessThan(.00001);g.dispose();}});

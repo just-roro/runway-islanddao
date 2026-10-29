@@ -1,0 +1,2 @@
+import{defineConfig,devices}from'@playwright/test';
+export default defineConfig({testDir:'tests/browser',timeout:220000,workers:2,use:{baseURL:process.env.RUNWAY_BASE_URL||'http://127.0.0.1:5180',video:'on',screenshot:'only-on-failure',trace:'retain-on-failure'},projects:[{name:'chromium-mobile',use:{...devices['Pixel 7'],browserName:'chromium',launchOptions:{args:['--use-angle=metal','--enable-webgl']}}},{name:'webkit-mobile',use:{...devices['iPhone 13'],browserName:'webkit'}}]});

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "build": "passed",
+  "unit_tests": {
+    "passed": 22,
+    "files": [
+      "cosmetics42.test.ts",
+      "shop.test.ts",
+      "dialogue.test.ts"
+    ]
+  },
+  "browser_checks": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "scenarios_per_engine": 4,
+    "unique_scenarios_passed": 8,
+    "formats": [
+      [
+        360,
+        640
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "physical_devices": false,
+    "api": "intercepted 503"
+  },
+  "catalog": {
+    "pilots": 12,
+    "accessories": 94,
+    "canopies": 12,
+    "trails": 10,
+    "helmets": 9
+  },
+  "deployment": "not performed",
+  "production_zip_sha256": "2e58d83034d89f7b5957b172c9b823f56b49951c1194b949c5aacfa09de3c9fc"
+}

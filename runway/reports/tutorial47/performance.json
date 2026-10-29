@@ -1,0 +1,42 @@
+{
+  "environment": "macOS host, local Vite, browser device emulation; not physical phones",
+  "window_seconds": 7,
+  "samples": {
+    "chromium-pixel7": {
+      "medianMs": 8.300000000001091,
+      "p95Ms": 9.100000000000364,
+      "maxMs": 9.300000000001091,
+      "calls": 38,
+      "triangles": 32950,
+      "geometries": 25,
+      "textures": 24,
+      "visibleMax": 1,
+      "frames": 841,
+      "kinds": [
+        "canopy",
+        null,
+        "delivery",
+        "gas"
+      ],
+      "requests": []
+    },
+    "webkit-iphone13": {
+      "medianMs": 17,
+      "p95Ms": 20,
+      "maxMs": 34,
+      "calls": 38,
+      "triangles": 33030,
+      "geometries": 25,
+      "textures": 24,
+      "visibleMax": 1,
+      "frames": 421,
+      "kinds": [
+        "canopy",
+        null,
+        "delivery",
+        "gas"
+      ],
+      "requests": []
+    }
+  }
+}

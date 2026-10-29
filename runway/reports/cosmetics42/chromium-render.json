@@ -1,0 +1,567 @@
+{
+  "errors": [],
+  "metrics": [
+    {
+      "id": "canopy:sunrise",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 2.379599999904631,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999983724,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:lagoon",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 3.0628999998569406,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999994,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:orchid",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 3.7503999998569353,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999996,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:coral",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 4.441899999856939,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:azure",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 5.108799999952309,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:pearl",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 5.791099999904629,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:tropical",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 6.4720999999046365,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:sunset",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 7.146000000000015,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:racing",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 7.82950000000002,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:ocean",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 8.512500000000015,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:constellation",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 9.244999999999987,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999997,
+        "message": -1
+      }
+    },
+    {
+      "id": "canopy:aurora",
+      "calls": 41,
+      "triangles": 45158,
+      "textures": 29,
+      "led": {
+        "phase": 10.036599999904595,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999998,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:air",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 10.802999999761518,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:mint",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 11.478499999761494,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:violet",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 12.145199999809154,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:gold",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 12.827599999904493,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:sky",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 13.510399999856775,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:coral",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 0,
+      "led": {
+        "phase": 14.176599999904429,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:stars",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 1,
+      "led": {
+        "phase": 14.969899999856716,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:bubbles",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 2,
+      "led": {
+        "phase": 15.711999999761323,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:mist",
+      "calls": 39,
+      "triangles": 44710,
+      "textures": 29,
+      "particles": 96,
+      "shape": 3,
+      "led": {
+        "phase": 16.562699999570608,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "trail:comet",
+      "calls": 39,
+      "triangles": 44774,
+      "textures": 29,
+      "particles": 128,
+      "shape": 4,
+      "led": {
+        "phase": 17.296099999666012,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:original",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 18.070599999666047,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:original",
+        "rimMode": 0,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:lagoon",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 18.738399999618398,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:lagoon",
+        "rimMode": 1,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:solar",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 19.42429999971379,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:solar",
+        "rimMode": 1,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:violet",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 20.095999999761503,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:violet",
+        "rimMode": 1,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:sunset",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 20.762599999666165,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:sunset",
+        "rimMode": 2,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:duo",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 21.453299999713877,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:duo",
+        "rimMode": 3,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:pixels",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 22.14519999957087,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:pixels",
+        "rimMode": 4,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:aurora",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 22.92999999976163,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:aurora",
+        "rimMode": 5,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    },
+    {
+      "id": "helmet:circuit",
+      "calls": 38,
+      "triangles": 44518,
+      "textures": 29,
+      "led": {
+        "phase": 23.67159999966629,
+        "material": "d61ecd8d-40d0-4da4-823b-c2a041f1038d",
+        "pilot": 0,
+        "color": "a98bff",
+        "portrait": "http://127.0.0.1:5180/assets/cosmetics/dragon-none.png",
+        "helmet": "helmet:circuit",
+        "rimMode": 6,
+        "mix": 0.9999999999999999,
+        "message": -1
+      }
+    }
+  ],
+  "smoke": {
+    "median": 8.299999952316284,
+    "p95": 8.799999952316284,
+    "render": {
+      "frame": 17514,
+      "calls": 39,
+      "triangles": 44710,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 22,
+      "textures": 29
+    }
+  }
+}

@@ -1,0 +1,13 @@
+
+> runway-islanddao@1.0.0 test
+> vitest run tests/gameplay37-report.test.mjs
+
+
+ RUN  v4.1.11 /Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  15:00:46
+   Duration  11.20s (transform 45ms, setup 0ms, import 57ms, tests 11.01s, environment 0ms)
+

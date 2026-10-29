@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';
+import {treePlaces,grassPlaces,residentPlaces,decorationClear} from '../src/scene/habitat';
+import {treeGeometry} from '../src/scene/Vegetation';
+it('deterministic island dressing stays clear of gameplay and landing camera spaces',()=>{const trees=treePlaces(),grass=grassPlaces(trees),people=residentPlaces();expect(trees).toEqual(treePlaces());expect(trees).toHaveLength(112);expect(grass.length).toBeGreaterThan(1000);expect(people).toHaveLength(64);expect(trees.every(p=>decorationClear(p.x,p.z,3.4))).toBe(true);expect(people.every(p=>decorationClear(p.x,p.z,2))).toBe(true);expect(new Set(trees.map(p=>p.variant)).size).toBe(3);expect(new Set(people.map(p=>p.variant)).size).toBe(3);});
+it('far foliage reduces geometry, and tuft bases are never displaced by wind',()=>{for(let i=0;i<3;i++){const full=treeGeometry(i),low=treeGeometry(i,true);expect(low.attributes.position.count).toBeLessThan(full.attributes.position.count);for(const g of [full,low]){for(let v=0;v<g.attributes.position.count;v++)if(g.attributes.position.getY(v)<.001)expect(g.attributes.flex.getX(v)).toBeLessThan(.001);g.dispose();}}});

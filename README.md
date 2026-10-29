@@ -1,29 +1,62 @@
-# RUNWAY — paquete para GitHub y Grokbot
+# RUNWAY — código recuperado para GitHub
 
-Preparado el 29/10/2026. **Exportación parcial: NO es una copia completa de la última versión del juego.**
+Entrega del 29/10/2026. **Reemplaza el ZIP parcial RUNWAY-GITHUB-HANDOFF.zip.**
 
-## Qué contiene
+Se recuperó el código original de la última versión guardada en Sites: frontend v47, commit `e58d1fd3366258686830d116d2c6db5d80c5de32`. Incluye API v28, commit `3d74ea5a3fbc15cd9a9dcda956692c892985eb9c`.
 
-- `public/`: último paquete de frontend exportado recuperable, del 22/10/2026. Es el build para `/islanddao/`, con imágenes, modelos 3D, fuentes, música, sonidos, JS y CSS. No contiene el código React/TypeScript editable del juego.
-- `api/`: código fuente recuperado del repositorio de la API v28, commit `3d74ea5a3fbc15cd9a9dcda956692c892985eb9c`, con lockfile, migraciones SQL y pruebas existentes. Se omiten únicamente los informes de ejecución de `reports/`; los archivos de código se conservan sin modificaciones.
-- `docs/`: contexto del hosting y estado comprobado de la exportación.
-- `GROKBOT-LEER-PRIMERO.md`: instrucciones para subir lo disponible a un repositorio privado.
-- `MANIFEST-SHA256.json`: integridad de los archivos del paquete.
+Esto permite guardar y continuar desarrollando el proyecto. No afirma incluir cambios que alguien haya hecho después en una computadora sin guardarlos en Sites.
 
-## Qué falta para tener TODO lo último
+## Contenido
 
-Sites registra el frontend v47, commit `e58d1fd3366258686830d116d2c6db5d80c5de32`. Los intentos de descarga del repositorio devolvieron HTTP 500/503. Esa versión y su código fuente NO están incluidos. No sustituirla por el build de `public/` afirmando que son equivalentes.
+- `runway/`: código React/TypeScript, modelos originales Blender, modelos GLB, imágenes, audio, tipografías, licencias, tests, scripts, configuración Vite y lockfile.
+- `services/runway-api/`: código del backend, simulaciones actuales y heredadas, migraciones D1, tests, scripts y lockfile.
+- `docs/`: procedencia, validación actual, contexto de Cloudflare y lista exacta de exclusiones.
+- `GROKBOT-LEER-PRIMERO.md`: instrucciones para subir a GitHub.
+- `MANIFEST-SHA256.json` y `VERIFICAR-PAQUETE.py`: integridad de todos los archivos entregados.
 
-La base D1 de producción, sus registros y las variables/secretos del servidor tampoco se exportaron. La API incluida es código y esquema, no un backup de los jugadores ni una migración operativa.
+La estructura conserva las rutas relativas originales entre `runway/` y `services/runway-api/`. No mover estas carpetas por separado.
 
-## Uso
+## Subir a GitHub
 
-Adjuntar este ZIP a Grokbot y pedirle que lea `GROKBOT-LEER-PRIMERO.md`. Solo necesita que le indiques la cuenta/organización y, si corresponde, el repositorio de destino. Debe usar su conexión autorizada a GitHub; no pegar tokens dentro del chat ni del repositorio.
+Adjuntar este ZIP a Grokbot y pedirle que lea `GROKBOT-LEER-PRIMERO.md`. Indicar cuenta/organización y nombre del repositorio, o permitir que use `runway-islanddao` como nombre para un repositorio privado nuevo.
 
-Subir a GitHub almacena los archivos; no publica automáticamente el juego ni migra la API.
+No se necesita base de datos ni credenciales de hosting para subir el código. La base de jugadores y secretos de producción no están incluidos. GitHub no ejecuta automáticamente la API ni publica el juego por recibir estos archivos.
 
-## Ver el build disponible
+## Trabajar con el juego
 
-Desde `public/`, servir con cualquier servidor estático local y abrir `/islanddao/`. Los archivos compilados apuntan a la API existente; las funciones online dependen del origen permitido y de esa API. No crear identidades ni enviar partidas de prueba a producción durante esta exportación.
+Requiere Node 24. En `runway/`:
 
-La API mantiene sus instrucciones originales en `api/README.md` y scripts en `api/package.json`. No se reinstalaron dependencias ni se repitieron builds/pruebas funcionales: esta entrega preserva archivos, no cambia el juego.
+```sh
+npm ci
+npm run dev
+```
+
+Abrir http://127.0.0.1:5180. El proxy de desarrollo espera una API local en 8787; sin API se usa el modo práctica. No copiar `.env.example` apuntando a producción para ejecutar pruebas que creen jugadores o partidas.
+
+```sh
+npm run build
+```
+
+Genera `runway/dist/`. En producción el cliente usa por defecto la URL de API original. Las invitaciones dependen de `VITE_PUBLIC_URL`. Las rutas bajo `/islanddao/` se generan con el script original `npm run package:hosting`; leer primero la advertencia de versiones en `docs/VALIDACION.md` antes de desplegarlo.
+
+## Trabajar con la API preservando v28
+
+En `services/runway-api/`:
+
+```sh
+npm ci
+node scripts/run-framework.mjs build
+node --test tests/production-leaderboards/api.test.mjs tests/dao41/rankings.test.mjs
+```
+
+**Para preservar esta versión no ejecutar `npm run build` en la API:** su `prebuild` histórico ejecuta `scripts/sync-core.mjs` y copia la simulación del frontend sobre la simulación más nueva de la API. La compilación directa indicada arriba evita esa sobrescritura; fue la utilizada en esta verificación. No editar ni reemplazar las simulaciones por intuición.
+
+El backend usa Cloudflare Workers/Vinext y un binding D1 `DB`. Su alojamiento original es Sites. Una migración a otra cuenta necesita configurar runtime, D1 y orígenes; no basta con GitHub Pages.
+
+## Verificación realizada
+
+Instalación limpia y build de frontend y API: aprobados. API: 12/12 pruebas seleccionadas aprobadas. Suite completa frontend: 132/135 inicialmente; una prueba agotó 5 segundos y pasó al repetir su archivo con 20 segundos (6/6). Las otras dos comparan directamente la simulación del cliente con la más nueva del backend y fallan con estas dos versiones guardadas. El cliente coincide byte por byte con `api/lib/legacy/island-glide-13.ts`, soportada por el backend. Detalle en `docs/VALIDACION.md`.
+
+Se conservaron los fuentes sin cambios. No se ejecutaron nuevas pruebas en navegador o teléfonos físicos ni se modificó producción.
+
+Se excluyeron el enlace local de `node_modules`, grabaciones, screenshots y binarios auxiliares de informes QA; se conservan los informes textuales y fixtures JSON. Lista en `docs/ARCHIVOS-EXCLUIDOS.json`. No se incluye el historial Git de origen; los commits originales quedan identificados en la documentación.

@@ -1,0 +1,50 @@
+{
+  "local_tests": {
+    "route_and_sql_tests": 10,
+    "passed": 10,
+    "worker_D1_integration": {
+      "score": 1620000,
+      "ceo_rank": 1,
+      "startup_rank": 1,
+      "authoritative_replay": true,
+      "duplicate_safe": true,
+      "memberships_locked": true,
+      "database": "isolated local D1"
+    }
+  },
+  "legacy": {
+    "commit": "833e05a15a23b50a2e3d07684ca2a7f7168ef914",
+    "file_sha256": "3d14592a377d36dd517fd77187c820b580a0d69ccd8facba18b7b8c1fbc970ed",
+    "content": "island-routes-10",
+    "published_bundle": "index-DoS41M8C.js",
+    "seeds_compared": 100,
+    "results_and_economic_events_match": true
+  },
+  "typecheck": {
+    "modified_backend_modules": "passed",
+    "whole_backend": "blocked by offloaded iCloud node_modules/zod/v4/locales/id.d.cts; stopped",
+    "frontend": "modified session module passed; full project blocked by offloaded iCloud @types/three/build/three.webgpu.d.ts"
+  },
+  "migrations": {
+    "new": 0,
+    "remote": 0,
+    "existing_local_migrations_applied": 2
+  },
+  "backend_build": "passed",
+  "frontend_deployed": false,
+  "published_endpoint": {
+    "status": "passed",
+    "api_version": 24,
+    "origin": "https://humanfriendly.global",
+    "browsers": [
+      "Chromium",
+      "WebKit"
+    ],
+    "runs_saved": 1,
+    "concurrent_submissions": 2,
+    "score": 0,
+    "reloaded_sessions": 2,
+    "existing_records_unchanged": true
+  },
+  "frontend_html_unchanged": true
+}

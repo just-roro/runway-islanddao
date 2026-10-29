@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-22",
+  "status": "not-published",
+  "reason": "Automatic approval review requires explicit authorization to publish this new iteration. No deployment was started.",
+  "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+  "currentPublishedFrontendVersion": 45,
+  "currentCompatibleApiVersion": 22,
+  "build": "passed",
+  "bundle": "index-S9xW8YjF.js",
+  "css": "index-Dyk5rRVq.css"
+}

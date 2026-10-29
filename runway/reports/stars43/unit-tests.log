@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway
+
+
+ Test Files  6 passed (6)
+      Tests  24 passed (24)
+   Start at  12:08:59
+   Duration  33.42s (transform 694ms, setup 0ms, import 956ms, tests 35.04s, environment 1ms)
+

@@ -1,0 +1,38 @@
+{
+  "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+  "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway",
+  "commit_sha": "833e05a15a23b50a2e3d07684ca2a7f7168ef914",
+  "archive": "/private/tmp/runway-dao41a.tar.gz",
+  "version": {
+    "id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_d55b3328afb481918e79ce5bf3fcc81d",
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "version_number": 43,
+    "source": {
+      "commit_sha": "833e05a15a23b50a2e3d07684ca2a7f7168ef914"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000072d4820e8daba195527afc46",
+      "content_hash": "sha256:84ee14d1bf28cbcb28368d928da4612fe66c91d0313d2bdab38afc38efdeac62",
+      "size_bytes": 14950400,
+      "file_count": 110
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ad94678f300819180ae4e7d6cd881ab",
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "title": "RUNWAY — FUND. BUILD. LAND.",
+    "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_d55b3328afb481918e79ce5bf3fcc81d",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-21T23:11:04.281772+00:00"
+  }
+}

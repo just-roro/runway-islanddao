@@ -1,28 +1,18 @@
-# Instrucción para Grokbot
+# Grokbot — subir RUNWAY correctamente a mi GitHub
 
-Quiero subir este paquete de RUNWAY / IslandDAO a mi GitHub. Ejecutá la carga usando tu conexión autorizada a GitHub.
+Quiero que subas el contenido de este ZIP a mi GitHub. El código frontend v47 y API v28 ya están recuperados. Leé `README.md` y `docs/VALIDACION.md` antes de actuar.
 
-1. Leé `README.md`, `docs/ESTADO-EXPORTACION.json` y el manifiesto. Esta entrega es PARCIAL: no digas que contiene todo el código de la v47.
-2. Verificá la cuenta autenticada. Si no está definido el destino, preguntame únicamente usuario/organización y nombre de repositorio. Sugerencia: `runway-islanddao`. Si no existe, crealo PRIVADO. Si existe, trabajá en una rama nueva y prepará un PR; no reemplaces archivos existentes sin revisar diferencias y no hagas force push.
-3. Extraé el ZIP. Subí el CONTENIDO de `RUNWAY-GITHUB-HANDOFF/` a la raíz del repositorio, manteniendo `public/`, `api/` y `docs/`. No subas solo el ZIP ni agregues una carpeta contenedora redundante.
-4. Conservá todos los assets, lockfiles, SQL, licencias y documentación. No incluyas credenciales, `.git`, `node_modules`, `.env`, estado local de Wrangler o bases de datos de jugadores.
-5. Usá como mensaje de commit: `Import RUNWAY available frontend build and API v28 source; v47 source pending`.
-6. Antes del push verificá el manifiesto, la cantidad de archivos y que ningún archivo supere el límite permitido por GitHub. No ejecutes scripts de despliegue. Para esta carga no hace falta instalar dependencias ni compilar.
-7. Entregame el enlace del repositorio (o PR), el SHA del commit y la lista breve de faltantes. No habilites GitHub Pages, Actions de despliegue ni cambies Cloudflare, Sites, DNS o la API: el pedido es guardar los archivos en GitHub.
+1. Verificá tu conexión autorizada a GitHub y la cuenta autenticada. Si falta un destino, preguntame únicamente cuenta/organización. Usá `runway-islanddao` como nombre sugerido y creá un repositorio PRIVADO si no existe. Si ya existe, clonalo, revisá su contenido y creá una rama con PR; no reemplaces código existente sin comparar y no uses force push.
+2. Extraé el ZIP y ejecutá, desde su carpeta contenedora, `python3 VERIFICAR-PAQUETE.py`. Conservá la salida. Si falla, frená la carga y reportá el archivo afectado; no regeneres el manifiesto para ocultarlo.
+3. Subí a la raíz del repo el CONTENIDO de `RUNWAY-GITHUB-v47/`: deben quedar `README.md`, `runway/`, `services/`, `docs/` y los manifiestos directamente en la raíz. No subas solo el ZIP ni agregues una carpeta contenedora redundante.
+4. Incluí los archivos de configuración `.gitignore`, `.npmrc`, `.openai/hosting.json` y `.env.example` donde existan. Los IDs de proyecto conservados en hosting.json documentan el origen; no son credenciales. No subas `.env` reales, tokens, node_modules, directorios dist generados, bases de jugadores ni metadatos `.git` de origen.
+5. Conservá los nombres y mayúsculas de los assets y las rutas entre ambas aplicaciones. Usá el manifiesto para comprobar cantidades y SHA256. Conservá también los permisos ejecutables Git de los scripts, indicados en `docs/ORIGEN-FUENTES.json`. Si tu extractor perdió permisos, restauralos con chmod en Unix y `git update-index --chmod=+x` para las rutas listadas como 100755 después de git add.
+6. Subí con commit: `Import recovered RUNWAY frontend v47 and API v28 source`.
+7. Verificá el árbol del commit contra el manifiesto después del push; descargá o leé los archivos desde GitHub para comprobar SHA256 cuando tu herramienta lo permita. Confirmá todos los archivos con git ls-tree en lugar de confiar solo en un mensaje de subida. Reportá cualquier límite o error. Ningún archivo de este paquete supera 100 MiB.
+8. Entregame el enlace del repo o PR, rama y SHA final. No habilites Pages/Actions de despliegue ni cambies Cloudflare, Sites, DNS, secretos, base o público del repo. Esta instrucción autoriza subir código, no migrar producción.
 
-## Recuperar la última versión completa
+## Si querés validar además en tu máquina
 
-Falta el código editable del frontend y el estado de la v47. Debe conseguirse desde el proyecto original de desarrollo o cuando vuelva a estar disponible el repositorio de Sites. Referencia de la fuente faltante:
+Usá Node 24 y los lockfiles con npm ci, sin actualizar paquetes. Los comandos y resultados previos están en README. Para compilar API usá `node scripts/run-framework.mjs build`, evitando su prebuild histórico. La instalación y compilación ya fueron verificadas en esta entrega; no hace falta ejecutarlas para realizar el push.
 
-- Proyecto: `appgprj_6acfeda93e2c8191a478eae796d0d3dd`.
-- Versión guardada: 47.
-- Commit: `e58d1fd3366258686830d116d2c6db5d80c5de32`.
-- Sitio: https://runway-islanddao.agenciahumanfriendly.chatgpt.site
-
-La credencial de Sites es temporal y no está incluida. No intentes adivinarla. Si el usuario te proporciona el proyecto local más reciente, comparalo con estas referencias y sumalo como una actualización separada. No reconstruyas React/TypeScript a partir del JS compilado fingiendo que es la fuente original.
-
-## Hosting actual
-
-El build exportado usa `/islanddao/` y la API `https://runway-api.agenciahumanfriendly.chatgpt.site/api`. `public/index.html` forma parte del paquete Direct Upload y `public/islanddao/` contiene el juego. Para alojarlo luego, el directorio de publicación sería `public/`; el backend requiere su propio runtime y D1. GitHub Pages por sí solo no ejecuta esa API.
-
-El handoff histórico de Cloudflare está en `docs/`. Su nota CORS era pendiente en esa conversación: el código de API v28 recuperado sí incluye `https://humanfriendly.global` y `https://runway-islanddaoxhumanfriendly.pages.dev` en `api/lib/competitive.ts`. Esto no certifica una nueva prueba end-to-end ni el estado actual de la ruta del dominio.
+El pedido NO requiere migrar jugadores o desplegar backend. Si luego el usuario solicita hosting nuevo, tratá esa migración como otra tarea: guardar código en GitHub no traslada D1, identidad del navegador, rutas del dominio ni configuración CORS. No prometas equivalencia de producción sin validarla.

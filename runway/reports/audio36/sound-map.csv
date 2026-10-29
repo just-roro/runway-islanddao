@@ -1,0 +1,88 @@
+event,source_wav,runtime_file,gain,cooldown_s,priority
+ui,ui_press_01.wav,ui_press_01.wav,0.45,0.045,2
+ui,ui_press_02.wav,ui_press_02.wav,0.45,0.045,2
+ui,ui_press_03.wav,ui_press_03.wav,0.45,0.045,2
+back,ui_back_01.wav,ui_back_01.m4a,0.42,0.12,2
+back,ui_back_02.wav,ui_back_02.m4a,0.42,0.12,2
+confirm,ui_confirm_01.wav,ui_confirm_01.m4a,0.48,0.12,2
+confirm,ui_confirm_02.wav,ui_confirm_02.m4a,0.48,0.12,2
+select,ui_skin_change_01.wav,ui_skin_change_01.m4a,0.42,0.07,2
+select,ui_skin_change_02.wav,ui_skin_change_02.m4a,0.42,0.07,2
+select,ui_skin_change_03.wav,ui_skin_change_03.m4a,0.42,0.07,2
+buy,shop_buy_ok_01.wav,shop_buy_ok_01.m4a,0.52,0.3,4
+buy,shop_buy_ok_02.wav,shop_buy_ok_02.m4a,0.52,0.3,4
+denied,shop_buy_denied_01.wav,shop_buy_denied_01.m4a,0.45,0.2,4
+denied,shop_buy_denied_02.wav,shop_buy_denied_02.m4a,0.45,0.2,4
+equip,ui_confirm_01.wav,ui_confirm_01.m4a,0.5,0.12,3
+equip,ui_confirm_02.wav,ui_confirm_02.m4a,0.5,0.12,3
+unlock,rare_cargo_01.wav,rare_cargo_01.m4a,0.48,0.5,4
+unlock,rare_cargo_02.wav,rare_cargo_02.m4a,0.48,0.5,4
+sol,sol_pickup_01.wav,sol_pickup_01.m4a,0.34,0.065,1
+sol,sol_pickup_02.wav,sol_pickup_02.m4a,0.34,0.065,1
+sol,sol_pickup_03.wav,sol_pickup_03.m4a,0.34,0.065,1
+sol,sol_pickup_04.wav,sol_pickup_04.m4a,0.34,0.065,1
+sol,sol_pickup_05.wav,sol_pickup_05.m4a,0.34,0.065,1
+delivery,sol_pickup_01.wav,sol_pickup_01.m4a,0.28,0.1,1
+delivery,sol_pickup_02.wav,sol_pickup_02.m4a,0.28,0.1,1
+delivery,sol_pickup_03.wav,sol_pickup_03.m4a,0.28,0.1,1
+delivery,sol_pickup_04.wav,sol_pickup_04.m4a,0.28,0.1,1
+delivery,sol_pickup_05.wav,sol_pickup_05.m4a,0.28,0.1,1
+community,island_token_01.wav,island_token_01.m4a,0.43,0.12,2
+community,island_token_02.wav,island_token_02.m4a,0.43,0.12,2
+term,reward_big_01.wav,reward_big_01.m4a,0.5,0.2,4
+term,reward_big_02.wav,reward_big_02.m4a,0.5,0.2,4
+term,reward_big_03.wav,reward_big_03.m4a,0.5,0.2,4
+boost,boost_air_01.wav,boost_air_01.m4a,0.26,0.25,2
+boost,boost_air_02.wav,boost_air_02.m4a,0.26,0.25,2
+rare,rare_cargo_01.wav,rare_cargo_01.m4a,0.48,0.2,4
+rare,rare_cargo_02.wav,rare_cargo_02.m4a,0.48,0.2,4
+magnet,powerup_magnet_01.wav,powerup_magnet_01.m4a,0.45,0.15,3
+magnet,powerup_magnet_02.wav,powerup_magnet_02.m4a,0.45,0.15,3
+water,powerup_water_01.wav,powerup_water_01.m4a,0.4,0.15,3
+water,powerup_water_02.wav,powerup_water_02.m4a,0.4,0.15,3
+star,star_activate_01.wav,star_activate_01.m4a,0.46,0.15,3
+star,star_activate_02.wav,star_activate_02.m4a,0.46,0.15,3
+ring,ring_note_01.wav,ring_note_01.m4a,0.36,0.07,2
+ring,ring_note_02.wav,ring_note_02.m4a,0.36,0.07,2
+ring,ring_note_03.wav,ring_note_03.m4a,0.36,0.07,2
+ring,ring_note_04.wav,ring_note_04.m4a,0.36,0.07,2
+ring,ring_note_05.wav,ring_note_05.m4a,0.36,0.07,2
+ring,ring_note_06.wav,ring_note_06.m4a,0.36,0.07,2
+ring,ring_note_07.wav,ring_note_07.m4a,0.36,0.07,2
+ring,ring_note_08.wav,ring_note_08.m4a,0.36,0.07,2
+sequence,sequence_complete_01.wav,sequence_complete_01.m4a,0.52,0.25,4
+sequence,sequence_complete_02.wav,sequence_complete_02.m4a,0.52,0.25,4
+loss,hit_cash_loss_01.wav,hit_cash_loss_01.m4a,0.53,0.1,5
+loss,hit_cash_loss_02.wav,hit_cash_loss_02.m4a,0.53,0.1,5
+loss,hit_cash_loss_03.wav,hit_cash_loss_03.m4a,0.53,0.1,5
+defeat,fail_air_01.wav,fail_air_01.m4a,0.55,0.5,6
+defeat,fail_air_02.wav,fail_air_02.m4a,0.55,0.5,6
+bonus,land_bonus_01.wav,land_bonus_01.m4a,0.4,0.4,4
+bonus,land_bonus_02.wav,land_bonus_02.m4a,0.4,0.4,4
+reveal,island_reveal_shimmer_01.wav,island_reveal_shimmer_01.m4a,0.65,1,6
+reveal,island_reveal_shimmer_02.wav,island_reveal_shimmer_02.m4a,0.65,1,6
+countStart,results_count_start_01.wav,results_count_start_01.m4a,0.3,0.5,2
+countTick,results_count_tick_01.wav,results_count_tick_01.wav,0.3,0.11,1
+countTick,results_count_tick_02.wav,results_count_tick_02.wav,0.3,0.11,1
+countTick,results_count_tick_03.wav,results_count_tick_03.wav,0.3,0.11,1
+final,results_final_01.wav,results_final_01.m4a,0.43,0.5,4
+type,npc_blip_01.wav,npc_blip_01.wav,0.22,0.09,1
+type,npc_blip_02.wav,npc_blip_02.wav,0.22,0.09,1
+type,npc_blip_03.wav,npc_blip_03.wav,0.22,0.09,1
+type,npc_blip_04.wav,npc_blip_04.wav,0.22,0.09,1
+type,npc_blip_05.wav,npc_blip_05.wav,0.22,0.09,1
+type,npc_blip_06.wav,npc_blip_06.wav,0.22,0.09,1
+welcome,original synthesis,original synthesis,0.025,0.1,3
+curious,original synthesis,original synthesis,0.025,0.1,3
+warning,original synthesis,original synthesis,0.025,0.1,3
+confident,original synthesis,original synthesis,0.025,0.1,3
+celebrate,original synthesis,original synthesis,0.025,0.1,3
+door,original synthesis,original synthesis,0.22,1,3
+jump,original synthesis,original synthesis,0.6,1,6
+parachute,original synthesis,original synthesis,0.55,1,5
+landing,original synthesis,original synthesis,0.6,0.5,5
+cloud,original synthesis,original synthesis,0.25,1,3
+thunder,original synthesis,original synthesis,0.35,1.2,3
+fall,amb_freefall_placeholder_01.wav,amb_freefall_placeholder_01.m4a,adaptive,,
+glide,amb_glide_placeholder_01.wav,amb_glide_placeholder_01.m4a,adaptive,,
+updraft,updraft_placeholder_01.wav,updraft_placeholder_01.m4a,adaptive,,

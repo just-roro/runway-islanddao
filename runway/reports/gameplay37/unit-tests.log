@@ -1,0 +1,21 @@
+
+> runway-islanddao@1.0.0 test
+> vitest run tests/gameplay37.test.ts tests/controls37.test.ts tests/simulation.test.ts tests/canopy.test.ts tests/balance.test.ts tests/items34.test.ts tests/runtime.test.ts tests/storm.test.ts
+
+
+ RUN  v4.1.11 /Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway
+
+(node:37109) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37112) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37113) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:37113) Warning: `--localstorage-file` was provided without a valid path
+
+ Test Files  8 passed (8)
+      Tests  48 passed (48)
+   Start at  14:52:55
+   Duration  31.06s (transform 825ms, setup 0ms, import 1.43s, tests 39.59s, environment 1ms)
+

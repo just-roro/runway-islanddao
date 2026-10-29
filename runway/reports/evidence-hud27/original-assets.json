@@ -1,0 +1,16 @@
+[
+  {
+    "original": "/Users/nacho/Documents/Human Friendly/DAO/IMAGENES/Logo Blanco Alfa.png",
+    "project": "public/assets/brand/human-friendly-official.png",
+    "sha256": "78020d92ff3a473d9ecea90f7c83514d5d3df2980b773407e3d11e3790147bc2",
+    "identical": true,
+    "bytes": 36345
+  },
+  {
+    "original": "/Users/nacho/Documents/Human Friendly/DAO/IMAGENES/Logotipo RUNWAY con avio\u0301n y eslogan calcad.png",
+    "project": "public/assets/brand/runway-official.png",
+    "sha256": "eae684364705993f3f9b2ff6090f18496fa92c0ac48230f4f91ccdfafb5f18f1",
+    "identical": true,
+    "bytes": 1025371
+  }
+]

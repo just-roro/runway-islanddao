@@ -1,0 +1,39 @@
+{
+  "seed": 17,
+  "identicalInputs": true,
+  "identicalEvents": true,
+  "identicalResult": true,
+  "inputSamples30Hz": 1635,
+  "inputSha256": "0435e989a5a4d409d8987d6ef3af3617d36b87e9ed3bb4f3d35fdf8f34563c03",
+  "result": {
+    "status": "funded",
+    "outcome": "landed",
+    "destination": "jurere",
+    "cashFinal": 1755000,
+    "score": 1755000,
+    "breakdown": {
+      "initial": 5000,
+      "earned": 1165000,
+      "lost": 0,
+      "bonus": 585000
+    },
+    "landing": 187,
+    "emergency": false
+  },
+  "beforeRender": {
+    "calls": 48,
+    "triangles": 81351
+  },
+  "afterRender": {
+    "calls": 53,
+    "triangles": 86007
+  },
+  "beforeExitDistance": [
+    3.820569550610425,
+    5.027305742308308
+  ],
+  "afterExitDistance": [
+    3.8206001727564978,
+    5.027700265626249
+  ]
+}

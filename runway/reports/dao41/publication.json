@@ -1,0 +1,79 @@
+{
+  "build": "dao-41",
+  "frontend": {
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway",
+    "commit_sha": "7c14347e42bfdccdbb4c7832442468b65fbd7b7c",
+    "archive": "/private/tmp/runway-dao41.tar.gz",
+    "version": {
+      "id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_5c78eb67389c8191a0877bf8c0cdb245",
+      "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+      "version_number": 42,
+      "source": {
+        "commit_sha": "7c14347e42bfdccdbb4c7832442468b65fbd7b7c"
+      },
+      "archive_storage": {
+        "archive_format": "tar",
+        "sediment_file_id": "file_000000001a84820e89fcac9d4e7a3050",
+        "content_hash": "sha256:ebc8d76ecd2b551c0be907198f43007a2592429061695401414bc6781588ce0d",
+        "size_bytes": 14950400,
+        "file_count": 110
+      },
+      "screenshot_url": null,
+      "deployment_id": null
+    },
+    "deployment": {
+      "id": "appgdep_6ad9436945e48191b897ed967117a13d",
+      "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+      "title": "RUNWAY — FUND. BUILD. LAND.",
+      "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_5c78eb67389c8191a0877bf8c0cdb245",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-21T22:58:00.992604+00:00"
+    }
+  },
+  "api": {
+    "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+    "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/services/runway-api",
+    "commit_sha": "9be869cf4a696d47e2e1fe1e87baecf941a289af",
+    "archive": "/private/tmp/runway-api-dao41.tar.gz",
+    "version": {
+      "id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_36e61c1213088191b14c04dbc8aefdf6",
+      "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+      "version_number": 20,
+      "source": {
+        "commit_sha": "9be869cf4a696d47e2e1fe1e87baecf941a289af"
+      },
+      "archive_storage": {
+        "archive_format": "tar",
+        "sediment_file_id": "file_00000000cd90820e8b63fc446cd50f99",
+        "content_hash": "sha256:948816afba7b5b7beebfe3f1152d889037ffc4be82793b1b13b66ef597884283",
+        "size_bytes": 1208320,
+        "file_count": 62
+      },
+      "screenshot_url": null,
+      "deployment_id": null
+    },
+    "deployment": {
+      "id": "appgdep_6ad9431f11c88191ba9a90df04b13d6a",
+      "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+      "title": "RUNWAY · Event API",
+      "version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_36e61c1213088191b14c04dbc8aefdf6",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://runway-api.agenciahumanfriendly.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acfed30efd88191aef688e5a181c299",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-21T22:56:49.422019+00:00"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import {describe,it,expect} from 'vitest';
+import {migrateShop,newShop,purchase,settleShop,shopItems} from '../src/shopCatalog';
+import {initialState,step,decoded,quantize} from '../src/core/simulation';
+import {flyRoute} from './test-pilot';
+const flight=(destination:'beach'|'terrace'|'jurere'='jurere')=>{const s=initialState(17);while(!s.result){const input=decoded(quantize(flyRoute(s,destination)));step(s,input);step(s,input);}return s;};
+describe('local cosmetic shop',()=>{
+ it('credits actual final capital once, without changing score or replay',()=>{const s=flight(),events=JSON.stringify(s.events),a=settleShop(newShop(),'flight-1',s);expect(a.credited).toBe(s.result!.cashFinal);expect(a.account.balance).toBe(a.credited);expect(settleShop(a.account,'flight-1',s).account).toBe(a.account);expect(JSON.stringify(s.events)).toBe(events);expect(a.account.owned).toContain('pilot:9');});
+ it('does not credit a stopped or defeated flight',()=>{const s=initialState(17);expect(settleShop(newShop(),'unfinished',s).account.receipts).toEqual([]);while(!s.result)step(s,{x:0,y:0});expect(s.result.outcome).not.toBe('landed');expect(settleShop(newShop(),'loss',s).credited).toBe(0);});
+ it('debits once and refuses overspending, objective purchases and unknown items',()=>{const a={...newShop(),balance:3100000};const b=purchase(a,'pilot:3');expect(b.balance).toBe(100000);expect(purchase(b,'pilot:3')).toBe(b);expect(()=>purchase(b,'pilot:4')).toThrow('Not enough');expect(()=>purchase(a,'pilot:9')).toThrow('Jurerê');expect(()=>purchase(a,'missing')).toThrow('unavailable');expect(a.balance).toBe(3100000);});
+ it('preserves legacy ownership and rare canopy without inventing a lifetime balance',()=>{const a=migrateShop({community:100,pilot:11,rares:[1]});expect(a.owned.filter(i=>i.startsWith('pilot:'))).toHaveLength(12);expect(a.canopy).toBe('canopy:orchid');expect(a.balance).toBe(0);expect(migrateShop({community:0,pilot:0,rares:[]},a)).toBe(a);});
+ it('uses actual successful flight objectives, not payment',()=>{const s=flight();s.hazardHits=0;s.events.push({tick:s.tick,kind:'sequence-complete',delta:100000,balance:s.cash},{tick:s.tick,kind:'sequence-complete',delta:100000,balance:s.cash});const a=settleShop(newShop(),'objectives',s);expect(a.unlocks).toEqual(['pilot:9','pilot:10','pilot:11']);});
+ it('all purchasable cosmetics have a real preview color and stable identifier',()=>{const items=shopItems.filter(i=>['canopy','trail'].includes(i.category)&&!i.tier);expect(new Set(shopItems.map(i=>i.id)).size).toBe(shopItems.length);expect(items.every(i=>/^#[\da-f]{6}$/i.test(i.color!))).toBe(true);expect(items).toHaveLength(8);});
+});

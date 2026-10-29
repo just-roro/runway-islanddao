@@ -1,0 +1,104 @@
+node_modules/
+dist/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+playwright-report/
+.sites-runtime/
+.sites-artifacts/
+
+.DS_Store
+
+test-results-final/
+*.blend1
+
+test-results-camera/
+
+test-results-*/
+
+# Browser traces stay local; screenshots and recordings remain available.
+reports/evidence/**/trace.zip
+
+# Full sky QA recordings/telemetry stay local; representative captures are versioned.
+reports/sky38/before/
+reports/sky38/final/
+
+# Raw world QA stays local; selected comparisons and report are versioned.
+reports/world39/before/
+reports/world39/after/
+reports/world39/final/
+reports/world39/draft/
+
+# UI QA recordings and full screenshot matrix stay local.
+reports/ui40/before/
+reports/ui40/draft/
+reports/ui40/final/
+reports/ui40/confirmation/
+reports/ui40/intro-check/
+
+# DAO UI raw recordings remain local; selected captures are versioned.
+reports/dao41/draft/
+reports/dao41/final/
+reports/dao41/integration/
+
+# Cosmetics recordings and full galleries remain local; inventory/reports are versioned.
+reports/cosmetics42/browser/
+reports/cosmetics42/recheck/
+reports/cosmetics42/flight-check/
+reports/cosmetics42/chromium/
+reports/cosmetics42/webkit/
+reports/cosmetics42/*-video/
+
+# Stars/replay raw videos remain local; reports, telemetry and selected captures are versioned.
+reports/stars43/browser/
+reports/stars43/verified/
+reports/stars43/final/
+
+# Shop 44: retain selected screenshots and report, raw browser recordings stay local.
+reports/shop44/browser/
+reports/shop44/verified/
+reports/shop44/final/
+reports/shop44/layout-final/
+
+# Parachute 45: keep selected captures, reports and deterministic fixtures.
+reports/parachute45/before/
+reports/parachute45/after/
+reports/parachute45/verified/
+reports/parachute45/inspect/
+reports/parachute45/visible/
+reports/parachute45/final/
+reports/parachute45/reduced/
+
+# Local QA captures; not runtime assets
+reports/parachute45/captures/
+reports/shop44/captures/
+reports/stars43/*.png
+
+# Recognition 46 browser evidence is retained locally, not published source.
+reports/recognition46/browser/
+reports/recognition46/verified/
+reports/recognition46/final/
+reports/recognition46/accepted/
+reports/recognition46/reviewed/
+reports/recognition46/small-final/
+reports/recognition46/crown-final/
+reports/recognition46/captures/
+
+# Local dependency hydration backup and tutorial QA artifacts
+.node_modules-offloaded-tutorial47/
+reports/tutorial47/browser/
+reports/tutorial47/verified/
+reports/tutorial47/final/
+reports/tutorial47/shop/
+reports/tutorial47/metrics/
+reports/tutorial47/performance/
+
+reports/tutorial47/visual-final/
+
+reports/tutorial48/browser/
+
+reports/tutorial48/tutorial-final*/
+reports/tutorial48/verified/
+reports/tutorial48/audio-final/
+reports/tutorial48/storm-final/

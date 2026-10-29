@@ -1,0 +1,39 @@
+{
+  "build": "ui-40",
+  "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+  "checkout_path": "/Users/nacho/Documents/MATTS JUEGOS/CODEX/MONKE/runway",
+  "commit_sha": "dff3b969cef0e4fae7f935808c35022246c5f4fc",
+  "archive": "/private/tmp/runway-ui40.tar.gz",
+  "version": {
+    "id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_ed475a561fc48191a50ae13e91328358",
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "version_number": 41,
+    "source": {
+      "commit_sha": "dff3b969cef0e4fae7f935808c35022246c5f4fc"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000006f6c820ea28045aa40de6ff6",
+      "content_hash": "sha256:196c3e06717a5a16adbcd7c8e9fc87697809a097a096d4284ac11072ba1125d4",
+      "size_bytes": 14929920,
+      "file_count": 110
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ad93c9ba4f88191a90d7f2bef5505e3",
+    "project_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd",
+    "title": "RUNWAY — FUND. BUILD. LAND.",
+    "version_id": "appgprj_6acfeda93e2c8191a478eae796d0d3dd~appgver_ed475a561fc48191a50ae13e91328358",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://runway-islanddao.agenciahumanfriendly.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acfeda93e2c8191a478eae796d0d3dd",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-21T22:28:59.637992+00:00"
+  }
+}

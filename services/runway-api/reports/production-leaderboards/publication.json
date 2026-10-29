@@ -1,0 +1,36 @@
+{
+  "version": {
+    "id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_b9aacf5ea70c819194f83e153eb6a845",
+    "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+    "version_number": 24,
+    "source": {
+      "commit_sha": "faf59e166f23e940cc9a38aa1d17dbe544e324ad"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000007858820e8d386c8cf5dd32e8",
+      "content_hash": "sha256:36af23f3437edfd1381ba94f6dd6481b095a0ba21334a5240f3195b198d04815",
+      "size_bytes": 1239040,
+      "file_count": 62
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6adaadedd6508191b244dd61ae7a8010",
+    "project_id": "appgprj_6acfed30efd88191aef688e5a181c299",
+    "title": "RUNWAY · Event API",
+    "version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_b9aacf5ea70c819194f83e153eb6a845",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://runway-api.agenciahumanfriendly.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acfed30efd88191aef688e5a181c299",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-23T00:44:49.548152+00:00"
+  },
+  "previous_version_id": "appgprj_6acfed30efd88191aef688e5a181c299~appgver_fd2f8264b5fc8191a598764221837c7a",
+  "frontend_deployed": false
+}

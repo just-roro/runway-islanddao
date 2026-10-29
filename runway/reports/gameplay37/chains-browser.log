@@ -1,0 +1,36 @@
+
+Running 4 tests using 2 workers
+
+
+(node:38112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:38111) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/4] [webkit-mobile] › tests/browser/gameplay37.spec.ts:3:1 › three live chains reveal one ring, dissolve after contact, pay only completion
+[2/4] [chromium-mobile] › tests/browser/gameplay37.spec.ts:3:1 › three live chains reveal one ring, dissolve after contact, pay only completion
+[3/4] [webkit-mobile] › tests/browser/gameplay37.spec.ts:17:1 › sensor permission, touch takeover, release, manual touch and denied fallback
+[4/4] [chromium-mobile] › tests/browser/gameplay37.spec.ts:17:1 › sensor permission, touch takeover, release, manual touch and denied fallback
+[webkit-mobile] › tests/browser/gameplay37.spec.ts:17:1 › sensor permission, touch takeover, release, manual touch and denied fallback
+SENSOR37 {
+  mode: 'tilt',
+  received: 7322,
+  latest: { x: 20, y: 1.2246467991473533e-15 },
+  denied: false,
+  secure: true,
+  calls: 1
+}
+
+[chromium-mobile] › tests/browser/gameplay37.spec.ts:17:1 › sensor permission, touch takeover, release, manual touch and denied fallback
+SENSOR37 {
+  mode: 'tilt',
+  received: 7835.599999904633,
+  latest: { x: 0, y: 20 },
+  denied: false,
+  secure: true,
+  calls: 1
+}
+
+  4 passed (51.6s)
